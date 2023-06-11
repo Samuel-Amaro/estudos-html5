@@ -1,0 +1,61 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO ONINVALID(INVALIDO)
+
+      - O evento oninvalid ocorre quando um elemento submittable <input> é inválido.
+
+      - Por exemplo, o campo de entrada é inválido se o atributo obrigatório for definido e o campo estiver vazio (o atributo obrigatório especifica que o campo de entrada deve ser preenchido antes de enviar o formulário).
+
+      - SINTAXE:
+
+        <element oninvalid="script">
+
+      - TAG HTML SUPORTADAS:
+
+            <input>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Formulario</title>
+</head>
+<body>
+    <h1>Evento de Formulario oninvalid(evento invalido)</h1>
+
+    <p><strong>Exemplo: </strong>Execute um JavaScript quando um campo de entrada for inválido:</p>
+
+    <p>Se você clicar em enviar, sem preencher o campo de texto, uma mensagem de alerta irá ocorrer.</p>
+
+    <!--formulario-->
+    <form action="#" method="get">
+        <!--label-->
+        <label for="labelNome">Nome:</label>
+        <!--campo de texto-->
+        <input type="text" oninvalid="alert('Você deve prencher o formulário!');" name="pNome" required>
+        <!--botão de enviar submit-->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p><strong>Exemplo 2:</strong>Execute um JavaScript quando um campo de entrada for inválido:</p>
+
+    <p>Se você enviar o campo de entrada com menos de 6 caracteres, ocorrerá uma mensagem de alerta.</p>
+
+    <!--formulario-->
+    <form action="#" method="get">
+        <!--label-->
+        <label for="labelNome">Nome:</label>
+        <!--campo de texto-->
+        <input type="text" oninvalid="alert('Deve conter 6 ou mais caracteres!');" name="pNome" pattern=".{6,}">
+        <!--botão de enviar submit-->
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>

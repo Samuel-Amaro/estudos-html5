@@ -1,0 +1,18 @@
+/*
+ * A folha de estilo externa pode ser escrita em qualquer editor de texto. O arquivo não deve conter nenhum código HTML e deve ser salvo com uma extensão .css.
+ * 
+ * Aqui está a aparência do arquivo "styles.css":
+*/
+
+body{
+    /*define um cor de fundo para o corpo da pagina a area de conteudo*/
+    background-color: powderblue;
+}
+h1{
+    /*define que a cor do texto do elemento <h1> sera azul*/
+    color: blue;
+}
+p{
+    /*define que a cor do texto dos elementos <p> sera vermelha*/
+    color: red;
+}

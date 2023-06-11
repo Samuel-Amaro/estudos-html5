@@ -1,0 +1,51 @@
+<!--
+    * INPUT TYPE NUMBER(NUMERO DO TIPO DE ENTRADA)
+
+        - O <input type="number"> define um campo de entrada numérico.
+
+        - Você também pode definir restrições sobre quais números são aceitos.
+
+        - O exemplo a seguir exibe um campo de entrada numérica, onde você pode inserir um valor de 1 a 5:
+
+        - O input elemento representa um controle para definir o valor do elemento para uma string representando um número.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Campo de número(number)</h2>
+
+    <p>O <strong>&lt;input type="number"&gt;</strong> define um campo de entrada numérico.</p>
+
+    <p>Você pode usar os atributos min e max para adicionar restrições numéricas no campo de entrada:</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="quantity">Quantidade (intervalo 1 a 5):</label>
+        <!--
+           - o <input type="number"> define um campo de entrada numérico.
+           - atributo min Especifica um valor mínimo para um elemento <input>
+           - atributo max Especifica o valor máximo para um elemento <input>.
+           - campo de entrada para usuario entrar com um valor numerico entre 1 e 5 as restrições.
+        -->
+        <input type="number" id="quantity" name="quantity" min="1" max="5"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

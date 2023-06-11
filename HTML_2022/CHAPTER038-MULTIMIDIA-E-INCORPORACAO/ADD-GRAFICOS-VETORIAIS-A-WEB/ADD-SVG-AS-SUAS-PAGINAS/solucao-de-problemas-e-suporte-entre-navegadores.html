@@ -1,0 +1,17 @@
+<!--
+    * SOLUÇÃO DE PROBLEMAS E SUPORTE ENTRE NAVEGADORES
+
+        Para navegadores que não suportam SVG (IE 8 e inferior, Android 2.3 e inferior), você pode fazer referência a um PNG ou JPG de seu sr catributo e usar um srcset atributo (que somente navegadores recentes reconhecem) para referenciar o SVG. Sendo este o caso, apenas os navegadores compatíveis carregarão o SVG — os navegadores mais antigos carregarão o PNG:
+
+            <img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"/>
+
+        Você também pode usar SVGs como imagens de plano de fundo CSS, conforme mostrado abaixo. No código abaixo, os navegadores mais antigos ficarão com o PNG que eles entendem, enquanto os navegadores mais novos carregarão o SVG:
+
+            background: url("fallback.png") no-repeat center;
+            background-image: url("image.svg");
+            background-size: contain;
+
+        Assim como o <img> método descrito acima, inserir SVGs usando imagens de plano de fundo CSS significa que o SVG não pode ser manipulado com JavaScript e também está sujeito às mesmas limitações de CSS.
+
+        Se seus SVGs não estão aparecendo, pode ser porque seu servidor não está configurado corretamente. 
+-->

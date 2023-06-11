@@ -1,0 +1,54 @@
+<!--
+    * WIDTH(LARGURA) É HEIGHT(ALTURA) OU STYLE ?
+
+        - Os atributos width, height e style são todos válidos em HTML.
+
+        - No entanto, sugerimos usar o style atributo. Impede que as folhas de estilos alterem o tamanho das imagens:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><!--define uma seção head-->
+    <!--
+        aplica css na pagina de forma local, css aplicado somente nessa pagina, elementos somente dessa pagina
+    -->
+    <style>
+        /*este estilo define a largura de todas as imagens para 100%*/
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Atributos de height/width ou style?</h2>
+
+    <p>A primeira imagem usa o atributo largura (definido como 128 pixels), mas o estilo na seção de cabeça o substitui e define a largura como 100%.</p>
+
+    <!--
+        - a tag html <img> e usada para incorporar uma imagem em uma página da web, e uma tag vazia, e sem fechamento, possui atributos.
+
+        - as imagens são vinculadas a paginas da web. não são tecnicamente incorporadas, a  <img> tag cria um espaç de retenção para a imagen referenciada.
+
+        - o atributo src da tag <img> e obrigatorio, esse atributo especifica o caminho URL para imagen
+
+        - o alt atributo da tag <img>, atributo obrigatorio, especifica um texto alternativo, quando por algum motivo o usuario não puder visualizala.
+
+        - aqui ao inves de usarmos o atributo style para especificar altura e largura da imagen usamos os atributos whidth e height do elemento html <img> especifica altura e largura da imagen em px, porem o estilo aplicado de forma local na head seção do documento substitui a width atributo para o valor especificado la no estilo local, deixando a imagen com 100 de largura
+    -->
+
+    <img src="./imgs/html5.gif" alt="HTML5 Icon" width="128px" height="128px">
+
+    <p>A segunda imagem usa o atributo style para definir a largura para 128 pixels, isso não será substituído pelo estilo na seção head:</p>
+
+    <!--
+
+        - usando o atributo style na tag html <img> para adicionar um estilo css inline(somente a esse elemento html) que permita especificar a altura e largura da imagen.
+
+        - essa forma de especificar largura e altura da imagen não e substituida, pois o css inline sobrepoe o css local
+    -->
+
+    <img src="./imgs/html5.gif" alt="HTML5 Icon" style="width: 128px; height: 128px;">
+
+</body>
+</html>

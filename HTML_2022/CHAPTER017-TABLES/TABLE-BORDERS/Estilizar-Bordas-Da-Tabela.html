@@ -1,0 +1,73 @@
+<!--
+    * ESTILIZAR BORDAS DA TABELA
+
+        - Se você definir uma cor de fundo para cada célula e der à borda uma cor branca (igual ao fundo do documento), você terá a impressão de uma borda invisível:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+
+        table, th, td{
+            /*propriedade css que adiciona bordas nos elementos th, td, e table, vai ter borda na tabela, e em cada celula da tabela vai ter borda também, a borda e da cor branca*/
+            border: 1px solid white;
+            /*para evitar bordas duplas, bordas na tabela e bordas nas celulas, usamos a propriedade css abaixo, para que as bordas sejam reduzidas a uma unica borda, borda somente na tabela geral*/
+            border-collapse: collapse;
+        }
+        th, td{
+            /*define uma cor de fundo para as celulas da tabela, tanto as celulas de cabeçalho como as celulas de dados*/
+            background-color: #96D4D4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabela Com Bordas Invisíveis</h2>
+
+    <p>Estilize a tabela com bordas brancas e uma cor de fundo das células para dar a impressão de bordas invisíveis.</p>
+
+    <!--define uma tabela, permitindo organizar os dados em linhas e colunas-->
+    
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <!--
+                - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+            -->
+            <th>Primeiro Nome</th>
+            <th>Último Nome</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Véspera</td>
+            <td>Jakson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>Corça</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

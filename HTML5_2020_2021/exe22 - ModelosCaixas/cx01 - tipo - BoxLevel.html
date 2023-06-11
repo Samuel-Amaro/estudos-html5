@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos De Caixas</title>
+    <!--
+        * Aplicando um estilo local;
+    -->
+    <style>
+        /*
+         * Aplicando configurações de caixas de tipo box-level, atraves do css na caixa do H1;
+         * configurações de box size
+           * configurando uma cor;
+           * uma altura;
+           * uma largura;
+         * configurações de border da caixa;
+           * configurando a borda da caixa do h1;
+           * configurando uma cor da borda;
+           * configurando um estilo da borda;
+           * configurando uma largura da borda;
+         * configurações de pading na caixa;
+           * largura do top; topo/cima
+           * largura do right; direita
+           * largura de bottom; baixo
+           * largura de left; esquerda
+        */
+        h1{
+           /* caixa - box size*/ 
+           background-color: darkslategrey;
+           height: 400px;
+           width: 400px;
+
+
+           /*border da cx - fica entre margim e padding*/
+           border-width: 10px;
+           border-style: solid;
+           border-color: darkgreen;
+           /* 
+            * shortand uteis para usar;
+            * shorthand e uma propriedade com multiplos valores;
+           */
+           /*
+            * shorthand da border;
+            * as 3 propriedades mais usadas da borda;
+            * espessura stilo cor;
+           */  
+            border: 10px solid darkgreen;
+             
+
+           /*padding da cx - fica entre border e conteudo da caixa*/
+           padding-top:cx 10px;
+           padding-right: 10px;
+           padding-bottom: 10px;
+           padding-left: 10px;
+           /*
+             * shorthando do padding;
+             * tem que seguir a ordem de propriedades igual a de cima ai;
+             * cima direita baixo esquerda;
+           */  
+            padding: 10px 10px 10px 10px;
+           /* 
+            * se as 4 medidas forem iguais pode informar so uma vez na shorthand
+            padding: 10px;
+           */ 
+
+
+           /*centralizando a cx no meio da pagina, no sentido horizontal*/
+           margin: auto;
+
+              
+           /*configurando as margens da caixa: que fica da borda para fora*/
+           margin-top: 15px; /*margin - cima - caixa*/
+           margin-right: 15px;/*margin - direita - caixa*/
+           margin-bottom: 60px;/*margin - baixo - caixa*/
+           margin-left: 15px; /*margin - esquerda - caixa*/
+           /*
+            * shorthando da margin;
+            * tem que seguir a ordem das propriedades igual as de cima;
+            * cima direita baixo esquerda;
+           */
+           margin: 15px 15px 60px 15px;
+           /*
+            * shorthand da margim so que com configurações praticas;
+             * cima px
+             * direita auto(o navegador cofigura tm da margin direita para ela ficar centraliada)
+             * baixo px
+             * esquerda (o navegador cofigura tm da margin esquerda para ela ficar centraliada)
+             * margin: 15px auto 15px auto;
+           */
+            
+
+          
+           /*
+            * criando um autline para a caixa, fica entre a   borda e margin da caixa, so que fica dentro da margin;
+            * o autline vai ser um tracejado fora da caixa;
+          */
+          outline-width: 9px;
+          outline-style: dashed;
+          outline-color: blue;
+          /*
+           * shorthand da outiline não e muito utilizada mas e bom aprender;
+           * shorthand da outline tem que seguir as propriedades na mesma ordem acima;
+           * espessura estilo cor;
+          */
+          outline: 9px dashed blue;
+
+        }
+        /*
+         * Aplicando configurações de caixas atraves do css na caixa da ancora, que e uma caixa de tipo inline-level;
+          * aplicando configurações de border uma na caixa de tipo inline level no link;
+            * aplicando uma borda na caixa;
+            * aplicando uma largura na borda;
+            * aplicando um estilo na borda;
+            * aplicando uma cor na borda;
+        */
+        a{
+           border-width: 12px;
+           border-style: solid;
+           border-color: darkturquoise; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        * (<h1>) e (<p>) são cxs de tipo box level;
+        * mas (<a>) são caixas de tipo inline-level; 
+    -->
+    <h1>Exemplo de Caixa Box-Level</h1>
+    <p>Paragrafos também são tipos de caixas Box-Level <a href="#" target="_blank">Mas Links São do tipos de caixas Inline-Level</a> Vamos Ver como tudo isso funciona.</p>
+</body>
+</html>

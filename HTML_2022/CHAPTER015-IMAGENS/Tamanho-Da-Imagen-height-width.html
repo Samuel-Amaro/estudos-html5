@@ -1,0 +1,44 @@
+<!--
+    * TAMANHO DA IMAGEN - HEIGHT(ALTURA) E WIDTH(LARGURA)
+
+        - Você pode usar o style atributo para especificar a largura e a altura de uma imagem.
+
+        - Como alternativa, você pode usar os atributos width e : height
+
+        - Os atributos width e height sempre definem a largura e a altura da imagem em pixels.
+
+        - Nota: Sempre especifique a largura e a altura de uma imagem. Se a largura e a altura não forem especificadas, a página da Web poderá piscar enquanto a imagem é carregada.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+
+    <h2>Tamanho da imagen</h2>
+
+    <p>Aqui usamos o atributo style para especificar a largura e a altura de uma imagem:</p>
+
+    <!--
+        - a tag html <img> e usada para incorporar uma imagem em uma página da web, e uma tag vazia, e sem fechamento, possui atributos.
+
+        - as imagens são vinculadas a paginas da web. não são tecnicamente incorporadas, a  <img> tag cria um espaç de retenção para a imagen referenciada.
+
+        - o atributo src da tag <img> e obrigatorio, esse atributo especifica o caminho URL para imagen
+
+        - o alt atributo da tag <img>, atributo obrigatorio, especifica um texto alternativo, quando por algum motivo o usuario não puder visualizala.
+
+        - usando o atributo style na tag html <img> para adicionar um estilo css inline(somente a esse elemento html) que permita especificar a altura e largura da imagen.
+    -->
+
+    <img src="./imgs/img_girl (1).jpg" alt="Garota de jaqueta" style="width: 500px;height: 600px;">
+
+    <p>Aqui especificamos a largura e a altura de uma imagem com os atributos largura e altura:</p>
+
+    <!--
+        - aqui ao inves de usarmos o atributo style para especificar altura e largura da imagen usamos os atributos whidth e height do elemento html <img> especifica altura e largura da imagen em px
+    -->
+
+    <img src="./imgs/img_girl (1).jpg" alt="Garota de casaco" width="500px" height="600px">
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+    * INPUT TYPE WEEK(ENTRADA TIPO SEMANA)
+
+        - O <input type="week"> permite que o usuário selecione uma semana e ano.
+
+        - Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.
+
+        - O input elemento representa um controle para definir o valor do elemento para uma string que representa uma semana específica .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Exibir um controle de entrada semanal</h2>
+
+    <p>O <strong>&lt;input type="week"&gt;</strong> permite que o usuário selecione uma semana e um ano.</p>
+
+    <p>Se o navegador for compatível, um seletor de data será exibido ao inserir o campo de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="week">Selecione um semana:</label>
+        <!--
+           - o <input type="week"> permite que o usuário selecione uma semana e ano.
+           - usuario entra com uma semana especifica do ano e o ano.
+        -->
+        <input type="week" id="week" name="week"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p><strong>Nota:</strong>type="week" não é compatível com Firefox, Safari ou Internet Explorer 11.</p>
+</body>
+</html>

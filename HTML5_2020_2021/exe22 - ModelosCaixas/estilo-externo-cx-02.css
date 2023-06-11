@@ -1,0 +1,84 @@
+@import "UTF-8";
+
+/*aplicando configurações de estilos no documento HTML5 usando CSS, e seletores personalizados, de elementos e classes*/
+
+
+/*conteudo do site, onde vai mostrar para o usuario*/
+ body{
+    font-family: Arial, Helvetica, sans-serif; /*familia-fonte que o DocHTML5 vai usar*/
+    background-color: darkgray; /*cor de fundo da area de conteudo da pagina*/
+    margin: 0px; /*quero que o conteudo ocupe a largura total da area disponivel*/
+}
+/*cabeçalho do site*/
+header{
+      background-color:dodgerblue; /*cor de fundo para a caixa*/
+      padding: 0px 6px 6px 6px; /*um espaço interno entre a borda e o conteudo*/
+      margin: 3px 6px 8px 6px;/*um espaço externo da borda para fora*/
+}
+/*rodape do site*/
+footer{
+      background-color:black; /*cor de fundo da caixa do radape*/
+      color:white;/*cor da fonte*/
+      text-align: center; /*texto  centralizado dentro da caixa*/
+      padding: 3px; /*um espaço interno entre a borda e o conteudo*/
+      margin: 0px 0px 0px 0px; /*um espaço externo da borda para fora, quero que o rodape, ocupe a largura total da pagina*/
+}
+/*dentro do rodape possui um paragrafo, onde todo texto fica, configurando esse elememento, paragrafo que e filho do footer, esta dentro do rodape*/
+footer > p{
+      margin: 0px; /*aplicando um espaço externo,da borda para fora, no paragrafo*/
+}
+
+/*conteudo principal do site, onde todo o agrupamento de conteudo principal do site*/
+main{
+    background-color: bisque; /*cor de fundo da area principal*/
+    padding: 15px; /* um espaço interno entre o conteudo e a borda da caixa*/
+    margin: 15px; /*um espaço externo entre a borda e o outline, da borda para fora*/
+    border-radius: 0px 15px;
+    /*
+    * arredondando os vertices da caixa principal, onde o  conteudo principal esta concentrado, usando uma shorthand;
+    * para poder especificar todos parametros na shorthand: topo-superior-esquerda topo-superior-direito inferior-esquerdo inferior-direito;para configurar todos os vertices;
+    * usando outra shorthand: topo-superior-esquerdo_and_inferior-direito topo_superior_direito_and_inferior_esquerdo; configura as 4 vertices, mas com apenas duas medidas, a 1 medida serve para os vertices ditos acima, a segunda medida para os outros vertices; vai aplicar nos vertices intercalados;
+    */
+}
+
+/*nos artigos da area principal*/
+article{
+       background-color: coral; /*uma cor de fundo da caixa*/
+       padding: 11px; /* um espaço interno entre o conteudo e a borda da caixa*/
+       border: 3px solid black; /*shorthand border: espessura estilo cor*//*uma linha que circuncida a caixa*/
+       margin: 5px; /*um espaço externo entre a borda e o outline, da borda para fora*/
+}
+/*cada atigo que possui um conteudo relacionado ou periferico a ele*/
+article > aside{
+      text-align: center; /*texto centralizado*/
+      font-size: 18px; /*tamanho do texto*/
+      background-color: blanchedalmond; /*cor de fundo*/
+      padding: 2px; /*um espaço interno entre conteudo e borda*/
+}
+/*no menu de navegação*/
+nav{
+    background-color: rgb(68, 63, 63); /*cor de fundo*/
+    padding: 3px; /*um espaço interno*/
+    /*aplicando uma sombra na caixa, do menu nav, essa caixa, vai possuir uma sombra*/
+    box-shadow: 4px 4px 2px black; /*os paramentros para essa config, vão ser shorthand de sombra, onde vai ser: deslocamentoHorizontalpx deslocamentoVerticalpx espalhamentopx corSombra;*/
+}
+/*cada link do menu*/
+nav > a{
+      text-decoration: solid; /*tira sublinhado do link*/
+      color:ghostwhite; /*cor do link*/
+      font-weight: bold; /*vai ficar em negrito*/
+      margin-right: 200px; /* um espaço externo de cada margin a direita de cada link vai ter uma margin*/
+      padding: 4px; /*um espaço interno*/
+}
+/*ao passar o mouse em cada link*/
+nav > a:hover{
+  text-decoration:underline; /*mostra o sublinhado do link*/  
+  color:brown; /*muda a cor*/
+}
+/*titulo principal do site, usando um seletor personalizado de um unico elemento*/
+h1#titulo_principal{
+   font-family: sans-serif; /*aplicando uma fonte sem serifa*/
+   font-weight: 900;/*espessura da fonte*/
+   font-size: 35px; /*tamanho da fonte*/
+   text-align: center; /*fonte centralizada*/
+}

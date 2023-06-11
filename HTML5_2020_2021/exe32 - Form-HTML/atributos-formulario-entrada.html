@@ -1,0 +1,172 @@
+<!--
+    * HTML INPUT FORM* ATTRIBUTES - ATRIBUTOS DO FORMULARIO DE ENTRADA
+
+     - Este capítulo descreve os diferentes form* atributos do <input> elemento HTML;
+
+
+    * O ATRIBUTO FORMULARIO - ATTRIBUTE FORM
+
+     - O form atributo input especifica o formulário ao qual os <input> elemento pertence.
+     - O valor deste atributo deve ser igual ao atributo id do elemento <form> ao qual pertence.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos do Formulario Entrada</title>
+</head>
+<body>
+    <h1>Atributos de Formulario - Attribute Input form*</h1>
+    <hr><!--linha separadora na horizontal-->
+    <h2>O Atributo Formulário - Attribute form</h2>
+    <p><b>Exemplo:</b> Um campo de entrada lozalizado fora do formulário HTML(mas ainda faz parte do formulário)</p>
+    <!--
+        * O ATRIBUTO FORMULARIO - ATTRIBUTE FORM
+
+            - O form atributo input especifica o formulário ao qual os <input> elemento pertence.
+            - O valor deste atributo deve ser igual ao atributo id do elemento <form> ao qual pertence.
+    -->
+    <form action="#" id="form1">
+        <label for="pNome">Primeiro Nome:</label><!--label-->
+        <input type="text" id="pNome" name="pName"><!--input type text-->
+        <br><!--quebra linha-->
+        <br><!--quebra linha-->
+        <input type="submit" value="Enviar"><!--input type submit-->
+        <br><!--quebra linha-->
+        <br><!--quebra linha-->
+    </form>
+    <!--campos de formulario fora de um formulario, mas que ainda pertence a um formulario, devido ao atributo id do formulario e o atributo form do input que recebem os mesmos valores nesse atributo, para dizer que  o input pertence ao form1, mesmo fora dele, com isso ainda consegue resgatar o valor do input para ser processado-->
+    <label for="sNome">Segundo Nome:</label><!--label-->
+    <input type="text" id="sNome" name="lName" form="form1">
+    <hr><!--linha separadora na horizontal-->
+
+
+    <!--
+        * ATRIBUTO DE FORMAÇÃO - ATTRIBUTE FORM ACTION
+
+         - O formaction atributo input especifica a URL do arquivo que processará a entrada quando o formulário for enviado.
+         - Nota: este atributo substitui o action atributo do <form> elemento.
+         - O formaction atributo funciona com os seguintes tipos de entrada: enviar(SUBMIT) e imagem(IMAGE).
+    -->
+    <h2>O Atributo de Formação - Attribute formaction</h2>
+    <p><b>Exemplo:</b> Um formulário HTML com dois botões de envio, com ações diferentes</p>
+    <!-- atributo action: vai a ação que processa os dados vindo pelos inputs-->
+    <form action="#">
+        <label for="pNome">Primeiro Nome:</label><!--label-->
+        <input type="text" id="pNome" name="pNome"><!--input type text-->
+        <br><!--quebra linha-->
+        <br><!--quebra linha-->
+        <label for="sNome">Segundo Nome:</label><!--label-->
+        <input type="text" id="lNome" name="lNome"><!--input type text-->
+        <input type="submit" value="Enviar01"><!--input type submit - enviar-->
+        <input type="submit" value="Enviar02" formaction="#"><!--input type submit - enviar - formaction: url do arquivo que vai processar os input recebido -->
+    </form>
+
+    <hr><!--linha separadora na horizontal-->
+
+    <!--
+        * ATRIBUTO FORMENCTYPE
+
+         - O formenctype atributo input especifica como os dados do formulário devem ser codificados quando enviados (somente para formulários com method = "post").
+         - Nota: Este atributo substitui o atributo enctype do <form> elemento.
+         - O formenctype atributo funciona com os seguintes tipos de entrada: enviar(submit) e imagem(img).
+    -->
+    <h2>Atributo formenctype</h2>
+    <p><b>Exemplo:</b> Um formulário com dois botões de envio. O primeiro envia os dados do formulário com codificação padrão, o segundo envia os dados do formulário codificados como "multipart/ form-data":</p>
+    <form action="#" method="POST">
+        <label for="pNome">Primeiro Nome:</label><!--label-->
+        <input type="text" id="pNome" name="pNome"><!--input type text-->
+        <br><!--quebra linha-->
+        <br><!--quebra linha-->
+        <input type="submit" value="Enviar-01"><!--input type submit codificação padrão-->
+        <input type="submit" value="Enviar-02" formenctype="multipart/form-data"><!--input type submit codificação multipart/form-data-->
+    </form>
+
+    <hr><!--linha separadora na horizontal-->
+
+    <!--
+        * O ATRIBUTO MÉTODO DE FORMULÁRIO - ATRRIBUTE FORMMETHOD
+
+         - O formmethod atributo input define o método HTTP para enviar dados do formulário ao URL de ação(action);
+         - Observação: esse atributo substitui o atributo de método do <form> elemento;
+         - O formmethodatributo funciona com os seguintes tipos de entrada: enviar(submit) e imagem(image).
+         - Os dados do formulário podem ser enviados como variáveis ​​de URL (método = "get") ou como uma transação HTTP post (método = "post").
+
+         - Notas sobre o método "get":
+
+           - Este método anexa os dados do formulário ao URL em pares nome/valor
+           - Este método é útil para envios de formulários onde um usuário deseja marcar o resultado;
+           - Há um limite para a quantidade de dados que você pode colocar em um URL (varia entre os navegadores), portanto, você não pode ter certeza de que todos os dados do formulário serão transferidos corretamente;
+           - Nunca use o método "get" para passar informações confidenciais! (a senha ou outras informações confidenciais estarão visíveis na barra de endereço do navegador);
+
+        - Notas sobre o método "post":
+        
+          - Este método envia os dados do formulário como uma transação HTTP post;
+          - Os envios de formulários com o método "post" não podem ser marcados;
+          - O método "post" é mais robusto e seguro do que "get", e "post" não tem limitações de tamanho;
+    -->
+    <h2>Atributo Método de Formulário - attribute FORMMETHOD</h2>
+    <p><b>Exemplo:</b> Um formulário com dois botões de envio. O primeiro envia os dados do formulário com o método = "get". O segundo envia os dados do formulário com o método = "post":</p>
+    <form action="#" method="get">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Segundo Nome:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit using GET">
+        <input type="submit" formmethod="post" value="Submit using POST">
+      </form>
+      <hr><!--linha separadora na horizontal-->
+
+      <!--
+          * O ATRIBUTO META DE FORMA - ATTRIBUTE formtarget 
+
+           - O formtarget atributo input especifica um nome ou uma palavra-chave que indica onde exibir a resposta recebida após o envio do formulário.
+           - Nota: Este atributo substitui o atributo target do <form> elemento.
+           - O formtarget atributo funciona com os seguintes tipos de entrada: enviar(SUBMIT) e imagem(IMAGE).
+      -->
+      <h2>O Atributo meta de formulario - ATTRIBUTE FORMTARGET</h2>
+      <p><b>Exemplo:</b> Um formulário com dois botões de envio, com janelas de destino diferentes:</p>
+      <form action="#">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Segundo Nome:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+      </form>
+      <hr><!--linha separadora na horizontal-->
+
+      <!--
+          * O ATRIBUTO FORMULÁRIO SEM VALIDAÇÃO - ATTRIBUTE FORMNOVALIDATE
+
+          - O formnovalidate atributo input especifica que um elemento <input> não deve ser validado quando enviado.
+          - Nota: Este atributo substitui o atributo novalidate do <form> elemento.
+          - O formnovalidate atributo funciona com os seguintes tipos de entrada: enviar(Submit).
+      -->
+      <h2>O Atributo Formulário Sem Validação - Attribute FORMNOVALIDATE</h2>
+      <p><b>Exemplo:</b> Um formulário com dois botões de envio (com e sem validação):</p>
+      <form action="#">
+        <label for="email">Entre Com Seu Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formnovalidate="formnovalidate"
+        value="Submit without validation">
+      </form>
+      <hr><!--linha separadora na horizontal-->
+
+      <!--
+          * O ATRIBUTO SEM VALIDAÇÃO - ATTRIBUTE NOVALIDATE
+
+           - O novalidate atributo é um <form> atributo.
+           -  Quando presente, novalidate especifica que todos os dados do formulário não devem ser validados quando enviados.
+      -->
+      <h2>O Atributo Sem Validação - attribute novalidate</h2>
+      <p><b>Exemplo:</b> Especifique que nenhum dado do formulário deve ser validado no envio:</p>
+      <form action="#" novalidate>
+        <label for="email">Entre com Seu Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>

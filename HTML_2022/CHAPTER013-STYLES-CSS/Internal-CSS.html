@@ -1,0 +1,37 @@
+<!--
+    * INTERNAL CSS(CSS INTERNO)
+
+        - Um CSS interno é usado para definir um estilo para uma única página HTML.
+
+        - Um CSS interno é definido na <head> seção de uma página HTML, dentro de um <style> elemento.
+
+        - O exemplo a seguir define a cor do texto de TODOS os <h1> elementos (nessa página) para azul e a cor do texto de TODOS os <p> elementos para vermelho. Além disso, a página será exibida com uma cor de fundo "powderblue": 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Forma de adicionar css a página html, usando o css internal(local), aplicado somente a propria pagina, e definido na <head> seção do documento html, dentro do <style> elemento.-->
+    <style>
+        body{
+            /*define um cor de fundo para o corpo da pagina a area de conteudo*/
+            background-color: powderblue;
+        }
+        h1{
+            /*define que a cor do texto do elemento <h1> sera azul*/
+            color: blue;
+        }
+        p{
+            /*define que a cor do texto dos elementos <p> sera vermelha*/
+            color: red;
+        }
+    </style>
+</head>
+<body> 
+
+    <h1>Esté é um título</h1><!--define um titulo mais importante da página usando elemento html <h1>-->
+
+    <p>Este é um parágrafo.</p> <!--define um paragrafo, um bloco de texto-->
+
+</body>
+</html>

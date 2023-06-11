@@ -1,0 +1,30 @@
+<!--
+    * CARACTERES UTF-8
+
+        - Muitos caracteres UTF-8 não podem ser digitados em um teclado, mas sempre podem ser exibidos usando números (chamados números de entidade):
+
+            A é 65
+            B é 66
+            C é 67
+
+        - EXEMPLO EXPLICADO:
+
+            - O <meta charset="UTF-8"> elemento define o conjunto de caracteres.
+
+            - Os caracteres A, B e C são exibidos pelos números 65, 66 e 67.
+
+            - Para permitir que o navegador entenda que você está exibindo um caractere, você deve iniciar o número da entidade com &#  e terminá-lo com ; (ponto e vírgula).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"> <!-- elemento define o conjunto de caracteres usando na pagina, especificação da codificação dos caracteres do documento.-->
+</head>
+<body>
+
+    <p>Vou mostrar ABC</p>
+    <p>Vou mostrar &#65; &#66; &#67;</p> <!--especificando entidades usando a entidade numerica decimal, para representar três caracteres numericos diferentes. para permitir que o navegador estou exibindo um caractere devo iniciar o numero da entidade com &#numeroEntidade;-->
+
+</body>
+</html>

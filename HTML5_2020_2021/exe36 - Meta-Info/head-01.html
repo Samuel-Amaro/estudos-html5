@@ -1,0 +1,64 @@
+<!--
+    * TAG HTML <head>
+
+     - O <head> elemento é um contêiner para metadados (dados sobre dados) e é colocado entre a tag <html> e a tag <body>.
+     
+     - Metadados são dados sobre o documento HTML. Os metadados não são exibidos.
+
+     - Os metadados normalmente definem o título do documento, conjunto de caracteres, estilos, scripts e outras meta informações.
+
+     - Os seguintes elementos podem ir dentro do <head> elemento:
+
+        <title> (obrigatório em todos os documentos HTML);
+        <style>
+        <base>
+        <link>
+        <meta>
+        <script>
+        <noscript>            
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--
+        - Um documento HTML simples, com uma tag <title> dentro da seção head:
+    -->
+
+    <title>Título do documento</title>
+
+    <!--
+        - A tag <base> (especifica um URL padrão e destino para todos os links em uma página) vai para <head>:
+    -->
+
+    <base href="https://www.w3schools.com/" target="_blank">
+
+    <!--
+        - A tag <style> (adiciona informações de estilo a uma página) vai dentro de <head>:
+    -->
+    <style>
+        h1{
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+    </style>
+
+    <!--
+        - A tag <link> (links para uma folha de estilo externa) vai dentro de <head>:
+    -->
+    <link rel="stylesheet" href="estilo-head.css">
+</head>
+<body>
+    <h1>Este é um título</h1>
+    <p>Este é um parágrafo</p>
+    <p>Define informações sobre o documento</p>
+    <img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+    <a href="tags/tag_base.asp">HTML base Tag</a>
+</body>
+</html>

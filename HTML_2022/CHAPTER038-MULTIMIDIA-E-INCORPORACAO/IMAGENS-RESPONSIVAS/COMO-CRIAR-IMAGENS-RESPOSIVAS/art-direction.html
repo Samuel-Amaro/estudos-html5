@@ -1,0 +1,97 @@
+<!--
+    * ART DIRECTION(DIREÇÃO DE ARTE)
+
+        Para recapitular, o problema da direção de arte envolve querer alterar a imagem exibida para se adequar a diferentes tamanhos de exibição de imagem. Por exemplo, uma página da Web inclui uma grande foto de paisagem com uma pessoa no meio quando visualizada em um navegador de desktop. Quando visualizada em um navegador móvel, essa mesma imagem é reduzida, tornando a pessoa na imagem muito pequena e difícil de ver. Provavelmente seria melhor mostrar uma imagem de retrato menor no celular, que amplie a pessoa. O <picture> elemento nos permite implementar exatamente esse tipo de solução.
+
+        o <picture> elemento é um wrapper contendo vários <source> elementos que fornecem fontes diferentes para o navegador escolher, seguido pelo <img> elemento importantíssimo
+
+            Os <source>elementos incluem um mediaatributo que contém uma condição de mídia — como no primeiro srcsetexemplo, essas condições são testes que decidem qual imagem é mostrada — a primeira que retornar true será exibida. Neste caso, se a largura da janela de visualização for de 799px ou menos, a <source>imagem do primeiro elemento será exibida. Se a largura da janela de visualização for 800px ou mais, será a segunda.
+
+            Os srcset atributos contêm o caminho para a imagem a ser exibida. Assim como vimos <img> acima, <source> podemos pegar um srcset atributo com várias imagens referenciadas, assim como um sizes atributo. Assim, você pode oferecer várias imagens por meio de um <picture> elemento, mas também oferecer várias resoluções de cada uma. Realisticamente, você provavelmente não vai querer fazer esse tipo de coisa com muita frequência.
+
+            Em todos os casos, você deve fornecer um <img> elemento, com src e alt, logo antes </picture> de , caso contrário nenhuma imagem aparecerá. Isso fornece um caso padrão que será aplicado quando nenhuma das condições de mídia retornar true (você poderia realmente remover o segundo <source> elemento neste exemplo) e um fallback para navegadores que não suportam o <picture> elemento.
+
+        Este código nos permite exibir uma imagem adequada tanto em telas amplas quanto em telas estreitas,
+
+        Observação: você deve usar o atributo de mídia apenas em cenários de direção de arte; quando você usar mídia, não ofereça condições de mídia dentro do atributo de sizes.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Responsive HTML images demo</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      header {
+        background: url(../images/header.jpg) no-repeat center;
+        height: 200px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+
+    </header>
+
+    <main>
+      <section>
+        <h1>My website</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget venenatis ligula. Ut lacinia at dolor vitae pulvinar. Aliquam pretium dignissim eros. Integer faucibus, dui non aliquet bibendum, lectus orci lobortis odio, ornare porttitor est tellus eget velit. Nulla eros elit, malesuada id neque vel, viverra vehicula neque. Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu venenatis libero tempor, ac pulvinar ligula dapibus.</p>
+
+        <!--
+            - o elemento <picture> e um wrapper contendo vários <source> elementos que fornecem fontes diferentes para o navegador escolher, seguido pelo img elemento importantissimo
+        -->
+        <picture>
+            <!--
+                - cada source elemento incluem o media atributo que contem uma condição de midia, essas condições são testes que decidem qual imagem e mostrada, a primeira que retornar true sera exibida.
+                - neste caso se a viewreport dor de 799px ou menos a <source> imagem do primeiro elemento sera exibida.
+                - o atributo srcset contêm o caminho para a imagem a ser exibida 
+            -->
+            <source media="(max-width: 799px)" srcset="../images/elva-480w-close-portrait.jpg"/>
+            <source media="(min-width: 800px)" srcset="../images/elva-800w.jpg"/>
+            <!--
+                - o <img> elemento vem logo antes de </picture> caso contrario nenhuma imagem aparecerá. isso fornece um caso padrão que sera aplicado quando nenhuma das condições de midia retornar true
+            -->
+            <img src="../images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva"/>
+        </picture>
+
+        <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
+
+        <img srcset="../images/elva-fairy-480w.jpg 480w,
+        ../images/elva-fairy-800w.jpg 800w"
+             sizes="(max-width: 600px) 480px,
+                    800px"
+             src="../images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+        <p>Header image originally by <a href="https://www.flickr.com/photos/miwok/17086751527/">Miwok</a>.</p>
+      </section>
+    </main>
+  </body>
+</html>

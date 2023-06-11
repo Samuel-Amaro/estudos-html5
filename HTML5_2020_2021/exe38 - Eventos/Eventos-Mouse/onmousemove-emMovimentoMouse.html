@@ -1,0 +1,51 @@
+<!--
+    * EVENTOS MOUSE
+    * 
+    * ATRIBUTO DE EVENTO HTML ONMOUSEMOVE - EM MOVIMENTO MOUSE
+    * 
+    * DEFINIÇÃO E USO
+    * 
+    * O atributo onmousemove é disparado quando o ponteiro está se movendo enquanto está sobre um elemento.
+    * 
+    * SINTAXE:
+
+        <element onmousemove="script">
+
+    * TAGS HTML SUPORTADAS: odos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>        
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo onmousemove</title>
+</head>
+<body>
+    <h1>Eventos Mouse</h1>
+    <h2>Atributo de evento HTML onmousemove - mouse em movimento</h2>
+    <p><strong>Exemplo: </strong>Execute um JavaScript ao mover o ponteiro do mouse sobre uma imagem:</p>
+    <!--atributos de eventos de mouse aplicados ao elemento img, quando captado o evento, executara um javascript-->
+    <img src="imagem-em-movimento-1.jpg" alt="imagens" onmousemove="imgGrande(this)" onmouseout="imgNormal(this)" >
+    <p>A função bigImg() é acionada quando o ponteiro do mouse do usuário é movido sobre a imagem. Esta função amplia a imagem.</p>
+    <p>A função normalImg () é acionada quando o ponteiro do mouse é movido para fora da imagem. Essa função define a altura e largura da imagem de volta ao normal.</p>
+
+    <script>
+        /*
+         * função java script que anplia o tamanaho de um elemento recebido por parametro
+        */
+        function imgGrande(x) {
+            x.style.height = "600px";
+            x.style.width = "600px";
+        }
+        /*
+         * função java script que volta retorna o elemento recebido por paramentro ao tamanho normal 
+        */
+        function imgNormal(x) {
+            x.style.height = "400px";
+            x.style.width = "400px";
+        }
+    </script>
+</body>
+</html>

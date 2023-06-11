@@ -1,0 +1,45 @@
+<!--
+    * EVENTO HTML DE TECLADO ONKEYUP(NA CHAVE-SE)
+
+      - O atributo onkeyup é disparado quando o usuário libera uma tecla (no teclado).
+
+      - SINTAXE:
+
+        <element onkeyup="script">
+
+      - TAGS HTML SUPORTADAS:
+
+          - Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title> 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Teclado</title>
+</head>
+<body>
+    
+    <h1>Eventos Teclado HTML onkeyup(quando uma tecla e solta apos ter sido pressionada)</h1>
+
+    <p><strong>Exemplo: </strong>Execute um JavaScript quando um usuário soltar uma chave</p>
+
+    <p>Uma função é disparada quando o usuário libera uma tecla no campo de entrada. A função transforma o caractere em maiúsculas.</p>
+
+    <!--label-->
+    <label for="lbl">Digite Seu Nome:</label>
+
+    <!--campo de entrada-->
+    <input type="text" id="campoNome" onkeyup="getText()">
+
+    <!--função java script que pega o valor do campo de entrada, apos cada tecla ter sido pressionada, e transforma cada caractere digitado em maiusculo, e ainda deixa no mesmo campo de entrada so que maiuscuolo-->
+    <script>
+        function getText() {
+            var x = document.getElementById("campoNome");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

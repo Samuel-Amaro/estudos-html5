@@ -1,0 +1,43 @@
+<!--
+    * CONTAGEM DA LISTA DE CONTROLE
+
+        - Por padrão, uma lista ordenada começará a contar a partir de 1. Se você quiser começar a contar a partir de um número especificado, você pode usar o start atributo:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>O atributo start</h2>
+
+    <p>Por padrão, uma lista ordenada começará a contar a partir de 1. Use o atributo start para começar a contar a partir de um número especificado:</p>
+    
+    <!--
+        - o elemento <ol> define uma lista ordenada, que pode ser alfabetica ou numerica.
+        - o atributo type, do elemento <ol>, define o tipo do marcador da lista, nesse caso define um marcador com numeros, os marcadores serão numerados(esse e o padrão);
+        - o atributo start especifica de onde a contagem dos marcadores dos itens da lista deve começar por padrão começa em 1, os numericos. aqui definiremos para que a contagem dos marcadores começe em 50.
+    -->
+    <ol type="1" start="50">
+        <!-- 
+            - o elemento <li> representa um item da lista, os itens da lista cada <li> sera marcado com numero por padrão.
+            - cada marcador sera numerado.
+        -->
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <!--
+        - o elemento <ol> define uma lista ordenada
+        - o atributo type, do elemento <ol>, define o tipo do marcador da lista, nesse caso define um marcador como algarismo romanos maiusculos
+        - o atributo start especifica de onde a contagem dos marcadores dos itens da lista deve começar por padrão começa em I, os numericos romanos. aqui definiremos para que a contagem dos marcadores começe em 50.
+    -->
+    <ol type="I" start="50">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    
+</body>
+</html>

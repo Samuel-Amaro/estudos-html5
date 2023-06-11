@@ -1,0 +1,49 @@
+<!--
+    * O ELEMENTO <datalist>
+
+        - O <datalist> elemento especifica uma lista de opções predefinidas para um <input> elemento.
+
+        - Os usuários verão uma lista suspensa das opções predefinidas à medida que inserem dados.
+
+        - O list atributo do <input> elemento deve se referir ao id atributo do <datalist> elemento.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O elemento datalist</h2>
+
+    <p>O elemento datalist especifica uma lista de opções predefinidas para um elemento de entrada.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados
+    -->
+    <form action="#">
+        <!--
+            - define um elemento de formulario
+            - O <datalist> elemento especifica uma lista de opções predefinidas para um <input> elemento.
+            - O list atributo do <input> elemento deve se referir ao id atributo do <datalist> elemento.
+        -->
+        <input list="browsers" name="browser"/>
+        <datalist id="browsers">
+            <option value="Internet Explores"/>
+            <option value="Chrome"/>
+            <option value="Opera"/>
+            <option value="Safari"/>
+        </datalist>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+    
+    <p><strong>Observação:</strong> a tag datalist não é compatível com a versão anterior 12.1 do Safari.</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos inseridos no documento HTML5</title>
+</head>
+<body>
+    <h1>Inserindo Videos Hospedados Localmente</h1>
+    <p>Este video esta hospedado no meu proprio servidor</p>
+    <!--
+        como inserir videos no documento html5.
+        hospedado localmente, na minha propria maquina.
+        * usa a tag video e alguns atribuitos. pode ser inserido da maneira abaixo, mas não e a mais recomendavel por causa, que não e compativel com todos navegadores.
+        *atributo src(caminho ate o video local) whidth(largura da  janela para mostar o   video)
+        *controls(apareça os comandos de player de reprodução de video.)
+         <video src="midias/Meu-Video-convertido-1.m4v" width="600px" controls>
+        * a tecnica abaixo, exige muita internet do usuario que vai acessar o site, para poder carregar a pagina. isso não e muito recomendavel.
+        *atributo widht(vai indicar a largura do video na pagina).
+        *poster(configura uma imagem que vai aparecer como uma capa, enquanto o
+         visitante não aperta o play para reproduzir o vídeo)
+        *controls(vai configurar se os controles do vídeo vão aparecer na parte inferior da
+         mídia. Por padrão, os controles não aparecerão, mas basta colocar a palavra
+         controls na tag <video>).
+        *autoplay(diz para o navegador se o vídeo vai começar a tocar automaticamente,
+        assim que a página for carregada.)
+    -->
+     <video width="700px" controls >
+         <!-- video padrão que sera carregado quando  a pagina for carregada.-->
+         <source src="midias/meu-video.mp4" type="video/mp4">
+         <!-- outro padrão de video que sera carregado, quando o padrão de cima não carregar-->  
+        <source src="midias/Meu-Video-convertido-1.m4v" type="video/m4v">
+            <!-- proximo video que sera carregado caso nenhum dos dois de cima, seja carregado.-->
+        <source src="midias/Meu-Video-convertido-2.webm" type="video/webm">    
+     </video>
+     <H1>Inserindo videos do you tube</H1>
+     <p>Tecnica que utiliza menos internet do usuario para visulizar e menos intenet para <br>carregar o site, usando uma tecnica onde os videos ja estejam hospedados em plataformas de videos</p>
+     <!--
+         videos de hospedagem externa. tipo o video esta hospedado no youtube, vou usar o trafego do you tube.
+         esse video esta publico para todos que visitar meu site pode ver.
+     -->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/R_MWm4d3XxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

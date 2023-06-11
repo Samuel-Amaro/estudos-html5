@@ -1,0 +1,20 @@
+<!--
+    * COMO INCORPORAR UM SVG COM UM IFRAME
+
+        Você pode abrir imagens SVG em seu navegador como páginas da web. Portanto, incorporar um documento SVG com um <iframe>é feito exatamente como estudamos em From <object> to <iframe> — outras tecnologias de incorporação .
+
+        Aqui está uma rápida revisão:
+
+        <iframe src="triangle.svg" width="500" height="500" sandbox>
+            <img src="triangle.png" alt="Triangle with three unequal sides" />
+        </iframe>
+
+        Este definitivamente não é o melhor método para escolher:
+
+        Contras:
+
+            iframes tem um mecanismo de fallback, como você pode ver, mas os navegadores só exibem o fallback se não tiverem suporte para iframes.
+
+            Além disso, a menos que o SVG e sua página atual tenham a mesma origem , você não pode usar JavaScript em sua página principal para manipular o SVG.
+
+-->

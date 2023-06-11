@@ -1,0 +1,65 @@
+<!--
+    * TAG HTML <link>
+
+    * DEFINIÇÃO E USO
+
+        - A <link> tag define o relacionamento entre o documento atual e um recurso externo.
+
+        - A <link> tag é usada com mais frequência para vincular a folhas de estilo externas ou para adicionar um favicon ao seu site.
+
+        - O <link> elemento é um elemento vazio, contém apenas atributos.
+
+    * ATRIBUTOS
+
+        ATTRIBUTE: crossorigin
+        VALUE: anonymous use-credentials(anônimo credenciais de uso).
+        DESCRIPTION: Especifica como o elemento lida com solicitações de origem cruzada(request cross-origin).
+        ------------------------------------
+        ATTRIBUTE: href;
+        VALUE: URL;
+        DESCRIPTION: Especifica a localização do documento vinculado.
+        ------------------------------------
+        ATTRIBUTE: hreflang;
+        VALUE: language_code;
+        DESCRIPTION: Especifica o idioma(linguagem) do texto no documento vinculado;
+        ------------------------------------
+        ATTRIBUTE: media;
+        VALUE: media_query;
+        DESCRIPTION: Especifica em qual dispositivo o documento vinculado será exibido;
+        ------------------------------------
+        ATTRIBUTE: referrerpolicy;
+        VALUE: no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, unsafe-url
+        DESCRIPTION: Especifica qual referenciador usar ao buscar o recurso;
+        ------------------------------------
+        ATTRIBUTE: rel;
+        VALUE: alternate, author. dns-prefetch, help, icon, license, next, pingback, preconnect, prefetch, preload, prerender, prev, search, stylesheet;
+        DESCRIPTION: Requeridos. Especifica a relação entre o documento atual e o documento vinculado.
+        ------------------------------------
+        ATTRIBUTE: sizes;
+        VALUE: Height, Width, any;
+        DESCRIPTION: Especifica o tamanho do recurso vinculado. Apenas para rel="icon"
+        ------------------------------------
+        ATTRIBUTE: title;
+        VALUE: 
+        DESCRIPTION: Define uma folha de estilo preferencial ou alternativa;
+        ------------------------------------
+        ATTRIBUTE: type;
+        VALUE: media_type;
+        DESCRIPTION: Especifica o tipo de mídia do documento vinculado;
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+
+    <h2>I am formatted with a linked style sheet.</h2>
+
+    <p>Me too!</p>
+
+</body>
+</html>

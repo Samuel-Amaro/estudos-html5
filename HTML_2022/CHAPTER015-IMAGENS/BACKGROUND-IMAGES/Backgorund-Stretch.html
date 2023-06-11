@@ -1,0 +1,43 @@
+<!--
+    * BACKGROUND STRETCH(ALONGAMENTO DE FUNDO)
+
+        - Se você quiser que a imagem de fundo se estique para caber em todo o elemento, você pode definir a background-size propriedade como 100% 100%:
+
+        - Tente redimensionar a janela do navegador e você verá que a imagem se alongará, mas sempre cobrirá todo o elemento.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - forma de adicionar css a essa pagina foi, Um CSS interno é definido na <head> seção de uma página HTML, dentro de um <style> elemento.
+    -->
+    <style>
+        body{
+            /*
+            - por meio dessa porpriedade css, especificamos que toda a area de conteudo da pagina o corpo da pagina, toda area visivel pelo usuario, tera uma imagem de fundo.
+            
+            - se a imagen de fundo for menor que o elemento a imagen se repetira, horizontalmente e verticalmente, até chegar ao final do elemento.
+            
+            - para evitar que a imagen de fundo se repita, defina a bakgroun-repeat propriedade como no-repeat
+            
+            - para que a imagen de fundo cubra todo elemento use a propriedade css, background-size como o valor 100%, assim a imagen se esticara para caber em todo o elemento html 
+
+            - e para garantir que todo o elemento esteja sempre coberto com a imagen de fundo usar a propriedade css backgorund-attachment, com o valor fixed, assim a imagen cobrira todo o fundo do elemento sem precisar esticar, mantendo suas proporções.
+            */
+            background-image: url('../imgs/img_girl\ \(1\).jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Backgorund-Cover</h2>
+
+    <p>Defina a propriedade background-size como "cover" e a imagem de fundo cobrirá todo o elemento, neste caso o elemento body.</p>
+
+
+</body>
+</html>

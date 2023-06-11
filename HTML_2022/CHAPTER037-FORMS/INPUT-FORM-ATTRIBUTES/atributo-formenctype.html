@@ -1,0 +1,62 @@
+<!--
+    * O ATRIBUTO FORMENCTYPE
+
+        - O atributo input formenctype especifica como os dados do formulário devem ser codificados quando enviados (somente para formulários com method="post").
+
+        - Nota: Este atributo substitui o atributo enctype do <form> elemento.
+
+        - O formenctype atributo funciona com os seguintes tipos de entrada: submit e image.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo formectype de entrada</h2>
+
+    <p>O atributo formenctype especifica como os dados do formulário devem ser codificados quando enviados.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+        - o atributo method especifica o método HTTP a ser usado ao enviar os dados do formulário.
+        - o método HTTP post envia os dados para o manipulador/processador da entrada do formulario como uma transação de postagem HTTP
+        - O enctype atributo especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor. o valor(application/x-www-form-urlencoded) Todos os caracteres são codificados antes do envio (os espaços são convertidos em símbolos "+" e os caracteres especiais são convertidos em valores ASCII HEX)
+    -->
+    <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo autofocus, especifica que um campo de entrada deve obter o foco automaticamente, quando a pagina for carregada.
+            - o campo de entrada de texto unico vai obter o foco quando a pagina for carregada/iniciada.
+            - usuario entra com um texto.
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+        <!--
+            -O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - o atributo formenctype="multipart/form-data" especifica como os dados do formulário devem ser codificados quando enviados, Este atributo substitui o atributo enctype do <form> elemento. (multipart/form-data) Este valor é necessário se o usuário fizer upload de um arquivo através do formulário
+        -->
+        <input type="submit" value="Enviar como Multipart/form-data" formenctype="multipart/form-data"/>
+    </form>
+ 
+</body>
+</html>

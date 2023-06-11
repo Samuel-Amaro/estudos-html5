@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Ordenadas, mistas, definção</title>
+</head>
+<body>
+   <!-- 1ª Forma de Lista ordenada--> 
+   <!-- Listas ordenadas, são aquelas que a ordem faz a diferença--> 
+   <h1>Trabalhando Com Listas</h1>
+   <h2>Listas Ordenadas</h2>
+   <!-- Tag de abrir a lista
+        essa tag tem um parametro o type = "tipo_formatação_lista" tipos de formatação para o parametro tipe: A a 1 I i-->
+   <ol type="I">
+    <!-- tag para colocar itens na lista-->
+    <!-- 1ª maneira-->
+     <li>Trabalhar</li>
+     <li>Estudar</li>
+     <li>Lavar Moto</li>
+     <li>Tomar Agua</li>
+     <li>Correr 10 Km</li>
+    <!-- 2ª Maneira -->
+     <li>Ir a igreja
+     <li>Viajar
+     <li>Comprar um automovel
+   </ol>
+
+   <!-- 2ª Maneira de Lista, Lista não ordenada a ordem não faz diferença-->
+   <h2>Listas Não ordenadas</h2>
+   <!-- abrindo tag para abrir a lista não ordenada, o parametro type = "     formatar_a_estica_lista" parametros de type: disc, circle, square-->
+    <ul type = "square">
+       <!-- tag para colocar itens na lista, mesmo esquema da de cima-->
+       <li>ir na padaria
+       <li>ir no mercado
+       <li>ir na igreja
+       <li>tomar um cafe reforçado        
+    </ul>
+
+   <!-- Continuação de listas-->
+   <h2>Listas Mistas e de Definições</h2>
+   <h2>Minhas Linguagens Preferidas</h2>
+   <!-- Misturado listas UL e OL e criando sublistas-->
+   <ol>
+       <li>Minhas Linguagens Antigas</li>
+       <!-- criando uma sublista dentro da lista acima-->
+       <ol type = "a">
+          <li>Cliper</li>
+          <li>Fortran</li>
+          <li>Delph</li>
+          <li>Fortram</li> 
+       </ol>
+       <li>Minhas Linguagens Novas</li>
+       <!-- Criando outra sublista-->
+       <!-- parametro start = " ", serve para dar uma sequncia(continuar) ou para dar inicio em um valor que eu quero, no caso quero continuar a sublista de cima, como e,f,g etc.. so que tem que ser pela posição e não pelo alfabeto-->
+       <ol type="a"start = "5"> 
+         <li>Python</li>
+         <li>Java</li>
+         <li>Kotlin</li>
+         <li>JavaScript</li>
+       </ol>
+   </ol>
+   <!-- misturando listas UL e OL--> 
+   <h2>Misturando as Listas</h2>
+   <ol>
+    <li>Plastation</li>
+    <ul>
+        <ol>
+         <li type = "A">GTA</li>
+         <ul>
+             <li>Gta Vice City</li>
+             <li>San Andreas</li>
+             <li>Gta Naruto</li>
+         </ul>
+        </ol> 
+        <ul>
+        </ul>
+        <li>NeedForSped</li>
+        <li>Deus da Guerra</li>
+        <li>Medalha de Honrra</li>
+    </ul>
+    <li>Xbox</li>
+    <ul>
+        <li>GTA 5</li>
+        <li>Pes 2019</li>
+        <li>Forza Horizon</li>
+    </ul>
+   </ol>
+    <h2>Lista de definição</h2>
+   <!-- Lista de definição, tem um termo, e uma descrição do termo-->
+   <!-- tag para abrir essa lista-->
+   <dl>
+     <!-- para dizer o termo-->  
+     <dt>Termo</dt>
+     <!-- para dizer descrição do termo acima-->
+     <dd>Descrição</dd>
+     <dt>Linguagem C</dt>
+     <dd>Linguagem so para os fortes programar</dd>
+   </dl>
+</body>
+</html>

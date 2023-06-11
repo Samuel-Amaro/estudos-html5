@@ -1,0 +1,13 @@
+<!--
+    * SEMPRE USE O sandbox atributo
+
+        Você deseja dar aos invasores o mínimo de poder possível para fazer coisas ruins em seu site, portanto, você deve fornecer ao conteúdo incorporado apenas as permissões necessárias para fazer seu trabalho. Claro, isso se aplica ao seu próprio conteúdo também. Um contêiner de código onde ele pode ser usado adequadamente — ou para teste — mas não pode causar nenhum dano ao restante da base de código (acidental ou malicioso) é chamado de sandbox.
+
+        O conteúdo sem sandbox pode fazer muito (executar JavaScript, enviar formulários, janelas pop-up, etc.) Por padrão, você deve impor todas as restrições disponíveis usando o sandbox atributo sem parâmetros, conforme mostrado em nosso exemplo anterior.
+
+        Se for absolutamente necessário, você pode adicionar permissões de volta uma a uma (dentro do sandbox="" valor do atributo) — consulte a sandbox entrada de referência para todas as opções disponíveis. Uma observação importante é que você nunca deve adicionar ambos allow-scripts e allow-same-origin ao seu sandbox atributo — nesse caso, o conteúdo incorporado pode ignorar a política de mesma origem que impede que os sites executem scripts e usar JavaScript para desativar completamente o sandboxing.
+
+        Observação: o sandboxing não oferece proteção se os invasores puderem enganar as pessoas para que visitem conteúdo malicioso diretamente (fora de um iframe). Se houver alguma chance de que determinado conteúdo possa ser malicioso (por exemplo, conteúdo gerado pelo usuário), veicule-o de um domínio diferente do seu site principal.
+
+
+-->

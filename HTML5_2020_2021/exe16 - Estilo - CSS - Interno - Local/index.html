@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo CSS Interno | Locais</title>
+    <!-- * tudo dentro dessa tag abaixo e CSS.;
+         * essa tecnica usa, seletores de tag para poder aplicar estilos;
+     -->
+    <style>
+     /* 
+       * criando um seletor para a tag <body> </body>;
+       * tudo dentro do seletor, vai ser aplicado a tag, e tudo aplicado a tag atinge todo conteudo, ou função que ela faz. isso e vai ser aplicado a tag.
+       * cada linha de seletor e uma declaração     
+    */
+     body{
+         background-color: lemonchiffon;/*aplica cor de fundo*/
+         font-family: Georgia, 'Times New Roman', Times, serif;/*aplica uma fonte*/
+         font-size: 20px;/*tm da fonte*/
+     } 
+     /* criando outro seletor, agora para o H1, esse estilo de h1, vai ser aplicado a todos os H1 existentes no documento
+     */
+     h1{
+        color: darkgreen;/*aplica uma cor ao titulo*/ 
+     }
+     /* outro seletor, agora para o h2*/
+     h2{
+         color: crimson;/*aplica uma cor ao titulo*/
+     }
+     /* criando um seletor para paragrafo*/
+     p{
+        text-align: justify;/*justificando meu texto, no caso paragrafos*/ 
+     }
+    </style>
+</head>
+<!-- 
+     * aplicando estilos CSS Interno;
+     * segunda tecnica usada para poder aplicar CSS a um documento HTMl5;
+     *As CSS vão permitir dar estilo a pagina vão deixar visualmente mais bonito a pagina aplicando elementos visuais, efeitos, estilos na pagina(docuemnto HTML5);
+     * tecnica usada aqui nessa aula, para poder dar estilos somente a uma pagina. acima de uma pagina usar a terceira tecnica.
+     * HTML dito que ele tem sua enfase semanticamente vai dar enfase no conteudo, no documento HTML5, tendo semantica, fazendo sentido cada parte do conteudo do documento.
+     * existe tres maneiras de aplicar CSS no documento HTML5.
+-->
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic delectus aut labore corporis sequi repellendus voluptates, atque explicabo nemo nisi error magni autem aliquid consequatur odit officiis id nesciunt tempora.</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad adipisci iure iusto ut maiores eius, eos tempora itaque nisi neque veniam quod minus cumque beatae dolorum est praesentium magnam quis.</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa necessitatibus eius dolores unde facilis aperiam, voluptas, laboriosam distinctio modi nemo recusandae fugit, nisi deserunt eum numquam accusantium vitae explicabo earum.</p>
+</body>
+</html>

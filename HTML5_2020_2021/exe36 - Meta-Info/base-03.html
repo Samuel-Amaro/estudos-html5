@@ -1,0 +1,39 @@
+<!--
+    * TAG HTML <base>
+
+     - A <base> tag especifica o URL base e / ou destino para todos os URLs relativos em um documento.
+
+     - A <base> tag deve ter um href ou um atributo target presente, ou ambos.
+
+     - Só pode haver um único <base> elemento em um documento e deve estar dentro do elemento <head>.
+
+    * ATRIBUTOS
+
+        atributo : href;
+        valor : URL;
+        descrição : Especifica a URL base para todos os URLs relativos na página;
+
+     -------------------------------------------
+
+        atributo : target;
+        valor : _blank, _parent, _self, _top;
+        descrição : Especifica o destino padrão para todos os hiperlinks e formulários na página
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Base</title>
+    <!--
+        Especifique um URL padrão e um destino padrão para todos os links em uma página:
+    -->
+    <base href="https://www.w3schools.com/" target="_blank">
+</head>
+<body>
+    <p>Especifique um URL padrão e um destino padrão para todos os links em uma página:</p>
+    <img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+    <a href="tags/tag_base.asp">HTML base Tag</a>
+</body>
+</html>

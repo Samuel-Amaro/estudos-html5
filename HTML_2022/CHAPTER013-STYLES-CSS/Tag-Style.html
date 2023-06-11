@@ -1,0 +1,45 @@
+<!--
+    * TAG HTML <style> 
+
+    * DEFINIÇÃO E USO
+
+        - A <style> tag é usada para definir informações de estilo (CSS) para um documento.
+
+        - Dentro do <style> elemento, você especifica como os elementos HTML devem ser renderizados em um navegador.
+
+    * DICAS E NOTAS
+        
+        - Nota: Quando um navegador lê uma folha de estilo, ele irá formatar o documento HTML de acordo com as informações da folha de estilo. Se algumas propriedades foram definidas para o mesmo seletor (elemento) em diferentes folhas de estilo, será usado o valor da última folha de estilo lida (veja o exemplo abaixo)!
+
+        - Dica: Para vincular a uma folha de estilo externa, use a tag <link> .
+
+    * ATRIBUTOS
+
+        ATTRIBUTE: media;
+        VALUE: media_query;
+        DESCRIPTION: Especifica para qual media/device o recurso de mídia é otimizado.
+        ---------------------------------
+        ATTRIBUTE: type;
+        VALUE: text/css;
+        DESCRIPTION: Especifica o tipo de mídia(media) da tag <style>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        h1{
+            color:red;
+        }
+        p{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+</body>
+</html>

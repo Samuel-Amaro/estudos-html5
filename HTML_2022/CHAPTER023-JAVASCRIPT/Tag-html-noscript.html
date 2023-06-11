@@ -1,0 +1,30 @@
+<!--
+    * A TAG HTML <noscript>
+
+        - A tag HTML <noscript> define um conteúdo alternativo a ser exibido para usuários que desabilitaram scripts em seus navegadores ou têm um navegador que não suporta scripts:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <!--
+        - define um script do lado do cliente(JavaScript) usando o elemento html <script>, para conter instruções de script
+    -->
+    <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+    <!--
+        - define um conteudo alternativo a ser exibido para usuarios que desabilitaram scripts em seus naveagdores ou tem uma navegador que não suporta scripts
+    -->
+    <noscript>
+        <p>Um navegador sem suporte para JavaScript mostrará o texto escrito dentro do elemento noscript.</p>
+    </noscript>
+
+    
+</body>
+</html>

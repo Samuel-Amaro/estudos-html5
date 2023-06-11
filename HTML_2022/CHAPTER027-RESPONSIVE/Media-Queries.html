@@ -1,0 +1,76 @@
+<!--
+    * MEDIA QUERYS(CONSULTAS DE MIDIA)
+
+        - Além de redimensionar textos e imagens, também é comum utilizar media queries em páginas web responsivas.
+
+        - Com consultas de mídia, você pode definir estilos completamente diferentes para diferentes tamanhos de navegador.
+
+        - Exemplo: redimensione a janela do navegador para ver que os três elementos div abaixo serão exibidos horizontalmente em telas grandes e empilhados verticalmente em telas pequenas:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html
+        - A janela de visualização(viewport) é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+        - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+        - A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+        - A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - define informações de estilo local  aplicadas para o documento html.
+    -->
+    <style>
+        /*propriedades css*/
+        *{
+            box-sizing: border-box;
+        }
+        .left{
+            background-color: #2196F3;
+            padding: 20px;
+            float: left;
+            width: 20%; /*the width e 20%, por padrão*/
+        }
+        .main{
+            background-color: #f1f1f1;
+            padding: 20px;
+            float: left;
+            width: 60%; /*The width is 60%, by default */
+        }
+        .right{
+            background-color: #04AA6D;
+            padding: 20px;
+            float: left;
+            width: 20%; /*The width is 20%, by default*/
+        }
+        /*Use a media query to add a break point at 800px*/
+        @media screen and (max-width: 800px) {
+            .left, .main, .right{
+                width: 100%; /*The width is 100%, when the viewport is 800px or smaller*/
+            }
+        }
+    </style>
+</head>
+</head>
+<body>
+
+    <h2>Media Queries</h2>
+    <p>Resize the browser window.</p>
+
+    <p>Make sure you reach the breakpoint at 800px whe resizing this frame</p>
+
+    <div class="left">
+        <p>Left Menu</p>
+    </div>
+
+    <div class="main">
+        <p>Main Content</p>
+    </div>
+
+    <div class="right">
+        <p>Right Content</p>
+    </div>
+</body>
+</html>

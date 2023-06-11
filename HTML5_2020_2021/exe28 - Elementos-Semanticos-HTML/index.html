@@ -1,0 +1,185 @@
+<!--
+    # ELEMENTOS SEMANTICOS DO HTML5
+     - Elementos semânticos = elementos com um significado;
+    
+     * OQUE SÃO ELEMENTOS SEMÂNTICOS ?
+      
+      - Um elemento semântico descreve claramente seu significado para o navegador e o desenvolvedor;
+      - Exemplos de elementos não semânticos : <div> e <span> - Não diz nada sobre seu conteúdo.
+      - Exemplos de semânticas elementos: <form>, <table> e <article> - Claramente define seu conteúdo.    
+    
+     * ELEMENTOS SEMÂNTICOS EM HTML
+      
+      - Muitos sites contêm código HTML como: <div id = "nav"> <div class = "header"> <div id = "footer"> para indicar navegação, cabeçalho e rodapé.
+      - Em HTML, existem alguns elementos semânticos que podem ser usados ​​para definir diferentes partes de uma página da web: 
+      - <article> = ARTIGO;
+      - <aside> = A PARTE, DE LADO;
+      - <details> = DETALHES;
+      - <figcaption> = 
+      - <figure> = figura;
+      - <footer> = rodapé;
+      - <header> = cabeçalho;
+      - <main> = a Principal;
+      - <mark> = marca;
+      - <nav> = menu de navegaçaõ com links;
+      - <section> = seção;
+      - <summary> = resumo;
+      - <time> = Tempo;
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Semanticos HTML</title>
+    <style>
+        /*configuração de estilo para a tag de artigo*/
+        article{
+            margin: 0;
+            padding: 5px;
+            background-color: lightgray;
+        }
+        /*configuração de estilo para o h2 de cada artigo e para cada paragrafo*/
+        article > h2,p {
+            margin: 4px;
+            font-size: 90%;
+        }
+        /*configuração de estilo para  as seções*/
+        section{
+             margin: 0;
+             padding: 5px;
+             background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos Semanticos Do HTML5</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dicta repellendus quidem officia adipisci quis, quia enim nisi voluptas iste dolor est ea repellat, molestias odit. Omnis animi architecto ad.</p>
+    <!--
+        * ELEMENTO HTML - <section> = seção;
+          - O <section> elemento define uma seção em um documento.
+          - De acordo com a documentação HTML do W3C: "Uma seção é um agrupamento temático de conteúdo, normalmente com um título."
+          - Uma página da web normalmente pode ser dividida em seções de introdução, conteúdo e informações de contato.
+          - exemplo de seção abaixo;
+    -->
+    <section>
+            <h1>Uma seção</h1>
+            <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961</p>
+    </section>
+    <section>
+             <h1>Segunda seção</h1>
+             <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <!--
+        * ELEMENTO HTML <article> artigo;
+          - O <article> elemento especifica conteúdo independente e autocontido;
+          - Um artigo deve fazer sentido por si só e deve ser possível distribuí-lo independentemente do resto do site;
+          - Exemplos de onde um <article> elemento pode ser usado:
+             - postagem no forum;
+             - postagem do blog;
+             - artigo de jornal;
+          - EXEMPLO DE USO DO ARTICLE:
+            três artigos com conteúdo independente e autocontido;  
+    -->
+    <article>
+            <h2>Artigo 01</h2>
+            <h2>Google Chrome</h2>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+    </article>
+    <article>
+            <h2>Artigo 02</h2>
+            <h2>Mozilla Firefox</h2>
+            <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+    </article>
+    <article>
+            <h2>Artigo 03</h2>
+            <h2>Microsoft Edge</h2>
+            <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+    </article>
+    <!--
+        * ANINHANDO <article> em <section> ou vice versa ?
+          - O <article> elemento especifica conteúdo independente e autocontido.
+          - O <section> elemento define a seção em um documento.
+          - Podemos usar as definições para decidir como aninhar esses elementos? Não nós não podemos!
+          - Assim, você encontrará páginas HTML com <section>elementos que contêm <article>elementos e <article>elementos que contêm <section>elementos.
+    -->
+    <!--
+        * ELEMENTO HTML <header> - cabeçalho;
+          - O <header> elemento representa um contêiner para conteúdo introdutório ou um conjunto de links de navegação;
+          - Um <header> elemento normalmente contém:
+            - um ou mais elementos de título(<h1> - <h6>)
+            - logotipo ou icone;
+            - informação de autoria;
+          - Você pode ter vários <header> elementos em um documento HTML. No entanto, <header> não pode ser colocado dentro de uma <footer>, <address> ou de outro <header> elemento.
+          
+          # EXEMPLO = um cabeçalho para um artigo;
+    -->
+        <article>
+                <header>
+                    <h1>Titulo do Cabeçalho</h1>
+                    <p>WWF's mission:</p>
+                </header>
+                <p>WWF's mission is to stop the degradation of our planet's natural environment,and build a future in which humans live in harmony with nature</p>
+        </article>
+        <!--
+            * ELEMENTO HTML <footer>
+              - O <footer> elemento define um rodapé para um documento ou seção.
+              - Um <footer>elemento normalmente contém:
+                - informação de autoria;
+                - informações sobre direitos autorais;
+                - informações de contato;
+                - mapa do site;
+                - voltar aos links principais;
+                - documentos relacionados;
+              - pode-se ter varios <footer> elements em um documento;
+               
+              # EXEMPLO = uma seção de rodape em um documento;  
+        -->
+        <h2>rodape</h2>
+        <footer>
+            <p>Author: Samuel Amaro</p>
+            <p><a href="mailto:hege@exemple.com">hege@exemple.com</a></p>
+        </footer>
+        <!--
+            * ELEMENTO HTML <nav>
+              - O <nav>elemento define um conjunto de links de navegação;
+              - Observe que NÃO todos os links de um documento devem estar dentro de um <nav> elemento. O <nav> elemento destina-se apenas ao bloco principal de links de navegação.
+              - Navegadores, como leitores de tela para usuários com deficiência, podem usar este elemento para determinar se deve omitir a renderização inicial deste conteúdo.
+            
+              # EXEMPLO = um conjunto de links de navegação;
+        -->
+        <h2>Menu de navegação</h2>
+        <nav>
+           <a href="#">HTML5</a>
+           <a href="#">CSS3</a>
+           <a href="#">JavaScript</a>
+           <a href="#">Jquery</a>
+        </nav>
+        <!--
+            * ELEMENTO HTML <aside>
+              - O <aside> elemento define algum conteúdo além do conteúdo em que é colocado (como uma barra lateral);
+              - O <aside> conteúdo deve estar indiretamente relacionado ao conteúdo circundante.
+              
+              # EXEMPLO = exibindo algum conteudo alem do conteudo em que é colocado;  
+        -->
+        <h2>Asside</h2>
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        <aside>
+            <h4>Epcot Center</h4>
+            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events</p>
+        </aside>
+        <!--
+            * ELEMENTO HTML <figure> e <figcaption>
+              - A <figure> tag especifica conteúdo independente, como ilustrações, diagramas, fotos, listagens de código, etc.
+              - A <figcaption> tag define uma legenda para um <figure> elemento. O <figcaption> elemento pode ser colocado como o primeiro ou o último filho de um <figure> elemento.
+              - O <img> elemento define a imagem/ilustração real. 
+                
+              # exemplo
+        -->
+        <h2>Figure e Figcaption</h2>
+        <figure>
+            <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli">
+            <figcaption>Fig1. - Legenda da figura</figcaption>
+        </figure>
+</body>
+</html>

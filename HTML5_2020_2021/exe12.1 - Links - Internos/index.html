@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+   <!-- 
+       * Links Internos, e links que liga uma pagina arquivos que estão no mesmo lugar que  meu site, que estão dentro do servidor, em link interno não precisa indicar a URL inteira, so o nome do arquivo(se estiverem todos arquivos do site, paginas etc.. tudo dentro da mesma pasta)
+       * usando o atributo rel = "", com parametro next, digo ao hiperlink semanticamente  para poder ir para uma proxima pagina, isso e dizendo semanticamente, e ajuda na navegação e indexação do site
+    --> 
+   <h1>Links Internos</h1>
+   <p>Esta e a minha primeira pagina, para poder acessar a minha segunda pagina <a href="pagina02.html" rel="next">clique aqui</a></p>
+   <!--
+       *Link interno, so que o arquivo da pagina esta dentro de uma subPasta dentro do diretorio geral dos arquivos.
+       *aplicando o atributo de navegação semantica.
+       *aplicando um atributo de abertura da pagina, isso e vai abrir a proxima pagina sobrenpondo a atual. usando o atributo target = "", aplicando o parametro _self
+   -->
+   <p>Tambem Temos uma pagina de noticia, se quiser visitar <a href="noticias/pagina03.html" rel="next" target="_self">clique aqui</a></p>
+   <!--
+       *Links Para Download.
+       *link que vai poder baixar um arquivo pdf.
+       * usando atributo Download = " ", aplicando o atributo, que vai ser o nome do arquivo.
+       * o atributo type = "", com o parametro application/pdf. diz ao navegador o tipo de arquivo que estou fornecendo para Download.
+       * existe uma lista com o site desses parametro para os arquivos. esta no capitulo no pdf dessa aula.
+   -->
+   <h1>Links Para Download</h1>
+   <ul>
+       <li><a href="arquivos-baixar/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixar Capitulo Dessa Aula</a></li>
+   </ul>
+</body>
+</html>

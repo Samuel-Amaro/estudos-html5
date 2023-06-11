@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Imagen Dinâmica</title>
+</head>
+<body>
+    <!-- desafio de imagens dinamicas-->
+    <picture>
+        <h1>Imagens Flexivel</h1>
+        <p>Olhe abaixo as imagens de ajustando de acordo com a janela</p>
+        <!-- imagens que serão carregadas de acordo com a janela-->
+        <!-- imagen que sera carregada quando a janela estiver com largura de 300px-->
+        <source media="(max-width:300px)" srcset="imagens/imagem-p.jpg" type="image/jpeg">
+        <!-- imagen que sera carregada quando a largura da pagina estiver em 750px-->
+        <source media="(max-width: 700px)" srcset="imagens/imagem-m.jpg" type="image/jpeg">
+        <!-- imagen padrão carregada junto da pagina-->
+        <img src="imagens/imagem-g.jpg" alt="imagen-padrão-carregada">
+    </picture>
+</body>
+</html>

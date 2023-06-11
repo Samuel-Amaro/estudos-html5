@@ -1,0 +1,65 @@
+<!--
+    * ANOTAR IMAGENS COM FIGURES E LEGENDS DE FIGURE
+
+        Falando em legendas, há várias maneiras de adicionar uma legenda para acompanhar sua imagem. Por exemplo, não haveria nada para impedi-lo de fazer isso:
+
+            <div class="figure">
+                <img src="images/dinosaur.jpg"
+                    alt="The head and torso of a dinosaur skeleton;
+                            it has a large head with long sharp teeth"
+                    width="400"
+                    height="341">
+
+                <p>A T-Rex on display in the Manchester University Museum.</p>
+            </div>
+
+        Isso está bem. Ele contém o conteúdo que você precisa e é bem estilizado usando CSS. Mas há um problema aqui: não há nada que vincule semanticamente a imagem à sua legenda, o que pode causar problemas para os leitores de tela. Por exemplo, quando você tem 50 imagens e legendas, qual legenda combina com qual imagem?
+
+        Uma solução melhor é usar o HTML5 <figure> e os <figcaption> elementos. Eles são criados exatamente para esse propósito: fornecer um contêiner semântico para figuras e vincular claramente a figura à legenda. Nosso exemplo acima poderia ser reescrito assim:
+
+        O <figcaption> elemento informa aos navegadores e à tecnologia assistiva que a legenda descreve o outro conteúdo do <figure> elemento.
+
+        Nota: Do ponto de vista da acessibilidade, as legendas e alt o texto têm funções distintas. As legendas beneficiam até mesmo as pessoas que podem ver a imagem, enquanto alt o texto fornece a mesma funcionalidade de uma imagem ausente. Portanto, legendas e alt texto não devem apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+
+        Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
+
+            Expressa seu significado de forma compacta e fácil de entender.
+
+            Poderia ir em vários lugares no fluxo linear da página.
+
+            Fornece informações essenciais que suportam o texto principal.
+
+        Uma figura pode ser várias imagens, um trecho de código, áudio, vídeo, equações, uma tabela ou qualquer outra coisa.
+        
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+    <!--
+        elemento figure fornece um conteiner semantico para figuras e vinvular claramente a figura a legenda
+    -->
+    <figure>
+        <!--
+            - para colocar uma imagem e uma pagina da web usamos o <img> elemento.
+            - um elemento vazio, que não tem  conteudo de texto ou tag de fechamento.
+                - requer dois atributos o src(source, caminho que aponta para a imagem que eu desejo incorporar na pagina, usando uma URL relativa ou absoluta)
+                - o atributo alt, Seu valor deve ser uma descrição textual da imagem
+                - Você pode usar os atributos width e height para especificar a largura e a altura da sua imagem.
+            - o img elemento e um elemento subtituido, o conteudo e o tamanho do elemento são definidos por um recurso externo como um arquivo de imagem, não pelo conteudo do proprio elemento.
+            -->
+        <img src="dinosaur.jpg" alt="A cabeça e o torso de um esqueleto de dinossauro; tem uma cabeça grande com longos dentes afiados" width="400" height="341"/>
+
+        <!--
+            O <figcaption> elemento informa aos navegadores e à tecnologia assistiva que a legenda descreve o outro conteúdo do <figure> elemento.
+        -->
+        <figcaption>Um T-Rex em exposição no Museu da Universidade de Manchester.</figcaption>
+    </figure>
+   
+    
+</body>
+</html>

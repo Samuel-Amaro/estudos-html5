@@ -1,0 +1,133 @@
+<!--
+    * ENTIDADES HTML
+      - Os caracteres reservados em HTML devem ser substituídos por entidades de caracteres.
+      - Alguns caracteres são reservados em HTML.
+      - Se você usar os sinais de menor que (<) ou maior que (>) em seu texto, o navegador pode misturá-los com tags
+      - As entidades de caracteres são usadas para exibir caracteres reservados em HTML;
+      - sintaxe:
+        &nomeDaEntidade;
+        OU 
+        &#numeroEntidade;
+    
+      - nome das entidades diferenciam maiusculas de minusculas
+      
+    # ESPAÇO INQUEBRAVEL  
+     - Uma entidade comumente usada em HTML é o espaço sem quebra: &nbsp; 
+     - Um espaço não separável é um espaço que não se quebra em uma nova linha.  
+     - Outro uso comum do espaço sem quebra é evitar que os navegadores truncem os espaços nas páginas HTML.
+     - Se você escrever 10 espaços em seu texto, o navegador removerá 9 deles. Para adicionar espaços reais ao seu texto, você pode usar o &nbsp; entidade de caráter. 
+    
+    * SIMBOLOS HTML
+      - Símbolos que não estão presentes em seu teclado também podem ser adicionados usando entidades;
+
+    # ENTIDADES DE SIMBOLO HTML
+     - Muitos símbolos matemáticos, técnicos e monetários não estão presentes em um teclado normal;
+     - Para adicionar esses símbolos a uma página HTML, você pode usar o nome da entidade ou o número da entidade (uma referência decimal ou hexadecimal) para o símbolo.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entidades HTML</title>
+</head>
+<body>
+    <h1>Entidades HTML</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt officiis adipisci sunt expedita neque ex quas reprehenderit, cum minus illum perferendis. Veniam in ullam aperiam reiciendis? Accusamus, unde iste!</p>
+    <h2>Entidades</h2>
+    <h3>Nome Entidade</h3>
+    <p>&it;</p>
+    <h3>Numero da entidade</h3>
+    <p>&#60;</p>
+    <h3>Algumas Entidades e simbolos</h3>
+    <table>
+        <!-- primeira linha cabeçalho-->
+        <tr>
+            <th>Descrição Entidade</th>
+            <th>Nome Entidade</th>
+            <th>Numero da entidade</th>
+        </tr>
+        <!-- linhas de dados-->
+        <tr>
+            <th>espaço inquebravel</th>
+            <th>&nbsp;</th>
+            <th>&#160;</th>
+        </tr>
+        <tr>
+            <th>menor</th>
+            <th>&it;;</th>
+            <th>&#60;</th>
+        </tr>
+        <tr>
+            <th>maior</th>
+            <th>&gt;;;</th>
+            <th>&#62;</th>
+        </tr>
+        <tr>
+            <th>e-comercial</th>
+            <th>&amp;</th>
+            <th>&#38;</th>
+        </tr>
+        <tr>
+            <th>aspas dubla</th>
+            <th>&quot;</th>
+            <th>&#34;</th>
+        </tr>
+        <tr>
+            <th>aspas simples</th>
+            <th>&apos;;</th>
+            <th>&#39;</th>
+        </tr>
+        <tr>
+            <th>cent</th>
+            <th>&cent;</th>
+            <th>&#162;</th>
+        </tr>
+        <tr>
+            <th>pound</th>
+            <th>&pound;</th>
+            <th>&#163;</th>
+        </tr>
+        <tr>
+            <th>yen</th>
+            <th>&yen;</th>
+            <th>&#165;</th>
+        </tr>
+        <tr>
+            <th>euro</th>
+            <th>&euro;</th>
+            <th>&#8364;</th>
+        </tr>
+        <tr>
+            <th>copyright</th>
+            <th>&copy;</th>
+            <th>&#169;</th>
+        </tr>
+        <tr>
+            <th>registered trademark</th>
+            <th>&reg;;</th>
+            <th>&#174;</th>
+        </tr>
+        <tr>
+            <th>Descrição Simbolos Matematicos</th>
+            <th>Nome</th>
+            <th>Numero</th>
+        </tr>
+        <tr>
+            <th>SOMA DE VARIOS NUMEROS</th>
+            <th>&Sum;</th>
+            <th>&#8721;</th>
+        </tr>
+        <tr>
+            <th>Descrição Letras Gregas</th>
+            <th>Nome</th>
+            <th>Numero</th>
+        </tr>
+        <tr>
+            <th>Letra capital grega Zeta</th>
+            <th>&Zeta;</th>
+            <th>&#918;</th>
+        </tr>
+    </table>
+</body>
+</html>

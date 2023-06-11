@@ -1,0 +1,54 @@
+<!--
+    * O ATRIBUTO PADRÃO(PATTERN)
+
+        - O atributo input pattern especifica uma expressão regular com a qual o valor do campo de entrada é verificado quando o formulário é enviado.
+
+        - O pattern atributo funciona com os seguintes tipos de entrada: texto(text), data(date), pesquisa(search), url(url), tel(tel), email(email) e senha(password).
+
+        - Dica: Use o atributo global title para descrever o padrão para ajudar o usuário.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo pattern(padrão) de entrada(inputy)</h2>
+
+    <p>O atributo pattern especifica uma expressão regular com a qual o valor do elemento de entrada é verificado.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="country_code">Country code:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo pattern, especifica uma expressão regular, com o qual o valor do campo de entrada e verificado, quando o formulario e enviado. a expressão regular abaixo possui o seguinte padrão: um conjunto que corresponda somente caracteres de palavras, que corresponda especificamente três caracteres de palavra.
+            - o atributo title e usado para ajudar a descreevr o padrão para o usuario.
+            - usuario entra com um texto.
+        -->
+        <input type="text" id="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p><strong>Nota:</strong> O atributo pattern da tag de entrada não é compatível com o Safari 10 (ou anterior).</p>
+    
+</body>
+</html>

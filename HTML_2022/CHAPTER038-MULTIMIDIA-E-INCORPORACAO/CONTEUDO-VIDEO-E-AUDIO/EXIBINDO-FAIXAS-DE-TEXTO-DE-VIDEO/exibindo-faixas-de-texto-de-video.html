@@ -1,0 +1,58 @@
+<!--
+    * EXIBINDO FAIXAS DE TEXTO DE VÍDEO
+
+        Agora vamos discutir um conceito um pouco mais avançado que é realmente útil conhecer. Muitas pessoas não podem ou não querem ouvir o conteúdo de áudio/vídeo que encontram na Web, pelo menos em determinados momentos. Por exemplo:
+
+            Muitas pessoas têm deficiências auditivas (como deficiência auditiva ou surdez), então não conseguem ouvir o áudio com clareza, se é que conseguem.
+
+            Outros podem não conseguir ouvir o áudio porque estão em ambientes barulhentos (como um bar lotado quando um jogo esportivo está sendo exibido).
+
+            Da mesma forma, em ambientes onde a reprodução de áudio seria uma distração ou interrupção (como em uma biblioteca ou quando um parceiro está tentando dormir), ter legendas pode ser muito útil.
+
+            As pessoas que não falam o idioma do vídeo podem querer uma transcrição de texto ou até mesmo uma tradução para ajudá-las a entender o conteúdo da mídia.
+
+        Não seria bom poder fornecer a essas pessoas uma transcrição das palavras ditas no áudio/vídeo? Bem, graças ao vídeo HTML, você pode. Para isso, usamos o formato de arquivo WebVTT<track> e o elemento.
+
+        Nota: "Transcrever" significa "escrever palavras faladas como texto". O texto resultante é uma "transcrição".
+
+        WebVTT é um formato para escrever arquivos de texto contendo várias sequências de texto junto com metadados, como o tempo no vídeo em que cada sequência de texto deve ser exibida e até mesmo informações limitadas de estilo/posicionamento. Essas strings de texto são chamadas de cues e existem vários tipos de cues que são usados ​​para diferentes propósitos. As dicas mais comuns são:
+
+            subtitle(subtitulo): Traduções de material estrangeiro, para pessoas que não entendem as palavras ditas no áudio.
+
+            captions(legendas): Transcrições sincronizadas de diálogos ou descrições de sons significativos, para que as pessoas que não conseguem ouvir o áudio entendam o que está acontecendo.
+
+            descrições cronometradas(timed descriptions): Texto que deve ser falado pelo reprodutor de mídia para descrever recursos visuais importantes para usuários cegos ou com deficiência visual.
+
+        Um arquivo WebVTT típico terá a seguinte aparência:
+
+            WEBVTT
+
+            1
+
+            00:00:22.230 - - > 00:00:24.606
+            This is the first subtitle.
+
+            2
+
+            00:00:30.739 - - > 00:00:34.074
+            This is the second.
+
+            …
+
+        Para que isso seja exibido junto com a reprodução de mídia HTML, você precisa:
+
+            Salve-o como um .vtt arquivo em um local sensato.
+
+            Link para o .vtt arquivo com o <track> elemento. <track> deve ser colocado dentro de <audio> ou <video>, mas depois de todos os <source> elementos. Use o kind atributo para especificar se as dicas são subtitles, captions ou descriptions. Além disso, use srclang para informar ao navegador em que idioma você escreveu as legendas. Por fim, adicione label para ajudar os leitores a identificar o idioma que estão procurando.
+
+            Aqui está um exemplo:
+
+        <video controls>
+            <source src="example.mp4" type="video/mp4">
+            <source src="example.webm" type="video/webm">
+            <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish">
+        </video>    
+
+    
+        Observação: as faixas de texto também ajudam no SEO , já que os mecanismos de pesquisa prosperam especialmente no texto. As faixas de texto até permitem que os mecanismos de pesquisa vinculem diretamente a um ponto no meio do vídeo
+-->

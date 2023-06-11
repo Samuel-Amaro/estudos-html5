@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <!-- CHAMANDO UM ESTILO EXTERNO, UMA CONFIGURAÇÃO DE CSS EXTERNA, PARA SER APLICADA, NESSE DOCUMENTO HTML -->
+    <link rel="stylesheet" href="estilo-externo-cx-02.css">
+</head>
+<body>
+    <!--
+        * Tags de agrupamento GENERICO; Sempre foram duas tags basicas de agrupamento(<div> <span>);
+         * caixa de tipo box-level; <div></div>
+         * caixa de tipo inline-level; <span></span> 
+        * mas aqui vamos aprender tags de agrupamento novas, que são semanticas, que são a nova forma de deselvolver com o html5 moderno;
+        * aprendendo essas tags de agrupamentos semanticas, ajuda na costrução do site semanticamente, toda parte do site vai ter siginificado, vai ajudar na indexação, e entedimento de todo o conteudo do site;
+        * as tags abaixo são semanticas, todas elas são uma div, so que com significado, possui semantica cada uma, das tags abaixos;
+        * elas são uma div, são divs especias, tags especias, gruping de tags semanticas, para organização e desenvolvimento moderno do site;
+    -->
+    <!--* cabeçalho do site, apresentação do site, pode ser cabeçalho de um seção o artigo tambem;-->
+    <header>
+        <h1 id = "titulo_principal">Meu Site</h1>
+        <!-- cria um menu dentro do cabeçalho do site, define a area de navegação dentro do site, cria navegaçaõ entre as estruturas de paginas dentro de um web-site-->
+        <nav>
+            <a href="#" target="external">Pagina 1</a>
+            <a href="#" target="external">Pagina 2</a>
+            <a href="#" target="external">Pagina 3</a>
+            <a href="#" target="exteRnal">Pagina 4</a>
+            <a href="#" target="external">Pagina 5</a>
+        </nav>
+    </header>
+    <!-- * e um agrupador de elementos(como article,section,asside) onde o conteudo principal do site se concentra; -->
+    <main>
+         <!-- 
+              * seção para a pagina principal do site;
+              * uma section pode conter o conteudo em seu proprio corpo, ou dividir os conteudos em artigos, com conteudos especificos;
+              * uma seção e um agrupamento tematico de conteudos;
+        -->
+        <!-- uma seção para conteudo relacionado a assuntos-->
+         <section id = "assunto">
+           
+         </section>
+         <!-- outra seção para conteudo relacionado a noticias-->
+         <section id = "noticias">
+           <!-- 
+               * tag artigo;
+               * vai conter um conteudo que pode ser lido de maneira independente;
+               * e dizem respeito ao mesmo assunto;
+               * ex: um post, uma noticia;
+            -->
+           <article>
+             <h2>Noticias 01</h2>
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis sequi amet dolorum ipsum repellendus  perferendis, praesentium eius reprehenderit sunt ducimus, cum perspiciatis nihil impedit minima repellat iste? Officia, sed sint. 
+             </p>
+             <!-- 
+                 * asside: outra tag semantica;
+                 * Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo  ou seção;
+                 * Normalmente um conteúdo <aside> está posicionado ao lado de um  determinado texto ou até mesmo no meio dele
+             -->
+             <aside>Noticia escrita por Samuel Amaro</aside>   
+           </article>
+           <article>
+            <h2>Noticia 02</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem modi ipsa illo ipsam provident adipisci deserunt nobis quasi hic ducimus quas aliquid non voluptatibus voluptate asperiores unde, quisquam at tempora.</p>
+            <aside>Noticia Escrita por Raul Seixas</aside>   
+        </article>
+         </section>
+    </main>
+    <!-- 
+        * rodape do site;
+        * Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte  diretamente do conteúdo nem é um conteúdo periférico;
+        * mas possui informações sobre autoria do conteúdo, links adicionais, mapa  do site, documentos relacionados.
+    -->
+    <footer>
+       <p>Desenvolvido por Samuel Amaro</p>
+    </footer>
+</body>
+</html>

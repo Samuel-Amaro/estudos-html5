@@ -1,0 +1,46 @@
+<!--
+    * EVENTO DE TECLADO(ONKEYPRESS) NA IMPRESSÃO-CHAVE
+
+      - O atributo onkeypress é disparado quando o usuário pressiona uma tecla (no teclado).
+
+      - Dica: a ordem dos eventos relacionados ao evento onkeypress:
+
+        onkeydown
+        onkeypress
+        onkeyup
+
+      - Nota: O evento onkeypress não é disparado para todas as teclas (por exemplo, ALT, CTRL, SHIFT, ESC) em todos os navegadores. Para detectar apenas se o usuário pressionou uma tecla, use onkeydown , pois funciona para todas as teclas.
+
+      <element onkeypress="script">
+
+     - TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Teclado</title>
+</head>
+<body>
+    
+    <h1>Evento teclado onkeypress(tecla pressionada no teclado)</h1>
+
+    <p><strong>Exemplo: </strong>Execute um JavaScript quando um usuário pressiona uma tecla:</p>
+
+    <p>Uma função é disparada quando o usuário pressiona uma tecla no campo de entrada.</p>
+
+    <!--campo de  entrada-->
+    <input type="text" onkeypress="mesage()">
+
+    <!--função java script que mostra uma mensagem ao usuario pressionar um tecla-->
+
+    <script>
+        function mesage() {
+            alert('Você pressiounou uma tecla dentro do campo de entrada!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!--
+    * POR QUE IMAGENS RESPONSIVAS?
+
+        Vamos examinar um cenário típico. Um site típico pode conter uma imagem de cabeçalho e algumas imagens de conteúdo abaixo do cabeçalho. A imagem do cabeçalho provavelmente abrangerá toda a largura do cabeçalho e a imagem de conteúdo caberá em algum lugar dentro da coluna de conteúdo. Aqui está um exemplo simples:
+
+        Isso funciona bem em um dispositivo de tela ampla, como um laptop ou desktop Não discutiremos muito o CSS nesta lição, exceto para dizer que:
+
+            O conteúdo do corpo foi definido para uma largura máxima de 1.200 pixels — em viewports acima dessa largura, o corpo permanece em 1.200 pixels e centraliza-se no espaço disponível. Em viewports abaixo dessa largura, o corpo permanecerá em 100% da largura da viewport.
+
+            A imagem do cabeçalho foi definida de forma que seu centro sempre permaneça no centro do cabeçalho, não importa a largura em que o cabeçalho esteja definido. Se o site estiver sendo visualizado em uma tela mais estreita, o detalhe importante no centro da imagem (as pessoas) ainda poderá ser visto, e o excesso será perdido em ambos os lados. Tem 200px de altura.
+
+            As imagens de conteúdo foram definidas para que, se o elemento do corpo se tornar menor que a imagem, as imagens comecem a encolher para que fiquem sempre dentro do corpo, em vez de transbordar.
+
+        No entanto, surgem problemas quando você começa a visualizar o site em um dispositivo de tela estreita. O cabeçalho abaixo parece bom, mas está começando a ocupar muito da altura da tela de um dispositivo móvel. E nesse tamanho, é difícil ver os rostos das duas pessoas na primeira imagem do conteúdo.
+
+        Uma melhoria seria exibir uma versão recortada da imagem que exibe os detalhes importantes da imagem quando o site é visualizado em uma tela estreita. Uma segunda imagem recortada pode ser exibida para um dispositivo de tela de largura média, como um tablet. O problema geral pelo qual você deseja veicular diferentes imagens recortadas dessa maneira, para vários layouts, é comumente conhecido como problema de direção de arte(ART DIRECTION PROBLEM) 
+
+        Além disso, não há necessidade de incorporar imagens tão grandes na página se ela estiver sendo visualizada em uma tela de celular. E, inversamente, uma pequena imagem raster começa a parecer granulada quando exibida maior que seu tamanho original (uma imagem raster é um número definido de pixels de largura e um número definido de pixels de altura, como vimos quando analisamos gráficos vetoriais ). Isso é chamado de problema de comutação de resolução.(RESOLUTION SWITCHING PROBLEM).
+
+        Por outro lado, não é necessário exibir uma imagem grande em uma tela significativamente menor do que o tamanho para o qual ela foi projetada. Fazer isso pode desperdiçar largura de banda; em particular, os usuários móveis não querem desperdiçar largura de banda baixando uma imagem grande destinada a usuários de desktop, quando uma imagem pequena serviria para seu dispositivo. Idealmente, várias resoluções seriam disponibilizadas para o navegador da web do usuário. O navegador pode então determinar a resolução ideal para carregar com base no tamanho da tela do dispositivo do usuário.
+
+        Para tornar as coisas mais complicadas, alguns dispositivos têm telas de alta resolução que precisam de imagens maiores do que você poderia esperar para exibir bem. Este é essencialmente o mesmo problema, mas em um contexto ligeiramente diferente.
+
+        Você pode pensar que as imagens vetoriais resolveriam esses problemas, e elas resolvem até certo ponto – elas são pequenas em tamanho de arquivo e dimensionam bem, e você deve usá-las sempre que possível. No entanto, eles não são adequados para todos os tipos de imagem. Imagens vetoriais são ótimas para gráficos simples, padrões, elementos de interface, etc., mas começa a ficar muito complexo criar uma imagem baseada em vetor com o tipo de detalhe que você encontraria em, digamos, uma foto. Formatos de imagem raster, como JPEGs, são mais adequados para o tipo de imagem que vemos no exemplo acima.
+
+        Esse tipo de problema não existia quando a web existia pela primeira vez, no início e meados dos anos 90 - naquela época os únicos dispositivos existentes para navegar na web eram desktops e laptops, então engenheiros de navegadores e escritores de especificações nem pensaram em implementar soluções. Tecnologias de imagem responsiva foram implementadas recentemente para resolver os problemas indicados acima, permitindo que você ofereça ao navegador vários arquivos de imagem, todos mostrando a mesma coisa, mas contendo diferentes números de pixels ( alternância de resolução - resolution switching), ou imagens diferentes adequadas para diferentes alocações de espaço ( direção de arte - art direction).
+
+        Observação: os novos recursos discutidos neste artigo — srcset/ sizes/ <picture>— são todos suportados em navegadores modernos para desktop e dispositivos móveis (incluindo o navegador Edge da Microsoft, embora não o Internet Explorer).
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Not responsive demo</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            background-color: gray;
+        }
+
+        body {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        header {
+            background: url(header.jpg) no-repeat center;
+            height: 200px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>My website</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget venenatis ligula. Ut lacinia at
+                dolor vitae pulvinar. Aliquam pretium dignissim eros. Integer faucibus, dui non aliquet bibendum, lectus
+                orci lobortis odio, ornare porttitor est tellus eget velit. Nulla eros elit, malesuada id neque vel,
+                viverra vehicula neque. Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu venenatis
+                libero tempor, ac pulvinar ligula dapibus.</p>
+
+            <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+
+            <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend
+                luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas
+                rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis
+                dignissim.</p>
+
+            <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+            <p>Header image originally by <a href="https://www.flickr.com/photos/miwok/17086751527/">Miwok</a>.</p>
+        </section>
+    </main>
+
+</body>
+</html>

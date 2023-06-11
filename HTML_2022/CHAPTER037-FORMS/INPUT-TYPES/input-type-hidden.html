@@ -1,0 +1,58 @@
+<!--
+    * INPUT TYPE HIDDEN(TIPO DE ENTRADA OCULTO)
+
+        - O <input type="hidden"> define um campo de entrada oculto (não visível para um usuário).
+
+        - Um campo oculto permite que os desenvolvedores da Web incluam dados que não podem ser vistos ou modificados pelos usuários quando um formulário é enviado.
+
+        - Um campo oculto geralmente armazena o registro do banco de dados que precisa ser atualizado quando o formulário é enviado.
+
+        - Observação: embora o valor não seja exibido para o usuário no conteúdo da página, ele fica visível (e pode ser editado) usando as ferramentas de desenvolvedor de qualquer navegador ou a funcionalidade "Exibir código-fonte". Não use entradas ocultas como forma de segurança!
+
+        - O input elemento representa um valor que não deve ser examinado ou manipulado pelo usuário.
+
+        - Validação de restrição : se o atributo input de um elemento estiver no estado Oculto , ele será impedido de validação de restrição .type
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Um campo oculto(procure no codigo-fonte)</h2>
+
+    <p>O <strong>&lt;input type="hidden"&gt;</strong> é usado para campos de entrada que devem ser ocultados</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="fname">First name:</label>
+        <!--
+            - o <input type="text"> define um campo de entrada de texto de linha unica.
+            - usuario entra com um texto de linha unica 
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <br/>
+        <!--
+            - o elemento <input type="hidden">, define um campo de entrada oculto (não visível para um usuário). 
+        -->
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p><strong>Nota:</strong> O campo oculto não é mostrado ao usuário, mas os dados são enviados quando o formulário é enviado.</p>
+</body>
+</html>

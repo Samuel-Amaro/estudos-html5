@@ -1,0 +1,62 @@
+<!--
+    * O ELEMENTO <select>
+
+        - O <select> elemento define uma lista suspensa:
+
+        - Os <option> elementos definem uma opção que pode ser selecionada.
+
+        - Por padrão, o primeiro item na lista suspensa é selecionado.
+
+        - Para definir uma opção pré-selecionada, adicione o selected atributo à opção:
+
+        - Use o size atributo para especificar o número de valores visíveis:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Valores de opções visíveis</h2>
+
+    <p>Use o atributo size para especificar o número de valores visíveis.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do elemento a ser rotulado para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="cars">Escolha um carro:</label>
+        <!--
+            - o elemento de formulario <select> define uma lista suspensa.
+            -  Use o size atributo para especificar o número de valores visíveis: aqui dizemos que na lista suspensa de 4 itens somente 3 são visiveis
+        -->
+        <select name="cars" id="cars" size="3">
+            <!--
+                - <option> elementos definem uma opção que pode ser selecionada.
+                - por padrão o primeiro item na lista suspenso e selecionado.
+            -->
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

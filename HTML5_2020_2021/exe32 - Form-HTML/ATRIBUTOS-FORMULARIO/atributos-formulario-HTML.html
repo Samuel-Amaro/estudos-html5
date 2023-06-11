@@ -1,0 +1,169 @@
+<!--
+    * ATRIBUTOS DE FORMULARIO
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos do Formulario</title>
+</head>
+<body>
+    <h1>Atributos de Formulario</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit sapiente quo est eius veniam ducimus laboriosam iure. Maxime officiis ea tempore voluptatum animi quas odio numquam, rem sapiente nisi?</p>
+    <h2>Atributos de Formualario</h2>
+    <p>todos atributos que um formulario pode ter</p>
+    <h2>Atributo de Ação - ACTION</h2>
+    <!--
+        * ATRIBUTO ACTION - ATRIBUTO DE AÇÃO
+
+         - O actionatributo define a ação a ser executada quando o formulário é enviado;
+         - Normalmente, os dados do formulário são enviados para um arquivo no servidor quando o usuário clica no botão enviar;
+         - Se o action atributo for omitido, a ação é definida para a página atual; no caso usaremos # a propria pagina
+    -->
+    <!-- formulario -->
+    <form action="#">
+        <!-- label -->
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+        <br>
+        <!-- label -->
+        <label for="segundo_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="segundo_nome" name="segundo_nome">
+        <br>
+        <!--botão-->
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <h2>Atributo de Destino - TARGET</h2>
+    <p>os dados que foram setados no formulario e foram enviados, sera mostrado em uma nova guia</p>
+    <!--
+        * ATRIBUTO DE DESTINO - TARGET
+
+         - O target atributo especifica onde exibir a resposta recebida após o envio do formulário.
+         - O target atributo pode ter um dos seguintes valores:
+
+            _blank : A resposta é exibida em uma nova janela ou guia;
+            _self : A resposta é exibida na janela atual;
+            _parent : A resposta é exibida no quadro pai;
+            _top : A resposta é exibida em todo o corpo da janela;
+            framename : A resposta é exibida em um iframe nomeado;
+    -->
+    <!-- formulario -->
+    <form action="#" target="_blank">
+        <!-- label -->
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+        <br>
+        <!-- label -->
+        <label for="segundo_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="segundo_nome" name="segundo_nome">
+        <br>
+        <!--botão-->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Atributo do método - method</h2>
+    <!--
+        * ATRIBUTO DO MÉTODO - METHOD
+
+         - O method atributo especifica o método HTTP a ser usado ao enviar os dados do formulário.
+         - Os dados do formulário podem ser enviados como variáveis ​​de URL (com method="get") ou como transação HTTP post (com method="post").
+         - O método HTTP padrão ao enviar dados do formulário é GET.
+         
+         - Notas sobre GET:
+
+           Acrescenta os dados do formulário ao URL, em pares nome / valor
+           NUNCA use GET para enviar dados confidenciais! (os dados do formulário enviado são visíveis no URL!)
+           O comprimento de um URL é limitado (2.048 caracteres)
+           Útil para envios de formulários onde um usuário deseja marcar o resultado
+           GET é bom para dados não seguros, como strings de consulta no Google;
+
+         - Notas no POST:
+
+            Acrescenta os dados do formulário dentro do corpo da solicitação HTTP (os dados do formulário enviado não são mostrados no URL)
+            O POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados.
+            Os envios de formulários com POST não podem ser marcados;
+
+          - Sempre use POST se os dados do formulário contiverem informações confidenciais ou pessoais!
+    -->
+    <!-- method: get or post;-->
+    <!-- formulario -->
+    <form action="#" target="_blank" method="get">
+        <!-- label -->
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+        <br>
+        <!-- label -->
+        <label for="segundo_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="segundo_nome" name="segundo_nome">
+        <br>
+        <!--botão-->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>O Atributo de Preenchimento Automático - autocomplete</h2>
+    <p>digite um valor nos campos do formulario, apague esse valores, depois digiti-os de novo par ver o atributo autocomplete funcionando</p>
+    <!--
+        * O ATRIBUTO DE PREENCHIMENTO AUTOMÁTICO - AUTOCOMPLETE
+
+         - O autocomplet eatributo especifica se um formulário deve ter o preenchimento automático ativado ou desativado;
+         - Quando o preenchimento automático está ativado, o navegador completa os valores automaticamente com base nos valores que o usuário inseriu anteriormente.
+    -->
+    <!-- formulario -->
+    <form action="#" target="_blank" method="get" autocomplete="on">
+        <!-- label -->
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+        <br>
+        <!-- label -->
+        <label for="segundo_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="segundo_nome" name="segundo_nome">
+        <br>
+        <!--botão-->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Atributo sem validação - novalidate</h2>
+    <!--
+        * ATRIBUTO NOVALIDATE - SEM VALIDAÇÃO DE DADOS
+
+         - O novalidate atributo é um atributo booleano.
+         - Quando presente, especifica que os dados do formulário (entrada) não devem ser validados ao serem enviados
+    -->
+     <!-- formulario -->
+     <form action="#" target="_blank" method="get" autocomplete="on" novalidate>
+        <!-- label -->
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+        <br>
+        <!-- label -->
+        <label for="segundo_nome">Primeiro Nome:</label>
+        <br>
+        <!-- caixa de texto-->
+        <input type="text" id="segundo_nome" name="segundo_nome">
+        <br>
+        <!--botão-->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

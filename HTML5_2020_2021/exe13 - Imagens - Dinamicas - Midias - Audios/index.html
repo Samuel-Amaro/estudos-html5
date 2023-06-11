@@ -1,0 +1,70 @@
+<!-- para entender todo essa aula, redimensione, varias vezes, o navegador na pagina atual desse documento, vai e volta e percebera os efeitos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias Em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir essa pagina em varios dispotivos diferentes <br>
+       ou simplesmente, fique redimensionando a pagina aberta.  
+     </p>
+     <!-- 
+        Colocando imagens dinamicas no documento HTML5.
+        imagens que vão ser dinamicas, vão ser abertas de acordo com o dispositivo que for aberto, para abrir a pagina. Em telefones, tablets, computador.
+        usando a tag abaixo
+    -->
+    <picture>
+        <!-- 
+            a tag abaixo abre uma imagem. mas essa imagem so sera aberta e usada na pagina quando algum desses atributos na tag forem acionados. 
+            a tag source possui os seguintes atributos.
+            type vai indicar o media type da imagem que usamos.
+            srcset vai configurar o nome da imagem que será carregada quando o tamanho
+            indicado for atingido(tamanho da janela, documento html5).
+            media indica o tamanho máximo a ser considerado para carregar a imagem
+            indicada no atributo srcset.
+            a tag source vai controlar o redimensionamento da imagem na pagina de acordo com o espaço permitido pelo dispotivo no visor ou monitor ou tela,levando em conta tamem o tm da imagem disponivel.
+        -->
+        <source media="(max-width: 750px)" srcset="imagens/imagem-p.png" type="image/png">
+        <!-- 
+            a tag abaixo, carrega uma imagem de tamanho medio. isso e a tela e menor que a de um computador.
+            a tag source vai controlar o redimensionamento da imagem na pagina de acordo com o espaço permitido pelo dispotivo no visor ou monitor ou tela,levando em conta tamem o tm da imagem disponivel.
+            o max-with(diz assim enquanto estiver espaço de 1000px, carrega a seguinte imagem no argumento type)
+        -->
+        <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
+       <!-- a tag abaixo esta,carregando a imagem padrão que eu quero usar quando a pagina for aberta, independente do dispositivo que esta sendo usado. imagem de tamnho grande-->
+        <img src="imagens/imagem-g.png" alt="imagem flexivel">
+        <!-- a hierarquia da flexibilidade das imagens serem abertas para cada tipo de dispositivo, e de cima para baixo, da imagem padrão que vai ser aberta independente do dispositivo, ate as outras que ja possuem um tamanho especifico para poderem serem usadas na pagina.-->
+    </picture>
+    <h1>Reproduzindo Aúdio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!-- 
+        Como mostrar audio no documento HTML5, como deixar o audio disponivel no ducumento HTML5. para ser ouvido.
+        como mostrar uma midia no documento HTML5. um audio. 
+        usando a tag abaixo. a tag audio.
+        atributos da tag audio.
+         *preload(diz se a midia vai ser pre-carrega junto com o site ou não). o atributo  preload aceita os seguintes parametros.
+          metadata(vai carregar apenas as informações sobre o arquivo (tamanho,
+          tempo, informações de direitos, etc)).
+          none(não vai carregar absolutamente nada até que o usuário clique no botão
+          play ou um script inicie a reprodução).
+          auto((padrão) vai carregar o arquivo de áudio inteiro assim que a página for
+          carregada, mesmo que o usuário nunca aperte o play)
+        *O atributo controls vai apresentar o player na tela. Caso não seja colocado na   tag  <audio>, o controle será transparente e o usuário não poderá interagir com ele.
+        *O atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que
+        a página for carregada.
+        *O atributo loop vai fazer com que o áudio seja repetido eternamente assim que
+         terminar a sua reprodução.
+    -->
+    <audio preload="metadata" autoplay controls loop>
+        <!-- 
+            Dentro da tag <audio>, adicionamos vários <source> com formatos diferentes do
+            mesmo áudio. para que haja total compatibilidade co navegador, a media typr informada. Coloque na parte de cima o seu formato favorito. Os demais só serão carregados caso o de cima falhe.-->
+         <source src="midias/guanacast-33.mp3" type="audio/mpeg">
+         <source src="midias/guanacast-33.ogg" type="audio/ogg">
+         <source src="midias/guanacast-33.wav" type="audio/wav">      
+    </audio>
+</body>
+</html>

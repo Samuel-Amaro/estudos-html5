@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <!-- 
+        * Aplicando um estilo local, dentro do documento HTML5;
+        * Aplicando uma configuração de CSS local no documento HTML5;
+    -->
+    <style>
+     /*
+      * aplicando uma cor nas div, para identificalas;
+      * alinhando as div ao centro da pagina;
+      * colocando cada div de um tamanho 200 x 200;
+      * aplicando uma borda em cada div = de um tamanho de 1px com uma cor solida aplicada;
+      * usando uma shorthand para aplicar uma borda em cada div: largura tipo cor;
+      * colocando as div na mesma linha; fazendo um alinhamento horizontal;
+      */
+     div{
+        background-color: lightgrey;
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        display: inline-block;
+     }
+     /*
+      * (:) significa que esta se usando uma pseudo-classe;
+      * uma pseudo-classe tem que esta relacionado a um elemento(ID #) ou a uma classe(class .);
+      * pseudo-classes, são relacionadas a um estado de um determinado elemento(Se ele ta ativo, marcado,vazio,habilitado);
+      * uma pseudo-classe consegue configurar um estado de um elemento;
+     */
+     /*
+      * (hover) e um tipo de pseudo-classe, que configura um estado de um elemento;
+      * hover(e uma pseudo classe de varios elementos);
+      * hover == quando eu passar o mause por cima;
+      * quando estou com alguma coisa por cima do elemento;
+      * no caso, quando eu passar o mouse por cima da div;
+      * vai mudar o estado da vid, para a configuração que vou aplicar;
+      * so passar o mouse por cima de qualquer div que vai perceber;
+     */
+     div:hover{
+              background-color: yellow;
+     }
+    </style>
+</head>
+<body>
+    <!-- 
+        * uma div e um espaço qualquer; 
+        * ocupa um espaço horizontal dentro da pagina inteira;
+        * aplicando uma configuração de CSS personalizada, usando um SELETOR PERSONALIZADO DE CSS, O ID;
+        * cada div vai possuir um identificador de personalização de CSS;
+    -->
+    <div id = "d1">01</div>
+    <div id = "d2">02</div>
+    <div id = "d3">03</div>
+</body>
+</html>

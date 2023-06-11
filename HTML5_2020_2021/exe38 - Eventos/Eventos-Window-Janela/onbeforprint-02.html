@@ -1,0 +1,41 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML ONBEFOREPRINT
+
+     - O atributo onbeforeprint dispara quando uma página está prestes a ser impressa (antes que a caixa de diálogo de impressão apareça).
+
+     - O atributo onbeforeprint é freqüentemente usado junto com o atributo onafterprint .
+
+    * SINTAXE
+
+      <element onbeforeprint="script">
+
+      script : O roteiro a ser executado antes da impressão
+
+      ESSE EVENTO SO E SUPORTADADO NA TAG HTML <body>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML onbeforeprint</title>
+</head>
+<body onbeforeprint="minhaFuncao()">
+    
+    <h1>Evento HTML onbeforeprint(antes de imprimir)</h1>
+    
+    <p><strong>Execute um JavaScript quando uma página estiver prester a ser impressa:</strong></p>
+
+    <h2>Tente imprimir este documento</h2>
+
+    <p><strong>Dica: </strong> atalhos de teclado, como Ctrl + P definem a página a ser impressa.</p>
+
+    <!--Script a ser executado antes que o documento seja impresso-->
+    <script>
+        function minhaFuncao() {
+            alert("Você está prestes a imprimir este documento!")
+        }
+    </script>
+</body>
+</html>

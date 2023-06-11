@@ -1,0 +1,66 @@
+<!--
+    * ELEMENTS INLINE(EMBUTIDOS)
+
+        - Um elemento embutido não inicia em uma nova linha.
+
+        - Um elemento embutido ocupa apenas a largura necessária.
+
+        - Aui estão os elementos embutidos em HTML:
+
+            <a>
+            <bdo>
+            <cite>
+            <i>
+            <label>
+            <q>
+            <small>
+            <sup>
+            <var>
+            <abbr>
+            <big>
+            <code>
+            <img>
+            <map>
+            <samp>
+            <span>
+            <textarea
+            <acronym>
+            <br>
+            <dfn>
+            <input>
+            <object>
+            <script>
+            <strong>
+            <time>
+            <b>
+            <button>
+            <em>
+            <kbd>
+            <output>
+            <select>
+            <sub>
+            <tt>
+
+        - Nota: Um elemento embutido(inline) não pode conter um elemento de nível de bloco(block level)!
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Elementos Embutidos(inline)</h2>
+
+    <!--
+        - o elemento <p> e um elemento que possui um valor de exibição - display como block(um elemento de bloco).
+        - o elemento <p> e um elemento de nivel de bloco, que começa em uma nova linha, e os navegadores adicionam espaço(margin antes e depois do elemento).
+        - o elemento de nivel de bloco sempre ocupa toda a largura disponivel, se estende da esquerda para direita.
+        - usando o atributo style de forma embutida na tag para adicionar uma propriedade css que adiciona borda somente neste elemento <span>.
+        - o elemento <span> aninhado dentro da tag <p>, e um elemento embutido(inline), um elemento inline, não inicia em uma nova linha(e criado na mesma linha, inicia na mesma linha), e ocupa somente a largura necessaria(somente o conteudo que ele contém).
+    -->
+    <p>Este é um elemento <span style="border: 1px solid black;">Olá Mundo</span> dentro de um parágrafo.</p>
+    
+    <p>O elemento SPAN é um elemento embutido e não começará em uma nova linha e ocupará apenas a largura necessária.</p>
+</body>
+</html>

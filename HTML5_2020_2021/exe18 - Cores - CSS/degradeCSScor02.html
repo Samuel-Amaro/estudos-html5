@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <!-- aplicando um estilo CSS Local no documento HTML-->
+    <style>
+        /* Configuração global de CSS*/
+        * {
+            height: 100%;
+        }
+        /* aplicando um estilo a tag BODY*/
+        body{
+            /*
+            * aplicando um degrade no documento HTML. 
+            * começando aplicando um degrade linear.
+            * os parametros da função são:
+              (direção,quantidade de cores que eu quiser); 
+            * direção: pode ser o nome da direção, ou o angulo em graus: ex 90deg;
+            * quantidade de cores: com o argumento da direção do degrade informado, corretamente, as cores informadas vai sendo mostrada na pagina, de acordo com a direção e quantidade de cores. tipo vai para direita, com cores, branco e azul. começa a esquerda da pagina pelo branco e vai seguindo para direita preenchendo com o azul. 
+             em cada cor posso colocar a quantidade da cor no gradiente, tipo azul 10%, preto 9%, informado em porcentagem;
+            */
+            background-image: linear-gradient(to right,#E0DD8D 30%,#736094,#9265E0);
+            /* 
+            * com os parametros informados, o degrade vai ser localizado no fundo da pagina. 
+            * E vai começar da direita para a esquerda, do branco para o azul.
+               se quiser mais degrade com mais cores, so  informa mais cores
+            */
+            background-attachment: fixed;
+            /*
+            Configuração para o fundo da pagina ficar fixa, no caso onde o gradiente, degradê se localiza
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>

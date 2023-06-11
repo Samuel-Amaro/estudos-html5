@@ -1,0 +1,25 @@
+/*aplicando uma regra CSS para compatibilidade de acentuações*/
+@charset "UTF-8";
+    /* 
+       * criando um seletor para a tag <body> </body>;
+       * tudo dentro do seletor, vai ser aplicado a tag, e tudo aplicado a tag atinge todo conteudo, ou função que ela faz. isso e vai ser aplicado a tag.
+       * cada linha de seletor e uma declaração     
+    */
+     body{
+         background-color: lemonchiffon;/*aplica cor de fundo*/
+         font-family: Georgia, 'Times New Roman', Times, serif;/*aplica uma fonte*/
+         font-size: 20px;/*tm da fonte*/
+     } 
+     /* criando outro seletor, agora para o H1, esse estilo de h1, vai ser aplicado a todos os H1 existentes no documento
+     */
+     h1{
+        color: darkgreen;/*aplica uma cor ao titulo*/ 
+     }
+     /* outro seletor, agora para o h2*/
+     h2{
+         color: crimson;/*aplica uma cor ao titulo*/
+     }
+     /* criando um seletor para paragrafo*/
+     p{
+        text-align: justify;/*justificando meu texto, no caso paragrafos*/ 
+     }

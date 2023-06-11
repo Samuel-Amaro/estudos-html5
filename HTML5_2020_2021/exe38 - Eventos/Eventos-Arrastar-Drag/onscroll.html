@@ -1,0 +1,68 @@
+<!--
+    * EVENTOS DE ARRASTAR
+    * 
+    * ATRIBUTO DE EVENTO HTML ONSCROLL
+    * 
+    * DEFINIÇÃO E USO
+    *
+    *  O atributo onscroll é acionado quando a barra de rolagem de um elemento está sendo rolada.
+    * 
+    * Dica: use a propriedade de estilo de OVERFLOW de CSS para criar uma barra de rolagem para um elemento.
+    * 
+    * SINTAXE:
+    * 
+    * <element onscroll="script">
+    * 
+    * TAGS HTML SUPORTADAS: 
+    * 
+    * <address>, <blockquote>, <body>, <caption>, <center>, <dd>, <dir>, <div>, <dl>, <dt>, <fieldset>, <form>, <h1 > para <h6>, <html>, <li>, <menu>, <objeto>, <ol>, <p>, <pre>, <select>, <tbody>, <textarea>, <tfoot>, <thead>, <ul>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo onscroll</title>
+    <style>
+        div#bloco{
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-left: 1px;
+            border-style: solid;
+            border-color: black;
+            width: 200px;
+            height: 100px;
+            /*conteudo maior que o elemento que o contem adiciona barra de rolagem*/
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atributos de evento  arrastar HTML onscroll</h1>
+    <p><strong>Exemplo:</strong> Execute um JavaScript quando um elemento &lt;div&gt; estiver sendo rolado:</p>
+
+    <p>Experimente a barra de rolagem em div.</p>
+
+    <div id="bloco" onscroll="mudaCorTexto()">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quia a ut, dolorem cumque nesciunt tempore tempora perferendis fugit illo vitae delectus architecto, iusto quasi quisquam suscipit? Magnam, fugit natus.
+        <br>
+        <br>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis officia ad expedita voluptatum corporis doloribus saepe, et sit laboriosam fugiat explicabo eaque, consectetur non maiores quas recusandae quibusdam odio illum.
+    </div>
+
+    <!--java script inline, java script local-->
+    <script>
+        /**
+         * Função java script que muda a cor do texto de um elemento selecionado pelo seu id;
+         * */
+        function mudaCorTexto() {
+            document.getElementById("bloco").style.color = "red";
+        }
+    </script>
+
+    <p>Uma função é acionada quando você rola em div. A função define a cor do texto em div para vermelho.</p>
+</body>
+</html>

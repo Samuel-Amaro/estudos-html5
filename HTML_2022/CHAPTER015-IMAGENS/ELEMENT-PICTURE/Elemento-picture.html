@@ -1,0 +1,46 @@
+<!--
+    * ELEMENTO HTML <picture>
+
+        - O elemento HTML <picture> permite exibir imagens diferentes para diferentes dispositivos ou tamanhos de tela.
+
+        - O elemento HTML <picture> oferece aos desenvolvedores da Web mais flexibilidade na especificação de recursos de imagem.
+
+        - O <picture> elemento contém um ou mais <source> elementos, cada um referindo-se a diferentes imagens por meio do src set atributo. Desta forma, o navegador pode escolher a imagem que melhor se adapta à visualização e/ou dispositivo atual.
+
+        - Cada <source> elemento possui um media atributo que define quando a imagem é a mais adequada.
+
+        - Observação: sempre especifique um <img> elemento como o último elemento filho do <picture> elemento. O <img> elemento é usado por navegadores que não suportam o <picture> elemento ou se nenhuma das <source>tags corresponder.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h2>O elemento picture</h2>
+
+    <p>Redimensione o navegador para ver diferentes versões da imagem sendo carregada em diferentes tamanhos de janela de visualização. O navegador procura o primeiro elemento de origem em que a consulta de mídia corresponde à largura da janela de visualização atual do usuário e busca a imagem especificada no atributo srcset.</p>
+
+    <p>O elemento img é necessário como a última tag filho do bloco de declaração de imagem. O elemento img é usado para fornecer compatibilidade com versões anteriores para navegadores que não suportam o elemento picture ou se nenhuma das tags de origem corresponder.</p>
+
+    <p>Observação: o elemento de imagem não é compatível com IE12 e versões anteriores ou Safari 9.0 e versões anteriores.</p>
+
+    <p><strong>Mostrar imagens diferentes para diferentes tamanhos de tela:</strong></p>
+
+    <!--
+        - o elemento html <picture> permite exibir imagens diferentes para diferentes dispositivos ou tamanhos de tela.
+
+        - o elemento <picture> contém um ou mais elementos <source>, cada um referise a diferentes imagens por meio do srcset atributo
+    -->
+    <picture>
+        <!--o elemento <source> referese a diferentes imagens por meio do atributo srcset, o elemento possui um atributo chamado media que define quando a imagen é mais adequada-->
+        <source media="(min-width: 650px)" srcset="../imgs/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="../imgs/img_car.jpg">
+        <!--usamos o <img> elemento como ultimo elemento filho do <picture> elemento. o <img> elemento e usado por navegadores que não suportam o <picture> elemento ou se nenhuma das <sources> tags correponder.-->
+        <img src="../imgs/img_girl (1).jpg" style="width: auto;">
+    </picture>
+
+</body>
+</html>

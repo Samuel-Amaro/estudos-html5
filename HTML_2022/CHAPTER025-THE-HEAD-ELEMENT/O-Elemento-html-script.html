@@ -1,0 +1,44 @@
+<!--
+    * O ELEMENTO HTML <script>
+
+        - O <script> elemento é usado para definir JavaScripts do lado do cliente.
+
+        - O JavaScript a seguir escreve "Hello JavaScript!" em um elemento HTML com id="demo":
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--
+    - o elemento <head> e um conteiner para metadados,(dados sobre dados)
+    - Metadados são dados sobre o documento HTML, não são exibidos no navegador.
+    - o elemento <head> fica entre a tag <html> e <body>
+-->
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html, define um titulo para o documento.
+        - o elemento <title>, define um titulo do documento, o titulo deve ser so texto.
+        - o titulo definido e mostrado na barra de titulo do navegador ou na aba da pagina
+        - o title elemento e obrigatorio em um documento <html>
+    -->
+    <title>Título da página</title>
+     <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - define um script do lado do cliente(JavaScript) usando o elemento html <script>, para conter instruções de script.
+    -->
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Olá JavaScript!";
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Meu primeiro JavaScript</h2>
+
+    <p>JavaScript pode alterar o conteúdo de um elemento HTML:</p>
+
+    <button type="button" onclick="myFunction()">Clique em mim!</button>
+
+    <p id="demo">Esta é uma demostração</p>
+
+</body>
+</html>

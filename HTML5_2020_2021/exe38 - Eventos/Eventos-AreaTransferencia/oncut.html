@@ -1,0 +1,66 @@
+<!--
+    * EVENTOS DA AREA DE TRANSFERENCIA DE UMA PAGINA HTML
+
+    * ATRIBUTO DE EVENTO HTML oncut - em corte
+
+    * DEFINIÇÃO E USO
+
+        - O atributo oncut é disparado quando o usuário corta o conteúdo de um elemento.
+        - 
+        - Nota: Embora o atributo oncut seja suportado por todos os elementos HTML, não é realmente possível cortar o conteúdo de, por exemplo, um elemento <p>, A MENOS que o elemento tenha definido contenteditable como "true"
+        - 
+        - Dica: O atributo oncut é usado principalmente em elementos <input> com type = "text".
+        - 
+        - Dica: Existem três maneiras de cortar o conteúdo de um elemento:
+
+            - Pressione CTRL + X
+            - 
+            - Selecione "Cortar" no menu Editar do seu navegador
+            - 
+            - Clique com o botão direito para exibir o menu de contexto e selecione o comando "Cortar"
+
+    * SINTAXE:
+
+         <element oncut = "script">
+
+    * TAGS HTML SOPORTADAS: TODOS os elementos HTML
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atributo evento oncut</title>
+</head>
+<body>
+    <h1>Eventos da area de trasferencia de uma pagina HTML</h1>
+    <h2>Atributo de evento HTML oncut(em corte)</h2>
+    <p><strong>Exemplo:</strong> Execute um JavaScript ao cortar algum texto em um elemento &lt;input&gt;: </p>
+
+    <!--atributo de evento da area de trasnferencia, esta ativado para executar um javascript ao texto do elemento ter sido cortado-->
+    <input type="text" oncut="setText()" value="tente recortar este texto">
+
+    <p id="demo"></p>
+
+    <!--java script interno(local)-->
+    <script>
+        /**
+         * função java script que seta um texto em um elemento HTML, selecionado pelo seu id
+        **/
+        function setText() {
+            document.getElementById("demo").innerHTML = "Você recortou o texto!";
+        }
+
+        function alerta() {
+            alert("Você recortou o texto!");
+        }
+    </script>
+
+    <p><strong>Exemplo 2:</strong> Execute um JavaScript ao cortar algum texto de um elemento &lt;p&gt; (observe que contenteditable está definido como "true")</p>
+
+    <!--atributo esta ativado para executar um java script ao texto do elemento ter sido recortado-->
+    <p contenteditable="true" oncut="alerta()">Tente recortar este texto</p>
+</body>
+</html>

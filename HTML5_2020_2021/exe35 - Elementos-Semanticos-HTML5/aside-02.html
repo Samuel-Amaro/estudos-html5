@@ -1,0 +1,50 @@
+<!--
+    * TAG HTML <aside>
+    
+    * DEFINIÇÃO E USO
+
+     - A <aside> tag define algum conteúdo além do conteúdo em que é colocada.
+     - O conteúdo aparte deve estar indiretamente relacionado ao conteúdo circundante.
+     - Dica: O <aside>conteúdo geralmente é colocado como uma barra lateral em um documento.
+     - Nota: O <aside> elemento não é renderizado como algo especial em um navegador. No entanto, você pode usar CSS para definir o estilo do <aside> elemento (veja o exemplo abaixo).
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag aside</title>
+    <style>
+        /*estilizando o elemento aside*/
+        aside{
+            /*definido uma largura para o elemento asside*/
+            width: 30%;
+            /*add um espaço interno entre a borda do elemento e o conteudo*/
+            padding-left: 15px;
+            /*add um espaço externo da borda para fora, um espaço ao redor da caixa*/
+            margin-left: 15px;
+            /*fazendo o elemento asside flutuar para a direita*/
+            float: right;
+            /*configurando a fonte para ser uma fonte italica*/
+            font-style: italic;
+            /*add um cor de fundo ao elemento*/
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tag semantica aside</h1>
+    <p><b>Exemplo:</b> Exiba algum conteúdo além do conteúdo em que é colocado:</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam, consequuntur rerum nesciunt cupiditate, exercitationem fugiat nulla dicta error harum commodi assumenda facilis iusto? Laboriosam enim rem deserunt esse maiores.</p>
+    <aside>
+        <h4>Asside conteudo</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia odio esse ea asperiores explicabo placeat sint molestiae iste id aliquam maiores odit doloribus debitis, est, aspernatur accusamus nesciunt deleniti labore.</p>
+    </aside>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus rerum, at suscipit sit aperiam voluptatem. Dolore unde accusamus culpa consectetur ex aspernatur corporis. Consectetur sint, earum ex voluptatem mollitia exercitationem!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque sint molestias reiciendis at blanditiis repudiandae quas tempore molestiae culpa labore? Deleniti, cumque iste! Dolorum incidunt qui suscipit officia maiores animi.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione deleniti quo cumque error nihil vitae natus unde dolore, provident harum nobis architecto ipsam delectus pariatur, eos, id quia accusamus porro.</p>
+</body>
+</html>

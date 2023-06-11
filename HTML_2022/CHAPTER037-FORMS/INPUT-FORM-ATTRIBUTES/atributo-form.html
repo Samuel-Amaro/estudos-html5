@@ -1,0 +1,62 @@
+<!--
+    * ATRIBUTOS FORM* DE INPUT
+
+        - Este capítulo descreve os diferentes form* atributos para o <input> elemento HTML.
+
+    * O ATRIBUTO FORM
+
+        - O form atributo input especifica o formulário ao qual o <input> elemento pertence.
+
+        - O valor deste atributo deve ser igual ao atributo id do elemento <form> ao qual ele pertence.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo form(formulario) de entrada(input)</h2>
+
+    <p>O atributo form especifica o formulário ao qual um elemento de entrada pertence.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo id, especifica um valor unico e  exclusivo para identificar um elemento, neste caso identificamos este elemento <form> como form1
+    -->
+    <form id="form1">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo autofocus, especifica que um campo de entrada deve obter o foco automaticamente, quando a pagina for carregada.
+            - o campo de entrada de texto unico vai obter o foco quando a pagina for carregada/iniciada.
+            - usuario entra com um texto.
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>O campo "Sobrenome" abaixo está fora do elemento de formulário, mas ainda faz parte do formulário.</p>
+
+    <label for="lname">Last Name:</label>
+    <!--
+        - o atributo form do elemento <input type="teste"> especifica o formulário ao qual este input pertence.
+        - O valor deste atributo deve ser igual ao atributo id do elemento <form> ao qual ele pertence.
+    -->
+    <input type="text" id="lname" name="lname" form="form1"/>
+</body>
+</html>

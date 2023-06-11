@@ -1,0 +1,47 @@
+<!--
+    * RADIO BUTTONS(BOTÃO RADIO)
+
+        - O <input type="radio"> define um botão de rádio.
+
+        - Os botões de opção permitem que o usuário selecione UMA dentre um número limitado de opções.
+
+        - Um formulário com botões de opção:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Botões do rádio</h2>
+
+    <p>Escolha sua linguagem da Web favorito:</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        
+        <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - Exibe um botão de opção (para selecionar uma das muitas opções)
+        -->
+        <input type="radio" id="html" name="fav_language" value="HTML"/>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="html">HTML</label>
+        <br/>
+        <input type="radio" id="css" name="fav_language" value="CSS"/>
+        <label for="css">CSS</label>
+        <br/>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript"/>
+        <label for="javascript">JavaScript</label>
+    </form>
+
+</body>
+</html>

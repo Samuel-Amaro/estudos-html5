@@ -1,0 +1,46 @@
+<!--
+    * ATRIBUTO GLOBAL HTML - DATA-*(dados)
+
+      - Os data-*atributos são usados ​​para armazenar dados personalizados privados para a página ou aplicativo;
+
+      - Os data-*atributos nos fornecem a capacidade de incorporar atributos de dados personalizados em todos os elementos HTML.
+
+      - Os dados armazenados (personalizados) podem então ser usados ​​no JavaScript da página para criar uma experiência de usuário mais envolvente (sem quaisquer chamadas Ajax ou consultas de banco de dados do lado do servidor).
+
+      - Os data-*atributos consistem em duas partes:
+
+        1. O nome do atributo não deve conter letras maiúsculas e deve ter pelo menos um caractere depois do prefixo "dados-"
+
+        2. O valor do atributo pode ser qualquer string;
+
+        NOTA: Os atributos personalizados prefixados com "dados-" serão completamente ignorados pelo agente do usuário. o usuario não ver essas informações do atributo data;
+
+
+
+    * SINTAXE:
+
+      <element data-nome-campo*="somevalue"
+
+      - VALORES DE ATRIBUTO:
+
+       somevalue(algum valor) : Especifica o valor do atributo (como uma sequência);
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Global HTML data</title>
+</head>
+<body>
+    <h1>Atributo Global HTML - data-*(dados)</h1>
+    <p>Usado para armazenar dados personalizados privados para a página ou aplicativo</p>
+    <ul>
+        <li data-animal-type="passaro">Coruja</li>
+        <li data-animal-type="peixe">Salmão</li>
+        <li data-animal-type="aranha">Tarantula</li>
+    </ul>
+</body>
+</html>

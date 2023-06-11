@@ -1,0 +1,58 @@
+<!--
+    * RESTRINGINDO OS VALORES DE SUAS ENTRADAS
+
+        - Para campos numéricos (ou seja <input type="number">, ), os atributos min e max podem ser usados ​​para fornecer um intervalo de valores válidos. Se o campo contiver um valor fora desse intervalo, ele será inválido.
+
+        - Aqui você verá que demos ao text campo a minlength e maxlength de seis, que é o mesmo comprimento de banana e cereja.
+
+        - Também demos ao number campo um min de um e um max de dez. Os números inseridos fora desse intervalo serão exibidos como inválidos; os usuários não poderão usar as setas de incremento/decremento para mover o valor para fora desse intervalo. Se o usuário inserir manualmente um número fora desse intervalo, os dados serão inválidos. O número não é obrigatório, portanto, remover o valor ainda resultará em um valor válido.
+
+        - Observação: <input type="number"> (e outros tipos, como range e date) também podem receber um step atributo, que especifica em qual incremento o valor aumentará ou diminuirá quando os controles de entrada forem usados ​​(como os botões de número para cima e para baixo). No exemplo acima, não incluímos um step atributo, então o valor padrão é 1. Isso significa que floats, como 3.2, também serão exibidos como inválidos.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Fruta inicial favorita</title>
+    <style>
+        /*quando o elemento input não possui um valor, corresponde a essa pseudo class :invalid */
+        input:invalid {
+            border: 2px dashed red;
+        }
+        /*quando o elemento input possui um valor valido, corresponde a essa pseudo classe :valid*/
+        input:valid {
+            border: 2px solid black;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div>
+            <label for="choose">Você prefere uma banana ou uma cereja?</label>
+            <!--
+                - o atributo required, torna o campo de entrada obrigatorio, o usuario tem que entrar com o valor no campo de entrada.
+                - o atributo minLength especifica o número minimo de caracteres permitidos em um campo de entrada. o campo de entrada não aceitará menos do que o número especificado de caracteres.
+                - o atributo maxLenght especifica o número maximo de caracteres permitidos em um campo de entrada. o campo de entrada não aceitará mais do que o número especificado de caracteres.
+                - o campo de entrada de texto de linha unico aceita no minimo 6 caracteres e no maximo 6.
+            -->
+            <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"/>
+        </div>
+        <div>
+            <label for="number">Quantos quer?</label>
+            <!--
+                - atributo min e max os atributos especificam os valores mínimo e máximo para um campo de entrada.
+                - juntos estes atributos especificam um intervalo de valores validos, qualquer valor fora desse intervalo e um valor invalido, corresponde a pseudo-classe invalid.
+            -->
+            <input type="number" id="number" name="amount" value="1" min="1" max="10"/>
+        </div>
+        <div>
+            <button type="submit">Enviar preferência.</button>
+        </div>
+    </form>
+</body>
+</html>

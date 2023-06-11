@@ -1,0 +1,56 @@
+<!--
+    * O ATRIBUTO FORMNOVALIDATE
+
+        - O atributo input formnovalidate especifica que um elemento <input> não deve ser validado quando submetido.
+
+        - Nota: Este atributo substitui o atributo novalidate do <form> elemento.
+
+        - O formnovalidate atributo funciona com os seguintes tipos de entrada: submit.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo formnovalidate de entrada(input)</h2>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="email">Entre com seu email:</label>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="email">  é usado para campos de entrada que devem conter um endereço de e-mail.
+            - usuario entra com um email
+            - o atributo required, especifica que o preenchimento deste campo e obrigatorio, antes do formulario ser enviado.
+        -->
+        <input type="email" id="email" name="email" required/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Enviar"/>
+        <!--
+            -O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - o atributo formnovalidate, especifica que um elemento <input> não deve ser validado quando submetido.
+            - quando o form for submetido por meio deste submit o campo de entrada ou os campos de entrada no formualrio não serão validados, são enviados sem validação.
+        -->
+        <input type="submit" formnovalidate="formnovalidate" value="Enviar sem validação"/>
+    </form>
+
+    <p><strong>Observação:</strong> o atributo formnovalidate da tag de entrada não é compatível com o Safari 10 (ou anterior).</p>
+ 
+</body>
+</html>

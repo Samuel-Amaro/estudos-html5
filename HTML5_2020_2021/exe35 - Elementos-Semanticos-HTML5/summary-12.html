@@ -1,0 +1,69 @@
+<!--
+    * TAG HTML <summary>
+
+     - A <summary> tag define um título visível para o elemento <details> . O título pode ser clicado para visualizar / ocultar os detalhes.
+    
+     - Observação: o <summary> elemento deve ser o primeiro elemento filho do elemento <details>.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag details</title>
+    <style>
+        /*estilizando o titulo*/
+        details > summary{
+            /*add espaço interno dentro do elemento summary, da borda para dentro em todos os lados, add um espaço interno entre a borda e conteudo*/
+            padding-top: 4px;
+            padding-right: 4px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+            /*configurando uma largura para o elemento*/
+            width: 200px;
+            /*Add um cor de fundo*/
+            background-color: #eeeeee;
+            /* sem um preenchimento*/
+            border: none;
+            /*add sombra*/
+            box-shadow: 1px 1px 2px #bbbbbb;
+            /*cursor do mouse*/
+            cursor: pointer;
+        }
+
+        /*paragrafo*/
+        details > p{
+             /*cor de fundo*/
+             background-color: #eeeeee;
+             /*Add um espaço interno*/
+             padding-top: 4px;
+             padding-right: 4px;
+             padding-bottom: 4px;
+             padding-left: 4px;
+             /*tirando todo espaço externo*/
+             margin-top: 0;
+             margin-right: 0;
+             margin-left: 0;
+             margin-bottom: 0;
+             /*add uma sombra*/
+             box-shadow: 1px 1px 2px #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>TAG SEMANTICA &lt;summary&gt;</h1>
+    <p>Define um título visível para um &lt;details&gt; element</p>
+    <p><b>Exemplo: </b>Especifique os detalhes que o usuário pode abrir e fechar sob demanda:</p>
+    <h2>O elemento de detalhes</h2>
+    <p><b>Exemplo: </b>TAG details sem o uso do atributo open</p>
+    <details>
+        <!-- titulo-->
+        <summary>Clique Aqui e Veja os detalhes</summary>
+        <!--
+            os detalhes a ser mostrado
+        -->
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam repellendus saepe suscipit quasi eaque tempore esse pariatur, sit dolorem minima, tempora, perferendis provident quia necessitatibus quam ex molestias libero quisquam?</p>
+    </details>
+</body>
+</html>

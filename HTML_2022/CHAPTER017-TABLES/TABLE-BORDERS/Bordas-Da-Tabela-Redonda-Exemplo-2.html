@@ -1,0 +1,71 @@
+<!--
+    * BORDAS DA TABELA REDONDA
+
+        - Com a border-radius propriedade, as bordas ganham cantos arredondados:
+
+        - Pule a borda ao redor da mesa deixando de fora table do seletor css:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+
+        th, td{
+            /*propriedade css que adiciona bordas nos elementos th, td vai ter borda em cada celula da tabela, tanto de cabeçalho quanto de dado*/
+            border: 1px solid black;
+            /*usando a propriedade css abaixo para arredondar os cantos das bordas, no caso arrendonda os cantos das bordas das celulas dos elementos td, e th(celulas de cabeçalho e dado)*/
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Table com bordas arredondadas</h2>
+
+    <p>Use a propriedade CSS border-radius para adicionar cantos arredondados às células da tabela</p>
+
+    <!--define uma tabela, permitindo organizar os dados em linhas e colunas-->
+    
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <!--
+                - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+            -->
+            <th>Primeiro Nome</th>
+            <th>Último Nome</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Véspera</td>
+            <td>Jakson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>Corça</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

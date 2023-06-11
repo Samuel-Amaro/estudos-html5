@@ -1,0 +1,51 @@
+<!--
+    * O ATRIBUTO DE FOCO AUTOMÁTICO
+
+        - O autofocus atributo input especifica que um campo de entrada deve obter foco automaticamente quando a página for carregada.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo de foco automatico(autofocus) de input</h2>
+
+    <p>O atributo autofocus especifica que o campo de entrada deve obter foco automaticamente quando a página for carregada.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo autofocus, especifica que um campo de entrada deve obter o foco automaticamente, quando a pagina for carregada.
+            - o campo de entrada de texto unico vai obter o foco quando a pagina for carregada/iniciada.
+            - usuario entra com um texto.
+        -->
+        <input type="text" id="fname" name="fname" autofocus/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

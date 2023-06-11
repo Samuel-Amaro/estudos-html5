@@ -1,0 +1,89 @@
+<!--
+    * CABEÇALHO PARA VÁRIAS COLUNAS(HEADER FOR MULTIPLE COLUMNS)
+
+        - Você pode ter um cabeçalho que se estende por duas ou mais colunas.
+
+        - Para fazer isso, use o colspan atributo no <th> elemento:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+
+        table, th, td{
+            /*propriedade css que adiciona bordas nos elementos th, td, e table, vai ter borda na tabela, e em cada celula da tabela vai ter borda também*/
+            border: 1px solid black;
+            /*para evitar bordas duplas, bordas na tabela e bordas nas celulas, usamos a propriedade css abaixo, para que as bordas sejam reduzidas a uma unica borda, borda somente na tabela geral*/
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 5px;
+            /*usando a propriedade css abaixo podemos alinhar um cabeçalho a esquerda, neste caso todas as celulas de cabeçalho serão alinhadas a esquerda, e todas as celulas de dados também*/
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Um cabeçalho que abrange duas colunas</h2>
+
+    <p>Use o atributo colspan para ter um cabeçalho estendido em várias colunas.</p>
+
+    <!--
+        - define uma tabela, permitindo organizar os dados em linhas e colunas.
+
+        - por meio do atributo style no elemento <table> usando a propriedade css width para especificar a largura da tabela, aqui nete caso espeficamos que a tabela e 100% ampla na sua largura, pode ocupar todo espaço
+        
+    -->
+    
+    <table style="width: 100%;">
+        <caption>Economias Mensais</caption>
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <!--
+                - - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+
+                - o elemento <th> define um cabeçalho para a tabela
+
+                - cada th elemento represent uma celula de dado, que e um cabeçalho para a tabela
+
+                - th e o mesmo que table header
+
+                - usando o atributo colspan para poder ter um cabecalho que se estende por mais de um coluna, aqui este cabecalho, esta celula de cabecalho se estendera por duas colunas.
+            -->
+            <th colspan="2">Name</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Véspera</td>
+            <td>Jakson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>Corça</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

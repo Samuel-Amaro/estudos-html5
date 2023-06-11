@@ -1,0 +1,62 @@
+<!--
+ * IMAGENS SENDO INSERIDAS E CONFIGURADAS USANDO A TAG STYLE;
+ - Os width, height e style atributos são todos válidos em HTML.
+ - No entanto, sugerimos usar o styleatributo. Impede que as folhas de estilo alterem o tamanho das imagens:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Tag style</title>
+    <style>
+        /*seletor de tag*/
+        img{
+            /*largura da imagen*/
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p>Imagem sendo inserida com a tag img configurada os atributos de largura e altura</p>
+    <!--
+        Imagen sendo inserida, e configurada pelos atributos de largura e altura
+    -->
+    <img src="imagens/logo-css-200.png" alt="logo css" width="128" height="128">
+    <p>outra imagen sendo configurada pela tag style dentro da tag img</p>
+    <img src="imagens/logo-css-200.png" alt="logo css" style="width: 128px;height: 128px;">
+    <p>Imagens em outra pasta</p>
+    <!--
+        Imagens em outra pasta
+        - Se você tiver suas imagens em uma subpasta, deverá incluir o nome da pasta no src atributo:
+    -->
+    <img src="imagens/logo-css-200.png" alt="logo css" style="width: 128px;height: 128px;">
+    <p>Imagens em outro servidor/site</p>
+    <!--
+        - Alguns sites apontam para uma imagem externa em outro servidor.
+        - Para apontar para uma imagem em outro servidor, você deve especificar um URL absoluto (completo) no srcatributo:
+    -->
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+    <p>Imagens animadas</p>
+    <!--
+        html permite gifs animados
+    -->
+    <img src="imagens/programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+    <p>Imagem como um link</p>
+    <!--
+        Para usar uma imagen como link, coloque a <img> tag dentro da <a> tag:
+    -->
+    <a href="biopython.org">
+        <img src="imagens/smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+    </a>
+    <p>Imagen flutuante</p>
+    <!--
+        use a FLOAT propriedade CSS para deixar a imagem flutuar á direita ou á esquerda de um texto
+    -->
+    <p><img src="imagens/smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.</p>
+        
+    <p><img src="imagens/smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.</p>
+</body>
+</html>

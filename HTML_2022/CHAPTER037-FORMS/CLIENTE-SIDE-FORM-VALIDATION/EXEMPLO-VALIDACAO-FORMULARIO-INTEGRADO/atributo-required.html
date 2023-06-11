@@ -1,0 +1,54 @@
+<!--
+    * EXEMPLOS DE VALIDAÇÃO DE FORMULARIO INTEGRADO
+
+        - usa recursos de validação de formulário HTML5
+
+    * O ATRIBUTO required(obrigatorio)
+
+        - O recurso de validação HTML5 mais simples é o required atributo. Para tornar uma entrada obrigatória, adicione este atributo ao elemento. Quando esse atributo é definido, o elemento corresponde à pseudoclasse da :required interface do usuário e o formulário não será enviado, exibindo uma mensagem de erro no envio quando a entrada estiver vazia. Enquanto estiver vazia, a entrada também será considerada inválida, correspondendo à pseudoclasse da :invalid interface do usuário.
+
+        - Adicione um required atributo à sua entrada, conforme mostrado abaixo.
+
+        - Este CSS faz com que a entrada tenha uma borda vermelha tracejada quando inválida e uma borda preta sólida mais sutil quando válida. Também adicionamos um gradiente de plano de fundo quando a entrada é obrigatória e inválida. 
+
+        - Tente enviar o formulário sem um valor. Observe como a entrada inválida fica em foco, uma mensagem de erro padrão ("Por favor, preencha este campo") aparece e o formulário é impedido de ser enviado.
+
+        - A presença do required atributo em qualquer elemento que suporte esse atributo significa que o elemento corresponde à :required pseudoclasse, independentemente de ter um valor ou não. Se o <input> não tiver valor, o input corresponderá à :invalid pseudoclasse.
+
+        - Observação: para uma boa experiência do usuário, indique ao usuário quando os campos do formulário forem obrigatórios. Não é apenas uma boa experiência do usuário, é exigida pelas diretrizes de acessibilidade das WCAG . Além disso, exija apenas que os usuários insiram os dados que você realmente precisa: Por exemplo, por que você realmente precisa saber o gênero ou o título de alguém?
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Fruta inicial favorita</title>
+    <style>
+        /*quando o elemento input não possui um valor corresponde a essa pseudo class :invalid */
+        input:invalid {
+            border: 2px dashed red;
+        }
+        /*quando o elemento input não possui valor, e possui o atributo obrigatorio corresponde a essas pseudo-classes, :invalid, e :required*/
+        input:invalid:required{
+            background-image: linear-gradient(to right, pink, lightgreen);
+        }
+        /*quando o elemento input possui um valor valido corresponde a essa pseudo classe :valid*/
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="choose">Você prefere uma banana ou uma cereja?(obrigatorio)</label>
+        <!--
+            o atributo required, torna o campo de entrada obrigatorio, o usuario tem que entrar com o valor no campo de entrada
+            - esse atributo corresponde a pseudo class css :required independente de ter valor ou não
+            - se o input elemento não tiver valor corresponde a pseudo-classe :invalid
+        -->
+        <input type="text" id="choose" name="i_like" required/>
+        <button type="submit">Enviar preferência.</button>
+    </form>
+</body>
+</html>

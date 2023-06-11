@@ -1,0 +1,31 @@
+<!--
+    * ADICIONANDO SVG ÁS SUAS PÁGINAS
+
+        Nesta seção, veremos as diferentes maneiras pelas quais você pode adicionar gráficos vetoriais SVG às suas páginas da web.
+
+    * * A maneira rápida: img elemento 
+
+        Para incorporar um SVG por meio de um <img> elemento, você só precisa referenciá-lo no atributo src como seria de esperar. Você precisará de um height ou um width atributo (ou ambos se o seu SVG não tiver proporção inerente). Se ainda não o fez, leia Imagens em HTML .
+
+        <img
+        src="equilateral.svg"
+        alt="triangle with all three sides equal"
+        height="87"
+        width="100" />
+        
+        Prós
+
+            Sintaxe de imagem rápida e familiar com equivalente de texto integrado disponível no alt atributo.
+
+            Você pode transformar a imagem em um hiperlink facilmente aninhando <img> dentro de um <a> elemento.
+
+            O arquivo SVG pode ser armazenado em cache pelo navegador, resultando em tempos de carregamento mais rápidos para qualquer página que usar a imagem carregada no futuro.
+
+        Contras
+
+            Você não pode manipular a imagem com JavaScript.
+
+            Se você deseja controlar o conteúdo SVG com CSS, deve incluir estilos CSS embutidos em seu código SVG. (Folhas de estilo externas invocadas do arquivo SVG não têm efeito.)
+
+            Você não pode reestilizar a imagem com pseudoclasses CSS (como :focus).
+-->

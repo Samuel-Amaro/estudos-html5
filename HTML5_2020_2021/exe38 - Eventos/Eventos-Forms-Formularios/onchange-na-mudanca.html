@@ -1,0 +1,74 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO ONCHANGE(NA MUDANÇA)
+
+        - Dispara o momento em que o valor do elemento é alterado
+
+        - Dica: este evento é semelhante ao evento oninput . A diferença é que o evento oninput ocorre imediatamente após o valor de um elemento ser alterado, enquanto onchange ocorre quando o elemento perde o foco. A outra diferença é que o evento onchange também funciona em elementos <select>.
+
+        - SINTAXE:
+
+            <element onchange="script">
+
+        - VALORES DE ATRIBUTO:
+
+            script : O script a ser executado em onchange;
+
+        - TAGS HTML SUPORTADAS: <input type = "checkbox">, <input type = "file">, <input type = "password">, <input type = "radio">, <input type = "range">, <input type = " search ">, <input type =" text ">, <select> e <textarea>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onchange</title>
+</head>
+<body>
+
+    <h1>Eventos de Formulario onchange(na mudança)</h1>
+
+    <p><strong>Exemplo: </strong> Execute um JavaScript quando um usuário alterar a opção selecionada de um elemento &lt;select&gt;</p>
+
+    <p><strong>Selecione um carro novo da lista</strong></p>
+
+    <!--usando elementos de um formulario sem um furmulario associado-->
+
+    <select name="selectCarros" id="selectCarros" onchange="getSelecao()">
+         <option value="Audi">Audi</option>
+         <option value="BMW">BMW</option>
+         <option value="Mercedes">Mercedes</option>
+         <option value="Volvo">Volvo</option>
+    </select>
+
+    <p>Quando você seleciona um novo carro, uma função é acionada e gera o valor do carro selecionado.</p>
+
+    <!--mostrara o resultado do elemento selecionado no select atraves da função java script que captura o resultado e seta o valor nesse elemento HTML-->
+    <p id="resultadoSelecao"></p>
+
+    <!--função java script que obtem o elemento selecionado do campo select-->
+    <script>
+        function getSelecao() {
+            var x = document.getElementById("selectCarros").value;
+            document.getElementById("resultadoSelecao").innerHTML = "OPÇÃO SELECIONADA: " + x;
+        }
+    </script>
+
+    <p><strong>Modifique o texto no campo de entrada e clique fora do campo para disparar o evento onchange.</strong></p>
+
+    <label for="labelTexto">Insira algum texto</label>
+
+    <input type="text" id="campoTexto" name="txt" value="Óla" onchange="getAlteraCampo(this.value)">
+
+    <!--função java script que mostra o novo valor no campo de texto-->
+    <script>
+        function getAlteraCampo(val) {
+            alert("O valor de entrada mudou. O novo valor é: " + val);
+        }
+    </script>
+</body>
+</html>

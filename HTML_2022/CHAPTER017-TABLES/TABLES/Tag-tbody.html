@@ -1,0 +1,98 @@
+<!--
+    * TAG HTML <tbody>
+
+    * DEFINIÇÃO E USO
+
+        - A <tbody> tag é usada para agrupar o conteúdo do corpo em uma tabela HTML.
+
+        - O <tbody>(CORPO) elemento é usado em conjunto com os elementos <thead>(CABEÇALHO) e <tfoot>(RODAPE) para especificar cada parte de uma tabela (corpo, cabeçalho, rodapé).
+
+        - Os navegadores podem usar esses elementos para permitir a rolagem do corpo da tabela independentemente do cabeçalho e do rodapé. Além disso, ao imprimir uma tabela grande que abrange várias páginas, esses elementos podem permitir que o cabeçalho e o rodapé da tabela sejam impressos na parte superior e inferior de cada página.
+
+        - Nota: O <tbody> elemento deve ter uma ou mais tags <tr> dentro.
+
+        - A <tbody> tag deve ser usada no seguinte contexto: Como filho de um elemento <table> , após qualquer elemento <caption> , <colgroup> e <thead>.
+
+        - Dica: Os elementos <thead>, <tbody> e <tfoot> não afetarão o layout da tabela por padrão. No entanto, você pode usar CSS para estilizar esses elementos (veja o exemplo abaixo)!
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+     <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+        table, th, td{
+            /*propriedade css que adiciona bordas nos elementos th, td, e table, vai ter borda na tabela, e em cada celula da tabela vai ter borda também*/
+            border: 1px solid black;
+            /*para evitar bordas duplas, bordas na tabela e bordas nas celulas, usamos a propriedade css abaixo, para que as bordas sejam reduzidas a uma unica borda, borda somente na tabela geral*/
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Os elementos thead, tbody, tfoot</h2>
+
+    <p> &lt;tbody&gt; tag é usada para agrupar o conteúdo do corpo em uma tabela HTML.</p>
+
+    <!--
+        - define uma tabela, permitindo organizar os dados em linhas e colunas.
+        - por meio do atributo style no elemento <table> usando a propriedade css width para especificar a largura da tabela, aqui nete caso espeficamos que a tabela e 100% ampla na sua largura, pode ocupar todo espaço
+    -->
+    <table style="width: 100%;">
+        <!--
+            - usando a tag <thead> para agrupar o conteudo do cabeçalho de uma tabela html semanticamente, todo o cabeçalho da tabela vai dentro dessa tag
+        -->
+        <thead>
+            <!--
+            - a tag <tr> define uma linha da tabela.
+            - tr e o mesmo que table row.
+                -->
+                <tr>
+                    <!--
+                    - - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+                    - o elemento <th> define um cabeçalho para a tabela
+                    - cada th elemento represent uma celula de dado, que e um cabeçalho para a tabela
+                    - th e o mesmo que table header
+                -->
+                <th>Primeiro Nome</th>
+                <th>Último Nome</th>
+                <th>Pontos</th>
+            </tr>
+        </thead>
+        <!-- usando o elemento html <tbody> para agrupar semanticamente o conteudo do corpo da tabela, todo o conteudo da tabela vai no <tbody> elemento-->   
+        <tbody>
+            <tr>
+                <!--
+                    - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+                    - td significa table data
+                -->
+                <td>Pedro</td>
+                <td>Grifo</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Grifo</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+        </tbody>
+        <!--agrupa o rodape da tabela-->
+        <tfoot>
+            <tr>
+                <td>Cleveland</td>
+                <td>Castanho</td>
+                <td>$250</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

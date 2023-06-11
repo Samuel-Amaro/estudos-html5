@@ -1,0 +1,57 @@
+<!--
+    * VÍDEO HTML - MÉTODOS, PROPRIEDADES E EVENTOS
+
+        - O HTML DOM define métodos, propriedades e eventos para o <video> elemento.
+        - Isso permite carregar, reproduzir e pausar vídeos, além de definir a duração e o volume.
+        - Há também eventos DOM que podem notificá-lo quando um vídeo começa a ser reproduzido, é pausado etc.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br/><br/>
+        <!--
+        - elemento html <video> e usado para mostrar um video em uma pagina da web
+        -->
+        <video width="400" id="video1">
+            <source src="./video-mp4.mp4" type="video/mp4"/>
+            <source src="./Video-Mp4-1.webm" type="video/webm">
+            Seu navegador não suporta video HTML
+        </video>
+    </div>
+
+    <script type="text/javascript">
+        var myVideo = document.getElementById("video1");
+        
+        function playPause() {
+            if(myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeBig() {
+            myVideo.width = 560;
+        }
+
+        function makeSmall() {
+            myVideo.width = 320;
+        }
+        
+        function makeNormal() {
+            myVideo.width = 420;
+        }
+    </script>
+
+    <p>Video Cortesia de <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body>
+</html>

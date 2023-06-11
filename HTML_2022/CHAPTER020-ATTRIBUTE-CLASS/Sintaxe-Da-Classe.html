@@ -1,0 +1,48 @@
+<!--
+    * A SINTAXE DA CLASSE
+
+        - Para criar uma classe; escreva um caractere ponto (.), seguido por um nome de classe. Em seguida, defina as propriedades CSS entre chaves {}:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+       /*criando uma classe no css, temos que escrever o caractere (.), seguido por um nome de classe*/
+        .city{
+            /*definimos as propriedades css entre chaves*/
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>O Atributo de classe</h2>
+
+    <p>Use CSS para estilizar elementos com o nome de classe "city":</p>
+
+    <!--
+        - usando o atributo class no elemento <h2> para especificar uma classe para o h2 elemento, aqui definimos que o h2 elemento possui um class atributo com o valor city.
+        - aqui definiremos uma class com o valor city.
+        - o atributo class ira apontar para um nome de classe definido em uma folha de estilo.
+    -->
+    <h2 class="city">Londres</h2>
+    <p>Londres é a capital da Inglaterra.</p>
+    <!--
+        -  usando o atributo class no elemento <h2> para especificar uma classe para o dh2 elemento, aqui definimos que o h2 elemento possui o atributo class com o valor city.
+        - varios elementos html podem compartilhar a mesma classe.
+    -->
+    <h2 class="city">Paris</h2>
+    <p>Paris é a capital da frança.</p>
+        
+    <h2 class="city">Tóquio</h2>
+    <p>Tóquio é a capital do Japão.</p>
+    
+
+</body>
+</html>

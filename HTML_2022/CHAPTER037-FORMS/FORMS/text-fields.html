@@ -1,0 +1,42 @@
+<!--
+    * TEXT FIELDS
+
+        - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+
+        - Nota: O formulário em si não é visível. Observe também que a largura padrão de um campo de entrada é de 20 caracteres.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Text Fields(Campos de entrada de texto)</h2>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form action="#">
+        <label for="fname">First Name:</label>
+        <br/>
+        <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+        -->
+        <input type="text" id="fname" name="fname" value="John"/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname" value="Doe"/>
+        <br/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Observe que o próprio formulário não é visível</p>
+
+    <p>Observe também que a largura padrão dos campos de entrada de texto é de 20 caracteres.</p>
+    
+</body>
+</html>

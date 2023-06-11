@@ -1,0 +1,69 @@
+<!--
+    * TAG HTML <figure>
+
+     - A <figure>tag especifica conteúdo independente, como ilustrações, diagramas, fotos, listagens de código, etc.;
+     - Embora o conteúdo do <figure>elemento esteja relacionado ao fluxo principal, sua posição é independente do fluxo principal e, se removido, não deve afetar o fluxo do documento;
+     - Dica: O elemento <figcaption> é usado para adicionar uma legenda para o <figure> elemento.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag HTML figcaption</title>
+    <style>
+            /*elemento img*/
+            figure > img{
+                /*pode ocupar 100% da pagina*/
+                width: 100%;
+            }
+
+            /*elemento figure*/
+            figure{
+                /*preenchimento*/
+                border-top: 1px;
+                border-right: 1px;
+                border-bottom: 1px;
+                border-left: 1px;
+                border-color: #cccccc;
+                border-style: solid;
+                /*espaço interno*/
+                padding-top: 4px;
+                padding-right: 4px;
+                padding-bottom: 4px;
+                padding-left: 4px;
+                /*centralizando na horizontal*/
+                margin: auto;
+            }
+
+            /*figcaption elemento de legenda da imagen*/
+            figcaption{
+                /*cor de fundo*/
+                background-color: black;
+                /*cor do texto*/
+                color: white;
+                /*estilo do texto*/
+                font-style: italic;
+                /*add espaço interno ao elemento*/
+                padding-top: 2px;
+                padding-right: 2px;
+                padding-bottom: 2px;
+                padding-left: 2px;
+                /*alinhamento do texto*/
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <h1>TAG SEMANTICA &lt;figure&gt;</h1>
+    <p>elemento &lt;figure&gt; usado para marca uma foto em um documento element</p>
+    <p>Especifica conteúdo independente, como ilustrações, diagramas, fotos, listas de código, etc.</p>
+    <p><b>Exemplo: </b>Use um elemento &lt;figure&gt; para marcar uma foto em um documento e um elemento &lt;figcaption&gt; para definir uma legenda para a foto:</p>
+    <figure>
+        <!--add uma imagen a pagina-->
+        <img src="monitor.png" alt="icone de um monitor">
+        <!-- add uma legenda para a imagen-->
+        <figcaption>Fig.1 - Icone de Monitor.</figcaption>
+    </figure>
+</body>
+</html>

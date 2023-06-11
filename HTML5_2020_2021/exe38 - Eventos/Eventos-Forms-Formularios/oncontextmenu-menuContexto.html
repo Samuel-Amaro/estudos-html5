@@ -1,0 +1,64 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO oncontextmenu(no menu de contexto)
+
+      - Script a ser executado quando um menu de contexto é acionado
+
+      - O atributo oncontextmenu é disparado quando o usuário clica com o botão direito em um elemento para abrir o menu de contexto.
+
+      - Nota: Embora o evento oncontextmenu seja compatível com todos os navegadores, o atributo contextmenu atualmente é compatível apenas com o Firefox.
+
+      - SINTAXE:
+
+          <element oncontextmenu="script">
+
+      - VALOR DE ATRIBUTO:
+
+         script : O roteiro a ser executado oncontextmenu;
+      
+      - TAGS HTML RELACIONADAS: todos os elementos HTML; 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento oncontextmenu</title>
+    <style>
+        div{
+            background-color: yellow;
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-left: 1px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evento de formulario oncontextmenu(no menu de contexto)</h1>
+
+    <p><strong>Execute um JavaScript quando um menu de contexto for acionado:</strong></p>
+
+    <div oncontextmenu="mostraMensagem()" contextmenu="menu">
+        <p>Clique com o botão direito dentro desta caixa para ver o menu de contexto!</p>
+    </div>
+
+    <!--função java script que mostra uma mensahgem ao acionar o menu de contexto do elemento HTML-->
+    <script>
+        function mostraMensagem() {
+            alert("Você clicou com o botão direito dentro da DIV!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!--
+    * OUTROS RECURSOS DE <video>
+
+        Há vários outros recursos que você pode incluir ao exibir um vídeo HTML. Dê uma olhada no nosso próximo exemplo:
+
+            <video controls width="400" height="400"
+       autoplay loop muted preload="auto"
+       poster="poster.png">
+                <source src="rabbit320.mp4" type="video/mp4">
+                <source src="rabbit320.webm" type="video/webm">
+                <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+            </video>    
+
+        Os novos recursos são:
+
+            width e height: Você pode controlar o tamanho do vídeo com esses atributos ou com CSS . Em ambos os casos, os vídeos mantêm sua proporção largura-altura nativa, conhecida como proporção . Se a proporção não for mantida pelos tamanhos definidos, o vídeo crescerá para preencher o espaço horizontalmente e o espaço não preenchido receberá apenas uma cor de fundo sólida por padrão.
+
+            autoplay: Faz com que o áudio ou vídeo comece a ser reproduzido imediatamente, enquanto o restante da página está carregando. Você é aconselhado a não usar vídeo (ou áudio) de reprodução automática em seus sites, porque os usuários podem achar isso muito irritante.
+
+            loop: Faz com que o vídeo (ou áudio) comece a ser reproduzido novamente sempre que terminar. Isso também pode ser irritante, então use apenas se realmente necessário.
+
+            muted: Faz com que a mídia seja reproduzida com o som desligado por padrão.
+
+            poster: O URL de uma imagem que será exibida antes da reprodução do vídeo. Destina-se a ser usado para uma tela inicial ou tela de publicidade.
+
+            preload: Usado para armazenar em buffer arquivos grandes; pode assumir um dos três valores:
+
+                "none" não armazena o arquivo
+                
+                "auto" armazena em buffer o arquivo de mídia
+                
+                "metadata" armazena em buffer apenas os metadados do arquivo
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Extra video features example</title>
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=qtHTj2jDANfroCkTh_z91HKbjFhJPK2XbKWmibUsipJOTx7lM3sKadcRJwp2OwKNjdL97Din420FD4-7D0bMFuntNI_Czv8cdmoRk7lZP2WV7S3-sXllLlfbBBI8lGzJxEcHuaZklwRl6ntgMex1eXbflUcyMW7mdDj-iByefdFSFJ4bg5z6R-M24_jiV3cb"
+        charset="UTF-8"></script>
+    <style type="text/css">
+        video {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Extra video features example</h1>
+
+    <!--
+        - incorporando um video no documento usando elemento video, tecnologia nativa do HTML5.
+            - o atributo controls, permite os usuarios controlar a reprodução de video e audio.
+            - atributos width e height permite controlar o tamanho do video com esses atributos ou com CSS
+            - o atributo loop faz o video/audio comece a ser reproduzido novamente sempre que terminar
+            - o atributo muted faz a midia seja reproduzida com o som desligado por padrão
+            - atributo preload usado para armazenar em buffer arquivos grandes, valor auto aramazena em buffer o arquivo de midia
+            - o atributo poster O URL de uma imagem que será exibida antes da reprodução do vídeo. Destina-se a ser usado para uma tela inicial ou tela de publicidade.
+    -->
+    <video controls width="400" height="400" loop muted preload="auto" poster="poster.png">
+        <!--
+            - usamos varios formatos de origem para melhorar compatibilidade, para que o video seja reproduzido/compativel com todos navegadores.
+            - cada source elemento aponta para uma fonte especifica de video.
+                - o <source> elemento possui um type atributo que e opcional, o type atributo contém o tipo MIME do arquivo especificado pelo <source>
+            - o navegador passará pelos <source> elementos e reproduzirá o primeiro que tiver o codec para suportar.
+        -->
+        <source src="../rabbit320.mp4" type="video/mp4"/>
+        <source src="../rabbit320.webm" type="video/webm"/>
+        <!--
+            - o elemento <p> dentro da tag <video> e chamado de conteudo de fallback isso sera exibido se o navegador que estiver acessando a página não suportar o <video> elemento.
+        -->
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="../rabbit320.mp4">link to the video</a> instead.
+        </p>
+    </video>
+
+</body>
+</html>

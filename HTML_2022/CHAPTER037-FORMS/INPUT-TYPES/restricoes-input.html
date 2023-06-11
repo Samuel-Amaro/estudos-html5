@@ -1,0 +1,78 @@
+<!--
+    * RESTRIÇÕES DE ENTRADA(INPUT RESTRICTIONS)
+
+        - Aqui está uma lista de algumas restrições de entrada comuns:
+
+        ATTRIBUTE: checked(verificado)
+        DESCRIPTION: Especifica que um campo de entrada deve ser pré-selecionado quando a página for carregada (para type="checkbox" ou type="radio")
+        ---------------------------------
+        ATTRIBUTE: disabled(desativado)
+        DESCRIPTION: Especifica que um campo de entrada deve ser desativado
+        ---------------------------------
+        ATTRIBUTE: max(maximo)
+        DESCRIPTION: Especifica o valor máximo para um campo de entrada
+        ---------------------------------
+        ATTRIBUTE: maxLength(tamanho maximo)
+        DESCRIPTION: Especifica o número máximo de caracteres para um campo de entrada
+        ---------------------------------
+        ATTRIBUTE: min(minimo)
+        DESCRIPTION: Especifica o valor mínimo para um campo de entrada
+        ---------------------------------
+        ATTRIBUTE: pattern(padrão)
+        DESCRIPTION: Especifica uma expressão regular para verificar o valor de entrada em relação
+        ---------------------------------
+        ATTRIBUTE: readonly(somente leitura)
+        DESCRIPTION: Especifica que um campo de entrada é somente leitura (não pode ser alterado)
+        ---------------------------------
+        ATTRIBUTE: required(obrigatorio)
+        DESCRIPTION: Especifica que um campo de entrada é obrigatório (deve ser preenchido)
+        ---------------------------------
+        ATTRIBUTE: size(tamanho)
+        DESCRIPTION: Especifica a largura (em caracteres) de um campo de entrada
+        ---------------------------------
+        ATTRIBUTE: step
+        DESCRIPTION: Especifica os intervalos de números legais para um campo de entrada
+        ----------------------------------
+        ATTRIBUTE: value(valor)
+        DESCRIPTION: Especifica o valor padrão para um campo de entrada
+        ---------------------------------
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Numeric steps</h2>
+
+    <p>O <strong>&lt;input type="number"&gt;</strong> Dependendo do suporte do navegador: etapas fixas serão aplicadas no campo de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="quantity">Quantidade:</label>
+        <!--
+           - o <input type="number"> define um campo de entrada numérico.
+           - atributo min Especifica um valor mínimo para um elemento <input>
+           - atributo max Especifica o valor máximo para um elemento <input>.
+           - campo de entrada para usuario entrar com um valor numerico entre 0 e 100
+           - atributo step, Especifica os intervalos de números legais para um campo de entrada. especifica que a cada numero incrementado tem que seguir o valor do step, incrementar na quantidade do step
+        -->
+        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

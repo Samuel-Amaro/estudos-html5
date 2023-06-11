@@ -1,0 +1,63 @@
+<!--
+    * MAPA DE IMAGEN E JS
+
+        - Uma área clicável também pode acionar uma função JavaScript.
+
+        - Adicione um clickevento ao <area>elemento para executar uma função JavaScript:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+    
+    <h2>Mapas de imagem</h2>
+
+    <p>Clique no computador, no telefone ou na xícara de café para ir para uma nova página e ler mais sobre o assunto:</p>
+
+    <p>Clique na xícara de café para executar uma função JavaScript:</p>
+
+    <!--
+        - a tag html <img> e usada para incorporar uma imagem em uma página da web, e uma tag vazia, e sem fechamento, possui atributos.
+
+        - as imagens são vinculadas a paginas da web. não são tecnicamente incorporadas, a  <img> tag cria um espaço de retenção para a imagen referenciada.
+
+        - o atributo src da tag <img> e obrigatorio, esse atributo especifica o caminho URL para imagen que iremos vincular.
+
+        - o alt atributo da tag <img>, atributo obrigatorio, especifica um texto alternativo, quando por algum motivo o usuario não puder visualizala.
+
+        - aqui ao inves de usarmos o atributo style para especificar altura e largura da imagen usamos os atributos whidth e height do elemento html <img> especifica altura e largura da imagen em px
+
+        - o usermap atributo da tag <img> e para criar um relacionamento entre a imagem e o mapa de imagem. o valor do atributo começa com uma marcha de # e logo em seguida o nome do mapa da imagen
+    -->
+
+    <img src="../imgs/workplace.jpg" usemap="#workmap" width="400" height="379">
+
+    <!--
+        - O <map> elemento é usado para criar um mapa de imagem e é vinculado à imagem usando o name atributo obrigatório: 
+
+        - O name atributo deve ter o mesmo valor que o <img> atributo do usemap.
+    -->
+    <map name="workmap">
+        <!--
+            = define areas clicaveis por meio do mapa de imagen
+
+            - Uma área clicável é definida usando um <area> elemento.
+
+            - a area clicavel abaixo cria uma forma retangular clicavel de acordo com as cordenadas fornecidas no atributo coords
+        -->
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+        <!--
+            define uma area clicavel usando a forma circular de acordo com as seguintes coordenadas
+        -->
+        <area shape="circle" coords="337, 300, 44" alt="Cup of coffee" href="https://www.w3schools.com/html/coffee.htm" onclick="myfunction()">
+    </map>
+
+    <script>
+        function myFunction() {
+            alert('You clicked the coffee cup!');
+        }
+    </script>
+</body>
+</html>

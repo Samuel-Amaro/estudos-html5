@@ -1,0 +1,58 @@
+<!--
+    * ATRIBUTO DE CLASSE HTML
+
+        - O atributo HTML class é usado para especificar uma classe para um elemento HTML.
+
+        - Vários elementos HTML podem compartilhar a mesma classe.
+
+    * USANDO O ATRIBUTO DE CLASS
+
+        - O class atributo é frequentemente usado para apontar para um nome de classe em uma folha de estilo. Ele também pode ser usado por um JavaScript para acessar e manipular elementos com o nome de classe específico.
+
+        - No exemplo a seguir temos três <div> elementos com um class atributo com o valor "city". Todos os três <div> elementos serão estilizados igualmente de acordo com a .city definição de estilo na seção principal:
+
+        - Dica: O class atributo pode ser usado em qualquer elemento HTML.
+
+        - Nota: O nome da classe diferencia maiúsculas de minúsculas!
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+        /*estiliza os três elementos div que possui o valor city nos class atributos*/
+        .city{
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        - usando o atributo class no elemento <div> para especificar uma classe para o div elemento, aqui definimos que o div elemento possui um class atributo com o valor city.
+        - aqui definiremos uma class com o valor city.
+        - o atributo class ira apontar para um nome de classe definido em uma folha de estilo.
+    -->
+    <div class="city">
+        <h2>Londres</h2>
+        <p>Londres é a capital da Inglaterra.</p>
+    </div>
+    <!--
+        -  usando o atributo class no elemento <div> para especificar uma classe para o div elemento, aqui definimos que o div elemento possui o atributo class com o valor city.
+        - varios elementos html podem compartilhar a mesma classe.
+    -->
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris é a capital da frança.</p>
+    </div>
+    <div class="city">
+        <h2>Tóquio</h2>
+        <p>Tóquio é a capital do Japão.</p>
+    </div>
+
+</body>
+</html>

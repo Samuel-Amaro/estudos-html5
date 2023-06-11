@@ -1,0 +1,32 @@
+<!--
+    * O ELEMENTO HTML <base>
+
+        - O <base> elemento especifica a URL base e/ou destino para todas as URLs relativas em uma página.
+
+        - A <base> tag deve ter um atributo href ou target presente, ou ambos.
+
+        - Só pode haver um único <base> elemento em um documento!
+-->
+<!DOCTYPE html>
+<html> 
+<!--
+    - o elemento <head> e um conteiner para metadados,(dados sobre dados)
+    - Metadados são dados sobre o documento HTML, não são exibidos no navegador.
+    - o elemento <head> fica entre a tag <html> e <body>
+-->
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - o <base> elemento especifica URL base ou destino para todas as URLs relativas em uma pagina.
+        - so pode haver um metadado base no documento html
+    -->
+    <base href="https://www.w3schools.com/" target="_blank">
+</head>
+<body> 
+    
+    <h1>O elemento básico</h1>
+
+    <p><img src="./stickman.gif" width="24" height="39" alt="Stickman">Observe que especificamos apenas um endereço relativo para a imagem. Como especificamos uma URL base na seção head, o navegador procurará a imagem em "https://www.w3schools.com/images/stickman.gif"</p>
+
+</body>
+</html>

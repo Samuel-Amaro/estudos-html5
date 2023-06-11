@@ -1,0 +1,65 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO ONFOCUS(EM FOCO)
+
+      - Dispara o momento em que o elemento fica focado
+
+      - Onfocus é mais frequentemente usado com <input>, <select> e <a>.
+
+      - Dica: O atributo onfocus é o oposto do atributo onblur .
+
+      - SINTAXE:
+
+        <element onfocus="script">
+
+      - VALORES DE ATRIBUTO
+
+        script : script a ser executado no foco
+
+      - TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Formulario</title>
+</head>
+<body>
+    <h1>Evento onfocus(em foco)</h1>
+
+    <p><strong>Exemplo</strong>Execute um JavaScript quando um campo de entrada receber o foco:</p>
+
+    <p>Uma função é acionada quando um dos campos de entrada obtém o foco. A função altera a cor de fundo do campo de entrada.</p>
+
+    <label for="pNome">Seu nome:</label>
+    <input type="text" id="pNome" onfocus="setCorElementoFocado(this.id)">
+    <br>
+    <label for="sNome">Segundo Nome:</label>
+    <input type="text" id="sNome" onfocus="setCorElementoFocado(this.id)">
+
+    <!--função java script que altera a cor de fundo de um elemento que esta em foco pelo cursor do mouse-->
+    <script>
+        function setCorElementoFocado(x) {
+            document.getElementById(x).style.backgroundColor = "yellow";
+        }
+
+        //essa função seta uma cor no elemento html desfocado
+        function setCorElementoDesfocado(x) {
+            document.getElementById(x).style.backgroundColor = "red";
+        }
+    </script>
+
+    <p>Quando você insere o campo de entrada, uma função é acionada que define a cor de fundo para amarelo. Quando você sai do campo de entrada, uma função é acionada que define a cor de fundo para vermelho.</p>
+
+    <label for="nome">Seu novo Nome:</label>
+    <input type="text" id="campoNome" onfocus="setCorElementoFocado(this.id)" onblur="setCorElementoDesfocado(this.id)">
+
+
+</body>
+</html>

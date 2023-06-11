@@ -1,0 +1,72 @@
+<!--
+    * ATRIBUTO DE EVENTO DE ONLOAD DE HTML(na carga)
+
+     - O atributo onload dispara quando um objeto é carregado.
+
+     - onload é mais frequentemente usado dentro do elemento <body> para executar um script depois que uma página da web carregou completamente todo o conteúdo (incluindo imagens, arquivos de script, arquivos CSS, etc.). No entanto, ele pode ser usado em outros elementos também (consulte "Tags HTML suportadas" abaixo).
+
+     - O atributo onload pode ser usado para verificar o tipo de navegador do visitante e a versão do navegador, e carregar a versão apropriada da página da web com base nas informações.
+
+     - O atributo onload também pode ser usado para lidar com cookies (consulte "Mais exemplos" abaixo).
+
+    * SINTAXE: 
+    
+        <element onload="script">
+
+        script = O script a ser executado no onload;
+
+        TAGS HTML SUPORTADAS: <body>, <frame>, <frameset>, <iframe>, <img>, <input type="image">, <link>, <script> e <style>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML onload</title>
+
+    <script>
+        
+        //Incêndios depois que a página terminar de carregar
+        function carregaPagina() {
+            alert("Página Terminou de ser Carregada");
+        }
+
+        //Incêndios depois que a imagen terminar de carregar
+        function imagenCarregada() {
+            alert("Imagen Carregada!");
+        }
+
+        //Incêndios depois que a pagina verifica se o cooki do navegador esta ativo terminar de carregar
+        function checaCookies() {
+            var text = "";
+
+            if(navigator.cookieEnabled == true) {
+                text = "Cookies esta Ativado.";
+            }else{
+                text = "Cookies não esta ativado.";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+    </script>
+
+</head>
+<body onload="carregaPagina(); checaCookies()">
+
+    <h1>Evento HTML onload(a carga)</h1>
+
+    <p><strong>Exemplo: </strong>Execute um JAVASCRIPT imediatamente após o carregamento de uma página:</p>
+
+    <p><strong>Exemplo 02: </strong> Usando onload em um elemento &lt;img&gt; Alerta "Imagen carregada" imediatamente após o carregameno de uma imagen.</p>
+
+    <img src="w3html.gif" alt="Imagen HTML" onload="imagenCarregada()">
+
+    <p><Strong>Exemplo 03:</Strong> Usando o evento onload para lidar com cookis(usando javascript "avançado"):</p>
+
+    <p id="demo"></p>
+
+
+</body>
+</html>

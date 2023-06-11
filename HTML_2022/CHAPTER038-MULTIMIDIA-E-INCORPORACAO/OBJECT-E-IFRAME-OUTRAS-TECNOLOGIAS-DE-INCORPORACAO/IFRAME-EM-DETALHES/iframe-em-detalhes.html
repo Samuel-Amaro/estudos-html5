@@ -1,0 +1,62 @@
+<!--
+    * IFRAME EM DETALHES
+
+        Então, isso foi fácil e divertido, certo? Os elementos <iframe> são projetados para permitir que você incorpore outros documentos da Web no documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não deseja implementar sua própria versão - como vídeo de provedores de vídeo on-line, sistemas de comentários como Disqus , mapas de on-line provedores de mapas, banners de publicidade, etc. Os exemplos editáveis ​​ao vivo que você está usando neste curso são implementados usando <iframe>s.
+
+        Existem algumas preocupações sérias de segurança a serem consideradas com <iframe>s, como discutiremos abaixo, mas isso não significa que você não deva usá-las em seus sites - apenas requer algum conhecimento e pensamento cuidadoso. Vamos explorar o código com um pouco mais de detalhes. Digamos que você queira incluir o glossário MDN em uma de suas páginas da web - você pode tentar algo assim:
+
+        Este exemplo inclui os fundamentos básicos necessários para usar um <iframe>:
+
+            border: none: Se usado, o <iframe> é exibido sem uma borda ao redor. Caso contrário, por padrão, os navegadores exibem o <iframe> com uma borda ao redor (o que geralmente é indesejável).
+
+            allowfullscreen: Se definido, o <iframe> pode ser colocado no modo de tela cheia usando a API Fullscreen (um pouco além do escopo deste artigo).
+
+            src: Esse atributo, assim como <video>/ <img>, contém um caminho que aponta para a URL do documento a ser incorporado.
+
+            width e height: Esses atributos especificam a largura e a altura que você deseja que o iframe tenha.
+
+            Conteúdo substituto(Fallback content): Da mesma forma que outros elementos semelhantes como <video>, você pode incluir conteúdo de fallback entre as tags de abertura e fechamento <iframe></iframe> que aparecerão se o navegador não suportar o <iframe>. Nesse caso, incluímos um link para a página. É improvável que você encontre algum navegador que não suporte <iframe>s nos dias de hoje.
+
+            sandbox: Esse atributo, que funciona em navegadores um pouco mais modernos do que o restante dos <iframe>recursos (por exemplo, IE 10 e superior), solicita configurações de segurança aprimoradas; falaremos mais sobre isso na próxima seção.
+
+        Nota: Para melhorar a velocidade, é uma boa ideia definir o src atributo do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de SEO ).
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--
+        - elementos <iframe> são projetados para permitir que você incorpore outros documentos da Web no documento atual.
+        - Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não deseja implementar sua própria versão.
+            - atributo src contém o caminho que aponta para a URL do documento a ser incorporado.
+            - 
+            - atributo width e height especificam a largura e altura que eu desejo que o iframe tenha.
+            -
+            - allowfullscreen se definido o iframe pode ser colocado no modo de tela cheia.
+            - 
+            - sandbox solicita configurações de segurança aprimoradas.
+    -->
+    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+    width="100%" height="500" allowfullscreen sandbox>
+        <!--
+            - fallbackcontent(conteudo substituto), conteudo ded fallback que aparecera se o navegador não suportar o iframe.
+        -->
+        <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+            Fallback link for browsers that don't support iframes
+            </a>
+        </p>
+    </iframe>
+
+
+</body>
+</html>

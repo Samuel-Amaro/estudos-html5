@@ -1,0 +1,44 @@
+<!--
+    * DIFERENTES ELEMENTOS PODEM COMPARTILHAR A MESMA CLASSE
+
+        - Diferentes elementos HTML podem apontar para o mesmo nome de classe.
+
+        - No exemplo a seguir, ambos <h2> e <p> apontam para a classe "city" e compartilharão o mesmo estilo:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+       /*cria uma classe no css chamada city, temos que escrever o carctere ., seguido por um nome de classe*/
+        .city{
+            /*definimos as propriedades css entre chaves*/
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Diferentes elementos podem compartilhar a mesma classe</h2>
+
+    <p>Mesmo que os dois elementos não tenham o mesmo nome de tag, ambos podem apontar para a mesma classe e obter o mesmo estilo CSS:</p>
+
+    <!--
+        - usando o atributo class no elemento <h2> para especificar uma classe para o h2 elemento, aqui definimos que o h2 elemento possui o atributo class com o valor city.
+        - o elemento h2 tera no atributo class o valor city.
+        - o elemento h2 sera estilizado com as classes vinculados no atributo class.
+        - o atributo class ira apontar para o nome de classe definido em uma folha de estilo.
+    -->
+    <h2 class="city main">Paris</h2>
+    <!--
+        -  usando o atributo class no elemento <p> para especificar uma classe para o p elemento, aqui definimos que o p elemento possui o atributo class com o valor city.
+        - aqui e um exeplo de que diferentes elementos <html> tags, podem apontar para o mesmo nome de class.
+        - o elemento <p> e <h2> apontam para o mesmo nome de class, sendo elemenos diferentes.
+    -->
+    <p class="city">Paris é a capital da frança</p>
+    
+</body>
+</html>

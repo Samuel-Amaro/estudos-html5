@@ -1,0 +1,37 @@
+<!--
+    * HTML <video> REPRODUÇÃO AUTOMÁTICA
+
+        - Para iniciar um vídeo automaticamente, use o autoplay atributo:
+
+        - Observação: os navegadores Chromium não permitem reprodução automática na maioria dos casos. No entanto, a reprodução automática sem som é sempre permitida.
+
+        - Adicione muted depois autoplay para permitir que seu vídeo comece a ser reproduzido automaticamente (mas silenciado):
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+
+    <!--
+        - elemento html <video> e usado para mostrar um video em uma pagina da web
+        - atributo controls do elemento, adiciona controles de reproduzir, pausar, volume.
+        - atributo height(altura) e widht(largura) definem a altura e largura do elemento <vide>, se não for definidos o elemento <video> pode piscar enquanto carrega
+        - o atributo autoplay inicia um video automaticamente
+        - atributo muted, tira o som do video, começa a reproduzir um video sem som
+    -->
+    <video width="320" height="240" autoplay muted>
+        <!--
+            - elemento <source> permite especificar arquivos alternativos de videos suportados pelo html, o navegador usara o primeiro formato reconhecido
+        -->
+        <source src="./video-mp4.mp4" type="video/mp4"/>
+        <source src="./Video-Mp4-1.webm" type="video/webm">
+        <!-- o texto so e exibido se o navgador não suportar o elemento <video>-->
+        Seu navegador não suporta video HTML
+    </video>
+
+    <p>Video Cortesia de <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body>
+</html>

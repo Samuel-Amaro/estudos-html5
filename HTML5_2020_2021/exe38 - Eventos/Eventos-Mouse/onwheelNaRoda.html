@@ -1,0 +1,52 @@
+<!--
+    * EVENTOS DE MOUSE
+    * 
+    * ATRIBUTO DE EVENTO HTML ONWHEEL - NA RODA
+    * 
+    * DEFINIÇÃO E USO:
+
+        - O atributo onwheel é acionado quando a roda de um dispositivo apontador é rolada para cima ou para baixo sobre um elemento.
+
+        - O atributo onwheel também dispara quando o usuário rola ou aplica zoom em um elemento usando um touchpad (como o "mouse" de um laptop).
+
+    * SINTAXE:
+
+        <element onwheel="script">
+
+    * TAGS HTML SUPORTADAS: Todos os elementos HTML
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo onwheel - na roda</title>
+    <style>
+        article#umBloco{
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-left: 1px;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos de Mouse</h1>
+    <h2>Atributos de evento HTML onwheell</h2>
+    <p><strong>Exemplo:</strong> Execute um JavaScript quando o usuário rolar a roda do mouse sobre um elemento &lt;div&gt;:</p>
+    <article id="umBloco" onmousewheel="aumentaFonte()">Este exemplo demonstra como atribuir um evento de evento "onwheel" a um elemento DIV. Role a roda do mouse sobre mim - para cima ou para baixo!</article>
+    <p>Uma função é acionada quando você rola a roda do mouse sobre div. A função define o tamanho da fonte de div para 35 pixels.</p>
+    <!--
+        * função javascript que aumenta o tamanho da fonte de um respectivo elemento atraves de seu id
+    -->
+    <script>
+        function aumentaFonte() {
+            document.getElementById("umBloco").style.fontSize = "35px";
+        }
+    </script>
+</body>
+</html>

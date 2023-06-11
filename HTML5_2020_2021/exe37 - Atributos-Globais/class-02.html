@@ -1,0 +1,43 @@
+<!--
+    * ATRIBUTO GLOBAL HTML - CLASS(CLASSE)
+
+      - O classatributo especifica um ou mais nomes de classe para um elemento.
+
+      - O classatributo é usado principalmente para apontar para uma classe em uma folha de estilo. No entanto, ele também pode ser usado por um JavaScript (por meio do HTML DOM) para fazer alterações em elementos HTML com uma classe especificada.
+
+    * SINTAXE:
+
+        <element class="nomeClasse">
+
+        - VALORES DE ATRIBUTO:
+        
+          nomeClasse : Especifica um ou mais nomes de classe para um elemento. Para especificar várias classes, separe os nomes de classe com um espaço, por exemplo, <span class="left important">. Isso permite que você combine várias classes CSS para um elemento HTML.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Global class</title>
+    <style>
+        h2.introducao{
+            color: blue;
+            text-align: center;
+        }
+
+        p.importante{
+            background-color: yellow;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atributo Global Class</h1>
+    <p>Uso do atributo class em um documento HTML</p>
+    <h2 class="introducao">Um Subtitulo</h2>
+    <p>Especifica um ou mais nomes de classe para um elemento (refere-se a uma classe em uma folha de estilo)</p>
+    <p class="importante">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, cupiditate cumque nesciunt dolorem quos officiis maxime a error quidem nemo pariatur vel praesentium accusantium. Dolorum sapiente a facere porro perspiciatis.</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!--
+    * TAG HTML <source>
+
+    * DEFINIÇÃO E USO
+
+        - A <source> tag é usada para especificar vários recursos de mídia para elementos de mídia, como <video> , <audio> e <picture>.
+
+        - A <source> tag permite que você especifique arquivos alternativos de vídeo/áudio/imagem que o navegador pode escolher, com base no suporte do navegador ou na largura da janela de visualização. O navegador escolherá o primeiro <source> que ele suporta.
+
+    * ATRIBUTOS
+
+        ATTRIBUTE: media;
+        VALUE: media_query;
+        DESCRIPTION: Aceita qualquer consulta de mídia válida que normalmente seria definida em um CSS;
+        -------------------------------------
+        ATTRIBUTE: sizes;
+        VALUE: 
+        DESCRIPTION: Especifica tamanhos de imagem para diferentes layouts de página;
+        -------------------------------------
+        ATTRIBUTE: src;
+        VALUE: URL;
+        DESCRIPTION: Necessário quando <source> é usado em <audio> e <video>. Especifica o URL do arquivo de mídia;
+        -------------------------------------
+        ATTRIBUTE: srcset;
+        VALUE: URL;
+        DESCRIPTION: Necessário quando <source> é usado em <picture>. Especifica a URL da imagem a ser usada em diferentes situações;
+        -------------------------------------
+        ATTRIBUTE: type;
+        VALUE: MIME-type;
+        DESCRIPTION: Especifica o tipo MIME do recurso;
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h1>O elemento picture</h1>
+
+    <p>Redimensione a janela do navegador para carregar imagens diferentes.</p>
+
+    <!--usando o elemento html <picture> para ter mais flexibilidade na especificação de recursos de imagen-->
+    <picture>
+        <!--
+            
+            - elemento html tag <source> especifica uma imagen para um tipo especifico de midia ou view report do navegador atual
+            
+            - O navegador procurará o primeiro elemento <source> onde a consulta de mídia(MEDIA QUERY) corresponde à largura da janela de visualização atual(VIEW REPORT) e, em seguida, exibirá a imagem adequada (especificada no atributo srcset).  
+
+            - o atributo media, aceita qualqer especificaçaõ de media_query valida
+
+            - o atributo srcset, e necessario quando usamos <o source> em elementos de midia como <picture>, nesse atributo especificamos uma URL absoluta ou relativa, para ser usada em diferentes situações
+        -->
+        <source media="(min-width: 650px)" srcset="../imgs/img_pink_flowers.jpg">
+        <source media="(min-width: 465px)" srcset="../imgs/img_white_flower.jpg">
+        <!--
+            - quando nenhuma tag <source> corresponder ao view report
+
+            - O elemento <img> é necessário como o último filho do <picture> elemento, como uma opção de fallback se nenhuma das tags de origem corresponder.
+        -->
+        <img src="../imgs/img_orange_flowers.jpg" alt="Flores" style="width: auto;">
+    </picture>
+</body>
+</html>

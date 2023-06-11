@@ -1,0 +1,41 @@
+<!--
+    * LISTAS HTML ANINHADAS
+
+        - As listas podem ser aninhadas (lista dentro da lista):
+
+        - Nota: Um item de lista (<li>) pode conter uma nova lista e outros elementos HTML, como imagens e links, etc.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Uma Lista Aninhada</h2>
+
+    <p>As listas podem ser aninhadas(lista dentro da lista):</p>
+
+    <!--
+        - o elemento <ul> define uma lista não ordenada com marcadores
+        - por padrão cada marcador de um item da lista sera um disco preto fechado(um circulo preto)
+    -->
+    <ul>
+        <!-- 
+            - o elemento <li> representa um item da lista, os itens da lista cada <li> serão marcados com marcadores, cada marcador sera um disco (um circulo preto)
+        -->
+        <li>Coffe</li>
+        <li>Tea</li>
+            <!--
+                - o elemento <li> ira conter uma nova lista
+                - define outra lista não ordenada, dentro do elemento <li>, exemplo de lista aninhada-->
+            <ul>
+                <!--define itens da lista-->
+                <li>Black Tea</li>
+                <li>Green Tea</li>
+            </ul>
+        <li>Milk</li>
+    </ul>
+    
+</body>
+</html>

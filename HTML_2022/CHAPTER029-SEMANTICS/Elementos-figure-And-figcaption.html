@@ -1,0 +1,43 @@
+<!--
+    * ELEMENTOS HTML <figure> e <figcaption>
+
+        - A <figure> tag especifica conteúdo independente, como ilustrações, diagramas, fotos, listagens de código etc.
+
+        - O figure elemento representa algum conteúdo de fluxo , opcionalmente com uma legenda, que é autocontida (como uma frase completa) e normalmente é referenciada como uma única unidade do fluxo principal do documento.
+
+        - O primeiro figcaption elemento filho do elemento, se houver, representa a legenda do figure conteúdo do elemento. Se não houver figcaption elemento filho, não haverá legenda.
+
+        - O conteúdo de um figure elemento faz parte do fluxo circundante. Se o objetivo da página for exibir a figura, por exemplo, uma fotografia em um site de compartilhamento de imagens, os elementos figure e figcaption podem ser usados ​​para fornecer explicitamente uma legenda para essa figura. Para conteúdo relacionado apenas tangencialmente ou que serve a um propósito separado do fluxo circundante, o aside elemento deve ser usado (e pode envolver um figure). Por exemplo, uma citação pull que repete o conteúdo de um article seria mais apropriada em um aside do que em um figure, porque não faz parte do conteúdo, é uma repetição do conteúdo para atrair leitores ou destacar tópicos-chave.
+
+        - A <figcaption> tag define uma legenda para um <figure> elemento. O <figcaption> elemento pode ser colocado como o primeiro ou o último filho de um <figure> elemento.
+        
+        - O figcaption elemento representa uma legenda ou legenda para o restante do conteúdo do figcaption elemento pai do figure elemento, se houver.
+
+        - O <img> elemento define a imagem/ilustração real. 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Lugares para visitar</h2>
+    <p>A visão mais famosa da Puglia são as casas cônicas únicas (Trulli) encontradas na área ao redor de Alberobello, declarada Patrimônio Mundial da UNESCO.</p>
+    
+    <!--
+        - o elemento <figure> representa um conteudo independente, como ilustrações, diagramas, fotos, e para representar um conteudo independente, que faça sentido por si so.
+    -->
+    <figure>
+        <!--
+            o elemento <img> define a imagen a ilustração real
+        -->
+        <img src="./pic_trulli (1).jpg" alt="Trulli" style="width: 100%;">
+        <!--
+            - o elemento <figcaption> define uma legenda para um elemento <figure>. o elemento <figcaption> e colocado como o primeiro ou ultimo filho do elemento <figure>
+        -->
+        <figcaption>Fig.1 - Trulli, Puglia, Itália.</figcaption>
+    </figure>
+
+</body>
+</html>

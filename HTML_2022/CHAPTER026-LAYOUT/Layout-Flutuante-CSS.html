@@ -1,0 +1,97 @@
+<!--
+    * LAYOUT FLUTUANTE CSS
+
+        - É comum fazer layouts web inteiros usando a float propriedade CSS. Float é fácil de aprender - você só precisa se lembrar de como as propriedades float e clear funcionam. Desvantagens: Os elementos flutuantes estão vinculados ao fluxo de documentos, o que pode prejudicar a flexibilidade. Saiba mais sobre float em nosso capítulo CSS Float and Clear .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Modelo CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*propriedades css*/
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Estiliza o header*/
+        header{
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        /*Crie duas colunas/caixas que flutuem uma ao lado da outra*/
+        nav{
+            float: left;
+            width: 30%;
+            height: 300px; /*apenas para demonstração, deve ser removido*/
+            background: #ccc;
+            padding: 20px;
+        }
+        /*Estilize a lista dentro do menu*/
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        article{
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px; /*apenas para demonstração, deve ser removido*/
+        }
+        /*Limpar floats após as colunas*/
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*Estilize o rodapé*/
+        footer{
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /*Layout responsivo - faz com que as duas colunas/caixas se empilhem uma sobre a outra em vez de uma ao lado da outra, em telas pequenas*/
+        @media(max-width: 600px) {
+            nav, article{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Layout Float</h2>
+    <p>Neste exemplo, criamos um cabeçalho, duas colunas/caixas e um rodapé. Em telas menores, as colunas serão empilhadas umas sobre as outras.</p>
+    <p>Redimensione a janela do navegador para ver o efeito responsivo (você aprenderá mais sobre isso em nosso próximo capítulo - HTML Responsivo).</p>
+    <header>
+        <h2>Cities</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Londres</h1>
+            <p>Londres é a capital da Inglaterra. É a cidade mais populosa do Reino Unido, com uma área metropolitana de mais de 13 milhões de habitantes.</p>
+            <p>Situada às margens do rio Tâmisa, Londres tem sido um importante assentamento por dois milênios, sua história remonta à sua fundação pelos romanos, que a chamaram de Londinium.</p>
+        </article>
+    </section>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+    
+</body>
+</html>

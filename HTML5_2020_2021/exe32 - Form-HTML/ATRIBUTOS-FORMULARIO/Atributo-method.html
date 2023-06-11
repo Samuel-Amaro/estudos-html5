@@ -1,0 +1,81 @@
+<!--
+    * ATRIBUTO DO HTML <form> método(method)
+
+      - Especifica o método HTTP a ser usado ao enviar dados do formulário
+
+    * DEFINIÇÃO E USO
+
+      - O method atributo especifica como enviar os dados do formulário (os dados do formulário são enviados para a página especificada no action atributo).
+
+      - Os dados do formulário podem ser enviados como variáveis ​​de URL (com method="get") ou como transação HTTP post (com method="post").
+
+      - NOTAS SOBRE GET:
+
+        - Acrescenta dados do formulário ao URL em pares nome/valor;
+        - O comprimento de um URL é limitado (cerca de 3.000 caracteres)
+        - Nunca use GET para enviar dados confidenciais! (ficará visível no URL)
+        - Útil para envios de formulários onde um usuário deseja marcar o resultado
+        - GET é melhor para dados não seguros, como strings de consulta no Google
+
+      - NOTAS SOBRE POST:
+
+        - Anexa dados do formulário dentro do corpo da solicitação HTTP (os dados não são mostrados no URL)
+        - Não tem limitações de tamanho
+        - Os envios de formulários com POST não podem ser marcados
+
+    * SINTAXE:
+
+      - <form method="get|post">
+
+    * VALORES DE ATRIBUTO:
+
+      VALUE: get;
+      DESCRIPTION: Padrão. Acrescenta os dados do formulário ao URL em pares nome / valor: URL? Nome = valor & nome = valor;
+
+      VALUE: post;
+      DESCRIPTION: Envia os dados do formulário como uma transação HTTP post;
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Formulario</title>
+</head>
+<body>
+    <h1>Atributo Formulario - method</h1>
+
+    <p><strong>Exemplo 01:</strong> Envie um formulário usando o método "get":</p>
+
+    <p>Clique no botão enviar, e a entrada será enviada para uma página no servidor chamada "action_page.php".</p>
+
+    <form action="action_page.php" method="GET" autocomplete="on" enctype="multipart/form-data" accept-charset="utf8">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">Ultimo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p><strong>Exemplo 02:</strong> Clique no botão enviar e o formulário será enviado usando o método POST.</p>
+
+    <form action="action_page.php" method="POST" autocomplete="on" enctype="multipart/form-data" accept-charset="utf8" target="_blank">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">Ultimo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

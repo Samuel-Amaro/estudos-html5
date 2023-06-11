@@ -1,0 +1,65 @@
+<!--
+    * TAG HTML <track>
+
+    * DEFINIÇÃO E USO
+
+        - A <track> tag especifica faixas de texto para elementos <audio> ou <video> .
+        - Este elemento é usado para especificar legendas, arquivos de legendas ou outros arquivos contendo texto, que devem estar visíveis durante a reprodução da mídia.
+        - As faixas são formatadas no formato WebVTT (arquivos .vtt).
+        - O track elemento permite que os autores especifiquem faixas de texto temporizadas externas explícitas para elementos de mídia . Não representa nada por si só.
+
+    * ATRIBUTOS OPCIONAIS
+
+        ATTRIBUTO: default(padrão) - ativa a faixa se nenhum outra faixa de texto for mais adequada
+        VALUE: default
+        DESCRIPTION: Especifica que a faixa deve ser habilitada se as preferências do usuário não indicarem que outra faixa seria mais apropriada
+        --------------------------------------
+        ATTRIBUTO: kind
+        VALUE: 
+            captions(legendas): Transcrição ou tradução do diálogo, efeitos sonoros, pistas musicais relevantes e outras informações de áudio relevantes, adequadas para quando o som não está disponível ou não é claramente audível (por exemplo, porque está mudo, abafado pelo ruído ambiente ou porque o usuário é surdo ). Sobreposto no vídeo; rotulados como apropriados para deficientes auditivos., 
+
+            chapters(capitulos): Faixas destinadas ao uso do script. Não exibido pelo agente do usuário., 
+        
+            descriptions(descrições): Descrições textuais do componente de vídeo do recurso de mídia , destinado à síntese de áudio quando o componente visual está obscurecido, indisponível ou não utilizável (por exemplo, porque o usuário está interagindo com o aplicativo sem tela enquanto dirige ou porque o usuário é cego) . Sintetizado como áudio., 
+            
+            metada(metadados): Faixas destinadas ao uso do script. Não exibido pelo agente do usuário., 
+        
+            subtitles(substitulos): Transcrição ou tradução do diálogo, adequada para quando o som está disponível, mas não é compreendido (por exemplo, porque o usuário não entende o idioma da faixa de áudio do recurso de mídia ). Sobreposto no vídeo
+            
+        DESCRIPTION: Especifica o tipo de faixa de texto
+        --------------------------------------
+        ATTRIBUTO: label(rotulo) - etiqueta visivel ao usuario
+        VALUE: text
+        DESCRIPTION: Especifica o título da faixa de texto
+        --------------------------------------
+        ATTRIBUTO: src - endereço do recurso
+        VALUE: URL
+        DESCRIPTION: Requeridos(obrigatorio). Especifica o URL do arquivo de faixa
+        --------------------------------------
+        ATTRIBUTO: srclang - idioma da faixa de texto
+        VALUE: language_code
+        DESCRIPTION: Especifica o idioma dos dados de texto da faixa (obrigatório se kind="subtitles")
+        --------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+</head>
+<body>
+
+    <!--
+        - elemento html <video> e usado para mostrar um video em uma pagina da web, o elemento e usado para incorpara um conteudo de um video em um documento
+        - o atributo controls, especifica que os controles de video deve ser exibidos, como um botão de reprodução/pausa etc...
+    -->
+    <video width="600" controls preload="auto">
+        <source src="./video-mp4.mp4" type="video/mp4"/>
+        <source src="./Video-Mp4-1.webm" type="video/webm">
+        <track src="./MinhaLegendaFechada.pt.vtt" kind="captions" label="Portuguese">
+        Seu navegador não suporta video HTML
+    </video>
+
+    <p>Video Cortesia de <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body>
+</html>

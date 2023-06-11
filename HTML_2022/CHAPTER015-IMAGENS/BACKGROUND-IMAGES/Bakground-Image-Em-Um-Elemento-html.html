@@ -1,0 +1,49 @@
+<!--
+    * IMAGENS DE FUNDO HTML
+
+        - Uma imagem de fundo pode ser especificada para quase qualquer elemento HTML.
+
+    * IMAGEM DE FUNDO EM UM ELEMENTO HTML
+
+        - Para adicionar uma imagem de fundo em um elemento HTML, use o style atributo HTML e a background-image propriedade CSS:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--adiciona css local a pagina, o css aplciado aqui e somente a pagina, a este documento especifico-->
+    <style>
+        /*usando a propriedade css, para adiconar um imagen de fundo a todos os elementos <p> deste documento*/
+        p{
+            background-image: url('../imgs/img_girl\ \(1\).jpg');
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Imagen de Fundo</h2>
+
+    <p>Uma imagen de fundo para o elemento p:</p>
+
+    <!--
+        - Por meio do atributo style do elemento HTML p, adicionado css inline(css somente ao elemento especificado), e especificando a propriedade css background-image, podemos especificar uma imagen de fundo para o elemento html <p>
+    -->
+    <p style="background-image: url('../imgs/img_girl\ \(1\).jpg');">
+        Você pode especificar imagens de fundo <br>
+        Para qualquer elemento HTML visível. 
+        <br>
+        Neste exemplo, a imagen de Fundo
+        <br>
+        é especificado para um elemento p.
+        <br>
+        Po padrão, a imagen de fundo 
+        <br>
+        se repetirá na(s) direções
+        <br>
+        onde é menor que o elemento
+        <br>
+        onde é especificado. (Tente redimensionar o <br> janela do navegador para ver como o <br> imagende fundo se comporta.)
+    </p>
+
+</body>
+</html>

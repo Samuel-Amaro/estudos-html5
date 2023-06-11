@@ -1,0 +1,48 @@
+<!--
+    * ATRIBUTO ID 
+
+        - O atributo HTML id é usado para especificar um id exclusivo para um elemento HTML.
+        - Você não pode ter mais de um elemento com o mesmo id em um documento HTML.
+
+    * USANDO O ATRIBUTO ID
+
+        - O id atributo especifica um ID exclusivo para um elemento HTML. O valor do id atributo deve ser exclusivo no documento HTML.
+
+        - O id atributo é usado para apontar para uma declaração de estilo específica em uma folha de estilo. Também é usado pelo JavaScript para acessar e manipular o elemento com o id específico.
+
+        - A sintaxe para id é: escreva um caractere hash (#), seguido por um nome de id. Em seguida, defina as propriedades CSS entre chaves {}.
+
+        - No exemplo a seguir temos um <h1> elemento que aponta para o nome do id "myHeader". Este <h1> elemento será estilizado de acordo com a #myHeader definição de estilo na seção head:
+
+        - Nota: O nome do id diferencia maiúsculas de minúsculas!
+
+        - Nota: O nome do id deve conter pelo menos um caractere, não pode começar com um número e não deve conter espaços em branco (espaços, tabulações, etc.).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+        /*criando um id, define um id com o nome myHeader. a sintaxe e: #nomeId{propriedades:css;}*/
+        #myHeader{
+            /*propriedades css para estilizar o elemento vinculado ao id*/
+            background-color: lightblue;
+            color: balck;
+            padding: 40px;
+            text-align: center;
+        }    
+    </style>
+</head>
+<body>
+    <h2>O atributo id</h2>
+    <p>Use CSS para estilizar um elemento com o id <q>myHeader</q>:</p>
+    <!--
+        - usando o atributo id do elemento html <h1>, para especificar um id exclusivo(unico) para um elemento html.
+        - o valor do id atributo deve ser exclusivo(unico) no documento html.
+        -o id atributo e usado para apontar para uma declaração de estilo especifica em uma folha de estilo.
+        - aqui neste exemplo temos o elemento <h1> apontando para o nome de id myHeader
+    -->
+    <h1 id="myHeader">My Header</h1>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--
+    * * ATRIBUTO DE EVENTO HTML ONCLICK - EM CLIQUE
+    * 
+    * * DEFINIÇÃO E USO
+    * 
+    * O atributo onclick dispara com um clique do mouse no elemento.
+    * 
+    * SINTAXE:
+    
+        <element onclick="script">
+
+    * TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick - EmClique</title>
+</head>
+<body>
+    <h1>Eventos de Mouse</h1>
+    <h2>Atributo de evento HTML onclick - em clique</h2>
+    <p><strong>Exemplo 01:</strong> Execute um JavaScript quando um botão for clicado:</p>
+    <button onclick="clicou()">Clique Aqui</button>
+    <!--nesse paragrafo sera mostrado o texto que sera produzindo quando clicar no botão, a função java script joga o texto aqui-->
+    <p id="campoTexto"></p>
+
+    <p>Uma função é acionada quando o botão é clicado. A função produz algum texto no elemento ap com id = "demo".</p>
+
+    <!--função java script que seta um texto num elemento de paragrafo identificado por um id-->
+    <script>
+            function clicou() {
+                document.getElementById("campoTexto").innerHTML = "Você clicou no Botão, Ola Mundo!";
+            }
+    </script>
+</body>
+</html>

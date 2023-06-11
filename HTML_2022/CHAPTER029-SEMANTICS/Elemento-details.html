@@ -1,0 +1,58 @@
+<!--
+    * ELEMENTO HTML <details> - detalhes
+
+    * DEFINIÇÃO E USO
+
+        - A <details> tag especifica detalhes adicionais que o usuário pode abrir e fechar sob demanda.
+
+        - O details elemento representa um widget de divulgação do qual o usuário pode obter informações ou controles adicionais.
+
+        - O primeiro summary elemento filho do elemento, se houver, representa o resumo ou legenda dos detalhes. Se não houver summary elemento filho, o agente do usuário deve fornecer sua própria legenda (por exemplo, "Detalhes").
+
+        - O restante do conteúdo do elemento representa as informações ou controles adicionais.
+
+        - A <details> tag é frequentemente usada para criar um widget interativo que o usuário pode abrir e fechar. Por padrão, o widget é fechado. Quando aberto, ele se expande e exibe o conteúdo dentro dele.
+
+        - Qualquer tipo de conteúdo pode ser colocado dentro da <details> tag. 
+
+        - Dica: A tag <summary> é usada em conjunto com <details> para especificar um cabeçalho visível para os detalhes.
+
+        - O open atributo content é um atributo booleano . Se presente, indica que tanto o resumo quanto as informações adicionais devem ser mostrados ao usuário. Se o atributo estiver ausente, apenas o resumo deve ser mostrado.
+
+        - Quando o elemento é criado, se o atributo estiver ausente, as informações adicionais devem ser ocultadas; se o atributo estiver presente, essa informação deve ser mostrada. Posteriormente, se o atributo for removido, a informação deverá ser ocultada; se o atributo for adicionado, a informação deve ser mostrada.
+
+        - O agente do usuário deve permitir que o usuário solicite que as informações adicionais sejam mostradas ou ocultadas. Para atender a uma solicitação para que os detalhes sejam mostrados, o agente do usuário deve definir o open atributo no elemento para a string vazia. Para atender a uma solicitação de ocultação das informações, o agente do usuário deve remover o open atributo do elemento.
+        
+    * ATRIBUTOS
+
+            ATTRIBUTE: open(abrir);
+            VALUE: open;
+            DESCRIPTION: Especifica que os detalhes devem ser visíveis (abertos) para o usuário
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <h1>O elemento de details</h1>
+
+    <!--
+        - o elemento <details> especifica detalhes adicionais que o usuario pode abrir e fechar sobdemanda.
+        - o elemento <details> e um widget interativo que o usuario pode abrir e fechar.
+        - por padrão o <details> elemento e fechado.
+    -->
+    <details>
+        <!--
+            - o elemento <summary> representa o resumo ou legenda do elemento <details>, não houver elemento <summary> como primeiro elemento filho do <details> o agente de usuario deve fornecer uma propria legenda
+            - o elemento <summary> e usado para especificar um cabeçalho visível para os details
+        -->
+        <summary>Epcot Center</summary>
+        <!--
+            - o restante do conteudo do elemento representa informações ou controle adicionais
+        -->
+        <p>O Epcot é um parque temático no Walt Disney World Resort com atrações emocionantes, pavilhões internacionais, fogos de artifício premiados e eventos especiais sazonais.</p>
+    </details>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+    * INPUT TYPE TEL(ENTRADA TIPO TEL)
+
+        - O <input type="tel"> é usado para campos de entrada que devem conter um número de telefone.
+
+        - O input elemento representa um controle para editar um número de telefone fornecido no valor do elemento.
+
+        - Ao contrário dos tipos URL e Email , o tipo Telefone não impõe uma sintaxe específica. Isso é intencional; na prática, os campos de número de telefone tendem a ser campos de formato livre, porque há uma grande variedade de números de telefone válidos.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Telephone Field(Campo telefone)</h2>
+
+    <p>O <strong>&lt;input type="tel"&gt;</strong> é usado para campos de entrada que devem conter um número de telefone:</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="phone">Digite um número de telefone:</label>
+        <br/>
+        <br/>
+        <!--
+           - o <input type="tel"> é usado para campos de entrada que devem conter um número de telefone.
+           - usuario entra com numeros que representam um telefone
+           - atributo placeholder Especifica uma dica curta que descreve o valor esperado de um elemento <input>
+           - o atributo pattern, Especifica uma expressão regular com a qual o valor de um elemento <input> é verificado(no caso a expressão regular para este atributo possui o seguinte padrão: corresponder a especificamente três digitos numericos especificados no conjuento de 0 a 9, seguido de um hifen, mesma coisa corresponder dois digitos, seguido hifen, corresponder três digitos seguidos)
+           - o atributo required, Especifica que um campo de entrada deve ser preenchido antes de enviar o formulário
+        -->
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+        <br/>
+        <br/>
+        <small>Format: 123-45-678</small>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+    * VÁRIAS CLASSES
+
+        - Elementos HTML podem pertencer a mais de uma classe.
+
+        - Para definir várias classes, separe os nomes das classes com um espaço, por exemplo, <div class="city main">. O elemento será estilizado de acordo com todas as classes especificadas.
+
+        - No exemplo a seguir, o primeiro <h2> elemento pertence à city classe e também à main classe e obterá os estilos CSS de ambas as classes: 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+       /*cria uma classe no css chamada city, temos que escrever o carctere ., seguido por um nome de classe*/
+        .city{
+            /*definimos as propriedades css entre chaves*/
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+        /*criando outra class no css, define uma class chamada main*/
+        .main{
+            /*definnimos as proprieddades css*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Várias Classes</h2>
+
+    <p>Aqui, todos os três elementos h2 pertencem á classe, <q>cidade</q>. Além disso, Londres também pertence à class <q>principal</q>, que alinha o texto ao centro.</p>
+
+    <!--
+        - usando o atributo class no elemento <h2> para especificar uma classe para o h2 elemento, aqui definimos que o h2 elemento possui o atributo class com mais de um valor city, main.
+        - o elemento h2 tera no atributo class dois valores city e main, fazendo o elemento html, pertencer a mais de uma class. para definir varias classes, separe o nome da classes com uma espaço.
+        - o elemento h2 sera estilizado com ambas as classes vinculados no atributo class.
+        - aqui definiremos mais de uma class com o valor city e main no elemento h2.
+        - o atributo class ira apontar para dois nome de classe definido em uma folha de estilo.
+    -->
+    <h2 class="city main">Londres</h2>
+    <!--
+        -  usando o atributo class no elemento <h2> para especificar uma classe para o h2 elemento, aqui definimos que o h2 elemento possui o atributo class com o valor city.
+        - varios elementos html podem compartilhar a mesma classe.
+    -->
+    <h2 class="city">Paris</h2>
+        
+    <h2 class="city">Tóquio</h2>
+    
+</body>
+</html>

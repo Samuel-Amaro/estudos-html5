@@ -1,0 +1,45 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML ONBEFOREUNLOAD(ANTES DE DESCARREGAR)
+
+     - O evento onbeforeunload é disparado quando o documento está prestes a ser descarregado.
+     
+     - Este evento permite exibir uma mensagem em uma caixa de diálogo de confirmação para informar ao usuário se ele deseja permanecer ou sair da página atual.
+
+     - A mensagem padrão que aparece na caixa de confirmação é diferente em navegadores diferentes. No entanto, a mensagem padrão é algo como "Tem certeza de que deseja sair desta página?". Você não pode remover esta mensagem.
+
+     - No entanto, você pode escrever uma mensagem personalizada junto com a mensagem padrão
+
+    * SINTAXE
+
+     <element onbeforeunload="script">
+
+     script : O script a ser executado antes de descarregar;
+     
+      ESSE EVENTO SO E SUPORTADADO NA TAG HTML <body> 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onbeforeunload</title>
+</head>
+<body onbeforeunload="return minhaFuncao()">
+    
+    <h1>Evento HTML onbeforeunload(antes de descarregar)</h1>
+
+    <p><strong>Exemplo: </strong> Execute um JavaScritp quando a página estiver prestes a ser descarregada: </p>
+
+    <p>Feche esta janela, pressione F5 ou clique no link abaixo para invocar o evento onbeforeunload.</p>
+
+    <a href="https://www.w3schools.com"> Clique aqui para ir para o w3school.com</a>
+
+    <!--Script a ser executado quando o documento está prestes a ser descarregado-->
+    <script>
+        function minhaFuncao() {
+            return "Pagina descarregando e executando script do evento HTML!";
+        }
+    </script>
+</body>
+</html>

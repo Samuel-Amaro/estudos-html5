@@ -1,0 +1,47 @@
+<!-- como colocar uma fonte externa que eu quero que não tenha no google fontes ?-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <!-- aplicando uma configuração de fontes VIA CSS local-->
+    <style>
+        /*
+         * Como carregar uma fonte Externa, uma fonte que não existe no google fontes, e no HTML, que não e padrão, e não existe no navegador.
+         * tenho que carrgar o arquivo da fonte no CSS aqui no caso como e local, ou no servidor quando tiver hospedado.
+        */
+        @font-face {
+            /* fonte family e onde decidimos o nome que a fonte externa vai ter*/
+            font-family: 'fonte-exercito' ;
+            src: url('fontes-externas/Capture it.ttf') /*nome arquivo.extensão*/ format('truetype');/*formato do arquivo*/
+            /*
+             * Tipos de Format();
+                - opentype(otf);
+                - truetype(ttf);
+                - embedded-openty
+                - truetype-att(Apple Advance Typograph)
+                - svg
+            */
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*
+         * aplicando uma configuração de CSS num seletor, na tag.
+         * para carregar uma fonte externa, na familia de fonte, pode colocar o nome, que foi decidido la na font-family, ao carregar ela na regra do fonte face
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-family: 'fonte-exercito', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi quidem ea facilis ipsam, fugiat totam velit perspiciatis quasi similique aspernatur? Ipsa reiciendis debitis consequatur, voluptates culpa accusantium architecto reprehenderit. Tempora.</p>
+</body>
+</html>

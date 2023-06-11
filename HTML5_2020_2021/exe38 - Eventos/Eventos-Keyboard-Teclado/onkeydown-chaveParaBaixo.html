@@ -1,0 +1,45 @@
+<!--
+    * EVENTO DO TECLADO ONKEYDOWN(NA CHAVE PARA BAIXO)
+
+       - O atributo onkeydown é disparado quando o usuário pressiona uma tecla (no teclado).
+
+       Dica: a ordem dos eventos relacionados ao evento onkeydown:
+
+                onkeydown
+                onkeypress
+                onkeyup
+        
+       - SINTAXE:
+
+            <element onkeydown="script">
+       
+       - TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos HTML Teclado</title>
+</head>
+<body>
+    <h1>Eventos de HTML teclado onkeydown(na chave de baixo)</h1>
+
+    <p><strong>Exemplo 01: </strong>Execute um JavaScript quando um usuário estiver pressionando uma tecla</p>
+
+    <p>Uma função é disparada quando o usuário pressiona uma tecla no campo de entrada.</p>
+
+    <!--campo de texto-->
+    <input type="text" onkeydown="mensage()">
+
+    <!--função java script que e executada quando o usuario vai teclar algum caractere no campo de texto-->
+    <script>
+        function mensage() {
+            alert("Você pressionou uma tecla do campo de entrada");
+        }
+    </script>
+
+</body>
+</html>

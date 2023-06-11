@@ -1,0 +1,57 @@
+<!--
+    # CAMINHOS DE ARQUIVOS HTML5
+     - Um caminho de arquivo descreve a localização de um arquivo na estrutura de pastas de um site da web;
+     - Exemplos de caminho de arquivo:
+     - <img src = "picture.jpg"> : O arquivo "picture.jpg" está localizado na mesma pasta da página atual;
+     - <img src = "images/picture.jpg"> : O arquivo "picture.jpg" está localizado na pasta de imagens da pasta atual;
+     - <img src = "/ images / picture.jpg"> : O arquivo "picture.jpg" está localizado na pasta de imagens na raiz da web atual;
+     - <img src = "../ picture.jpg"> : O arquivo "picture.jpg" está localizado na pasta um nível acima da pasta atual; 
+
+     - caminhos de arquivos são usados ao vincular a arquivos externos, como:
+     paginas web
+     Imagens
+     Folhas de estilo
+     JavaScripts
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhos Arquivos HTML</title>
+</head>
+<body>
+    <h1>Caminhos de Arquivo HTML</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque tenetur est repellendus, voluptate fugit dolore sequi! Optio reprehenderit sit iste, sed veritatis, iusto eum inventore qui repellendus, doloremque nihil.</p>
+    <h2>Caminhos de Arquivo absoluto</h2>
+    <!-- 
+        # CAMINHO DE ARQUIVO ABSOLUTO
+         - UM caminho de arquivo absoluto é o URL completo de um arquivo;
+    -->
+    <img src="https://www.w3schools.com/images/picture.jpg" alt="Montanha">
+    <h2>Caminhos de Arquivos Relativos</h2>
+    <!--
+        # Caminhos de Arquivos Relativos
+         - Um caminho de arquivo relativo aponta para um arquivo relativo à página atual;
+         - No exemplo a seguir, o caminho do arquivo aponta para um arquivo na pasta de imagens localizada na pasta atual:
+    -->
+    <h2>Caminho de arquivo apontando para pasta localizada na pasta atual</h2>
+    <img src="imagens/imagen-gato.jpg" alt="imagen-de-gato" style="width: 30%;">
+    <h2>Caminho Arquivo aponta para um arquivo na raiz da web atual</h2>
+    <!--
+        # No exemplo a seguir, o caminho do arquivo aponta para um arquivo na pasta de imagens localizada na raiz da web atual:
+    -->
+    <img src="/exe003 - imagens/logo-html-200.png" alt="imagen">
+    <h2>Pasta em nivel acima da pasta atual</h2>
+    <!--
+        # No exemplo a seguir, o caminho do arquivo aponta para um arquivo na pasta de imagens localizada na pasta um nível acima da pasta atual
+    -->
+    <img src="../exe003 - imagens/logo-css-full.png" alt="Logo css3" style="width: 45%;">
+    <!--
+        # MELHOR PRATICA
+         - É uma prática recomendada usar caminhos de arquivo relativos (se possível).
+         - Ao usar caminhos de arquivo relativos, suas páginas da web não serão vinculadas ao URL base atual. Todos os links funcionarão em seu próprio computador (localhost), bem como em seu domínio público atual e em seus domínios públicos futuros.
+    -->
+</body>
+</html>

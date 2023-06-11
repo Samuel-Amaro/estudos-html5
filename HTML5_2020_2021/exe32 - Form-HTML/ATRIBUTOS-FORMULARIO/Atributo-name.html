@@ -1,0 +1,66 @@
+<!--
+    * ATRIBUTO HTML <form> name
+
+     - Especifica o nome do formulário
+
+    * DEFINIÇÃO E USO
+
+     - O name atributo especifica o nome de um formulário.
+
+     - O name atributo é usado para fazer referência a elementos em um JavaScript ou para fazer referência a dados de formulário depois que um formulário é enviado.
+
+    * SINTAXE:
+
+        <form name="text">
+
+    * VALORES DE ATRIBUTO:
+
+      VALUE: text;
+      DESCRIPTION: Especifica o nome do formulário
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Formulario</title>
+</head>
+<body>
+
+    <h1>Atributos Formulario - name</h1>
+
+    <p><strong>Exemplo:</strong> Um formulário HTML com um atributo de nome:</p>
+
+    <br action="action_page.php" enctype="application/x-www-form-urlencoded" accept-charset="utf8" method="GET" autocapitalize="on" name="meuFormulario">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        </br>
+        </br>
+        <label for="lname">Ultimo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        </br>
+        </br>
+        <input type="button" onclick="enviaForm()" value="Envia Dados Do Formulario!">
+    </form>
+
+    <p>Observe que o JavaScript na seção head usa o nome do formulário para especificar qual formulário enviar</p>
+
+    <script>
+        /**
+         * uma função java script para envia o formulario
+        **/
+        function enviaForm() {
+            //Retorna uma lista dos <form> elementos do documento atual.
+            //Document.forms
+            //Acesso ao formulário nomeado, formulario que tem o atributo name especificado
+            //A formspropriedade somente leitura da Documentinterface retorna uma HTMLCollection lista de todos os <form>elementos contidos no documento.
+            let formTeste = document.forms.meuFormulario; // Ou document.forms['nomeFormulario'];
+            //envia o formulario
+            formTeste.submit();
+        }
+    </script>
+</body>
+</html>

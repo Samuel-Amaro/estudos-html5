@@ -1,0 +1,97 @@
+<!--
+    * LAYOUT CSS FLEXBOX
+
+        - O uso do flexbox garante que os elementos se comportem de forma previsível quando o layout da página deve acomodar diferentes tamanhos de tela e diferentes dispositivos de exibição.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Modelo CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*propriedades css*/
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Estiliza o header*/
+        header{
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        /*Recipiente para flexboxes*/
+        section{
+            display: -webkit-flex;
+            display: flex;
+        }
+        /*Estilizar o menu de navegação*/
+        nav{
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            background: #ccc;
+            padding: 20px;
+        }
+        /*Estilize a lista dentro do menu*/
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        /*Estilize o conteúdo*/
+        article{
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        /*estilize o footer*/
+        footer{
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /*Layout responsivo - faz com que o menu e o conteúdo (dentro da seção) fiquem um em cima do outro, em vez de um ao lado do outro*/
+        @media(max-width: 600px) {
+            section{
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Layout Flexbox</h2>
+    <p>Neste exemplo, criamos um cabeçalho, duas colunas/caixas e um rodapé. Em telas menores, as colunas serão empilhadas umas sobre as outras.</p>
+    <p>Redimensione a janela do navegador para ver o efeito responsivo (você aprenderá mais sobre isso em nosso próximo capítulo - HTML Responsivo).</p>
+    <header>
+        <h2>Cities</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Londres</h1>
+            <p>Londres é a capital da Inglaterra. É a cidade mais populosa do Reino Unido, com uma área metropolitana de mais de 13 milhões de habitantes.</p>
+            <p>Situada às margens do rio Tâmisa, Londres tem sido um importante assentamento por dois milênios, sua história remonta à sua fundação pelos romanos, que a chamaram de Londinium.</p>
+        </article>
+    </section>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+    
+</body>
+</html>

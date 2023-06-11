@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <!-- 
+        * Criando uma configuração de CSS Local para o documento;
+    -->
+    <style>
+        /*
+         * Aplicando uma familia de fontes no corpo do texto;
+        */
+         body{
+             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         }
+         /*
+          * Mudando a cor do link, ele visitado ou não visitado vai ficar com a cor preta;
+          *  tirando o sublinhado dos links;
+          * colocando o link em negrito;
+         */
+         a{
+           color: black;  
+           text-decoration: none;
+           font-weight: bold;
+         }
+         /*
+          * Segue abaixo outras pseudo-classes;
+          * * obs: uma pseudo-classe, são palavras que, definem um estado de um ou varios elementos das tags HTML;
+          * elemento:pseudo-class{
+              oque vai fazer, a mudança de estado que vai acontecer no elemento;
+          }
+         */
+         /*
+          * a pseudo-classe (visited) abaixo e aquela (link visitado), onde o link para um site externo, muda de cor ao ir clicar nele, ou se ja tiver ido visitar o site e retornou para a pagina que estava ele se destaca mostrando que você ja visitou aquele link;
+         */
+         a:visited{
+                color:darkred;
+         }
+         /*
+          * pseudo classe (houver): significa: quando eu passar por cima desse elemento;
+          * essa pseudo classe vai permitir que ao usuario passar o mouse por cima do link vai aparecer o sublinhado no link;
+          * e o link vai ficar com a cor preto;
+         */
+         a:hover{
+             text-decoration:underline;
+             color:black;
+         }
+         /*
+          * pseudo-classe(active): significa: a cor do elemento ativo, quando o usuario clicou no elemento;
+          * active == quando o elemento e clicado, e ativado com um clique de um mouse;
+          * um link ativo, e quando um link foi clicado;
+          * quando o usuario clicar no link, ativar o link com um clique, vou mudar a cor dele;  
+         */
+         a:active{
+             color: yellow;
+         }
+         /*
+          * Segue um exemplo abaixo usando um pseudo-elemento;
+          * como saber que e um pseudo-elemento ?
+          * usa (::);
+         */
+         /*
+          * usando um pseudo elemento (after);
+          * after: significa: depois;
+          * e um pseudo-elemento ::after, para ao final do elemento que ele esta referenciando, aqui no caso e a tag link, vai fazer algo;
+          * no exemplo abaixo, vamos mostrar a palavra link, ao final de cada link;
+          * ou depois de cada link, ou depois de todos os links, coloque a palavra link no final;
+          * elemento::pseudo-elemento{
+              mudança de estado que o elemento vai receber;
+          }
+         */
+         a::after{
+             content: '[LINK]'; /*content == conteúdo: 'texto a mostrar'*/
+             text-decoration: none; /*decoração-texto: nenhum decoração*/
+             font-weight: normal; /*espessura-fonte: normal;*/
+             color: darkgreen; /*o texto apos um final de cada link, vai ficar na cor verde;*/
+         }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+     <ul>
+         <li><a href="https://github.com/Samuel-Amaro" rel="external" target="_blank">Meu Repositório GitHub</a></li>
+         <li><a href="https://www.linkedin.com/in/samuel-amaro-20baa0147/" rel="external" target="_blank">Meu Linkedim</a></li>
+     </ul>
+</body>
+</html>

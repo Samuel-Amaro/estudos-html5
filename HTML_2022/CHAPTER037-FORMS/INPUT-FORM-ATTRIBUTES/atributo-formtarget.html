@@ -1,0 +1,61 @@
+<!--
+    * ATRIBUTO FORMTARGET
+
+        - O atributo input formtarget especifica um nome ou uma palavra-chave que indica onde exibir a resposta recebida após o envio do formulário.
+
+        - Observação: esse atributo substitui o atributo de destino(TARGET) do <form> elemento.
+
+        - O formtarget atributo funciona com os seguintes tipos de entrada: submit e image.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo formtarget de entrada(input)</h2>
+
+    <p>O atributo formtarget especifica um nome ou uma palavra-chave que indica onde exibir a resposta recebida após o envio do formulário.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+        - O target atributo especifica onde exibir a resposta recebida após o envio do formulário. _blank: A resposta é exibida em uma nova janela ou guia
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Enviar"/>
+        <!--
+            -O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - o atributo formtarget especifica onde exibir a resposta recebida após o envio do formulário. valor _blank: A resposta é exibida em uma nova janela ou guia
+        -->
+        <input type="submit" formtarget="_blank" value="Enviar para um nova janela/aba"/>
+    </form>
+ 
+</body>
+</html>

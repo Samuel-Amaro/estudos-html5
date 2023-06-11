@@ -1,0 +1,76 @@
+<!--
+    * O ATRIBUTO DE MÉTODO(METHOD)
+
+        - O method atributo especifica o método HTTP a ser usado ao enviar os dados do formulário.
+
+        - Os dados do formulário podem ser enviados como variáveis ​​de URL (com method="get") ou como transação de postagem HTTP (com method="post").
+
+        - O método HTTP padrão ao enviar dados de formulário é GET. 
+
+        * OBSERVAÇÕES SOBRE O GET:
+
+            - Anexa os dados do formulário à URL, em pares nome/valor
+            - NUNCA use GET para enviar dados confidenciais! (os dados do formulário enviado são visíveis na URL!)
+            - O comprimento de um URL é limitado (2048 caracteres)
+            - Útil para envios de formulários em que um usuário deseja marcar o resultado
+            - GET é bom para dados não seguros, como strings de consulta no Google
+
+        * OBSERVAÇÕES SOBRE O POST:
+
+            - Anexa os dados do formulário dentro do corpo da solicitação HTTP (os dados do formulário enviado não são mostrados na URL)
+            - O POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados.
+            - Envios de formulários com POST não podem ser marcados
+
+        * Dica: Sempre use POST se os dados do formulário contiverem informações confidenciais ou pessoais!
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo do método(method)</h2>
+
+    <p>Este formulário será enviado usando o método GET:</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+        - o atributo target(alvo) especifica onde exibir a resposta recebida após o envio do formulário. o valor _blank especifica que a resposta e exibida em uma nova janela ou guia.
+        - o atributo method, especifica o método HTTP a ser usado ao enviar os dados do formulario.
+        - o metodo utilizado por padrão para enviar dados do formulario e get
+    -->
+    <form action="#" target="_blank" method="get">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o label fname esta associado a esse input
+        -->
+        <input type="text" id="fname" name="fname" value="John"/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname" value="Doe"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Depois de enviar, observe que os valores do formulário ficam visíveis na barra de endereço da nova guia do navegador.</p>
+</body>
+</html>

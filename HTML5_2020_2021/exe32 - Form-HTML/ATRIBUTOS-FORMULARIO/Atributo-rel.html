@@ -1,0 +1,69 @@
+<!--
+    
+    * ATRIBUTO rel DO HTML <form> 
+
+      - Especifica a relação entre um recurso vinculado e o documento atual
+
+    * DEFINIÇÃO E USO
+
+     - O rel atributo especifica a relação entre o documento atual e o documento vinculado.
+        
+    * SINTAXE: 
+
+     <form rel="value">
+
+    * VALORES DE ATRIBUTO:
+
+      VALUE: external;
+      DESCRIPTION: Especifica que o documento referenciado não faz parte do site atual;
+
+      VALUE: help;
+      DESCRIPTION: Links para um documento de ajuda;
+
+      VALUE: license;
+      DESCRIPTION: Links para informações de direitos autorais do documento;
+
+      VALUE: next;
+      DESCRIPTION:O próximo documento em uma seleção;
+
+      VALUE: nofollow;
+      DESCRIPTION:Links para um documento não endossado, como um link pago. ("nofollow" é usado pelo Google para especificar que o spider de pesquisa do Google não deve seguir esse link);
+
+      VALUE: noopener;
+      DESCRIPTION: "";
+
+      VALUE: noreferrer;
+      DESCRIPTION: Especifica que o navegador não deve enviar um cabeçalho de referência HTTP se o usuário seguir o hiperlink;
+
+      VALUE: opener;
+      DESCRIPTION: "";
+
+      VALUE: prev;
+      DESCRIPTION: O documento anterior em uma seleção;
+
+      VALUE: search;
+      DESCRIPTION: Links para uma ferramenta de pesquisa para o documento;
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Formulario</title>
+</head>
+<body>
+    
+    <h1>Atributos Formulario - atributo rel</h1>
+
+    <p><strong>Exemplo:</strong> relação entre o documento atual e o documento vinculado para o servidor!</p>
+
+    <!--a pagina que trata o formulario vai ser ligado ao formulario como um documento para a proxima seleção-->
+    <form action="action_page.php" method="GET" autocomplete="on" accept-charset="utf8" name="meuForm" enctype="application/x-www-form-urlencoded" rel="next">
+        <input type="text" placeholder="Seu Nome">
+        <input type="submit" value="Enviar!">
+    </form>
+    
+</body>
+</html>

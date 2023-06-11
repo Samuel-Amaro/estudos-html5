@@ -1,0 +1,82 @@
+<!--
+    * VÍDEO HTML
+
+     - O <video> elemento HTML é usado para mostrar um vídeo em uma página da web.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        /*conteiner da tag que armazena o video*/
+        #video_01{
+            width: 320px; /*largura do conteiner*/
+            height: 240px; /*altura do conteiner*/
+        }
+        /*conteiner do elemento HTML que armazena o video*/
+        #video_02_autoplay{
+            width: 320px; /*largura do conteiner do video*/
+            height: 240px; /*altura do conteiner do video*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Video HTML</h1>
+    <h2>O Elemento HTML video</h2>
+    <p><b>Exemplo: </b>Como mostrar um video em uma pagina HTML da web.</p>
+
+
+    <!--
+        * O ELEMENTO HTML <video>
+          - Para mostrar um vídeo em HTML, use o <video> elemento:
+    -->
+    <video id="video_01" controls>
+        <source src="video-local.mp4" type="video/mp4">
+        <p>Seu Navegador Não Suporta a Tag de Video</p>
+    </video>
+
+    <hr><!--linha separadora na horizontal-->
+
+
+    <!--
+        * COMO FUNCIONA
+
+         - O controls atributo adiciona controles de vídeo, como reprodução, pausa e volume.
+         - É uma boa ideia sempre incluir width e height atributos. Se a altura e a largura não forem definidas, a página pode piscar enquanto o vídeo carrega.
+         - O <source> elemento permite que você especifique arquivos de vídeo alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.
+         - O texto entre as tags <video> e </video> só será exibido em navegadores que não suportam o <video> elemento.
+    -->
+    <h2>Como Funciona</h2>
+    <h3>HTML video Reprodução Automática - autoplay</h3>
+    <p>O atributo autoplay não funciona em dispositivos móveis como iPad e iPhone.</p>
+
+
+    <!--
+        * HTML <video> REPRODUÇÃO AUTOMÁTICA autoplay
+         
+         - Para iniciar um vídeo automaticamente, use o autoplay atributo:
+    -->
+    <video id="video_02_autoplay" autoplay>
+        <!--primeiro video que vai ser carregado-->
+        <source src="video-local.mp4" type="video/mp4">
+        <!--se o primeiro video não for carregado, carrega esse segundo-->
+        <source src="Video-Local-1.webm" type="video/webm">   
+        <!--se nenhum dos videos foi carregado mostra esse paragrafo dizendo que o navegador não tem compatibilidade com a tag video-->    
+        <p>Seu Navegador Não Suporta a Tag de Video, Não a compatibilidade para poder mostrar os videos</p>
+    </video>
+
+
+    <!--
+        * VIDEO HTML - TIPOS DE MÍDIA - o atributo TYPE da tag source
+
+        - File Format      Media Type
+
+            MP4        -    video/mp4
+            WebM       -    video/webm
+            Ogg        -    video/ogg
+    -->
+</body>
+</html>

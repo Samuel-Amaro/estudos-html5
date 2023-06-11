@@ -1,0 +1,59 @@
+<!--
+    * TAG HTML <main> - principal
+
+    * DEFINIÇÃO E USO
+
+        - A <main> tag especifica o conteúdo principal de um documento.
+
+        - O conteúdo dentro do <main> elemento deve ser exclusivo do documento. Ele não deve conter nenhum conteúdo repetido em documentos como barras laterais, links de navegação, informações de direitos autorais, logotipos de sites e formulários de pesquisa.
+
+        - O main elemento representa o conteúdo dominante do documento.
+
+        - Um documento não deve ter mais de um main elemento que não tenha o hidden atributo especificado.
+
+        - Um elemento hierarquicamente correto main é aquele cujos elementos ancestrais são limitados a html, body, div, form sem um nome acessível e elementos personalizados autônomos . Cada main elemento deve ser um elemento hierarquicamente correto main 
+
+        - Nota: Não deve haver mais de um <main> elemento em um documento. O <main> elemento NÃO deve ser descendente de um elemento <article>, <aside>, <footer>, <header> ou <nav>.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h1>O elemento main</h1>
+
+    <!--
+        - o elemento <main> especifica o conteudo principal de um documento.
+        - o <main> elemento representa o conteudo dominante do documento, aqui o <main> elemento contém o principal assunto do site, falar sobre os navegadores mais populares.
+        - o elemento <main> so pode ter como ancentrais os elementos <html>, <body>, <div>, <form>. o main so pode ser filho deste elementos.
+    -->
+    <main>
+        <h1>Navegadores mais populares</h1>
+        <!--
+        - o elemento <article> define um conteudo independente e autocontido, que deve fazer sentido por si so.
+        - aqui definimos um artigo que fala sobre o assunto google chorme
+        -->
+        <article>
+            <h2>Google Chrome</h2>
+            <p>O Google Chrome é um navegador da Web desenvolvido pelo Google, lançado em 2008. Atualmente, o Chrome é o navegador da Web mais popular do mundo!</p>
+        </article>
+        <!--
+            - aqui definimos um outro artigo independente que esta dentro do assunto geral do site mas fala sobre o assunto Mozzila Firefox
+        -->
+        <article>
+            <h2>Mozzila Firefox</h2>
+            <p>Mozilla Firefox é um navegador web de código aberto desenvolvido pela Mozilla. O Firefox é o segundo navegador mais popular desde janeiro de 2018.</p>
+        </article>
+        <!--
+            - aqui definimos um outro artigo independente que esta dentro do assunto geral do site mas fala sobre o assunto Microsofot Edge
+        -->
+        <article>
+            <h2>Microsoft Edge</h2>
+            <p>O Microsoft Edge é um navegador da Web desenvolvido pela Microsoft, lançado em 2015. O Microsoft Edge substituiu o Internet Explorer.</p>
+        </article>
+    </main>
+    
+</body>
+</html>

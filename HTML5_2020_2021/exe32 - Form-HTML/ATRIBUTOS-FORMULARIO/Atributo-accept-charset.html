@@ -1,0 +1,58 @@
+<!--
+    * ATRIBUTO HTML <form> accept-charset
+
+      - Especifica as codificações de caracteres usadas para o envio do formulário
+
+      * DEFINIÇÃO E USO
+
+       - O accept-charset atributo especifica as codificações de caracteres que devem ser usadas para o envio do formulário. 
+
+      * SINTAXE:
+
+        - <form accept-charset="character_set">
+
+      * VALORES DE ATRIBUTO:
+
+        Value: character_set;
+
+        Description: 
+            
+            Uma lista separada por espaço de uma ou mais codificações de caracteres que devem ser usadas para o envio do formulário.
+
+            Valores comuns:
+
+                - UTF-8 - codificação de caracteres para Unicode;
+
+                - ISO-8859-1 - Codificação de caracteres para o alfabeto latino.
+
+            Em teoria, qualquer codificação de caractere pode ser usada, mas nenhum navegador entende todos eles. Quanto mais amplamente a codificação de caracteres for usada, maiores serão as chances de um navegador entendê-la.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo form</title>
+</head>
+<body>
+    
+    <h1>Atributo do form</h1>
+
+    <p><strong>Exemplo:</strong> Atributo accept-charset.</p>
+
+    <p><strong>Um formulário com um atributo accept-charset:</strong></p>
+
+    <!-- um exemplo de um formulario especificando o atributo accept-charset dizendo que os caracteres das resposta do formulario ao ser eviado deve ser tratado como UTF-8 - codificação de caracteres para Unicode;-->
+    <form action="/action_page.php" accept-charset="utf-8">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

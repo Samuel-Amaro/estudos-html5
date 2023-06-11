@@ -1,0 +1,55 @@
+<!--
+    * O ATRIBUTO SIZE(TAMANHO)
+
+        - O atributo input size especifica a largura visível, em caracteres, de um campo de entrada.
+
+        - O valor padrão para size é 20.
+
+        - Observação: o size atributo funciona com os seguintes tipos de entrada: texto(text), pesquisa(search), tel(tel), url(url), email(email) e senha(password).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <h2>O atributo de tamanho(size) de entrada</h2>
+
+    <p>O atributo size especifica a largura (em caracteres) de um campo de entrada:</p>
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo size, especifica a largura visivel em caractere do campo de entrado do form.
+            - o campo abaixo tera 50 caracteres visiveis de largura, o restante e scrollado.
+        -->
+        <input type="text" id="fname" name="fname" size="50"/>
+        <br/>
+        <label for="pin">PIN:</label>
+        <br/>
+        <!--
+            - o campo abaixo tera 4 caracteres visiveis de largura. o resto e scrollado
+        -->
+        <input type="text" id="pin" name="pin" size="4"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

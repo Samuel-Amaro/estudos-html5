@@ -1,0 +1,43 @@
+/*
+ * Configuração do CSS EXTERNO, para aplicar no Documento HTML.
+*/
+@charset "UTF-8";
+
+/*
+ * Aplicando uma configuração de CSS Na tag Body(Corpo da parte Textual do HTML)
+ * Uma cor de fundo no corpo textual;
+ * aplicando uma familia de fonte para todo o texto;
+ * um id(identificador de um unico elemento em html) e identificado por id, e um identificador de um elemento em CSS e #
+ * em HTML um class(um identificador de um grupo de elementos multiplos que tenham mesmas caracteristicas) e identificado por class em HTML, em CSS um class e identificado por (.)
+*/
+body{
+    background-color: #569967d3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*
+ * Aplicando configuração de CSS NOS TITULOS TAMBEM;
+ * existe os titulos principais e os subtitulos;
+ * Como faço para aplicar configurações de CSS diferentes em Mesmo grupo de titulos ?
+ * existe dois h1s so que um e titulo principal e outro e titulo de categoria, como faço para aplciar configurações diferentes entre eles ?
+ * usando o seletor-CSS-id(ele identifica um elemento no HTML)
+ * Começar a tratar os titulos diferentes;
+ * aplicando uma configuração de CSS no h1 padrão generico;
+ * seletor padrão, um seletor padrão sem personalização
+*/
+h1{
+    color: rgb(60, 95, 56);
+}
+/*
+ * Como aplico a configuração CSS em um elemento Diferente;
+ * o elemento abaixo foi identificado por um id(no html), isso e ele possui um identificador;
+ * exemplo abaixo de um seletor personalizado
+*/
+h1#principal{
+  text-align: center;
+  background-color: rgb(30, 255, 0);
+  color: white;   
+}
+h2{
+    color: rgb(49, 145, 57);
+}

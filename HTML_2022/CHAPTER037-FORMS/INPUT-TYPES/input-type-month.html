@@ -1,0 +1,46 @@
+<!--
+    * INPUT TYPE MONTH(TIPO DE ENTRADA MÊS)
+
+        - O <input type="month"> permite que o usuário selecione um mês e ano.
+
+        - Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Um campo Mês(Month)</h2>
+
+    <p>O <strong>&lt;input type="month"&gt;</strong> permite que o usuario selecione um mês e ano.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="bdaymonth">Aniversário(mês e ano):</label>
+        <!--
+            - o elemento <input type="month">  permite que o usuário selecione um mês e ano.
+            - o usuario entra com o mes e ano
+        -->
+        <input type="month" id="bdaymonth" name="bdaymonth"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p><strong>Nota:</strong>  type="month" não é compatível com Firefox, Safari ou Internet Explorer 11.</p>
+</body>
+</html>

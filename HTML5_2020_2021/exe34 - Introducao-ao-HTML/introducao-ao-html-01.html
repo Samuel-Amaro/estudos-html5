@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao HTML</title>
+    <style>
+         #html{
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             background-color: #DDDDDD;
+             width: 70%;
+             margin: auto;
+         }
+         #head{
+             margin-top: 30px;
+             margin-right: 30px;
+             margin-bottom: 15px;
+             margin-left: 30px;
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             padding-top: 45px;
+             padding-right: 30px;
+             padding-bottom: 45px;
+             padding-left: 30px;
+             /*o position relative serve para dar posicinamento para os conteiner de position absolute, atraves desse conteiner com position absolute, eu consigo posicionar os conteiner que esse conteiner contem, atraves do positon absolute, que usa o posição do conteiner pai, usa a referencia de um elemento posicionado mais proximo, esse conteiner vai conter outros conteiner*/
+             position: relative;
+         }
+         #head > #tag_abertura_head{
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            /*todo positon absolute necessita de um relative acima dele para funcionar, nesse caso a um conteiner com positon relative para esse absolute funcionar*/
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         #head > #tag_fechamento_head{
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            /*todo positon absolute necessita de um relative acima dele para funcionar, nesse caso a um conteiner com positon relative para esse absolute funcionar*/
+            position: absolute;
+            bottom: 0;
+            left: 0;
+         }
+         #html > p{
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            top: 0;
+
+         }    
+
+         #title{
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+         }
+         #body{
+             margin-top: 30px;
+             margin-right: 30px;
+             margin-bottom: 45px;
+             margin-left: 30px;
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             padding-top: 0px;
+             padding-right: 0px;
+             padding-bottom: 0px;
+             padding-left: 0px;
+             /*o position relative serve para dar posicinamento para os conteiner de position absolute, atraves desse conteiner com position absolute, eu consigo posicionar os conteiner que esse conteiner contem, atraves do positon absolute, que usa o posição do conteiner pai, usa a referencia de um elemento posicionado mais proximo, esse conteiner vai conter outros conteiner*/
+             position: relative;
+         }
+        
+         #conteudo{
+             margin-top: 35px;
+             margin-right: 30px;
+             margin-bottom: 30px;
+             margin-left: 35px;
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             padding-top: 0px;
+             padding-right: 0px;
+             padding-bottom: 0px;
+             padding-left: 0px;
+             /*o position relative serve para dar posicinamento para os conteiner de position absolute, atraves desse conteiner com position absolute, eu consigo posicionar os conteiner que esse conteiner contem, atraves do positon absolute, que usa o posição do conteiner pai, usa a referencia de um elemento posicionado mais proximo, esse conteiner vai conter outros conteiner*/
+             position: relative;
+             background-color: white;
+         }
+         
+         #body > #tag_abertura_body{
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            /*todo positon absolute necessita de um relative acima dele para funcionar, nesse caso a um conteiner com positon relative para esse absolute funcionar*/
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+
+         #body > #tag_fechamento_body{
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            /*todo positon absolute necessita de um relative acima dele para funcionar, nesse caso a um conteiner com positon relative para esse absolute funcionar*/
+            position: absolute;
+            bottom: 0;
+            left: 0;
+         }
+
+         #conteudo > #h1{
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             margin-top: 25px;
+             margin-right: 25px;
+             margin-bottom: 25px;
+             margin-left: 25px;
+         }
+
+         #conteudo > #p{
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             margin-top: 0px;
+             margin-right: 25px;
+             margin-bottom: 25px;
+             margin-left: 25px;
+         }
+
+         #conteudo > #p2{
+             border-top: 2px;
+             border-right: 2px;
+             border-bottom: 2px;
+             border-left: 2px;
+             border-color: gray;
+             border-style: solid;
+             margin-top: 0px;
+             margin-right: 25px;
+             margin-bottom: 25px;
+             margin-left: 25px;
+         }
+
+         
+    </style>
+</head>
+<body>
+        <h1>Introdução ao HTML</h1>
+        <p>HTML é a linguagem de marcação padrão para criar pagínas da web.</p>
+        <h2>O que é HTML ?</h2>
+        <ul>
+            <li>HTML significa Hyper Text Markup Language</li>
+            <li>HTML é a linguagem de marcação padrão para a criação de páginas da web</li>
+            <li>HTML descreve a estrutura de uma página da web</li>
+            <li>HTML consiste em uma série de elementos</li>
+            <li>Os elementos HTML informan ao navegador como exibir o conteúdo</li>
+            <li>Os elementos HTML rotulam partes de conteúdo como "isto é um título", "isto é um parágrafo", "isto é um link", etc.</li>
+        </ul>
+        <h2>Um Documento HTML Simples</h2>
+        <!--para inserir um codigo HTML como codigo para mostrar como conteudo usar essas tags e escpara os simbolos, se colocar puro como codigo o ducumento html interpreta como codigo e acaba mostrando-->
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;Page Title&gt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+
+                &lt;h1&gt;My First Heading&lt;/h1&gt;
+                &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+                &lt;/body&gt;
+                &lt;/html&gt; 
+            </code>
+        </pre>
+        <h2>Exemplo Explicado</h2>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code> declaração define que este documento é um documento HTML5</li>
+            <li>O <code>&lt;html&gt;</code> elemento é o elemento raiz de uma página HTML </li>
+            <li>O <code>&lt;head&gt;</code> elemento contém meta informações sobre a página HTML</li>
+            <li>O <code>&lt;title&gt;</code> elemento especifica um título para a pagina HTML (que é mostrado na barra de título do navegador ou na guia da página)</li>
+            <li>O <code>&lt;body&gt;</code> elemento define o corpo do documento e é um contêiner para todo o conteúdo visivel, como titulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc...</li>
+            <li>O <code>&lt;h1&gt;</code> elemento define um grande título</li>
+            <li>O <code>&lt;p&gt;</code> elemento define um parágrafo</li>
+        </ul>
+
+        <h2>O que é um elemento HTML?</h2>
+        <p>Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final:</p>
+        <p><b>TAGNAME = NOME DA TAG</b></p>
+        <p><code>&lt;tagname&gt;</code>O conteúdo vai aqui.... <code>&lt;/tagname&gt;</code></p>
+        <p><b>Nota: </b>alguns elementos HTML não têm conteúdo (como o elemento <br>). Esses elementos são chamados de elementos vazios. Os elementos vazios não possuem uma tag final!</p>
+        <h2>Estrutura da página HTML</h2>
+        <p>Abaixo está uma visualização da estrutura de uma página HTML:</p>
+        <p><b>Nota: </b>O conteúdo dentro da seção &lt;body&gt; (a área branca acima) será exibido em um navegador. O conteúdo dentro do elemento &lt;title&gt; será mostrado na barra de título do navegador ou na guia da página.</p>
+        <div id="html">
+              <p>&lt;html&gt;</p>
+              <div id="head">
+                   <p id="tag_abertura_head">&lt;head&gt;</p>
+                   <div id="title"><code>&lt;title&gt;</code> Título da página <code>&lt;/title&gt;</code></div>
+                   <p id="tag_fechamento_head">&lt;/head&gt;</p>
+              </div>
+              <div id="body">
+                  <p id="tag_abertura_body">&lt;body&gt;</p>
+                  <div id="conteudo">
+                        <div id="h1">
+                            <code>&lt;h1&gt;</code> Este é um título <code>&lt;/h1&gt;</code>  
+                        </div>
+                        <div id="p">
+                            <code>&lt;p&gt;</code> Este é um parágrafo <code>&lt;p&gt;</code>
+                        </div>
+                        <div id="p2">
+                            <code>&lt;p&gt;</code> Este é um parágrafo <code>&lt;p&gt;</code>
+                        </div>
+                  </div>
+                  <p id="tag_fechamento_body">&lt;/body&gt;</p>
+              </div>
+              <p>&lt;/html&gt;</p>  
+        </div>
+</body>
+</html>

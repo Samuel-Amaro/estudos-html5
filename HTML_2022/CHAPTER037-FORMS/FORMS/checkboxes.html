@@ -1,0 +1,46 @@
+<!--
+    * CHECKBOXES(CAIXAS DE SELEÇÃO)
+
+        - O <input type="checkbox"> define uma caixa de seleção.
+        - As caixas de seleção permitem que o usuário selecione ZERO ou MAIS opções de um número limitado de opções.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Caixas de seleção(Checkbox)</h2>
+
+    <p>O &lt;input type="checkbox"&gt; defines uma caixa de seleção:</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form action="">
+        <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - o elemento <input type="checkbox"> define uma caixa de seleção As caixas de seleção permitem que o usuário selecione ZERO ou MAIS opções de um número limitado de opções.
+        -->
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="vehicle1">Eu tenho uma bicicleta Mountain Bike</label>
+        <br/>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
+        <label for="vehicle2">Eu tenho um Tesla</label>
+        <br/>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
+        <label for="vehicle3">Eu tenho um barco</label>
+        <br/>
+        <br/>
+        <input type="submit" value="Enviar"/>
+    </form>
+
+</body>
+</html>

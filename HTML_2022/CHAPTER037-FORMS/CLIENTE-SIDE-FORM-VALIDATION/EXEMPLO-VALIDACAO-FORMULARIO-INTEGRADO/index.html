@@ -1,0 +1,30 @@
+<!--
+    * EXEMPLOS DE VALIDAÇÃO DE FORMULARIO INTEGRADO
+
+        - usa recursos de validação de formulário HTML5
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Fruta inicial favorita</title>
+    <style>
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="choose">Você prefere uma banana ou uma cereja?</label>
+        <input type="text" id="choose" name="i_like"/>
+        <button type="submit">Enviar preferência.</button>
+    </form>
+</body>
+</html>

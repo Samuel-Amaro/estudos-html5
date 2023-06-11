@@ -1,0 +1,57 @@
+<!-- 
+    * ATRIBUTO DE AÇÃO(ACTION) HTML <form>
+
+     * DEFINIÇÃO E USO
+
+      - O action atributo especifica para onde enviar os dados do formulário quando um formulário é enviado.
+
+     * SINTAXE
+
+      <form action="URL">
+
+     * VALORES DE ATRIBUTO
+
+      - valor: URL;
+
+      - descrição: 
+
+         - Para onde enviar os dados do formulário quando o formulário for enviado.
+
+         - Valores possíveis:
+
+            - Um URL absoluto - aponta para outro site (como action = "http://www.example.com/example.htm")
+
+            - Um URL relativo - aponta para um arquivo em um site (como action = "exemplo.html")
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Formulario</title>
+</head>
+<body>
+    
+    <h1>Atributos Formulario</h1>
+
+    <p><strong>Exemplo:</strong> atributo action.</p>
+
+    <p><strong>Ao enviar, envie os dados do formulário para um arquivo chamado "action_page.php" (para processar a entrada):</strong></p>
+
+    <form action="action_page.php" method="get" accept-charset="utf-8">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">Segundo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        <p>Clique no botão "Enviar" e os dados do formulário serão enviados para uma página no servidor chamada "action_page.php".</p>
+    </form>
+    
+</body>
+</html>

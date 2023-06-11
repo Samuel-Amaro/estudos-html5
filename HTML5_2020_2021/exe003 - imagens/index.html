@@ -1,0 +1,65 @@
+<!-- Como inserir images no documento HTML5-->
+<!--
+    * <img>: TAG HTML é usada para inserir uma imagen em uma página da web;
+    - As imagens não são tecnicamente inseridas em uma página da web; as imagens são vinculadas a páginas da web. A <img>tag cria um espaço de retenção para a imagem referenciada.
+    - <img> tag esta vazia, contém apenas atributos e não possui uma tag de fechamento;
+    - A <img> tag tem dois atributos obrigatorios:
+        src - especifica o caminho para a imagem;
+        alt - especifica um texto alternativo para a imagem;
+    - sintaxe: <img src="url" alt="texto alternativo"
+    * ATRIBUTO SRC
+      -  O src atributo obrigatorio especifica o caminho (URL) para a imagem;
+      OBS: quando uma página da web é carregada; é o navegador, naquele momento, que pega a imagem de um servidor web e a insere na página. Portanto, certifique-se de que a imagem realmente fique no mesmo lugar em relação à página da web, caso contrário, seus visitantes receberão um ícone de link quebrado. O ícone de link quebrado e o alttexto são exibidos se o navegador não conseguir encontrar a imagem.
+    * ATRIBUTO ALT
+      - O altatributo obrigatório fornece um texto alternativo para uma imagem, se o usuário por algum motivo não puder visualizá-la (devido à conexão lenta, um erro no atributo src ou se o usuário usar um leitor de tela).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Imagens</title>
+</head>
+<body>
+    <h1> Testando Imagens No Documento HTML5</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Mollitia nesciunt enim perspiciatis ex numquam facilis ipsum recusandae, <br> consequuntur repudiandae pariatur, doloremque deleniti? <br> Laborum similique rem laboriosam nesciunt temporibus iure mollitia.</p>
+
+    <img src="logo-html-200.png" alt="Logo HTML 5">
+
+    <p> carregando imagem que não esta na mesma pasta que o documento html</p>
+
+    <img src="imagens/logo-css-200.png" alt="Logo CSS 3">
+
+    <p> tambem podemos carregar imagens externas</p>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8hEeLtFi3nse0zTIM7-sHMFa3iB1i1PiL45F_5RXJWvmECcB6&usqp=CAU" alt="Carro Antigo">
+
+    <p>Exemplo de link quebrado</p>
+
+    <img src="imagem_nao_existe.jpg" alt="imagen não existe">
+
+    <p>exemplo de uso do atributo alt da tag img</p>
+
+    <img src="teste.gif" alt="atributo alt funcionando">
+
+    <!--
+        * TAMANHO DA IMAGEN - LARGURA e ALTURA
+         - usando a tag style atributo para especificar a largura e altura de uma imagen
+    -->
+
+    <p>Exemplo de uso de configuração de altura e largura de uma imagem, dentro da tag style, usando os atributos altura e largura</p>
+
+    <img src="imagens/logo-css3.png" alt="Logo do CSS3"
+    style="width:500px;height:600;">
+
+    <!--
+        * COMO ALTERNATIVA, PODE USAR OS ATRIBUTOS width e height
+    -->
+
+    <p>Exemplo de uso dos atributos width(largura) e height(altura)</p>
+
+    <img src="imagens/logo-css3.png" alt="Logo do CSS3" width="500" height="600">
+</body>
+</html>

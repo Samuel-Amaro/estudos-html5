@@ -1,0 +1,48 @@
+<!--
+    * INPUT TYPE TIME(ENTRADA TIPO HORA)
+
+        - O <input type="time"> permite que o usuário selecione um horário (sem fuso horário).
+
+        - Dependendo do suporte do navegador, um seletor de horário pode aparecer no campo de entrada.
+
+        - O input elemento representa um controle para definir o valor do elemento para uma string que representa um horário específico .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Mostrar uum controle de entrada de tempo</h2>
+
+    <p>O <strong>&lt;input type="time"&gt;</strong> permite ao usuário selecionar um horário (sem fuso horário):</p>
+
+    <p>Se o navegador suportar, um seletor de tempo aparecerá ao entrar no campo de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="appt">Selecione um horario:</label>
+        <!--
+           - o <input type="time"> permite que o usuário selecione um horário (sem fuso horário).
+           - entre com um horario sem fuso horario
+        -->
+        <input type="time" id="appt" name="appt"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p><strong>Nota:</strong> type="time" não é compatível com Internet Explorer 11 ou Safari 14.1 anterior.</p>
+</body>
+</html>

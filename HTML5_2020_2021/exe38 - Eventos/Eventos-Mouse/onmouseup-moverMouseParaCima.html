@@ -1,0 +1,60 @@
+<!--
+    * EVENTOS DE MOUSE
+    * 
+    * ATRIBUTO DE EVENTO HTML ONMOUSEUP - MOVER MOUSE PARA CIMA
+    * 
+    * DEFINIÇÃO E USO:
+
+        - O atributo onmouseup é disparado quando um botão do mouse é liberado sobre o elemento.
+
+        - Dica: a ordem dos eventos relacionados ao evento onmouseup (para o botão esquerdo / do meio do mouse):
+
+            1.onmousedown
+            2.onmouseup
+            3.onclick
+
+        - A ordem dos eventos relacionados ao evento onmouseup (para o botão direito do mouse):
+
+            1.onmousedown
+            2.onmouseup
+            3.oncontextmenu
+
+    * SINTAXE:
+
+        <element onmouseup="script">
+
+    * TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo onmouseup</title>
+</head>
+<body>
+    <h1>Eventos Mouse</h1>
+    <h2>Atributo de evento HTML onmouseup</h2>
+    <p><strong>Exemplo: </strong> Execute um JavaScript ao liberar um botão do mouse sobre um parágrafo:</p>
+    <!--elemento do paragrafo tem dois atributos de evento de mouse especificados na tag, quando os eventos forem captados, sera executados javascript-->
+    <p id="p1" onmousedown="mouseParaBaixo()" onmouseup="mouseParaCima()">Clique no texto! <br> Mantenha o botão do mouse pressionado por alguns segundos, depois solte! <br> A função mouseDown() é acionada quando o botão do mouse é pressionado sobre este parágrafo. A função define a cor do texto para vermelho. A função mouseUp() é disparada quando o botão do mouse é liberado. A função mouseUp() define a cor do texto como verde.</p>
+
+    <script>
+        /*
+         * função java script que adiciona uma cor ao texto dentro do elemento 
+        */
+        function mouseParaBaixo() {
+            document.getElementById("p1").style.color = "red";
+        }
+
+        /**
+         * função java script que adiciona uma cor ao texto dentro do elemento 
+        */
+        function mouseParaCima() {
+            document.getElementById("p1").style.color = "green";
+        }
+    </script>
+</body>
+</html>

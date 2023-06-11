@@ -1,0 +1,60 @@
+<!--
+    * TAG HTML <iframe>
+
+    * DEFINIÇÃO E USO
+
+        - A <iframe> tag especifica um quadro embutido(inline).
+
+        - Um quadro embutido é usado para incorporar outro documento no documento HTML atual.
+
+        - Dica: Use CSS para estilizar <iframe> (veja o exemplo abaixo).
+            
+        - Dica: é uma boa prática sempre incluir um atributo title para o arquivo <iframe>. Isso é usado por leitores de tela para ler qual é o conteúdo do <iframe> arquivo.
+
+    * ATRIBUTOS
+
+            ATTRIBUTE: allow(permitir)
+            VALUE:
+            DESCRIPTION: Especifica uma política de recursos para o <iframe>
+            -------------------------------
+            ATTRIBUTE: allowfullscreen(Permitir tela cheia)
+            VALUE: true/false
+            DESCRIPTION: Defina como true se o <iframe> puder ativar o modo de tela cheia chamando o método requestFullscreen()
+            -------------------------------
+            ATTRIBUTE: allowpaymentrequest(permitir pedido de pagamento)
+            VALUE: true/false
+            DESCRIPTION: Defina como verdadeiro se um <iframe> de origem cruzada tiver permissão para invocar a API de solicitação de pagamento
+            -------------------------------
+            ATTRIBUTE: height(altura)
+            VALUE: pixels
+            DESCRIPTION: Especifica a altura de um <iframe>. A altura padrão é 150 pixels
+            -------------------------------
+            ATTRIBUTE: loading(carregando);
+            VALUE: eager(imediatamente)/lazy(adiar)
+            DESCRIPTION: Especifica se um navegador deve carregar um iframe imediatamente ou adiar o carregamento de iframes até que algumas condições sejam atendidas
+            -------------------------------
+            ATTRIBUTE: name(nome);
+            VALUE: texto;
+            DESCRIPTION: especifica o nome do <iframe>
+            ------------------------------
+            ATTRIBUTE: referrepolicy(política de referência)
+            VALUE: no-referrer(sem referenciador), no-referrer-when-downgrade(sem referenciador-quando-downgrade), origin(origem),
+            origin-when-cross-origin(origem-quando-origem-cruzada,), same-origin(mesma origem), strict-origin-when-cross-origin(origem-estrita-quando-origem-cruzada), unsafe-url(url inseguro)
+            DESCRIPTION: Especifica quais informações do referenciador enviar ao buscar o iframe
+            -------------------------------
+            ATTRIBUTE: sandbox(caixa de area)
+            VALUE: allow-forms(formulários de permissão), allow-pointer-lock(permitir-ponteiro-lock), allow-popups(permitir pop-ups), allow-same-origin(permitir-mesma-origem), allow-scripts(scripts de permissão), allow-top-navigation(permitir navegação superior)
+            DESCRIPTION: Habilita um conjunto extra de restrições para o conteúdo em um <iframe>
+            -------------------------------
+            ATTRIBUTE: src(src)
+            VALUE: URL
+            DESCRIPTION: Especifica o endereço do documento a ser incorporado ao <iframe>
+            -------------------------------
+            ATTRIBUTE: srcdoc
+            VALUE: HTML_code
+            DESCRIPTION: Especifica o conteúdo HTML da página a ser exibido no <iframe>
+            -------------------------------
+             ATTRIBUTE: width(largura) 
+            VALUE: pixels
+            DESCRIPTION: Especifica a largura de um <iframe>. A largura padrão é de 300 pixels
+-->

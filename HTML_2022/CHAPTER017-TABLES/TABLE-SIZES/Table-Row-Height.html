@@ -1,0 +1,74 @@
+<!--
+    * HTML TABLE ROW HEIGHT(ALTURA DA LINHA DA TABELA HTML)
+
+        - Para definir a altura de uma linha específica, adicione o style atributo em um elemento de linha da tabela:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+
+        table, th, td{
+            /*propriedade css que adiciona bordas nos elementos th, td, e table, vai ter borda na tabela, e em cada celula da tabela vai ter borda também*/
+            border: 1px solid black;
+            /*para evitar bordas duplas, bordas na tabela e bordas nas celulas, usamos a propriedade css abaixo, para que as bordas sejam reduzidas a uma unica borda, borda somente na tabela geral*/
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Defina a altura da segunda linha para 200 pixels</h2>
+
+    <p>Defina a altura da segunda linha para 200 pixels:</p>
+
+    <!--
+        - define uma tabela, permitindo organizar os dados em linhas e colunas.
+
+        - por meio do atributo style no elemento <table> usando a propriedade css width para especificar a largura da tabela, aqui nete caso espeficamos que a tabela e 100% ampla na sua largura, pode ocupar todo espaço
+        
+    -->
+    
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <th style="width: 70%;">Primeiro Nome</th>
+            <th>Último Nome</th>
+            <th>Idade</th>
+        </tr>
+        <!--
+            usando o atributo style no elemento html tr que representa a segunda linha da tabela, iremos especificar por meio da prorpiedade css height que queremos que somente essa linha em especifico tenha uma altura de 200px
+        -->
+        <tr style="height: 200px;">
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Véspera</td>
+            <td>Jakson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>Corça</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

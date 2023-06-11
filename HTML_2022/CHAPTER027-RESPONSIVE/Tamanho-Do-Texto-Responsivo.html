@@ -1,0 +1,42 @@
+<!--
+    * TAMANHO DO TEXTO RESPONSIVO
+
+        - O tamanho do texto pode ser definido com uma unidade "vw", que significa a viewport width - "largura da janela de visualização".
+        - Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador:
+        - Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html
+        - A janela de visualização(viewport) é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+        - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+        - A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+        - A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</head>
+<body>
+
+    <!--
+        - usando o atributo style, para definir um css inline, somente no elemento <h1>, usando a propriedade css font-size, definindo o valor 10vw, com a unidade vw(viewport width) - largura da janela de visualização(area visivel do usuario), e a largura da janela do usuario, definimos uma tamanho de texto responsivo.
+        - aqui definimos que o texto do elemento <h1> sera definido para 10% da largura da viewport
+    -->
+    <h1 style="font-size: 10vw;">Texto Responsivo</h1>
+
+    <!--
+        - aqui definimos que o texto do elemento <p> sera definido para 5% da largura da viewport.
+    -->
+    <p style="font-size: 5vw;">Redimensione a janela do navegador para ver como o tamanho do texto é dimensionado.</p>
+
+    <!--
+        - aqui definimos que o texto do elemento <p> sera definido para 5% da largura da viewport.
+    -->
+    <p style="font-size: 5vw;">Use a unidade "vw" ao dimensionar o texto. 10vw definirá o tamanho para 10% da largura da janela de visualização.</p>
+
+    <p>Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.</p>
+
+</body>
+</html>

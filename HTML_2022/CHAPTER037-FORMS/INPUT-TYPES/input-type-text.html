@@ -1,0 +1,57 @@
+<!--
+    * INPUT TYPE TEXT(TEXTO DO TIPO DE ENTRADA)
+
+        - <input type="text"> define um campo de entrada de texto de linha única:
+        
+        - O elemento input representa um controle de edição de texto simples de uma linha para o valor do elemento.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Text field(campo texto)</h2>
+
+    <p>O <strong>&lt;input type="text"&gt;</strong> define um campo de entrada de texto de uma linha:</p>
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o label fname esta associado a esse input
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Observe que o próprio formulário não é visível.</p>
+
+    <p>Observe também que a largura padrão de um campo de texto é de 20 caracteres.</p>
+    
+</body>
+</html>

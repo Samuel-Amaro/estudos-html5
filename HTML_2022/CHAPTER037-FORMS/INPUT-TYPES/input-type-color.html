@@ -1,0 +1,49 @@
+<!--
+    * INPUT TYPE COLOR(ENTRADA DO TIPO COR)
+
+        - O <input type="color"> é usado para campos de entrada que devem conter uma cor.
+
+        - Dependendo do suporte do navegador, um seletor de cores pode aparecer no campo de entrada.
+
+        - O elemento input representa um controle de cor bem, para definir o valor do elemento para uma string representando uma cor simples.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Mostrar um seletor de cores</h2>
+
+    <p>O <strong>&lt;input type="color"&gt;</strong> é usado para campos de entrada que devem conter uma cor.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="favcolor">Selecione sua cor favorita:</label>
+        <!--
+            - o elemento <input type="color"> e usado como um campo de entrada que deve conter uma cor.
+        -->
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>type="color" não é compatível com Internet Explorer 11 ou Safari 9.1 (ou anterior).</p>
+    
+</body>
+</html>

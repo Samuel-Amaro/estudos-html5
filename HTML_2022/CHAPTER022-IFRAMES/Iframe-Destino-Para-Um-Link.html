@@ -1,0 +1,33 @@
+<!--
+    * IFRAME - DESTINO PARA UM LINK
+
+        - Um iframe pode ser usado como o quadro de destino para um link.
+
+        - O target atributo do link deve se referir ao name atributo do iframe:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Iframe - Target para um link</h2>
+
+     <!--
+        - usando o elemento <iframe> para exibir uma pagina da web dentro de outra pagina da web.
+        - a tag <iframe> especifica um quadro inline.
+        - o <iframe> o quadro inline e usado para incorporar outro documento no documento html atual.
+        - usando os atributos height(altura) e width(largura) do elemento <iframe> para especificar tamanho do elemento <iframe> em pixels, neste caso especificamos 100% de altura e 300 de largura, e usamos o atributo title para especificar um titulo descritivo do iframe, o titulo e usado por leitores de tela.
+        - o atributo name especifica um nome para o iframe.
+    -->
+    <iframe src="./demo_iframe.html" height="200" width="300" title="Exemplo Iframe" name="iframe_a"></iframe>
+
+    <!--usando o elemento <a> para criar um hiperlink, que possui uma endereço externo, e o seu destino, alvo(e o iframe) dentro desta propria pagina, o target atributo esta referenciado o nome do iframe acima, para criar um iframe de destino como link, o link sera aberto no ifram-->
+    <p>
+        <a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a>
+    </p>
+
+    <p>Quando o atributo de destino de um link corresponder ao nome de um iframe, o link será aberto no iframe.</p>
+</body>
+</html>

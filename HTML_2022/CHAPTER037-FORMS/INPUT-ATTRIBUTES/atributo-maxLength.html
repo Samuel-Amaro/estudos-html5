@@ -1,0 +1,55 @@
+<!--
+    * O ATRIBUTO maxLenght(COMPRIMENTO MAXIMO)
+
+        - O maxlength atributo de entrada especifica o número máximo de caracteres permitidos em um campo de entrada.
+
+        - Nota: Quando a maxlength é definido, o campo de entrada não aceitará mais do que o número especificado de caracteres. No entanto, esse atributo não fornece nenhum feedback. Portanto, se você deseja alertar o usuário, deve escrever o código JavaScript.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <h2>O atributo de maxLenght de entrada</h2>
+
+    <p>O atributo maxlength especifica o número máximo de caracteres permitidos em um campo de entrada:</p>
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo size, especifica a largura visivel em caractere do campo de entrado do form.
+            - o campo abaixo tera 50 caracteres visiveis de largura, o restante e scrollado.
+        -->
+        <input type="text" id="fname" name="fname" size="50"/>
+        <br/>
+        <label for="pin">PIN:</label>
+        <br/>
+        <!--
+            - o campo abaixo tera 4 caracteres visiveis de largura. o resto e scrollado
+            - o atributo maxLenght especifica o numero maximo de caracteres permitidos em um campo de entrada, no entanto esse atributo não fornece nenhum feedback.
+            - esse cmapo de entrada abaixo possui a largura visivel de 4 caracters e so aceita 4 caracteres
+        -->
+        <input type="text" id="pin" name="pin" size="4" maxlength="4"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

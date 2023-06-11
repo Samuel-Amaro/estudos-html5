@@ -1,0 +1,95 @@
+<!--
+    * WEB DESIGN RESPONSIVO EM HTML
+
+        - Web design responsivo é sobre a criação de páginas da web que ficam bem em todos os dispositivos!
+        - Um web design responsivo se ajustará automaticamente a diferentes tamanhos de tela e viewports.
+
+    * OQUE É WEB DESIGN RESPONSIVO ?
+
+        - Responsive Web Design é usar HTML e CSS para redimensionar, ocultar, reduzir ou ampliar automaticamente um site, para torná-lo bom em todos os dispositivos (computadores, tablets e telefones):
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .menu{
+            float: left;
+            width: 20%;
+        }
+        .menuitem{
+            padding: 8px;
+            margin-top: 7px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .main{
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        .right{
+            background-color: lightblue;
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+        @media only screen and (max-width: 800px) {
+            /*For tablets*/
+            .main{
+                width: 80%;
+                padding: 0;
+            }
+            .right{
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            /*For mobile phones: */
+            .menu, .main, .right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="background-color: #f1f1f1; padding: 15px;">
+        <h1>Cinque Terre</h1>
+        <h3>Redimensionar a janela do navegador</h3>
+    </div>
+
+    <div style="overflow: auto;">
+        <div class="menu">
+            <div class="menuitem">A Caminhada</div>
+            <div class="menuitem">Transporte</div>
+            <div class="menuitem">Histórico</div>
+            <div class="menuitem">Galeria</div>
+        </div>
+
+        <div class="main">
+            <h2>A Caminhada</h2>
+            <p>A caminhada de Monterosso a Riomaggiore levará aproximadamente duas horas, mais ou menos uma hora, dependendo das condições climáticas e da sua forma física.</p>
+            <img src="./images/img_5terre.jpg" style="width: 100%;">
+        </div>
+    
+        <div class="right">
+            <h2>Que?</h2>
+            <p>Cinque Terre compreende cinco aldeias: Monterosso, Vernazza, Corniglia, Manarola e Riomaggiore.</p>
+            <h2>Onde?</h2>
+            <p>Na costa noroeste da Riviera italiana, ao norte da cidade La Spezia.</p>
+            <h2>Preço?</h2>
+            <p>A Caminhada é grátis!</p>
+        </div>
+    </div>
+
+    <div style="background-color: #f1f1f1; text-align: center; padding: 10px; margin-top: 7px; font-size: 12px;">Esta página da web é parte de uma demonstração de web design fluido feita por w3schools.com. Redimensione a janela do navegador para ver o conteúdo responder ao redimensionamento.</div>
+    
+</body>
+</html>

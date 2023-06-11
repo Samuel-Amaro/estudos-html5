@@ -1,0 +1,48 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML ONAFTERPRINT
+
+     - O atributo onafterprint dispara quando uma página começa a ser impressa ou se a caixa de diálogo de impressão foi fechada.
+
+     - O atributo onafterprint é freqüentemente usado junto com o atributo onbeforeprint .
+
+    * SINTAXE:
+
+     <element onafterprint="script">
+
+     script : O script a ser executado em onafterprint
+    
+     ESSE EVENTO SO E SUPORTADADO NA TAG HTML <body>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onafterprint</title>
+</head>
+<body onafterprint="minhaFuncao()">
+
+    <h1>Evento onafterprint - após impressão</h1>
+
+    <h2>Tente imprimir este documento</h2>
+
+    <p><strong>Eventos disparados para o objeto de janela (aplica-se á tag &lt;body&gt;</strong></p>
+
+    <p>para testar o evento de um CTRL + P e veja oque acontece quando o evento e disparado</p>
+
+    <p><strong>Dica: </strong>atalhos de teclado, como Ctrl + P definem a página a ser impressa.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint blanditiis soluta. Deleniti officiis similique vel sequi perspiciatis consectetur atque unde voluptas non, voluptatibus ut hic at ipsa necessitatibus nesciunt.</p>
+    
+    <p><strong>	Script a ser executado após a impressão do documento</strong></p>
+    
+    <!-- quando o evento de onafterprint for executado vai chamar essa função do java script-->
+    <script>
+        function minhaFuncao() {
+            alert("Este documento esta sendo impresso!")
+        }
+    </script>
+
+</body>
+</html>

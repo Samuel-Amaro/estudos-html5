@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/*
+ * APLICANDO UMA CONFIGURAÇÃO DE CSS, EXTERNA NO DOCUMENTO HTML;
+ * 
+*/
+
+
+/*
+ * Aplicando uma configuração de CSS Na tag Body(Corpo da parte Textual do HTML)
+ * Uma cor de fundo no corpo textual;
+ * aplicando uma familia de fonte para todo o texto;
+ * um id(identificador de um unico elemento html por documento) e identificado por id = "nome_identificador_elemento" em HTML, e um identificador de um elemento em CSS e elemento#"nome_identificador"
+ * em HTML um class(um identificador de um grupo de elementos multiplos que tenham mesmas caracteristicas, por documento HTML,seleciona varios elementos por classe) e identificado por class = "nome_classe" em HTML, em CSS um class  e identificado por .nome_classe
+*/
+body{
+    background-color: #569967d3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*
+ * Aplicando configuração de CSS NOS TITULOS TAMBEM;
+ * existe os titulos principais e os subtitulos;
+ * Como faço para aplicar configurações de CSS diferentes em Mesmo grupo de titulos ?
+ * existe dois h1s so que um e titulo principal e outro e titulo de categoria, como faço para aplciar configurações diferentes entre eles ?
+ * usando o seletor-CSS-id(ele identifica um elemento no HTML)
+ * Começar a tratar os titulos diferentes;
+ * aplicando uma configuração de CSS no h1 padrão generico;
+ * seletor padrão, um seletor padrão sem personalização
+*/
+h1{
+    color: rgb(60, 95, 56);
+}
+/*
+ * APLICANDO CONFIGURAÇÕES PERSONALIZADAS DE CSS, EM ELEMENTOS ESPECIFICOS DO HTML;
+ * USANDO DOIS SELETORES DE CSS PARA ISSO, O ID e o CLASS, QUE SELECIONA ELEMNTOS HTML, PARA RECEBEREM CONFIGURAÇÕES PERSONALIZADAS DE CSS, DOS DEMAIS ELEMENTOS QUE RECEBE UM CONFIGURAÇÃO PADRÃO DE CSS APLICADA;
+ * VAI DAR UMA NOVA PERSONALIZAÇÃO DE CSS, PARA OS ELEMENTOS, DANDO UMA NOVA CONFIGURAÇÃO DE CSS;
+*/
+/*
+ * Como aplico a configuração CSS em um elemento Diferente;
+ * o elemento abaixo foi identificado por um id(no html), isso e ele possui um identificador;
+ * por ele ser de um mesmo elemento ele herda configurações do h1 generico, aplicado antes;
+ * exemplo abaixo de um seletor personalizado, usando o ID;
+ * NO HTML id = "nome_identificado" NO CSS .nome_identificador_elemento
+*/
+h1#principal{
+  text-align: center;
+  background-color: rgb(30, 255, 0);
+  color: white;   
+}
+/*
+ * configurações padroes;
+*/
+h2{
+    color: rgb(49, 145, 57);
+}
+
+/*
+ * aplicando uma configuração de CSS, usando um SELETOR PERSONALIZADO DE CSS, O class;
+ * no HTML E IDENTIFICADO POR class = "nome classe, no CSS por .nome_classe
+*/
+/* 
+ * aplicando uma cor para destaque no subtitulo;
+ * tudo que for da classe basico vai receber a configuração abaixo, para todos elementos que ele seleciona;
+*/
+.basico{
+      color: darkmagenta;
+}
+/* 
+ * aplicando uma cor para destaque no subtitulo;
+ * tudo que for da classe intermediario vai receber a configuração abaixo, para todos elementos que ele seleciona;
+*/
+.intermediario{
+     color: crimson;
+}
+/* 
+ * aplicando uma cor para destaque no subtitulo;
+ * tudo que for da classe avancado vai receber a configuração abaixo, para todos elementos que ele seleciona;
+*/
+.avancado{
+    color: blue;
+}
+/*
+ * aplicando uma formatação de texto, texto centralizado ao centro;
+ * um cor de fundo nesse titulo, um destaque;
+ * um cor para a fonte padrão;
+*/
+.destaque_css{
+    text-align: center;
+    background-color: black;
+    color: white; 
+}

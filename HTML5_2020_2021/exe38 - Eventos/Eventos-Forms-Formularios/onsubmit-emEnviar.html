@@ -1,0 +1,50 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTOS DE FORMULARIO onsubmit(em enviar)
+
+      - O atributo onsubmit é disparado quando um formulário é enviado.
+
+      - SINTAXE:
+
+        <form onsubmit="script">
+
+     - TAGS HTML SUPORTADAS:
+
+         <form>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Formulario</title>
+</head>
+<body>
+
+    <h1>Eventos de Formulario onsubmit(em enviar)</h1>
+
+    <p><strong>Exemplo: </strong>Execute um JavaScript quando um formulário for enviado</p>
+
+    <p>Quando você envia o formulário, uma função é acionada e alerta algum texto.</p>
+
+    <!--formulario-->
+    <form action="#" onsubmit="alertaEnviou()">
+        <!--label-->
+        <label for="lbl">Entre com Nome:</label>
+        <!--campo de enviar-->
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--funçaõ java script que e acionada quando o formulario e enviado-->
+    <script>
+        function alertaEnviou() {
+            alert("O Formulario foi enviado!");
+        }
+    </script>
+</body>
+</html>

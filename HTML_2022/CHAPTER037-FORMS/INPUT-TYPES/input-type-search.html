@@ -1,0 +1,43 @@
+<!--
+    * INPUT TYPE SEARCH(CAMPO DE ENTRADA DE PESQUISA)
+
+        - O <input type="search"> é usado para campos de pesquisa (um campo de pesquisa se comporta como um campo de texto normal).
+
+        - O input elemento representa um controle de edição de texto simples de uma linha para o valor do elemento .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Field Search(campo pesquisa)</h2>
+
+    <p>O <strong>&lt;input type="search"&gt;</strong> é usado para campos de pesquisa (comporta-se como um campo de texto normal):</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="gsearch">Pesquisa google:</label>
+        <!--
+           - o <input type="search"> é usado para campos de pesquisa (um campo de pesquisa se comporta como um campo de texto normal).
+           - o usuario entra com um termo para ser pesquisa, ou texto
+        -->
+        <input type="search" id="gsearch" name="gsearch"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

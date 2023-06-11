@@ -1,0 +1,47 @@
+<!--
+    * O ELEMENTO <video>
+
+        O <video> elemento permite incorporar um vídeo com muita facilidade. Um exemplo bem simples se parece com isso:
+
+            <video src="rabbit320.webm" controls>
+                <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
+            </video>
+
+        As características de nota são:
+
+            src: Da mesma forma que para o <img> elemento, o src atributo (source) contém um caminho para o vídeo que você deseja incorporar. Funciona exatamente da mesma maneira.
+
+            controls: Os usuários devem ser capazes de controlar a reprodução de vídeo e áudio (é especialmente crítico para pessoas com epilepsia .) Você deve usar o controls atributo para incluir a própria interface de controle do navegador ou construir sua interface usando a API JavaScript apropriada . No mínimo, a interface deve incluir uma maneira de iniciar e parar a mídia e ajustar o volume.
+
+
+            O parágrafo dentro das <video> tags: Isso é chamado de conteúdo de fallback — isso será exibido se o navegador que estiver acessando a página não suportar o <video> elemento, permitindo-nos fornecer um fallback para navegadores mais antigos. Isso pode ser o que você quiser; neste caso, fornecemos um link direto para o arquivo de vídeo, para que o usuário possa pelo menos acessá-lo de alguma forma, independentemente do navegador que estiver usando.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Simple video example</title>
+</head>
+<body>
+
+    <h1>Below is a simple video example</h1>
+
+    <!--
+        - incorporando um video no documento usando elemento video, tecnologia nativa do HTML5.
+            - caminho para o video que desejamos incorporar na pagina
+            - o atributo controls, permite os usuarios controlar a reprodução de video e audio.
+
+    -->
+    <video src="../rabbit320.webm" controls>
+        <!--
+            - o elemento <p> dentro da tag <video> e chamado de conteudo de fallback isso sera exibido se o navegador que estiver acessando a página não suportar o <video> elemento.
+        -->
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.
+        </p>
+    </video>
+
+</body>
+
+</html>

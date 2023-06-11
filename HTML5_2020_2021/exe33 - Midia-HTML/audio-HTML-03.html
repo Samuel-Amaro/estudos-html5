@@ -1,0 +1,47 @@
+<!--
+    * ÁUDIO HTML;
+
+     - O <audio> elemento HTML é usado para reproduzir um arquivo de áudio em uma página da web.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio HTML</title>
+</head>
+<body>
+    <!--
+        * O ELEMENTO HTML <audio>
+          - Para reproduzir um arquivo de áudio em HTML, use o <audio> elemento:
+    -->
+    <h1>Áudio HTML</h1>
+    <h2>O elemento HTML audio</h2>
+    <audio controls>
+        <source src="audio-local.mp3" type="audio/mpeg">
+        <p>Seu Navegador Não tem  Compatibilidade Com a tag audio do HTML</p>
+    </audio>
+    <!--
+        * ÁUDIO HTML - COMO FUNCIONA
+
+         - O controls atributo adiciona controles de áudio, como reprodução, pausa e volume.
+         - O <source> elemento permite que você especifique arquivos de áudio alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.
+         - O texto entre as tags <audio> e </audio> só será exibido em navegadores que não suportam o <audio> elemento.
+    -->
+    <audio controls>
+        <!-- primeiro audio a ser carregado se o navegador conhecer esse tipo de midia e ter compatibilidade-->
+        <source src="audio-local.mp3" type="audio/mpeg">
+        <!-- caso nenhum dos elementos source acima não sejam carregados devido a compatibilidade do navegador, sera mostrado este paragrafo com um aviso de que a compatibilidade não ocorreu-->
+        <p>Seu Navegador Não tem  Compatibilidade Com a tag audio do HTML</p>
+    </audio>
+    <!--
+        * TIPOS DE MIDIA - MIDIA TYPE DO ELEMENTO SOURCE
+
+         FILE FORMAT              MEDIA TYPE
+            MP3                     audio/mpeg
+            OGG                     audio/ogg
+            WAV                     audio/wav
+    -->
+</body>
+</html>

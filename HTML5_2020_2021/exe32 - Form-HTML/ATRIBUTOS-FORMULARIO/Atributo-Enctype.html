@@ -1,0 +1,58 @@
+<!--
+    * ATRIBUTO HTML <form> enctype
+
+      - Especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor (apenas para method = "post")
+
+    * DEFINIÇÃO E USO
+
+     - O enctype atributo especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor.
+
+     - Nota: O enctypeatributo pode ser usado apenas se method="post"
+
+    * SINTAXE:
+
+      <form enctype="value">
+
+    * VALORES DE ATRIBUTO
+
+     VALOR: application/x-www-form-urlencoded;
+     DESCRIÇÃO: Padrão. Todos os caracteres são codificados antes do envio (os espaços são convertidos em símbolos "+" e os caracteres especiais são convertidos em valores ASCII HEX);
+
+     VALOR: multipart/form-data;
+     DESCRIÇÃO: Este valor é necessário se o usuário for enviar um arquivo através do formulário;
+
+     VALOR: text/plain;
+     DESCRIÇÃO: Envia dados sem nenhuma codificação. Não recomendado;
+
+    * EXEMPLO: Envie dados do formulário codificados como "multipart / form-data":
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo de Formulario</title>
+</head>
+<body>
+    
+    <h1>Atributo de formulario - enctype</h1>
+    
+    <p><strong>Exemplo:</strong> Envie dados do formulário codificados como "multipart / form-data"</p>
+
+    <!--atributo de como os dados devem ser codificados foi especificado no formulario-->
+    <form action="action_page.php" accept-charset="utf8" autocomplete="on" enctype="multipart/form-data" method="GET">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">Ultimo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

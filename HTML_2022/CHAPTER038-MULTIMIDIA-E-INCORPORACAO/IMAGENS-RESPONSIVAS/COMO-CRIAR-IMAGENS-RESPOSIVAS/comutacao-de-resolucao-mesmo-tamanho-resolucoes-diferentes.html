@@ -1,0 +1,32 @@
+<!--
+    * COMUTAÇÃO DE RESOLUÇÃO: MESMO TAMANHO, RESOLUÇÕES DIFERENTES
+
+        Se você oferece suporte a várias resoluções de exibição, mas todos veem sua imagem no mesmo tamanho real na tela, você pode permitir que o navegador escolha uma imagem de resolução apropriada usando srcset descritores x e sem sizes— uma sintaxe um pouco mais fácil!
+
+        Neste exemplo, o seguinte CSS é aplicado à imagem para que ela tenha uma largura de 320 pixels na tela (também chamados de pixels CSS):
+
+        Nesse caso, sizes não é necessário — o navegador determina em qual resolução a tela está sendo exibida e exibe a imagem mais apropriada referenciada no arquivo srcset. Portanto, se o dispositivo que estiver acessando a página tiver uma tela de resolução padrão/baixa, com um pixel de dispositivo representando cada pixel CSS, a elva-fairy-320w.jpg imagem será carregada (o 1x está implícito, portanto, você não precisa incluí-lo). uma alta resolução de dois pixels de dispositivo por pixel CSS ou mais, a elva-fairy-640w.jpg imagem será carregada. A imagem de 640px tem 93KB, enquanto a imagem de 320px tem apenas 39KB.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Responsive HTML images demo</title>
+    <style>
+        img {
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        - Nesse caso, sizes não é necessário — o navegador determina em qual resolução a tela está sendo exibida e exibe a imagem mais apropriada referenciada no arquivo srcset. Portanto, se o dispositivo que estiver acessando a página tiver uma tela de resolução padrão/baixa, com um pixel de dispositivo representando cada pixel CSS, a elva-fairy-320w.jpg imagem será carregada (o 1x está implícito, portanto, você não precisa incluí-lo). uma alta resolução de dois pixels de dispositivo por pixel CSS ou mais, a elva-fairy-640w.jpg imagem será carregada. A imagem de 640px tem 93KB, enquanto a imagem de 320px tem apenas 39KB.
+    -->
+    <img srcset="../images/elva-fairy-320w.jpg,
+    ../images/elva-fairy-480w.jpg 1.5x,
+    ../images/elva-fairy-640w.jpg 2x" src="../images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy"/>
+
+</body>
+</html>

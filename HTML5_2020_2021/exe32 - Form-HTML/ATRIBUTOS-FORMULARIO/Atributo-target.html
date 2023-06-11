@@ -1,0 +1,64 @@
+<!--
+    * ATRIBUTO target(alvo) DO HTML <form>
+
+        - Especifica onde exibir a resposta recebida após o envio do formulário
+
+    * DEFINIÇÃO E USO:
+
+      - O target atributo especifica um nome ou uma palavra-chave que indica onde exibir a resposta recebida após o envio do formulário.
+
+      - O target atributo define um nome ou uma palavra-chave para um contexto de navegação (por exemplo, guia - tab, janela - window ou quadro embutido - inline frame).
+
+    * SINTAXE:
+
+        <form target="_blank|_self|_parent|_top|framename">
+
+    * VALORES DOS ATRIBUTOS:
+
+       VALUE: _blank;
+       DESCRIPTION: A resposta é exibida em uma nova janela ou guia;
+
+       VALUE: _self;
+       DESCRIPTION: A resposta é exibida no mesmo quadro (este é o padrão);
+
+       VALUE: _parent;
+       DESCRIPTION: A resposta é exibida no quadro principal;
+
+       VALUE: _top;
+       DESCRIPTION: A resposta é exibida em todo o corpo da janela;
+
+       VALUE: framename;
+       DESCRIPTION: A resposta é exibida em um iframe nomeado;
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Formulario</title>
+</head>
+<body>
+    
+    <h1>Atributos de formulario - target(alvo)</h1>
+
+    <p><strong>Exemplo:</strong> Exibir a resposta recebida em uma nova janela ou guia:</p>
+
+    <!-- especifica o atributo target="_blank" para abrir a resposta do formulario em uma nova janela ou guia -->
+    <form action="action_page.php" method="GET" autocomplete="on" name="meuForm" accept-charset="utf8" enctype="application/x-www-form-urlencoded" rel="next" target="_blank">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">Ultimo Nome:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

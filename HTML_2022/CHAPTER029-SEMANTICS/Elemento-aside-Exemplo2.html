@@ -1,0 +1,39 @@
+<!--
+    - Use CSS para estilizar o elemento <aside>:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--
+        define informações de estilo local para estilizar o documento
+    -->
+    <style>
+        aside{
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        - bloco de texto que fala sobre o assunto principal circundante, o assunto que esta no ar, proximo ao aside elemento, o assunto principal que abrange o escopo.
+    -->
+    <p>Minha família e eu visitamos o centro do Epcot neste verão. O tempo estava bom e o Epcot foi incrível! Eu tive um ótimo verão junto com minha família!</p>
+    <!--
+        - o elemento <aside> define um conteudo alem do conteudo ja existente no documento define um conteudo a parte, e um conteudo extra, e definido como uma barra lateral.
+        - o conteudo do asside deve estar indiretamente relacionado ao conteudo circudante do documento
+    -->
+    <aside>
+        <!--assunto do aside elemento, e um assunto que esta relacionado ao assunto circuncidante do documento, de forma implicita os assuntos estão relacionados, assim o asside e um conteudo a parte, mas que esta relacionado, ao assunto principal de acordo com o escopo do elemento-->
+        <p>O Epcot é um parque temático no Walt Disney World Resort com atrações emocionantes, pavilhões internacionais, fogos de artifício premiados e eventos especiais sazonais.</p>
+    </aside>
+
+    <p>Minha família e eu visitamos o centro do Epcot neste verão. O tempo estava bom e o Epcot foi incrível! Eu tive um ótimo verão junto com minha família!</p>
+    <p>Minha família e eu visitamos o centro do Epcot neste verão. O tempo estava bom e o Epcot foi incrível! Eu tive um ótimo verão junto com minha família!</p>
+</body>
+</html>

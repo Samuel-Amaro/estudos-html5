@@ -1,0 +1,36 @@
+<!--
+    * ATRIBUTO GLOBAL HTML - CONTENTEDITABLE(editável de conteúdo)
+
+     - O contenteditable atributo especifica se o conteúdo de um elemento é editável ou não.
+
+     - Observação: quando o contenteditable atributo não é definido em um elemento, o elemento o herda de seu pai.
+
+     - SINTAXE:
+
+        <element contenteditable="true|false">
+
+     - VALORES DE ATRIBUTO:
+
+        true : Especifica que o elemento é editável;
+        false : Especifica que o elemento não é editável.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo contenteditable</title>
+</head>
+<body>
+    <h1>Atributo Global HTML contenteditable - conteudo editavel</h1>
+    
+    <p>Especifica se o conteúdo de um elemento é editável ou não</p>
+    
+    <!--conteudo do paragrafo pode ser editavel-->
+    <p contenteditable="true"><b>Conteudo deste paragrafo e editavel: sim!</b> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed excepturi accusantium tempore repellendus eum, soluta repudiandae qui quos saepe, veniam et, culpa distinctio illo ducimus dolores debitis minus. Velit.</p>
+
+    <!--conteudo do paragrafo não pode ser editavel-->
+    <p contenteditable="false"><b>Conteudo deste paragrafo não e editavel!</b> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint eligendi odio suscipit illum a illo et, perferendis, quas numquam quaerat accusantium? Provident sint magni velit quisquam, quas reprehenderit quia!</p>
+</body>
+</html>

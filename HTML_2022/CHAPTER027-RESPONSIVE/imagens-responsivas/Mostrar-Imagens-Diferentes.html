@@ -1,0 +1,39 @@
+<!--
+    * MOSTRAR IMAGENS DIFERENTES DEPENDENDO DA LARGURA DO NAVEGADOR
+
+        - O elemento HTML <picture> permite definir imagens diferentes para diferentes tamanhos de janela do navegador.
+
+        - Redimensione a janela do navegador para ver como a imagem abaixo muda dependendo da largura:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - A janela de visualização(viewport) é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+        - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+        - A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+        - A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h2>Mostrar imagens diferentes dependendo da largura do navegador</h2>
+
+    <p>Redimensione a largura do navegador e a imagem mudará em 600px e 1500px.</p>
+    
+    <!--
+        - o elemento html <picture> permite exibir imagens diferentes para diferentes dispositivos ou tamanhos de tela.
+        - o elemento <picture> contém um ou mais elementos <source>, cada um referise a diferentes imagens por meio do srcset atributo
+    -->
+    <picture>
+        <!--o elemento <source> referese a diferentes imagens por meio do atributo srcset, o elemento possui um atributo chamado media que define quando a imagen é mais adequada-->
+        <source media="(max-width: 600px)" srcset="../images/img_smallflower.jpg">
+        <source media="(max-width: 1500px)" srcset="../images/img_flowers.jpg">
+        <source srcset="">
+        <!--usamos o <img> elemento como ultimo elemento filho do <picture> elemento. o <img> elemento e usado por navegadores que não suportam o <picture> elemento ou se nenhuma das <sources> tags correponder.-->
+        <img src="../images/img_flowers.jpg" style="width: auto;">
+    </picture>
+</body>
+</html>

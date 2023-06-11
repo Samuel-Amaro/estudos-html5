@@ -1,0 +1,166 @@
+<!--
+    * ELEMENTOS DE FORMULARIO
+
+    * OS ELEMENTOS HTML <form>
+
+       -  O <form> elemento HTML pode conter um ou mais dos seguintes elementos de formulário:
+           
+         <input> - entrada
+         <label> - rotulo
+         <select> - seleciona
+         <textarea> - area de texto
+         <button> - botão
+         <fieldset> - conjunto de campo
+         <legend> - legenda
+         <datalist> - lista de dados
+         <output> - saida
+         <option> - opção
+         <optgroup> - opção grupo           
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Formulário</title>
+</head>
+<body>
+    <h1>Elementos de Formulario</h1>
+    <p>Descrevendo e mostrando todos os elementos de Formulario</p>
+    <h2>O elemento input - entrada</h2>
+    <!--
+        * O ELEMENTO <input>
+
+         - Um dos elementos de formulário mais usados ​​é o <input> elemento.
+         - O <input> elemento pode ser exibido de várias maneiras, dependendo do type atributo.
+    -->
+    <!-- formulario -->
+    <form action="#">
+        <!--label-->
+        <label for="primeiro_nome">Primeiro Nome</label>
+        <!--input - type: text -->
+        <input type="text" id="primeiro_nome" name="primeiro_nome">
+    </form>
+
+    <h2>O Elemento Label - rotulo</h2>
+    <!--
+        * O ELEMENTO LABEL
+
+          - O <label> elemento define um rótulo para vários elementos do formulário.
+          - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para uni-los.    
+    -->
+
+    <h2>O Elemento Select - seleciona</h2>
+    <p>para selecionar mais de um valor da lista pressione e segure ctrl e clique nas opções com o mouse</p>
+    <!--
+        * O ELEMENTO SELECT - SELECIONA
+
+         - O <select> elemento define uma lista suspensa:
+
+         - Os <option> elementos definem uma opção que pode ser selecionada;
+         - Por padrão, o primeiro item da lista suspensa é selecionado.
+         - Para definir uma opção pré-selecionada, adicione o selected atributo à opção:
+
+         # VALORES VISÍVEIS:
+
+          - Use o size atributo para especificar o número de valores visíveis na lista:
+
+        # PERMITIR VÁRIAS SELEÇÕES:
+
+         - Use o multiple atributo para permitir que o usuário selecione mais de um valor:
+    -->
+    <!--formulario-->
+    <form action="#">
+        <!--label-->
+        <label for="lista_carros">Escolha um Carro</label>
+        <!--lista suspensa que vai ter somente 3 valores visiveis, os outros estarão la na lista, mas o usuario tera que ir la e rola a barra para velos e o usuario podera escolher mais de uma valor da lista -->
+        <select name="lista_carros" id="lista_carros" size="3" multiple>
+           <!--item da lista - opção da lista, essa opção vai ser uma opção pre-selecionada inicialmente-->
+           <option value="volvo" selected>Volvo</option>
+           <!--item da lista - opção da lista-->
+           <option value="saab">Saab</option>
+           <!--item da lista - opção da lista-->
+           <option value="fiat">Fiat</option>
+           <!--item da lista - opção da lista-->
+           <option value="audi">Audi</option> 
+        </select>
+    </form>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, laborum consequatur! Harum asperiores dignissimos porro voluptas placeat quo a excepturi minus quae ipsum impedit temporibus rem deleniti, laudantium sed. Earum.
+    <h2>O Elemento textarea - area de texto</h2>
+    <!--
+        * O ELEMENTO <textarea>
+        
+          - O <textarea> elemento define um campo de entrada de várias linhas (uma área de texto):
+          - O rows atributo especifica o número visível de linhas em uma área de texto.
+          - O cols atributo especifica a largura visível de uma área de texto.
+          - pode-se definir o tamanho da area de texto usando CSS, com as propriedades width(largura) e height(altura);
+    -->
+    <!-- formulario sem ação para processar os dados-->
+    <form>
+        <textarea name="mensage" id="mensage" cols="30" rows="10">
+         O gato estava brincando no jardim, este e um textarea, uma area de texto de multiplas linhas, finalidade e mostrar um texto para um usuario, dentro dessa area!  
+        </textarea>
+    </form>
+    <h2>O Elemento button - botão</h2>
+    <!--
+        * O ELEMENTO <BUTTON> - BOTÃO
+          - O <button> elemento define um botão clicável:
+          - Sempre especifique o typeatributo para o elemento de botão. Navegadores diferentes podem usar tipos padrão diferentes para o elemento de botão.
+    -->
+    <!-- formulario sem ação para processar os dados recebidos pelos inputs-->
+    <form>
+        <!-- botão-->
+        <button type="button" onclick="alert('Hello Word!')">Clique Neste Botão!</button>
+    </form>
+    <h2>O Elementos fieldset e legend - Conjunto de Campo e Legenda</h2>
+    <!--
+        * OS ELEMENTOS <FIELDSET> e <LEGEND>
+          
+          - O <fieldset> elemento é usado para agrupar dados relacionados em um formulário.
+          - O <legend> elemento define uma legenda para o <fieldset> elemento.
+    -->
+    <!-- formulario sem ação para processar os inputs recebidos de um usuario-->
+    <form>
+        <!--elemento conjunto de campo definido, agrupa elementos-->
+        <fieldset>
+            <!--legenda do elemento de agrupamento-->
+            <legend>Login</legend>
+            <!--label-->
+            <label for="fname">Primeiro Nome:</label>
+            <br>
+            <!--campo de texto-->
+            <input type="text" id="fname" name="fname">
+            <br>
+            <!--label-->
+            <label for="lname">Segundo Nome:</label>
+            <br>
+            <!--campo de texto-->
+            <input type="text" id="lname" name="lname">
+            <br>
+            <!--botão de enviar dados do input para serem processados-->
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    <h2>O Elemento datalist - lista de dados</h2>
+    <!--
+        * O ELEMENTO <datalist> LISTA DE DADOS
+
+         - O <datalist> elemento especifica uma lista de opções predefinidas para um <input> elemento.
+         - Os usuários verão uma lista suspensa das opções predefinidas à medida que inserem os dados.
+         - O list atributo do <input> elemento deve se referir ao id atributo do <datalist> elemento
+    -->
+    <!-- formulario sem ação para processar os inputs recebidos de um usuario-->
+    <form>
+        <!-- elemento list -->
+        <input list="navegadores">
+        <!--elemento - lista de dados, com a lista suspensa embutida, id da list e datalist tem que ser iguais para aparecer a lista-->
+        <datalist id="navegadores">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">                      
+        </datalist> 
+    </form>    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--
+    * FORMULÁRIOS HTML
+
+        - Um formulário HTML é usado para coletar a entrada do usuário. A entrada do usuário é mais frequentemente enviada a um servidor para processamento.
+
+        - Um formulário é um componente de uma página da Web que possui controles de formulário, como texto, botões, caixas de seleção, intervalo ou controles de seletor de cores. Um usuário pode interagir com esse formulário, fornecendo dados que podem ser enviados ao servidor para processamento posterior (por exemplo, retornando os resultados de uma pesquisa ou cálculo). Nenhum script do lado do cliente é necessário em muitos casos, embora uma API esteja disponível para que os scripts possam aumentar a experiência do usuário ou usar formulários para outros fins que não o envio de dados para um servidor.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>HTML Forms</h2>
+
+    <form action="#">
+        <label for="fname">First Name:</label>
+        <br/>
+        <input type="text" id="fname" name="fname" value="John"/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname" value="Doe"/>
+        <br/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Se você clicar no botão "Enviar", os dados do formulário serão enviados para uma página chamada "/action_page.php".</p>
+    
+</body>
+</html>

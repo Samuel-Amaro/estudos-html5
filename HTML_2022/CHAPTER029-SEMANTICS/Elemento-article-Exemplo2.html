@@ -1,0 +1,60 @@
+<!--
+    - Use CSS para estilizar o elemento <article>:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--define informações de estilo locais a serem aplicadas ao documento html-->
+    <style>
+        .all-browsers{
+            margin: 0;
+            padding: 5px;
+            background-color: lightgray;
+        }
+        .all-browsers > h1, .browser{
+            margin: 10px;
+            padding: 5px;
+        }
+        .browser{
+            background: white;
+        }
+        .browser > h2, p{
+            margin: 4px;
+            font-size: 90%;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        - o elemento <article> define um conteudo independente e autocontido, que deve fazer sentido por si so.
+        - definimos um artigo, que possui outros artigos relacionados, um artigo geral que abrange outros artigos mas com os assuntos relacionados.
+    -->
+    <article class="all-browsers">
+        <h1>O elemento artigo</h1>
+        <!--
+            - o elemento <article> define um conteudo independente e autocontido, que deve fazer sentido por si so.
+            - aqui definimos um artigo interno que fala sobre o assunto google chorme, que esta relacionado com o artigo externo.
+        -->
+        <article class="browser">
+            <h2>Google Chrome</h2>
+            <p>O Google Chrome é um navegador da Web desenvolvido pelo Google, lançado em 2008. Atualmente, o Chrome é o navegador da Web mais popular do mundo!</p>
+        </article>
+        <!--
+            - aqui definimos um outro artigo interno independente que esta dentro do assunto geral do site mas fala sobre o assunto Mozzila Firefox, que esta relacionado com o artigo externo.
+        -->
+        <article class="browser">
+            <h2>Mozzila Firefox</h2>
+            <p>Mozilla Firefox é um navegador web de código aberto desenvolvido pela Mozilla. O Firefox é o segundo navegador mais popular desde janeiro de 2018.</p>
+        </article>
+        <!--
+            - aqui definimos um outro artigo interno independente que esta dentro do assunto geral do site mas fala sobre o assunto Microsofot Edge, que esta relacionado com o artigo externo.
+        -->
+        <article class="browser">
+            <h2>Microsoft Edge</h2>
+            <p>O Microsoft Edge é um navegador da Web desenvolvido pela Microsoft, lançado em 2015. O Microsoft Edge substituiu o Internet Explorer.</p>
+        </article>
+    </article>
+      
+</body>
+</html>

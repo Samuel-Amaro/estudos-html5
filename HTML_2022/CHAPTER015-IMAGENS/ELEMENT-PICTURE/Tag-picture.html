@@ -1,0 +1,44 @@
+<!--
+    * ELEMENTO HTML <picture> - TAG
+
+    * DEFINÇÃO E USO
+
+        - A <picture> tag oferece aos desenvolvedores da Web mais flexibilidade na especificação de recursos de imagem.
+
+        - O uso mais comum do <picture> elemento será para direção de arte em designs responsivos. Em vez de ter uma imagem que é dimensionada para cima ou para baixo com base na largura da janela de visualização, várias imagens podem ser projetadas para preencher melhor a janela de visualização do navegador.
+
+        - O <picture> elemento contém duas tags: uma ou mais tags <source> e uma tag <img>.
+
+        - O navegador procurará o primeiro elemento <source> onde a consulta de mídia(MEDIA QUERY) corresponde à largura da janela de visualização atual(VIEW REPORT) e, em seguida, exibirá a imagem adequada (especificada no atributo srcset). O elemento <img> é necessário como o último filho do <picture> elemento, como uma opção de fallback se nenhuma das tags de origem corresponder.
+
+        - Dica: O <picture> elemento funciona "semelhante" a <video> e <audio>. Você configura fontes diferentes e a primeira fonte que se ajusta às preferências é a que está sendo usada.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h1>O elemento picture</h1>
+
+    <p>Redimensione a janela do navegador para carregar imagens diferentes.</p>
+
+    <!--usando o elemento html <picture> para ter mais flexibilidade na especificação de recursos de imagen-->
+    <picture>
+        <!--elemento html tag <source> especifica uma imagen para um tipo especifico de midia ou view report do navegador atual
+        
+        - O navegador procurará o primeiro elemento <source> onde a consulta de mídia(MEDIA QUERY) corresponde à largura da janela de visualização atual(VIEW REPORT) e, em seguida, exibirá a imagem adequada (especificada no atributo srcset).  
+        -->
+        <source media="(min-width: 650px)" srcset="../imgs/img_pink_flowers.jpg">
+        <source media="(min-width: 465px)" srcset="../imgs/img_white_flower.jpg">
+        <!--
+            - quando nenhuma tag <source> corresponder ao view report
+
+            - O elemento <img> é necessário como o último filho do <picture> elemento, como uma opção de fallback se nenhuma das tags de origem corresponder.
+        -->
+        <img src="../imgs/img_orange_flowers.jpg" alt="Flores" style="width: auto;">
+    </picture>
+</body>
+</html>

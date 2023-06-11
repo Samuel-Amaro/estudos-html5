@@ -1,0 +1,47 @@
+<!--
+    * INPUT TYPE URL(ENTRADA DO TIPO URL)
+
+        - O <input type="url"> é usado para campos de entrada que devem conter um endereço de URL.
+
+        - Dependendo do suporte do navegador, o campo url pode ser validado automaticamente quando enviado.
+
+        - Alguns smartphones reconhecem o tipo de URL e adicionam ".com" ao teclado para corresponder à entrada de URL.
+
+        - O input elemento representa um controle para editar uma única URL absoluta fornecida no valor do elemento .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Exibir um campo de entrada de URL</h2>
+
+    <p>O <strong>&lt;input type="url"&gt;</strong> é usado para campos de entrada que devem conter um endereço de URL:</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="homepage">Adicone sua página inicial:</label>
+        <!--
+           - o <input type="url"> é usado para campos de entrada que devem conter um endereço de URL.
+           - usuario entra com um endereço URL absoluto
+        -->
+        <input type="url" id="homepage" name="homepage"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

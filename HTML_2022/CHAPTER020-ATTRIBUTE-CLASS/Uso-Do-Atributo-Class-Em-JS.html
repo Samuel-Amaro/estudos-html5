@@ -1,0 +1,49 @@
+<!--
+    * USO DO ATRIBUTO CLASS EM JS
+
+        - O nome da classe também pode ser usado pelo JavaScript para executar determinadas tarefas para elementos específicos.
+
+        - JavaScript pode acessar elementos com um nome de classe específico com o getElementsByClassName() método:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Uso do atributo class em JS</h2>
+
+    <p>Clique no botão para ocultar todos os elementos com o nome da classe <q>city</q>:</p>
+
+    <button onclick="myFunction()">Ocultar elementos</button>
+    
+    <!--
+        - usando o atributo class em todos os elementos html abaixo para especificar uma classe para todos os elementos, aqui definimos que todos os elementos possui o atributo class com o valor city.
+        - todos os diferentes elementos abaixo terão a mesma classe
+        - o elementos que possui o atributo class com um valor sera estilizado com as classes vinculados no atributo class.
+        - o atributo class ira apontar para o nome de classe definido em uma folha de estilo.
+    -->
+    <h2 class="city">Londres</h2>
+
+    <p class="city">Londres é a capital da inglaterra</p>
+
+    <h2 class="city">Paris</h2>
+
+    <p class="city">Paris é a capital da frança.</p>
+
+    <h2 class="city">Tóquio</h2>
+
+    <p class="city">Tóquio é a capital do Japão.</p>
+
+    <script>
+        function myFunction() {
+            /*acessa elementos com um nome de class especifico*/
+            var x = document.getElementsByClassName("city");
+            for(var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

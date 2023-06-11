@@ -1,0 +1,141 @@
+<!--
+    * LINKS HTML - CRIAR MARCADORES(BOOKMARKS)
+
+        - Links HTML podem ser usados ​​para criar marcadores, para que os leitores possam pular para partes específicas de uma página da web.
+
+    * CRIAR UM BOOKMARKS EM HTML
+
+        - Os marcadores podem ser úteis se uma página da Web for muito longa.
+
+        - Para criar um marcador - primeiro crie o marcador e, em seguida, adicione um link a ele.
+
+        - Quando o link for clicado, a página rolará para baixo ou para cima até o local com o marcador.
+
+    * EXEMPLO
+
+        - Primeiro, use o id atributo para criar um marcador:
+
+            <h2 id="C4">Chapter</h2>
+
+        - Em seguida, adicione um link ao marcador ("Pular para o Capítulo 4"), de dentro da mesma página:
+
+            <a href="#C4">Jump to Chapter</c4>
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+
+    <!--
+        - adiconado um link ao marcador, para que o usuario possa pular para uma parte especifica da pagina usando o bookmarcks, o link abaixo usara o bookmarck definido no elemento html do capitulo 4 usando o id atributo pulara para la
+
+        - usamos o href atributo href="#value" para vincular ao marcador
+    -->
+    <a href="#C4" target="_self" title="Pular para o capítulo 4">Pular Para Capítulo 4</a>
+
+    <!--mesma coisa so que pulara para o capitulo 10, para o bookmarck definido la-->
+    <a href="#C10" target="_self" title="Pular para o capítulo 10">Pular Para o Capítulo 10</a>
+
+    <h2>Capítulo 1</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 2</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 3</h2>
+    <p>Este capítulo explica bla bla bla</p>
+    
+    <!--
+        - criando um marcador(bookmarks) dentro do documento.
+
+        - para que o leitor possa pular para partes especificas do documentoi
+        .
+
+        - usando o id atributo do elemento html para criar um marcador
+    -->
+    <h2 id="C4">Capítulo 4</h2>
+    <p>Este capítulo explica bla bla bla</p>
+    
+    <h2>Capítulo 5</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 6</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 7</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 8</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 9</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <!--
+        - criando um marcador(bookmarks) dentro do documento.
+
+        - para que o leitor possa pular para partes especificas do documentoi
+        .
+
+        - usando o id atributo do elemento html para criar um marcador
+    -->
+    <h2 id="C10">Capítulo 10</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 11</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 12</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 13</h2>
+    <p>Este capítulo explica bla bla bla</p>
+    
+    <h2>Capítulo 14</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 15</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 16</h2>
+    <p>Este capítulo explica bla bla bla</p>
+    
+    <h2>Capítulo 17</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 18</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 19</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 20</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 21</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 22</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <h2>Capítulo 23</h2>
+    <p>Este capítulo explica bla bla bla</p>
+
+    <!--
+        define um link - hiperlink- permitindo o usuario em clique mude de uma pagina para outra
+
+        define um hiperlink usando o elemento html <a>, o atributo href indica o destino do link, como destino especificamos uma URLs absoluta(um endereço da web completo) para vincular a um documento
+
+        o texto entre a tag inicial e a tag final e mostrado para o usuario, o texto do link e parte que ficara visivel para o usuario.
+
+        o atributo target(destino), permite especificar onde abrir o documento vinculado por meio do link, aqui especificaremos o valor _blank no target atributo para abrir o documento vinculado em nova janela ou nova guia.
+
+        o title atributo especifica informações extra sobre o elemento, o title atributo e um atributo global que todos elementos html possui. as informações são mostradas como um tooltip quando move o mouse sobre o elemento
+    -->
+
+    <a href="https://www.w3schools.com/html/" target="_blank" title="Vá para a seção HTML do W3Schools">HTML Imagens</a>
+    
+</body>
+</html>

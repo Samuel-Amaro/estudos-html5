@@ -1,0 +1,5 @@
+<!--
+    * POR QUE NÃO PODEMOS FAZER ISSO USANDO CSS OU JavaScript?
+
+        Quando o navegador começa a carregar uma página, ele começa a baixar (pré-carregar) todas as imagens antes que o analisador principal comece a carregar e interpretar o CSS e o JavaScript da página. Esse mecanismo é útil em geral para reduzir o tempo de carregamento da página, mas não é útil para imagens responsivas - daí a necessidade de implementar soluções como srcset. Por exemplo, você não pode carregar o <img> elemento, detectar a largura da janela de visualização com JavaScript e, em seguida, alterar dinamicamente a imagem de origem para uma menor, se desejar. Até então, a imagem original já teria sido carregada e você também carregaria a imagem pequena, o que é ainda pior em termos de imagem responsiva.
+-->

@@ -1,0 +1,50 @@
+<!--
+    * O ATRIBUTO name PARA <input>
+
+        - Observe que cada campo de entrada deve ter um name atributo a ser enviado.
+        - Se o name atributo for omitido, o valor do campo de entrada não será enviado.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo do nome</h2>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, O manipulador de formulário é especificado no action atributo do formulário.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - cada elemento <input> tem que possui o atributo name especificado e obrigatorio, Se o name atributo for omitido, o valor do campo de <input> não será enviado.
+            - o atributo name, especifica o nome do elemento de entrada do formulario
+        -->
+        <input type="text" id="fname" name="fname" value="John"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Se você clicar no botão "Enviar", os dados do formulário serão enviados para uma página chamada "/action_page.php".</p>
+    
+    <p>Observe que o valor do campo "First name" não será enviado, pois o elemento input não possui um atributo name.</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML onoffline(off-line)
+
+     - O atributo onoffline é disparado quando o navegador começa a trabalhar offline.
+
+     - Dica: o atributo on-line é o oposto do atributo on - line .
+
+    * SINTAXE:
+    
+     <element onoffline="script">
+
+     script : O roteiro a ser executado onoffline;
+     
+     TAG HTML SUPORTADAS: <body>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML onoffline</title>
+</head>
+<body ononline="onFunction()" onoffline="offFunction()">
+    
+    <h1>Evento HTML onoffline(off-line)</h1>
+
+    <p><strong>Exemplo:</strong> Execute um JAVASCRIPT quando o navegador começar a funcionar offline:</p>
+
+    <p>Abra o menu Arquivo e clique em "Trabalhar Offline" para alternar entre trabalhar online e offline.</p>
+
+    <script>
+
+        //Script a ser executado quando o navegador começa a funcionar offline
+        function onFunction() {
+            alert("Seu navegador está online");
+        }
+
+        
+        function offFunction() {
+            alert("Seu navagador está funcionando offline.");
+        }
+
+    </script>
+
+</body>
+</html>

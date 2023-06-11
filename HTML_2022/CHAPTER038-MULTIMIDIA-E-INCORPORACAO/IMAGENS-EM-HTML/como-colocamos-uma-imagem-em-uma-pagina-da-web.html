@@ -1,0 +1,57 @@
+<!--
+    * COMO COLOCAMOS UMA IMAGEM EM UMA PÁGINA DA WEB?
+
+        Para colocar uma imagem simples em uma página da web, usamos o <img> elemento. Este é um elemento vazio (o que significa que não tem conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — src(às vezes falado como seu título completo, source ). O src atributo contém um caminho que aponta para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma forma que os href valores de atributo nos <a> elementos.
+
+        Por exemplo, se sua imagem for chamada dinosaur.jpg e estiver no mesmo diretório que sua página HTML, você poderá incorporar a imagem assim:
+
+            <img src="dinosaur.jpg" alt="Dinosaur">
+
+        Se a imagem estivesse em um images subdiretório, que estivesse dentro do mesmo diretório da página HTML, você a incorporaria assim:
+
+            <img src="images/dinosaur.jpg" alt="Dinosaur">
+
+        E assim por diante.
+
+        Observação: os mecanismos de pesquisa também lêem os nomes dos arquivos de imagem e os contam para SEO. Portanto, você deve dar à sua imagem um nome de arquivo descritivo; dinosaur.jpg é melhor do que img835.png.
+
+        Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
+
+            <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur">
+
+        Mas isso é inútil, pois apenas faz com que o navegador trabalhe mais, procurando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor do seu HTML.
+
+        Aviso: A maioria das imagens são protegidas por direitos autorais. Não exiba uma imagem em sua página da Web, a menos que :
+
+            Você possui a imagem.
+
+            Você recebeu permissão explícita por escrito do proprietário da imagem.
+            
+            Você tem ampla prova de que a imagem é, de fato, de domínio público.
+
+        As violações de direitos autorais são ilegais e antiéticas. Além disso, nunca aponte seu src atributo para uma imagem hospedada no site de outra pessoa para a qual você não tenha permissão para vincular. Isso é chamado de "hotlinking". Novamente, roubar a largura de banda de alguém é ilegal. Também diminui a velocidade da sua página, deixando você sem controle sobre se a imagem é removida ou substituída por algo embaraçoso.
+
+        Nota: Elementos como <img> e <video> às vezes são chamados de elementos substituídos . Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como um arquivo de imagem ou vídeo), não pelo conteúdo do próprio elemento.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Images in HTML</title>
+</head>
+<body>
+
+    <h1>Images in HTML</h1>
+
+    <!--
+        - para colocar uma imagem e uma pagina da web usamos o <img> elemento.
+        - um elemento vazio, que não tem  conteudo de texto ou tag de fechamento.
+        - requer dois atributos o src(source, caminho que aponta para a imagem que eu desejo incorporar na pagina, usando uma URL relativa ou absoluta)
+        - o img elemento e um elemento subtituido, o conteudo e o tamanho do elemento são definidos por um recurso externo como um arquivo de imagem, não pelo conteudo do proprio elemento.
+    -->
+    <img src="dinosaur.jpg" alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+        width="400" height="341" title="A T-Rex on display in the Manchester University Museum"/>
+</body>
+
+</html>

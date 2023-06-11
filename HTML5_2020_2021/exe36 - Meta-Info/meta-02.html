@@ -1,0 +1,86 @@
+<!--
+    * TAG HTML <meta>
+
+     - A <meta> tag define metadados sobre um documento HTML. Metadados são dados (informações) sobre dados.
+
+     - <meta> tags sempre vão dentro do elemento <head> e são normalmente usadas para especificar conjunto de caracteres(character set), (descrição de página(page description), palavras-chave(keywords), autor do documento(author of the document) e configurações de janela de visualização(preview window settings.).
+
+     - Os metadados não serão exibidos na página, mas podem ser analisados ​​pela máquina.
+
+     - Os metadados são usados ​​por navegadores (como exibir conteúdo ou recarregar a página), mecanismos de pesquisa (palavras-chave) e outros serviços da web.
+
+     - Existe um método para permitir que os web designers controlem a janela de visualização (a área visível do usuário em uma página da web), por meio da <meta> tag
+
+
+    * ATRIBUTOS DA TAG <meta>
+
+        atributo : charset;
+        valor = character_set
+        descrição = Especifica a codificação de caracteres para o documento HTML;
+
+    --------------------------------------------------
+
+        atributo : content;
+        valor : text
+        descrição : Especifica o valor associado ao atributo http-equiv ou nome;
+
+    --------------------------------------------------
+
+        atributo : http-equiv;
+        valor : content-security-policy(política de segurança de conteúdo), content-type(tipo de conteúdo), default-style(estilo padrão), refresh(Atualizar);
+        descrição : Fornece um cabeçalho HTTP para as informações/valor do atributo de conteúdo(content);
+        
+    ---------------------------------------------------
+        
+        atributo : name;
+        valor : application-name(nome do aplicativo), author(autor), description(descrição), generator(gerador), keywords(palavras-chave), viewport(ver porta)
+        descrição : Especifica um nome para os metadados;
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--
+    - descreva os metadados em um documento HTML
+-->    
+<head>
+    <!--
+        - codificação de caracteres do documento HTML no padrão UTF-8
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        - Definir a janela de visualização para que seu site tenha uma boa aparência em todos os dispositivos:
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        - defina uma descrição da pagina web
+    -->
+    <meta name="description" content="Uma pagina que mostra como utililizar a tag <meta> e os seus metadados">
+
+    <!-- 
+         - definindo palavras-chave para mecanismos de pesquisa
+     -->
+     <meta name="keywords" content="HTML, CSS, METADADOS, META">
+
+     <!--
+         - definindo o autor da pagina
+     -->
+     <meta name="author" content="Samuel Amaro">
+
+     <!--
+         - uma meta tag que atualiza o documento a cada 30 segundos
+     -->
+     <meta http-equiv="refresh" content="30">
+
+     <!--
+         - define o titulo do site na aba do navegador
+     -->
+    <title>Metadados</title>
+</head>
+<body>
+    <h1>Utilizando metadados</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid libero unde labore quo minus quasi adipisci ullam obcaecati qui iure accusamus in error laborum alias tempore reiciendis, optio voluptatibus a.</p>
+    <p>Define metadados sobre um documento HTML</p>
+</body>
+</html>

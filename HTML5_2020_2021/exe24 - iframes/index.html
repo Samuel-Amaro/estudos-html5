@@ -1,0 +1,54 @@
+<!--
+    # IFRAMES HTML
+     - Um iframe HTML é usado para exibir uma página da web dentro de uma página da web;
+     - SINTAXE:
+       - a <iframe> tag HTML especifica um quadro embutido.
+       - um quadro embutido é usado para incorporar outro documento ao docuemnto HTML atual;
+       - sintaxe:
+         <iframe src="url" title="description">
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Mostrando um iframe dentro da pagina</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem fuga error excepturi tempora debitis autem impedit, amet cumque, ex eligendi dicta praesentium, nesciunt tempore veritatis sed quod explicabo temporibus facilis!</p>
+    <h2>Iframe</h2>
+    <!--
+        # IFRAME - definir altura e largura
+         - Use os atributos height(altura) e width (largura) para especificar o tamanho do iframe.
+        - A altura e a largura são especificadas em pixels por padrão:
+        - pode-se especificar a largura e altura do bloco do iframe, por css inline;
+        - icluir um titulo para o iframe para leitores de tela;
+    -->
+    <iframe src="pagina02.html" height="200" width="300" title="Exemplo de Iframe"></iframe>
+    <h2>Iframe configurado por css local</h2>
+    <iframe src="pagina02.html" style="height:200px; width: 300px;" title="Exemplo de Iframe"></iframe>
+    <h2>Removendo borda do iframe</h2>
+    <!--
+        # IFRAME - REMOVER A BORDA;
+         - Por padrão, um iframe possui uma borda ao seu redor;
+         - Para remover a borda, adicione o style atributo e use a border propriedade CSS inline;
+    -->
+    <iframe src="pagina02.html" style="border:none;" title="Exemplo de Iframe"></iframe>
+    <h2>Configurações de estilização no iframe usando CSS</h2>
+    <!--
+        - COM CSS, posso também alterar o tamanho, estilo e cor da borda do iframe;
+        - tudo feito por css local;
+        - uma borda de 2px de largura, ela e solida e de cor vermelha
+    -->
+    <iframe src="pagina02.html" style="border:2px solid red;" title="Exemplo de Iframe"></iframe>
+    <h2>Iframe - destino para um Link</h2>
+    <!--
+        # IFRAME - DESTINO PARA UM LINK;
+         - um iframe pode ser usado como o quadro de destino de um link;
+         - o target atributo do link deve se referir ao name atributo do iframe:
+    -->
+    <iframe src="pagina02.html" name="bloco_iframe_link" title="Exemplo de Iframe"></iframe>
+    <p><a href="pagina02.html" target="bloco_iframe_link">Link para o iframe</a></p>
+</body>
+</html>

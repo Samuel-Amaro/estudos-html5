@@ -1,0 +1,52 @@
+<!--
+    * EVENTOS MOUSE
+    * 
+    * ATRIBUTO DE EVENTO HTML ONMOUSEOUT - ARRASTAR MOUSE PARA FORA
+    * 
+    * DEFINIÇÃO E USO
+    * 
+    * O atributo onmouseout é disparado quando o ponteiro do mouse sai de um elemento.
+    * Dica: O atributo onmouseout costuma ser usado junto com o atributo onmouseover .
+    * 
+    * SINTAXE:
+
+        <element onmouseout="script">
+
+    * TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo de evento onmouseout</title>
+</head>
+<body>
+    <h1>Eventos de Mouse</h1>
+    <h2>Atributo de evento HTML onmouseout - arrastar mouse para fora</h2>
+    <p><strong>Exemplo: </strong>Execute um JavaScript ao mover o ponteiro do mouse para fora de uma imagem:</p>
+    <!--atributos de eventos de mouse aplicados ao elemento img, quando captado o evento, executara um javascript-->
+    <img src="imagem-em-movimento-1.jpg" alt="imagens" onmousemove="imgGrande(this)" onmouseout="imgNormal(this)" >
+    <p>A função bigImg() é acionada quando o ponteiro do mouse do usuário é movido sobre a imagem. Esta função amplia a imagem.</p>
+    <p>A função normalImg () é acionada quando o ponteiro do mouse é movido para fora da imagem. Essa função define a altura e largura da imagem de volta ao normal.</p>
+
+    <script>
+        /*
+         * função java script que anplia o tamanaho de um elemento recebido por parametro
+        */
+        function imgGrande(x) {
+            x.style.height = "600px";
+            x.style.width = "600px";
+        }
+        /*
+         * função java script que volta retorna o elemento recebido por paramentro ao tamanho normal 
+        */
+        function imgNormal(x) {
+            x.style.height = "400px";
+            x.style.width = "400px";
+        }
+    </script>
+</body>
+</html>

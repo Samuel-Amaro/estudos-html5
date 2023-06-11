@@ -1,0 +1,57 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO ONINPUT - NA ENTRADA
+
+      - O atributo oninput é disparado quando um elemento obtém a entrada do usuário.
+
+      - O atributo oninput é acionado quando o valor de um elemento <input> ou <textarea> é alterado.
+
+      - Dica: este evento é semelhante ao evento onchange . A diferença é que o evento oninput ocorre imediatamente após o valor de um elemento ser alterado, enquanto onchange ocorre quando o elemento perde o foco. A outra diferença é que o evento onchange também funciona em elementos <select>.
+
+      - SINTAXE:
+
+        <element oninput="script">
+
+        script : O roteiro a ser executado em oninput;
+
+      - TAGS HTML SUPORTADAS:
+
+            <input type = "password">, <input type = "search">, <input type = "text"> e <textarea>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Formulario</title>
+</head>
+<body>
+    
+    <h1>Eventos de Formulario oninput(na entrada)</h1>
+
+    <p><strong>Exemplo: </strong> Execute um JavaScript quando um usuário escrever algo em um campo &lt;input&gt;:</p>
+
+    <p>Digite algo no campo de texto para acionar uma função: </p>
+
+    <!--campo de texto-->
+    <input type="text" id="campoTexto" oninput="getTextInput()">
+
+    <!--este elemento vai mostrar o texto obtido do elemento HTML-->
+    <p id="mostraResultado"></p>
+
+    <!--função javascript que obtem o texto digitado ou alterado de um elemento input HTML-->
+    <script>
+        function getTextInput() {
+            var x = document.getElementById("campoTexto").value;
+
+            document.getElementById("mostraResultado").innerHTML = "Você digitou no campo de texto: " + x;
+        }
+    </script>
+</body>
+</html>

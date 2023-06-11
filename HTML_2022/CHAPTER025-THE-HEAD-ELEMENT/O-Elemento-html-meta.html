@@ -1,0 +1,78 @@
+<!--
+    * O ELEMENTO HTML <meta> - metadados
+
+        - O <meta> elemento é normalmente usado para especificar o conjunto de caracteres, descrição da página, palavras-chave, autor do documento e configurações da janela de visualização.
+
+        - Os metadados não serão exibidos na página, mas são usados ​​por navegadores (como exibir conteúdo ou recarregar a página), por mecanismos de pesquisa (palavras-chave) e outros serviços da web.
+
+    * EXEMPLOS
+
+        - Defina o conjunto de caracteres usado:
+
+            <meta charset="UTF-8">
+
+        - Defina palavras-chave para motores de busca:
+
+            <meta name="keywords" content="HTML, CSS, JavaScript">
+
+        - Defina uma descrição da sua página da web:
+
+            <meta name="description" content="Free Web tutorials">
+
+        - Defina o autor de uma página:
+
+            <meta name="author" content="John Doe">
+
+        - Atualize o documento a cada 30 segundos:
+
+            <meta http-equiv="refresh" content="30">
+
+        - Configurando a janela de visualização(viewport) para que seu site fique bem em todos os dispositivos:
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    * Exemplo de <meta> etiquetas:
+
+-->
+<!DOCTYPE html>
+<html> 
+<!--
+    - o elemento <head> e um conteiner para metadados,(dados sobre dados)
+    - Metadados são dados sobre o documento HTML, não são exibidos no navegador.
+    - o elemento <head> fica entre a tag <html> e <body>
+-->
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html, define um titulo para o documento.
+        - o elemento <title>, define um titulo do documento, o titulo deve ser so texto.
+        - o titulo definido e mostrado na barra de titulo do navegador ou na aba da pagina
+        - o title elemento e obrigatorio em um documento <html>
+    -->
+    <title>Um título de página</title>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - define o conjunto de caracteres usado.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        - o elemento a seguir define um outro metadado sobre o documento html.
+        - define uma descrição da pagina da web.
+    -->
+    <meta name="description" content="Uma página mostrando como usar os metadados de um documento html">
+    <!--
+        - o elemento a seguir define um outro metadado sobre o documento html.
+        - define palavras-chaves para o motor de busca
+    -->
+    <meta name="keywords" content="HTML5, CSS3, JavaScript, metadados">
+    <!--
+        - o elemento a seguir define um outro metadado sobre o documento html.
+        - Defina o autor de uma página:
+    -->
+    <meta name="author" content="Samuel Amaro">
+</head>
+<body> 
+    
+    <p>Todas as meta-informações vão para a seção head.</p>
+
+</body>
+</html>

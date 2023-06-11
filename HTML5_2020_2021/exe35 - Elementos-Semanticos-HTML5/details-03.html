@@ -1,0 +1,95 @@
+<!--
+    * TAG HTML <details>
+
+      - A <details> tag especifica detalhes adicionais que o usuário pode abrir e fechar sob demanda.
+      - A <details> tag é freqüentemente usada para criar um widget interativo que o usuário pode abrir e fechar. Por padrão, o widget está fechado. Quando aberto, ele se expande e exibe o conteúdo interno.
+      - Qualquer tipo de conteúdo pode ser colocado dentro da <details> tag. 
+      - Dica: A tag <summary> é usada em conjunto com <details>para especificar um título visível para os detalhes;
+    
+    * ATRIBUTOS DA TAG <details>
+
+      - O open atributo é um atributo booleano.
+      - Quando presente, especifica que os detalhes devem ser visíveis (abertos) para o usuário.
+
+      SINTAXE: 
+
+       <details open>
+
+    
+      atributo : open
+      valor: open
+      descrição : Especifica que os detalhes devem ser visíveis (abertos) ao usuário
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag details</title>
+    <style>
+        /*estilizando o titulo*/
+        details > summary{
+            /*add espaço interno dentro do elemento summary, da borda para dentro em todos os lados, add um espaço interno entre a borda e conteudo*/
+            padding-top: 4px;
+            padding-right: 4px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+            /*configurando uma largura para o elemento*/
+            width: 200px;
+            /*Add um cor de fundo*/
+            background-color: #eeeeee;
+            /* sem um preenchimento*/
+            border: none;
+            /*add sombra*/
+            box-shadow: 1px 1px 2px #bbbbbb;
+            /*cursor do mouse*/
+            cursor: pointer;
+        }
+
+        /*paragrafo*/
+        details > p{
+             /*cor de fundo*/
+             background-color: #eeeeee;
+             /*Add um espaço interno*/
+             padding-top: 4px;
+             padding-right: 4px;
+             padding-bottom: 4px;
+             padding-left: 4px;
+             /*tirando todo espaço externo*/
+             margin-top: 0;
+             margin-right: 0;
+             margin-left: 0;
+             margin-bottom: 0;
+             /*add uma sombra*/
+             box-shadow: 1px 1px 2px #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>TAG SEMANTICA DETAILS</h1>
+    <p>Define detalhes adicionais que o usuário pode visualizar ou ocultar</p>
+    <p><b>Exemplo: </b>Especifique os detalhes que o usuário pode abrir e fechar sob demanda:</p>
+    <h2>O elemento de detalhes</h2>
+    <p><b>Exemplo: </b>TAG details sem o uso do atributo open</p>
+    <details>
+        <!-- titulo-->
+        <summary>Clique Aqui e Veja os detalhes</summary>
+        <!--
+            os detalhes a ser mostrado
+        -->
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam repellendus saepe suscipit quasi eaque tempore esse pariatur, sit dolorem minima, tempora, perferendis provident quia necessitatibus quam ex molestias libero quisquam?</p>
+    </details>
+
+    <h2>O elemento de detalhes</h2>
+    <p><b>Exemplo: </b>TAG details com o uso do atributo open</p>
+    <details open>
+        <!-- titulo-->
+        <summary>Clique Aqui e Veja os detalhes</summary>
+        <!--
+            os detalhes a ser mostrado
+        -->
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam repellendus saepe suscipit quasi eaque tempore esse pariatur, sit dolorem minima, tempora, perferendis provident quia necessitatibus quam ex molestias libero quisquam?</p>
+    </details>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--
+    * OS ATRIBUTOS DE HEIGHT(ALTURA) AND WIDTH(LARGURA)
+
+        - A entrada height e width os atributos especificam a altura e a largura de um <input type="image"> elemento.
+
+        - Dica: Sempre especifique os atributos de altura e largura para imagens. Se a altura e a largura forem definidas, o espaço necessário para a imagem será reservado quando a página for carregada. Sem esses atributos, o navegador não sabe o tamanho da imagem e não pode reservar o espaço apropriado para ela. O efeito será que o layout da página mudará durante o carregamento (enquanto as imagens são carregadas).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo de altura(height) e width(largura)</h2>
+
+    <p>Os atributos height e width especificam a altura e a largura de um elemento input type="image"</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o atributo autofocus, especifica que um campo de entrada deve obter o foco automaticamente, quando a pagina for carregada.
+            - o campo de entrada de texto unico vai obter o foco quando a pagina for carregada/iniciada.
+            - usuario entra com um texto.
+        -->
+        <input type="text" id="fname" name="fname"/>
+        <br/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"/>
+        <br/>
+        <br/>
+        <!--
+            - O input elemento representa uma imagem da qual um usuário pode selecionar uma coordenada e enviar o formulário ou, alternativamente, um botão a partir do qual o usuário pode enviar o formulário. O elemento é um botão , especificamente um botão de envio.
+            - A imagem é dada pelo src atributo. O src atributo deve estar presente e deve conter um URL não vazio válido potencialmente cercado por espaços que fazem referência a um recurso de imagem não interativo, opcionalmente animado, que não é paginado nem com script.
+            - os atributos height(altura) e width(largura), especificam a altura e lergura de um elemento de entrada de imagen.
+            - o usuario entra com arquivos de imagen
+        -->
+        <input type="image" src="./img_submit.gif" alt="Submit" width="48" height="48"/>
+    </form>
+
+    <p><strong>Nota:</strong> A entrada type="image" envia as coordenadas X e Y do clique que ativou o botão de imagem.</p>
+</body>
+</html>

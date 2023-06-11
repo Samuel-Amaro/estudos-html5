@@ -1,0 +1,39 @@
+<!--
+    * TAG HTML <summary> - resumo
+
+    * DEFINIÇÃO E USO
+
+        - A <summary> tag define um cabeçalho visível para o elemento <details> . O título pode ser clicado para visualizar/ocultar os detalhes.
+
+        - Nota: O <summary> elemento deve ser o primeiro elemento filho do elemento <details>.
+
+        - O summary elemento representa um resumo, legenda ou legenda para o restante do conteúdo do summary elemento pai do details elemento, se houver.
+
+        - Um summary elemento é um resumo de seus DETAILS pai se o algoritmo a seguir retornar verdadeiro.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <h1>O elemento de summary</h1>
+    <!--
+        - o elemento <details> especifica detalhes adicionais que o usuario pode abrir e fechar sobdemanda.
+        - o elemento <details> e um widget interativo que o usuario pode abrir e fechar.
+        - por padrão o <details> elemento e fechado.
+    -->
+    <details>
+        <!--
+            - o elemento <summary> representa o resumo ou legenda do elemento <details>, se não houver elemento <summary> como primeiro elemento filho do <details> o agente de usuario deve fornecer uma propria legenda
+            - o elemento <summary> e usado para especificar um cabeçalho visível para os details
+        -->
+        <summary>Epcot Center</summary>
+        <!--
+            - o restante do conteudo do elemento representa informações ou controle adicionais
+        -->
+        <p>O Epcot é um parque temático no Walt Disney World Resort com atrações emocionantes, pavilhões internacionais, fogos de artifício premiados e eventos especiais sazonais.</p>
+    </details>
+</body>
+</html>

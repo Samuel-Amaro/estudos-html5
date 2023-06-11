@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/*carregando para o site a fonte externa que vai ser os destaques do cabecalho do site*/
+@font-face{
+    font-family: 'fonte-destaque';
+    src: url('Fontes-Externas/Fonte-Destaque/tiza/tiza.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*carregando a fonte padrão de toda parte textual da pagina*/
+@font-face{
+    font-family: 'Fonte-Padrao';
+    src: url('Fontes-Externas/Fonte-Padrao-Conteudo/Open_Sans/OpenSans-Regular.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Carregando a fonte que vai ser os destaques dos titulos e subtitulos do artigo*/
+@font-face{
+    font-family: 'Fonte-destaque-artigo';
+    src: url('Fontes-Externas/Fonte-Destaque/ponymaker/PonyMaker.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*definindo minhas fontes e cores para o site, usando variaveies um novo tipo de configuração css, isso e aplicado na pseud-elemento root*/
+:root{
+    /*fontes*/
+    --fonte0:'fonte-Destaque';
+    --fonte1:'Fonte-Padrao';
+    --fonte2:'Fonte-destaque-artigo';
+    /*cores*/
+    --cor0: #B5BAE6;
+    --cor1: #515366;
+    --cor2: #737EEA;
+    --cor3: #323766;
+    --cor4: #8D91B3;
+    --cor5: #0DFC6D;
+    --cor6: #42BD73;
+    --cor7: #58FC9A;
+    --cor8: #067D36;
+    --cor9: #09b04c;
+    --cor10: #b7f3bb;
+    --cor11: #548858;
+    --cor12: #eafceb;
+    --cor13: #73b677;
+    --cor14: #46D499;
+    --cor15: #97DBAE;
+    --cor16: #06421A;
+    --cor17: #97DBAE;
+    --cor18: #063D1E;
+    --cor19: #B5D9AA;
+}
+/*body*/
+.corpo_texto{
+       font-family: var(--fonte1);
+       font-weight: normal;
+       font-size: 16px;
+       font-style: normal;
+       line-height: 1.2em; /*espaçamento entre as linhas*/    
+       background-color:var(--cor14);
+       margin: 0px 0px 0px 0px; /*tira espaço externo do topo e do baixo do corpo do texto, e na direita e esquerda*/
+}
+/*header*/
+.cabecalho{
+    font-family: var(--fonte1);
+    font-weight: bold;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    margin: 0px 0px 0px 0px; /*tirei do espaço externo ao redor da caixa do cabeçalho*/
+    /*criando um degrade com duas cores usando css: paramtros(direção em que o degrade tem que ir, cor01, cor02); posso ainda informar a quantidade de cada com no degrade usando porcentagem*/
+    background-image: linear-gradient(to bottom,var(--cor19) 5%,var(--cor18));
+    padding: 35px 35px 12px 35px; /*Aplicando um espaço interno entre o conteudo e a border*/
+}
+/*paragrafo do cabecalho*/
+#paragrafo_cabecalho{
+    margin: 0px; /*tirando todo espaço externo da caixa do paragrafo ao redor do paragrafo*/
+    padding: 0px 0px 15px 0px;/*coloca um epaço externo entre a caixa e conteudo*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.479); /*aplicando uma sobra no texto no paragrafo principal dentro do cabeçalho; para aplicar sombra no texto e parametros: deslocamentoHorizontalDireita px deslocamentoBaixo px espalhamentoSombra px cor;*/
+}
+/*article - h1*/
+#titulo_principal_artigo{
+    font-family:var(--fonte2); /*aplicando a fonte, usando uma variavel de CSS*/
+    line-height: 1em; /*espaçamento entre as linhas de titulos porque no dispositivo movel elas quebram*/
+}
+/*header - h1*/
+#titulo_principal_cabecalho{
+    font-family: var(--fonte0); /*fonte*/
+    font-weight: normal; /*largura da fonte normal, espessura*/
+    font-size: 25px; /*tamanho da fonte*/
+    font-style: normal; /*estilo da fonte normal*/
+    line-height: 1em; /*espaçamento entre as linhas de titulos porque no dispositivo movel elas quebram*/
+    text-align: center;/*justificando o titulo de destaque do cabeçalho*/
+    color: white; /*cor da fonte*/
+    margin: 0px 0px 35px 0px; /*espaço externo ao redor da caixa do titulo principal*/
+    text-shadow: 2px 2px 1px #6F785C; /*aplicando uma sobra no texto no titulo principal dentro do cabeçalho; para aplicar sombra no texto e parametros: deslocamentoHorizontalDireita px deslocamentoBaixo px espalhamentoSombra px cor;*/
+
+}
+/*main - h1*/
+.titulos_artigo{
+    font-family:var(--fonte2); /*aplicando a fonte, usando uma variavel de CSS*/
+    line-height: 1em; /*espaçamento entre as linhas de titulos porque no dispositivo movel elas quebram*/
+}
+/*main - h2s*/
+.subtitulos_artigo{
+    font-family:var(--fonte2); /*aplicando a fonte, usando uma variavel de CSS*/
+    line-height: 1em; /*espaçamento entre as linhas de titulos porque no dispositivo movel elas quebram*/
+    padding: 0px 0px 0px 14px; /*aplicando um espaço interno entre o conteudo e a caixa ordem(topo direita baixo esquerda)*/
+    background-color: var(--cor12); /*cor de fundo da caixa*/
+}   
+
+/*nav - menu de navegação*/
+.menu_navegacao{
+    background-color: var(--cor18); /*cor de fundo*/
+    margin: 0px 0px 0px 0px; /*tirando todo espaço externo ao redor da caixa*/
+    padding: 19px 19px 10px 19px; /*aplicando um espaço interno*/
+}
+/*cada opção do menu de navegação*/
+.links{
+      text-decoration: solid; /*tira sublinhado do link*/
+      color: white; /*cor da fonte*/
+      margin: 0px 0px 0px 0px; /*tira todo espaço externo da caixa de cada link*/
+      padding: 2px 2px 0px 16px; /*aplica um espaço interno em cada caixa de cada link*/
+}
+/*ao passar o mouse por cima de cada link vai dar um destaque*/
+.links:hover{
+     text-decoration: underline;
+     color: var(--cor1)
+}
+/*div,conteiner,caixa box level. onde o video esta alocado no html*/
+.video{
+      position: relative; /*a posição do conteiner e de acordo com a caixa main que esta acima encapsulando o conteiner video, a caixa video fica relativa a caixa main, relativa ao tamanho da caixa main, para ter redismensionamento automatico, responsividade, automatica*/
+      height: 450px; /*aplica uma autura no conteiner*/
+      background-color: #06421A; /*aplica uma cor de fundo*/
+      width: auto; /*largura automatica, ocupa todo espaço disponivel para ela, como tinha um padding ao redor da caixa não funciona*/
+      margin: 0px -16px 15px -16px; /*Adicionando um espaço externo dentro do conteiner onde vai se posicionar o video, devido o main ter um padding um espaço interno, e a caixa de video esta dentro do main, tenho que retirar essa medidas ao redor do conteiner para ele ficar topado ocupar toda largura dentro do main disponivel para ele, faço isso adicionando um espaço externo a minha caixa conteiner de video, e tiro o espaço ao redor da caixa, faço isso com medidas negativas com ajuda do devtols*/
+}
+/*personalizando e estilizando a tag do iframe*/
+.video > iframe{
+     position: absolute; /*ocupa o espaço absuluto aon conteiner video, dentro do conteiner video, fica ocupando espaço absoluto, responsividade automatica, e posição da caixa do video de acordo com o tamanho 
+     do conteiner video*/
+     /*medidas abaixo que a caixa video ocupa dentro do conteiner*/
+     top: 5%; /*o top vai ocupar 5% do espaço disponivel 100% para o top dentro do conteiner, sobra 95% de espaço disponivel no top*/
+     left:5%; /*a esquerda vai ocupar 5% disponivel dentro do conteiner que são 100% para a esquerda então sobra 95% de espaço livre a esquerda dentro do conteiner*/
+     width: 90%; /*a largura vai ocupar 90% do conteiner dos 100% disponivel vai sobrar 10% de espaço livre na largura do conteiner*/
+     height: 90%; /*a altura vai ocupar 90% dispoonivel do conteiner que são 100% para a altura, então vai sobrar 10% disponivel na altura*/
+     right: 5%; /*a caixa video a direita vai ocupar 5% de espaço enquanto vai sobra 95% de espaço livre no conteiner a direita*/
+}
+/*personalizando as listas não numeradas*/
+#list_version_android{
+    list-style-type: '\2714\0020'; /*muda adicona um estilo na lista, no meu caso adiconando um novo emoj em cada item da list, apos adiconar um emoj adiciono um espaço em branco ao lado do emoj, tudo isso atraves dos codigos unicodes do emojepedia*/
+    columns: 2;/*divide a lista em 2 colunas com quantidades iguais de itens em cada coluna*/
+    list-style-position: inside; /*os emojs de cada item da lista vai ficar dentro da border da caixa da list, isso atraves do parametro inside(por dentro) outside(por fora)*/  
+}
+/*main conteudo principal do site*/
+#conteudo_principal{
+    min-width: 400px;/*largura minima da caixa, do conteudo principal, da caixa box-level*/
+    max-width: 800px;/*largura maxima da caixa, do conteudo principal, da caixa box-level*/
+    background-color: white;
+    padding: 16px;/*um espaço interno da borda para dentro da caixa, entre a borda e conteudo da caixa main*/
+    margin: 0px auto 0px auto; /*centralizando todo conteudo principal do site no meio da pagina, esse e o espaço externo da caixa, centraliza ela no meio da pagina*/
+}
+/*p*/
+.paragrafo{
+          text-align: justify;
+          text-indent: 25px;
+}
+/*centralizando a imagen do bugdroid no meio da pagina, utilizando a tag img usando um seletor de class*/
+.imagen_bugdroid{
+    display: block; /*estou dizendo que e so um bloco de exibição*/
+    margin-left: auto; /*margin da esquerda e automatica ocupa todo espaço*/
+    margin-right: auto;/*margin da direita e automatica ocupa todo espaço*/
+}
+/*asside*/
+#conteudo_relativo{
+   background-color: var(--cor15);/*aplicando uma cor de fundo na caixa do asside*/
+   padding: 3px 10px 10px 10px;/*aplicando um espaço interno dentro da caixa do asside, um espaço entre  o conteudo e o border*/
+   border-radius: 0px 0px 10px 10px; /*arredondando os vertices da caixa, do asside, deixando os vertices bonitos sem pontas redondinhos para uma boa aparencia visual, ordem-aplicação dos parametros de cada vertice:
+   topo_superior_esquerdo,topo_superior_direito,inferior_direito, inferior_Esquerdo;*/
+}
+/*h3 que da um subtitulo ao asside, mas e uma caixa box level do h3 não pertence ao asside*/
+#titulo_asside{
+    color:white; /*uma cor na fonte*/
+    background-color: var(--cor8); /*uma cor de fundo na caixa do h3*/
+    padding: 10px; /*um espaço interno entre o o texto e o border*/
+    margin: 0px 0px 0px 0px; /*tira todo espço externo que possui ao redor da caixa do h3, isso e para topa a caixa do h3 na caixa do asside, para ficarem juntas visualmente*/
+    border-radius: 10px 10px 0px 0px; /*arredondando os vertices da caixa, do h3, deixando os vertices bonitos sem pontas redondinhos para uma boa aparencia visual, ordem-aplicação dos parametros de cada vertice:(topo_superior_esquerdo,topo_superior_direito,inferior_direito,inferior_esquerdo);*/
+}
+/*rodape do site*/
+footer{
+       background-color: var(--cor16); /*cor de fundo no rodape*/
+       margin: 15px 0px 0px 0px; /*personalizando um espaço externo no rodape, adicionando um espaço no top-superior da caixa para não ficar colado no main*/
+       padding: 8px; /*da um espaço interno entre o conteudo e o border do radape*/
+       /*personalizando o paragrafo que fica embutido no padding*/
+       color:white; /*dando uma cor para a fonte*/
+       text-align: center; /*centralizando o texto*/
+}
+/*link do rodape mostrando quem CRIOU o site*/
+#link_pessoal{         
+   text-decoration: none; /*tira o sublinhado do link*/
+   color: var(--cor17); /*adicona uma cor no link*/
+}
+/*se o link privado de quem criou o site ja tive sido visitado vai deixar uma cor de destaque mostrando que ja foi visitado*/
+#link_pessoal:visited{
+    color: var(--cor0); /*deixa o link com uma cor de destaque para mostrar que ja foi visitado*/
+}
+/*pseudo-classe houver, quando passar o ponteiro do mouse por cima do link, ele muda de estado*/
+#link_pessoal:hover{
+   text-decoration: underline; /*adiciona um sublinhado no link*/
+   color: var(--cor2) /*e muda a cor dele*/
+}
+/*links para ir visitar conteudos e site relacinados aos meu*/
+.links_publicos{
+   text-decoration: solid; /*tira sublinhado do link*/
+   color: var(--cor13) /*muda o link de cor*/
+}
+/*quando passa o mouse por cima dos links*/
+.links_publicos:hover{
+   text-decoration: underline; /*vai aparecer o sublinhado por baixo do link*/
+   color: var(--cor1); /*vai mudar a cor do link e do sublinhado ao passar o mouse por cima*/
+}

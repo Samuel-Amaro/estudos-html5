@@ -1,0 +1,87 @@
+<!--
+    * PÁGINA DA WEB RESPONSIVA - EXEMPLO COMPLETO
+
+        - Uma página da Web responsiva deve ficar bem em telas de desktop grandes e em telefones celulares pequenos.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - A janela de visualização(viewport) é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+        - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+        - A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+        - A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - o elemento a seguir define informações de estilo localmente para o documento
+    -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .menu{
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+        .menu a{
+            background-color: #e5e5e5;
+            padding: 8px;
+            margin-top: 7px;
+            display: block;
+            width: 100%;
+            color: black;
+        }
+        .main{
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+        }
+        .right{
+            background-color: #e5e5e5;
+            float: left;
+            width: 25%;
+            padding: 15px;
+            margin-top: 7px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 620px) {
+            /*for mobile phones*/
+            .menu, .main, .right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #aaaaaa;">
+
+    <div style="background-color: #e5e5e5; padding: 15px; text-align: center;">
+        <h1>Hello World</h1>
+    </div>
+  
+    <div style="overflow: auto;">
+        <div class="menu">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+
+        <div class="main">
+            <h2>Lorum Ipsum</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ex iste architecto et quos accusamus quis veritatis aliquam velit ullam ipsa, corporis impedit earum doloribus nulla. Possimus obcaecati quas illo!</p>
+        </div>
+
+        <div class="right">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta pariatur sequi cum amet deleniti tempora molestiae, omnis consequatur impedit, reprehenderit possimus minima, incidunt soluta quibusdam optio vero fugit ratione explicabo.</p>
+        </div>
+    </div>
+
+    <div style="background-color: #e5e5e5; text-align: center; padding: 10px; margin-top: 7px;">© copyright w3schools.com</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+    * HTML <audio> REPRODUÇÃO AUTOMATICA
+
+        - Para iniciar um arquivo de áudio automaticamente, use o autoplay atributo:
+
+        - Observação: os navegadores Chromium não permitem reprodução automática na maioria dos casos. No entanto, a reprodução automática sem som é sempre permitida.
+
+        - Adicione muted depois autoplay para permitir que seu arquivo de áudio comece a ser reproduzido automaticamente (mas silenciado):
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <!--
+        - o elemento <audio> e usado para reproduzir um arquivo de audio em uma pagina da web.
+        - O controls atributo adiciona controles de áudio, como reproduzir, pausar e volume.
+        - o atributo autoplay permite iniciar um arquivo de audio automaticamente, mas devido os navegadores choomiun não permitir reprodução automatica na maioria dos casos.
+        - o atributo muted permite que o arquivo de audio seja reproduzido automaticamente mas de forma silenciosa, silenciado
+    -->
+    <audio controls autoplay muted>
+        <!--
+            - O <source> elemento permite especificar arquivos de áudio alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.
+            - o src atributo e o endereço do recurso de midia
+            - o type atributo especifica Especifica o tipo de mídia da Internet
+            - primeiro arquivo de audio alternativo e no formato suportado ogg
+        -->
+        <source src="./audio-local.ogg" type="audio/ogg"/>
+        <!--
+            - primeiro arquivo de audio alternativo e no formato suportado mp3
+        -->
+        <source src="./audio-local.mp3" type="audio/mpeg"/>
+        <!--o texto so e exibido em navagadores que não suportam o elemento <audio>-->
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+</body>
+</html>

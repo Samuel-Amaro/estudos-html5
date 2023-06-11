@@ -1,0 +1,49 @@
+<!--
+    * QUANDO USAR O ELEMENTO <picture>
+
+        - Existem dois propósitos principais para o <picture> elemento:
+
+        1. LARGURA DE BANDA(BANDWIDTH)
+
+            - Se você tiver uma tela ou dispositivo pequeno, não é necessário carregar um arquivo de imagem grande. O navegador usará o primeiro <source> elemento com valores de atributo correspondentes e ignorará qualquer um dos elementos a seguir.
+
+        2. SUPORTE AO FORMATO(format support)
+
+            - Alguns navegadores ou dispositivos podem não suportar todos os formatos de imagem. Ao usar o <picture> elemento, você pode adicionar imagens de todos os formatos, e o navegador usará o primeiro formato que reconhecer e ignorará qualquer um dos seguintes elementos.
+
+        - O navegador usará o primeiro formato de imagem que reconhecer:
+
+        - Observação: o navegador usará o primeiro <source> elemento com valores de atributo correspondentes e ignorará os <source> elementos a seguir.
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h2>O elemento picture</h2>
+
+    <p>O elemento de imagem pode ser usado quando o formato de imagem não é suportado por todos os dispositivos.</p>
+
+    <p>O dispositivo usará o primeiro formato de imagem compatível e ignorará o restante das imagens.</p>
+
+    <p><strong> O navegador usará o primeiro formato de imagem que reconhecer:</strong></p>
+
+    <!--
+        - o elemento html <picture> permite exibir imagens diferentes para diferentes dispositivos ou tamanhos de tela.
+
+        - o elemento <picture> contém um ou mais elementos <source>, cada um referise a diferentes imagens por meio do srcset atributo
+    -->
+    <picture>
+        <!--o elemento <source> referese a diferentes imagens por meio do atributo srcset, o elemento possui um atributo chamado media que define quando a imagen é mais adequada-->
+        <source srcset="../imgs/img_avatar.png">
+        <source srcset="../imgs/img_girl (1).jpg">
+        <!--usamos o <img> elemento como ultimo elemento filho do <picture> elemento. o <img> elemento e usado por navegadores que não suportam o <picture> elemento ou se nenhuma das <sources> tags correponder.-->
+        <img src="../imgs/img_beatles.gif" style="width: auto;">
+    </picture>
+
+</body>
+</html>

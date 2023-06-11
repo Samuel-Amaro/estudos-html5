@@ -1,0 +1,61 @@
+<!--
+    * HTML <form> Atributo de preenchimento automático de formulario(autocomplete)
+
+     - Especifica se um formulário deve ter preenchimento automático ativado ou desativado
+
+    * DEFINIÇÃO E USO
+
+     - O autocomplete atributo especifica se um formulário deve ter o preenchimento automático ativado ou desativado.
+
+     - Quando o preenchimento automático está ativado, o navegador completa os valores automaticamente com base nos valores que o usuário inseriu anteriormente.
+
+     - Dica: é possível ter o preenchimento automático "ativado" para o formulário e "desativado" para campos de entrada específicos ou vice-versa.
+
+    * SINTAXE:
+
+        <form autocomplete="on|off">
+
+    * VALORES DE ATRIBUTO:
+
+      VALUE: on;
+      DESCRIPTION: Padrão. O navegador completará automaticamente os valores com base nos valores que o usuário inseriu antes;
+
+      VALUE: off;
+      DESCRIPTION: O usuário deve inserir um valor em cada campo para cada uso. O navegador não completa as entradas automaticamente;
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Formulario</title>
+</head>
+<body>
+    
+    <h1>Atributo de Formulario - atributo autocomplete</h1>
+
+    <p><strong>Exemplo:</strong> Um formulário com preenchimento automático em:</p>
+
+    <p>Preencha e envie o formulário, recarregue a página, comece a preencher o formulário novamente - e veja como o preenchimento automático funciona.</p>
+
+    <p>Em seguida, tente definir o preenchimento automático como "desligado".</p>
+
+    <!--formulario com o atributo autcomplete ativado-->
+    <form action="action_page.php" method="get" autocomplete="on" accept-charset="utf8">
+        <label for="fname">Primeiro Nome:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

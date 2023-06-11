@@ -1,0 +1,41 @@
+<!--
+    * LISTAS <html> aninhadas
+
+        - As listas podem ser aninhadas (lista dentro da lista):
+
+        - Nota: Um item de lista ( <li>) pode conter uma nova lista e outros elementos HTML, como imagens e links, etc.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Uma lista aninhada</h2>
+
+    <p>As listas podem ser aninhadas (lista dentro da lista):</p>
+
+    <!--
+        - o elemento <ol> define uma lista ordenada, que pode ser alfabetica ou numerica.
+        - por padrão a lista e numerica, seus marcores serão numericos.
+    -->
+    <ol>
+        <!-- 
+            - o elemento <li> representa um item da lista, os itens da lista cada <li> sera marcado com numero por padrão.
+        -->
+        <li>Coffe</li>
+        <li>Tea</li>
+        <!--
+            - um item da lista pode conter uma nova lista e outros elementos HTML.
+        -->
+        <ol>
+            <!--define itens da lista ordenada aninhada-->
+            <li>Black Tea</li>
+            <li>Green Tea</li>
+        </ol>
+        <li>Milk</li>
+    </ol>
+    
+</body>
+</html>

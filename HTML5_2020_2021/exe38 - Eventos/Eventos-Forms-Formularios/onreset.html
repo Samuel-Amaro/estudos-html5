@@ -1,0 +1,49 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO DE FORMULARIO onreset
+
+      - O atributo onreset é acionado quando um formulário é redefinido.
+
+      - SINTAXE:
+
+        <element onreset="script">
+
+      - TAGS HTML SUPORTADAS:
+            
+            <form>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Formulario</title>
+</head>
+<body>
+    <h1>Eventos de Formulario onreset(redefinifo)</h1>
+
+    <p><strong>Exemplo: </strong>Quando você redefine o formulário, uma função é acionada que alerta algum texto.</p>
+
+    <!--formulario-->
+    <form action="#" onreset="redefiniFormulario()">
+        <!--label-->
+        <label for="labelNome">Nome:</label>
+        <!--campo de texto-->
+        <input type="text">
+        <!--botão de redefinir formulario-->
+        <input type="reset">
+    </form>
+
+    <!--função java scritp que vai ser executada ao clicar no botão de redefinir do formulario-->
+    <script>
+        function redefiniFormulario() {
+            alert("O formulário foi zerado");
+        }
+    </script>
+</body>
+</html>

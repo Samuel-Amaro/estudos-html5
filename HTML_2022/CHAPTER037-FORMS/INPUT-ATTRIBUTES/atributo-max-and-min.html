@@ -1,0 +1,67 @@
+<!--
+    * OS ATRIBUTOS MIN E MAX
+
+        - A entrada min e max os atributos especificam os valores mínimo e máximo para um campo de entrada.
+
+        - Os atributos min e max funcionam com os seguintes tipos de entrada: número(number), intervalo(range), data(date), data e hora local(datetime-local), mês(month), hora(time) e semana(week).
+
+        - Dica: Use os atributos max e min juntos para criar um intervalo de valores válidos.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Os atributos min e max de entrada(input)</h2>
+
+    <p>Os atributos min e max especificam os valores mínimo e máximo para um elemento de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="datemax">Insira uma data anterior a <time>01-01-1980:</time></label>
+        <!--
+            - o elemento <input type="date"> e usado como um campo de entrada que deve conter uma data.
+            - o usuario deve entrar com uma data neste campo.
+            - o atributo min, especifica que a data de entrada deve ser maior ou igual a especificada em min
+        -->
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"/>
+        <br/>
+        <br/>
+        <label for="datemin">Insira uma data posterior a <time>01-01-2000</time></label>
+        <!--
+            - o elemento <input type="date"> e usado como um campo de entrada que deve conter uma data.
+            - o usuario deve entrar com uma data neste campo.
+            - o atributo max, especifica que a data de entrada deve ser menor ou igual a especificada em max
+        -->
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"/>
+        <br/>
+        <br/>
+        <label for="quantity">Quantidade(intervalo 1 a 5):</label>
+        <!--
+            - usando os atributos min e max para especificar um intervalo de valores, o atributo min, especifica o valor minimo, e o max o valor maximo no campo de numero, o usuario so pode entrar com um valor numerico que esteja dentro do intervalo especificado pelos atributos
+        -->
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

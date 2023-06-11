@@ -1,0 +1,102 @@
+<!--
+    # o elemento principal
+     - ELEMENTO HEAD
+     - A HTML <head> elemento é um recipiente para os seguintes elementos: <title>, <style>, <meta>, <link>, <script>, e <base>.
+     - O ELEMENTO HTML <head>
+      - O <head>elemento é um contêiner para metadados (dados sobre dados) e é colocado entre a <html> tag e a <body> tag.
+      - Os metadados HTML são dados sobre o documento HTML. Os metadados não são exibidos.
+      - Os metadados normalmente definem o título do documento, conjunto de caracteres, estilos, scripts e outras meta informações.
+      
+      - ELEMENTO HTML <title>
+        - O <title>elemento define o título do documento. O título deve ser somente texto e é mostrado na barra de título do navegador ou na guia da página.
+        - A tag <title> é necessária em documentos HTML!
+        - O conteúdo do título de uma página é muito importante para a otimização do mecanismo de pesquisa (SEO)! O título da página é usado pelos algoritmos do mecanismo de pesquisa para decidir a ordem ao listar as páginas nos resultados da pesquisa.
+        - O <title> elemento:
+            * define um título na barra de ferramentas do navegador;
+            * fornece um título para a página quando ela é adicionada aos favoritos;   
+            * exibe um título para a página nos resultados do mecanismo de pesquisa;
+        
+        - ELEMENTO HTML <style>
+          -  O <style> elemento é usado para definir informações de estilo para uma única página HTML;
+
+        - ELEMENTO HTML <link>
+         - O <link>elemento define a relação entre o documento atual e um recurso externo;
+         - A <link> tag é mais frequentemente usada para vincular a folhas de estilo externas;
+
+        - ELEMENTO HTML <meta>
+         - O <meta>elemento é normalmente usado para especificar o conjunto de caracteres, descrição da página, palavras-chave, autor do documento e configurações da janela de visualização;
+         - Os metadados não serão exibidos na página, mas são usados ​​por navegadores (como exibir conteúdo ou recarregar a página), por mecanismos de pesquisa (palavras-chave) e outros serviços da web.
+     
+        - Configurar a janela de visualização;
+-->
+
+<!--
+    # EXEMPLO DE UM DOCUMENTO HTML SIMPLES
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        # exemplo de uso do ELEMENTO meta;
+         - define o conjunto de caracteres usados;
+    -->
+    <meta charset="UTF-8">
+    <!--
+        # exemplo de uso do ELEMENTO meta;
+         - define palavras-chave para mecanismo de pesquisa;
+    -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!--
+        # exemplo de uso do ELEMENTO meta;
+         - defina uma descrição de sua pagina web;
+    -->
+    <meta name="description" content="Estudo sobre a Tag head do documento html, uma das tags principais do documento">
+    <!--
+        # EXEMPLO DE USO DO ELEMENTO META
+    -->
+    <meta name="author" content="Samuel Amaro">
+    <!--
+        # exemplo de uso do elemento meta;
+         - definir a janela de visualização para que meu site tenha uma boa aparencia em todos os dispositivos;
+         - configurar a janela de visualização;
+           - A janela de visualização é a área visível do usuário em uma página da web. Isso varia com o dispositivo - será menor em um telefone celular do que na tela de um computador.
+           - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+           - <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           - Isso fornece ao navegador instruções sobre como controlar as dimensões e a escala da página.
+           - A width=device-widthparte define a largura da página para seguir a largura da tela do dispositivo (que irá variar dependendo do dispositivo).
+           - A initial-scale=1.0parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+           - 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        # exemplo do elemento <title>
+    -->
+    <title>Elemento HEAD</title>
+    <!--
+        # exemplo do elemento <style>
+    -->
+    <style>
+        body{
+            background-color: powderblue;
+        }
+        h1{
+           color: red; 
+        }
+        p{
+           color: blue; 
+        }
+    </style>
+    <!--
+        # exemplo do elemento <link>
+         - aplicando uma estilização no documento HTML, com um arquivo css externo, linkado pela tag;
+    -->
+    <link rel="stylesheet" href="estiloExterno.css">
+</head>
+<body>
+    <h1>Um documento html simples</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quae maxime sequi eum facere esse officia dolores, numquam molestiae illo, nam quas, aliquam impedit consequuntur quidem suscipit culpa perferendis!</p>
+    <h2>Um subtitulo do documento</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis reiciendis consequuntur ut doloribus! Voluptatum quod, voluptates, nesciunt repellat nobis unde facere a officia, qui esse omnis expedita enim facilis quae!</p>
+</body>
+</html>

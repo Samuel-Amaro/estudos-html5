@@ -1,0 +1,43 @@
+<!--
+    * TAG HTML <time>
+
+    * DEFINIÇÃO E USO
+
+        - A <time> tag define uma hora específica (ou datetime).
+
+        - O datetime atributo desse elemento é usado para traduzir a hora em um formato legível por máquina para que os navegadores possam oferecer a adição de lembretes de data por meio do calendário do usuário e os mecanismos de pesquisa possam produzir resultados de pesquisa mais inteligentes.
+
+        - O time elemento representa seu conteúdo, juntamente com uma forma legível por máquina desses conteúdos no datetime atributo. O tipo de conteúdo é limitado a vários tipos de datas, horas, deslocamentos de fuso horário e durações, conforme descrito abaixo.
+
+        - O datetime atributo pode estar presente. Se presente, seu valor deve ser uma representação do conteúdo do elemento em um formato legível por máquina.
+
+        - Um time elemento que não possui um datetime atributo content não deve ter descendentes de elemento.
+
+        - O valor datetime de um time elemento é o valor do datetime atributo content do elemento, se houver, caso contrário, o conteúdo de texto filho do time elemento.
+
+    * ATRIBUTOS
+
+        ATTRIBUTE: datetime;
+        VALUE: datetime;
+        DESCRIPTION: Representar um formato legível por máquina do elemento <time>
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <h1>O elemento time</h1>
+    
+    <!--
+        - o elemento <time> define um hora ou data especifica.
+        - o atributo datetime define um formato legivel por maquina para que os navegadores possam oferecer adição de lembrentes de data por meio de calendario
+    -->
+    <p>Aberto de <time>10:00</time> até <time>21:00</time> todos os dias da semana.</p>
+
+    <p>Tenho um encontro em <time datetime="2008-02-14 20:00">Dia dos namorados</time>.</p>
+
+    <p><b>Nota:</b> O elemento time não e renderizado como algo especial em nehum dos principais navegadores.</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!--
+    * CABEÇALHO DE TABELA
+
+        - Às vezes você quer que suas células sejam cabeçalhos(HEADERS), nesses casos use a <th> tag em vez da <td> tag:
+
+        - Por padrão, o texto nos <th> elementos está em negrito e centralizado, mas você pode alterar isso com CSS.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Os elementos TH definem as cabeçalhos da tabela</h2>
+
+    <!--define uma tabela, permitindo organizar os dados em linhas e colunas-->
+    
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <!--
+                - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+            -->
+            <th>Pessoa 1</th>
+            <th>Pessoa 2</th>
+            <th>Pessoa 3</th>>
+        </tr>
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Emil</td>
+            <td>Tobias</td>
+            <td>Linus</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>14</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

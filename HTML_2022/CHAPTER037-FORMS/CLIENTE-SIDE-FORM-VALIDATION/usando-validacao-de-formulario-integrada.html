@@ -1,0 +1,32 @@
+<!--
+    * USANDO VALIDAÇÃO DE FORMULÁRIO INTEGRADA
+
+        - Um dos recursos mais significativos dos controles de formulário HTML5 é a capacidade de validar a maioria dos dados do usuário sem depender de JavaScript. Isso é feito usando atributos de validação em elementos de formulário. Já vimos muitos deles no início do curso, mas para recapitular:
+
+            - required: especifica se um campo de formulário precisa ser preenchido antes que o formulário possa ser enviado.
+
+            - minlength e maxlength: especifica o comprimento mínimo e máximo dos dados textuais (strings)
+
+            - min e max: Especifica os valores mínimo e máximo dos tipos de entrada numérica
+
+            - type: especifica se os dados precisam ser um número, um endereço de e-mail ou algum outro tipo predefinido específico.
+
+            - pattern: especifica uma expressão regular que define um padrão que os dados inseridos precisam seguir.
+
+        - Se os dados inseridos em um campo de formulário seguirem todas as regras especificadas pelos atributos acima, eles serão considerados válidos. Caso contrário, é considerado inválido.
+
+        - Quando um elemento é válido, as seguintes coisas são verdadeiras:
+
+            - O elemento corresponde à :valid pseudoclasse CSS, que permite aplicar um estilo específico a elementos válidos.
+
+            - Se o usuário tentar enviar os dados, o navegador enviará o formulário, desde que nada mais o impeça de fazê-lo (por exemplo, JavaScript).
+
+        - Quando um elemento é inválido, as seguintes coisas são verdadeiras:
+
+            - O elemento corresponde à :invalid pseudoclasse CSS e, às vezes, a outras pseudoclasses da interface do usuário (por exemplo, :out-of-range) dependendo do erro, o que permite aplicar um estilo específico a elementos inválidos.
+
+            - Se o usuário tentar enviar os dados, o navegador bloqueará o formulário e exibirá uma mensagem de erro.
+
+            - Observação: Existem vários erros que impedirão o envio do formulário, incluindo um badInput, patternMismatch, rangeOverflow ou rangeUnderflow, stepMismatch, tooLong ou tooShort, typeMismatch, valueMissing ou um customError.
+
+-->

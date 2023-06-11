@@ -1,0 +1,30 @@
+<!--
+    * USANDO A PROPRIEDADE MAX-WIDTH(LARGURA MAXIMA)
+
+        - Se a max-width propriedade estiver definida como 100%, a imagem será reduzida se for necessário, mas nunca será aumentada para ser maior que seu tamanho original:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html.
+        - A janela de visualização(viewport) é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+        - Você deve incluir o seguinte <meta> elemento em todas as suas páginas da web:
+        - A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+        - A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</head>
+<body>
+
+    <h2>Responsive Image</h2>
+
+    <p>"max-width: 100%" prevents the image from getting bigger than its original size. However, if you make the browser window smaller, the image will still scale down.</p>
+    <p>Resize the browser window to see the effect.</p>
+    <!--
+        - usando a propriedade css, para definr a largura da imagen, de forma responsiva, usando o atributo style de forma inline, somente na tag, usando a propriedade css max-width com o valor 100%, a imagen e reduzida se necessario mas nunca sera aumentada para ser maior que seu tamanho original, sem alterar escala da imagen, respeita o tamanho original.
+    -->
+    <img src="../images/img_girl (2).jpg" style="max-width: 100%; height: auto;">
+</body>
+</html>

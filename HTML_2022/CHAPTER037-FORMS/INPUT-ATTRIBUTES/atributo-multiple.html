@@ -1,0 +1,48 @@
+<!--
+    * O ATRIBUTO MULTIPLE(MULTIPLO)
+
+        - O atributo input multiple especifica que o usuário tem permissão para inserir mais de um valor em um campo de entrada.
+
+        - O multiple atributo funciona com os seguintes tipos de entrada: email(email) e arquivo(file).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>A entrada de vários atributos</h2>
+
+    <p>O atributo multiple especifica que o usuário tem permissão para inserir mais de um valor em um campo de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="files">Select a file:</label>
+        <!--
+            - o <input type="file"> define um campo de seleção de arquivo e um botão procurar para uploads de arquivos.
+            - o atributo multiple especifica que o usuario tem permissão para inserir mais de um valor em um campo de entrada.
+            - o usuario deve entrar com um arquivo ou mais
+        -->
+        <input type="file" id="files" name="files" multiple/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <p>Para selecionar vários arquivos, mantenha pressionada a tecla <kbd>CTRL</kbd> ou <kbd>SHIFT</kbd> enquanto seleciona. </p>
+</body>
+</html>

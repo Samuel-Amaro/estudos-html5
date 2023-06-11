@@ -1,0 +1,49 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML ononline(online)
+
+     - O atributo ononline é disparado quando o navegador começa a funcionar online.
+
+     - Dica: o atributo on-line é o oposto do atributo on - line .
+
+    * SINTAXE:
+    
+     <element ononline="script">
+
+     script : O roteiro a ser executado ononline;
+     
+     TAG HTML SUPORTADAS: <body>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML ononline</title>
+</head>
+<body ononline="onFunction()" onoffline="offFunction()">
+    
+    <h1>Evento HTML ononline(on-line)</h1>
+
+    <p><strong>Exemplo:</strong> Execute um JAVASCRIPT quando o navegador começar a funcionar online:</p>
+
+    <p>Abra o menu Arquivo e clique em "Trabalhar online" para alternar entre trabalhar online e offline.</p>
+
+    <p>Abra menu desenvolvedor &gt; network &gt; offiline ou online</p>
+
+    <script>
+
+        //Script a ser executado quando o navegador começa a funcionar offline
+        function onFunction() {
+            alert("Seu navegador está online");
+        }
+
+        //Script a ser executado quando o navegador começar a funcionar on-line
+        function offFunction() {
+            alert("Seu navagador está funcionando offline.");
+        }
+
+    </script>
+
+</body>
+</html>

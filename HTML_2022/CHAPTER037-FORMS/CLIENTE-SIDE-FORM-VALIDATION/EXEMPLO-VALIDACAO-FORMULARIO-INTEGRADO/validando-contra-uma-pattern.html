@@ -1,0 +1,66 @@
+<!--
+    * VALIDANDO CONTRA UMA EXPRESSÃO REGULAR
+
+        - Outro recurso de validação útil é o pattern atributo, que espera uma Expressão Regular como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para combinar combinações de caracteres em strings de texto, portanto, regexps são ideais para validação de formulários e servem a uma variedade de outros usos em JavaScript.
+
+        - Regexps são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para lhe dar uma idéia básica de como eles funcionam.
+
+            - a— Corresponde a um caractere que é a(não b, não aae assim por diante).
+
+            - abc— Partidas a, seguido de b, seguido de c.
+
+            - ab?c —Correspondências a, opcionalmente seguidas por um único b, seguido por c. ( ac ou abc)
+
+            - ab*c — Correspondências a, opcionalmente seguidas por qualquer número de bs, seguidos por c. ( ac, abc, abbbbbc, e assim por diante).
+
+            - a|b— Corresponde a um caractere que é a ou b.
+
+            - abc|xyz— Corresponde exatamente abc ou exatamente xyz(mas não abcxyz ou a ou y, e assim por diante).
+
+        - Vamos implementar um exemplo. Atualize seu HTML para adicionar um pattern atributo como este:
+
+        - Neste exemplo, o <input> elemento aceita um dos quatro valores possíveis: as strings "banana", "Banana", "cherry" ou "Cherry". As expressões regulares diferenciam maiúsculas de minúsculas, mas nós a tornamos compatível com versões maiúsculas e minúsculas usando um padrão "Aa" extra aninhado entre colchetes.
+
+        - Neste ponto, tente alterar o valor dentro do pattern atributo para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como vai. Faça-os relacionados a frutas sempre que possível para que seus exemplos façam sentido!
+
+        - Se um valor não vazio de <input> não corresponder ao padrão da expressão regular, o input corresponderá à :invalid pseudoclasse.
+
+        - Observação: alguns <input> tipos de elemento não precisam de um pattern atributo para serem validados em uma expressão regular. Especificar o email tipo, por exemplo, valida o valor de entradas em relação a um padrão de endereço de e-mail bem formado ou a um padrão que corresponde a uma lista de endereços de e-mail separados por vírgula, se tiver o multiple atributo.
+
+        - Nota: O <textarea> elemento não suporta o pattern atributo.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Fruta inicial favorita</title>
+    <style>
+        /*quando o elemento input não possui um valor, corresponde a essa pseudo class :invalid */
+        input:invalid {
+            border: 2px dashed red;
+        }
+        /*quando o elemento input possui um valor valido, corresponde a essa pseudo classe :valid*/
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="choose">Você prefere uma banana ou uma cereja?</label>
+        <!--
+            - o atributo required, torna o campo de entrada obrigatorio, o usuario tem que entrar com o valor no campo de entrada.
+
+            - o atributo pattern, especifica uma expressão regular com a qual o valor do campo de entrada é verificado quando o formulário é enviado.
+
+            - a expressão de regular especificada possui op seguinte padrão corresponde a um conjunto de caracteres de palavra B ou b seguido de anana ou correponde a um conjunto de caracteres de palavra C ou c seguido de ereja
+
+            - um valor não vazio de <input> não corresponder ao padrão da expressão regular acima, o input correspondera a :invalid pseudo-class css
+        -->
+        <input type="text" id="choose" name="i_like" required pattern="[Bb]anana|[Cc]ereja"/>
+        <button type="submit">Enviar preferência.</button>
+    </form>
+</body>
+</html>

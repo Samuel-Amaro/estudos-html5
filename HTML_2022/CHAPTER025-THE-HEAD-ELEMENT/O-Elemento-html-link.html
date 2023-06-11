@@ -1,0 +1,37 @@
+<!--
+    * O ELEMENTO HTML <link>
+
+        - O <link> elemento define o relacionamento entre o documento atual e um recurso externo.
+
+        - A <link> tag é usada com mais frequência para vincular a folhas de estilo externas:
+-->
+<!DOCTYPE html><!--especifica o tipo do documento, um doumento html5-->
+<html> <!--elemento raiz, contem todos os outros elementos-->
+<!--
+    - o elemento <head> e um conteiner para metadados,(dados sobre dados)
+    - Metadados são dados sobre o documento HTML, não são exibidos no navegador.
+    - o elemento <head> fica entre a tag <html> e <body>
+-->
+<head>
+    <!--
+        - o elemento a seguir define um metadado sobre o documento html, define um titulo para o documento.
+        - o elemento <title>, define um titulo do documento, o titulo deve ser so texto.
+        - o titulo definido e mostrado na barra de titulo do navegador ou na aba da pagina
+        - o title elemento e obrigatorio em um documento <html>
+    -->
+    <title>Um título de página</title>
+    <!--
+        - o elemento a seguir define um outro metadado sobre o documento html.
+        - o elemento <link> define o relacionamento entre o o documento atual e um recurso externo.
+        - aqui neste caso iremos vincular uma folha de estilo externa, usando o elemento <link>.
+    -->
+    <link href="./mystyle.css" rel="stylesheet" type="text/css">
+</head>
+<body> <!--define o corpo da pagina, a area de conteudo do documento-->
+    
+    <h1>Este é um título</h1>
+    
+    <p>Este é um parágrafo.</p>
+
+</body>
+</html>

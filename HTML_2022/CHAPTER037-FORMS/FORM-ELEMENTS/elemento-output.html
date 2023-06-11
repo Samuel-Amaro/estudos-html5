@@ -1,0 +1,48 @@
+<!--
+    * O ELEMENTO <output>
+
+        - O <output> elemento representa o resultado de um cálculo (como um realizado por um script).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O elemento de saída</h2>
+
+    <p>O elemento de saída representa o resultado de um cálculo.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados
+    -->
+    <form action="#" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <!--
+            - define um elemento de formulario
+            - define um elemento de entrada usando o elemento <input>
+        -->
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        <!--
+            - define um elemento de formulario
+            - O <output> elemento representa o resultado de um cálculo (como um realizado por um script).
+        -->
+        <output name="x" for="a b"></output>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+    
+    <p><strong>Observação:</strong> o elemento de saída(output) não é compatível com a versão anterior 13 do Edge.</p>
+</body>
+</html>

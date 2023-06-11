@@ -1,0 +1,86 @@
+<!--
+    * TABELA FLUTUANTE
+
+        - Use o :hover seletor tr para destacar as linhas da tabela ao passar o mouse:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+     <!--
+        - add um estilo local ao documento html, css local, aplicado somente a esse documento
+    -->
+    <style>
+        table{
+            /*para evitar bordas duplas, bordas na tabela e bordas nas celulas, usamos a propriedade css abaixo, para que as bordas sejam reduzidas a uma unica borda, borda somente na tabela geral*/
+            border-collapse: collapse;
+        }
+        th, td{
+            /*usando a propriedade css abaixo podemos especificar o alinhamento do conteudo das celulas de cabecalho e de conteudo, podemos espeficiar que queremos que o conteudo das ceulas de cabecalho e conteudo fiquem a esquerda*/
+            text-align: left;
+            /*usando a propriedade css abaixo, podemos adicionar um preenchimento na celula, que o espaço entre a borda da celula e o conteudo da mesma, em todas as celulas da tabela, tanto em celulas de cabeçalho como de conteudo*/
+            padding: 8px;
+            /*especificando borda na linha da tabela, especicando somente bordas inferiores nas linhas da tabela, usando a propriedade css abaixo, para parecer divisores horizontais
+            */
+            border-bottom: 1px solid #ddd;
+        }
+        /*usando o seletor abaixo para destacar todas as linhas da tabela ao passar o mouse*/
+        tr:hover{
+            background-color: #D6EEEE;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabela Flutuante</h2>
+
+    <p>Mova o mouse sobre as linhas da tabela para ver o efeito.</p>
+
+    <!--
+        - define uma tabela, permitindo organizar os dados em linhas e colunas.
+        - por meio do atributo style no elemento <table> usando a propriedade css width para especificar a largura da tabela, aqui nete caso espeficamos que a tabela e 100% ampla na sua largura, pode ocupar todo espaço
+    -->
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela.
+            - tr e o mesmo que table row.
+        -->
+        <tr>
+             <!--
+                - - usando a tag <th> para definir celulas de cabeçalhos, nesse caso usamos a table header tag a <th> para definir um célual de cabeçalho, por padrão ela e negrita e centralizada
+                - o elemento <th> define um cabeçalho para a tabela
+                - cada th elemento represent uma celula de dado, que e um cabeçalho para a tabela
+                - th e o mesmo que table header
+            -->
+            <th>Primeiro Nome</th>
+            <th>Último Nome</th>
+            <th>Pontos</th>
+        </tr>
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+                - td significa table data
+            -->
+            <td>Pedro</td>
+            <td>Grifo</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Grifo</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+        </tr>
+        <tr>
+            <td>Cleveland</td>
+            <td>Castanho</td>
+            <td>$250</td>
+        </tr>
+    </table>
+
+</body>
+</html>

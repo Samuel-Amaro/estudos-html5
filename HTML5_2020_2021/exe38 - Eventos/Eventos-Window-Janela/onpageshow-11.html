@@ -1,0 +1,40 @@
+<!--
+    * ATRIBUTO DE EVENTO EM HTML onpageshow
+
+     - O evento onpageshow ocorre quando um usuário navega para uma página da web.
+
+     - O evento onpageshow é semelhante ao evento onload , exceto que ocorre após o evento onload quando a página é carregada pela primeira vez. Além disso, o evento onpageshow ocorre sempre que a página é carregada, enquanto o evento onload não ocorre quando a página é carregada do cache.
+
+    * SINTAXE:
+
+        <element onpageshow="script">
+
+        script : O script a ser executado no onpageshow;
+
+        TAGS HTML SUPORTADAS: <body>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML5 onpageshow</title>
+</head>
+<body onpageshow="minhaFuncao()">
+    
+    <h1>Evento HTML5 onpageshow(em page show)</h1>
+
+    <p><strong>Exemplo:</strong> Execute um JavaScript quando um usuário navegar para uma página da web:</p>
+
+    <!--Script a ser executado quando um usuário navega para uma página-->
+    <script>
+
+        function minhaFuncao() {
+            alert("Bem-vindo!");
+        }
+    </script>
+
+</body>
+</html>

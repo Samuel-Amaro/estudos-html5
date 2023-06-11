@@ -1,0 +1,27 @@
+<!--
+    * OQUE É VALIDAÇÃO DE FORMULÁRIO?
+
+        - Vá a qualquer site popular com um formulário de registro e você notará que eles fornecem feedback quando você não insere seus dados no formato que eles esperam. Você receberá mensagens como:
+
+            - "Este campo é obrigatório" (você não pode deixar este campo em branco).
+
+            - "Por favor, digite seu número de telefone no formato xxx-xxxx" (É necessário um formato de dados específico para que seja considerado válido).
+
+            - "Digite um endereço de e-mail válido" (os dados inseridos não estão no formato correto).
+
+            - "Sua senha precisa ter entre 8 e 30 caracteres e conter uma letra maiúscula, um símbolo e um número." (É necessário um formato de dados muito específico para seus dados).
+
+        - Isso é chamado de validação de formulário . Quando você insere dados, o navegador e/ou o servidor web verifica se os dados estão no formato correto e dentro das restrições definidas pelo aplicativo. A validação feita no navegador é chamada de validação do lado do cliente , enquanto a validação feita no servidor é chamada de validação do lado do servidor . Neste capítulo, estamos nos concentrando na validação do lado do cliente.
+
+        - Se as informações estiverem formatadas corretamente, o aplicativo permite que os dados sejam enviados ao servidor e (geralmente) salvos em um banco de dados; se as informações não estiverem formatadas corretamente, ele fornece uma mensagem de erro ao usuário explicando o que precisa ser corrigido e permite que ele tente novamente.
+
+        - Queremos tornar o preenchimento de formulários da web o mais fácil possível. Então, por que insistimos em validar nossos formulários? Existem três razões principais:
+
+            - Queremos obter os dados certos, no formato certo. Nossos aplicativos não funcionarão corretamente se os dados de nossos usuários forem armazenados no formato errado, estiverem incorretos ou forem totalmente omitidos
+
+            - Queremos proteger os dados de nossos usuários . Forçar nossos usuários a inserir senhas seguras facilita a proteção das informações de suas contas.
+
+            -Queremos nos proteger . Há muitas maneiras pelas quais usuários mal-intencionados podem fazer uso indevido de formulários desprotegidos para danificar o aplicativo (consulte Segurança do site ).
+
+            - Aviso:: Nunca confie nos dados passados ​​para o seu servidor a partir do cliente. Mesmo que seu formulário esteja validando corretamente e evitando entradas malformadas no lado do cliente, um usuário mal-intencionado ainda poderá alterar a solicitação de rede.
+-->

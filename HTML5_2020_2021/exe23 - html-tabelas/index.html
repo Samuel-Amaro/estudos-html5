@@ -1,0 +1,183 @@
+<!--
+    * TABELAS HTML;
+     - As tabelas HTML permitem que os desenvolvedores da web organizem os dados em linhas e colunas.
+-->
+<!--
+        * DEFINIR UMA TABELA HTML
+         - a <table> define uma tabela HTML;
+         - Cada linha da tabela é definida com uma <tr> tag.
+         - Cada cabeçalho da tabela é definido com uma <th> tag
+         - Cada dado/célula da tabela é definido com uma <td> tag.
+         - por padrão o texto nos <th> elementos está em negrito e centralizado;
+         - por padrão, o texto nos <td> elementos é regular e alinhado á esquerda;  
+         
+            <tablea> -> cria tabela
+            <tr> -> cria linha da tabela
+            <th> -> definir cabeçalho da tabela
+            <td> -> dado e celula da tabela;   
+          
+          - os <td> elementos são conteineres de dados ta tabela; eles podem conter todos os tipos de elementos HTML; text, imgens, listas, outras tabelas, etc.....      
+    -->
+
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML</title>
+    <style>
+        /*
+         - propriedades de estilo estão sendo aplicadas diretamnete nas tags html, isso e uma generalização para todos os elementos que esteja usando essa tag;
+        */
+
+        /*aplicando bordar nos conteiner das tags da tabela*/
+        table, th, td{
+            /*borda de tamanho 1 solida e de cor preta*/
+            border: 1px solid black;
+        }
+        /*
+         * ADICIONAR UM PREENCHIMENTO DE CÉLULA;
+          - O preenchimento da célula especifica o espaço entre o conteúdo da célula e suas bordas.
+          - Se você não especificar um preenchimento, as células da tabela serão exibidas sem preenchimento.
+          - Para definir o preenchimento, use a paddingpropriedade CSS :
+        */
+        th,td{
+            /*aplicando um espaço interno entre a celula de conteudo e borda*/
+            padding: 15px;
+        }
+        /*
+         * Titulos alinhas á esquerda;
+          - Por padrão, os títulos das tabelas estão em negrito e centralizados.
+          - Para alinhar à esquerda os títulos da tabela, use a text-alignpropriedade CSS :
+        */
+        th{
+           text-align: left;
+        }
+        /*
+         * ADICIONAR UM ESPAÇAMENTO DE BORDA;
+          - O espaçamento da borda especifica o espaço entre as células.
+          - Para definir o espaçamento da borda de uma tabela, use a border-spacingpropriedade CSS :
+        */
+        table{
+            border-spacing: 5px;
+        }
+        /*aplicando estilo especial a tabela*/
+        #t01 {
+                width: 100%;
+                background-color: #f1f1c1;
+        }
+        #t01 tr:nth-child(even) {
+             background-color: #eee;
+        }
+        #t01 tr:nth-child(odd) {
+                background-color: #fff;
+        }
+        #t01 th {
+                color: white;
+                background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt mollitia error est excepturi, porro non voluptatem possimus voluptatum quod cumque doloremque inventore aliquam. Quo amet velit dolorum at optio!</p>
+    <p>Exemplo de uma tabela simples</p>
+    <!--
+        Criando uma tabela
+    -->
+    <table style="width: 100%;">
+        <!-- primeira linha-->
+        <tr>
+            <!-- cabeçalho da tabela-->
+            <th>Primeiro Nome</th>
+            <th>Segundo nome</th>
+            <th>Idade</th>
+        </tr>
+        <!-- segunda linha-->
+        <tr>
+             <!-- dados-->
+             <td>Samuel</td>
+             <td>Diogo J</td>
+             <td>30</td>   
+        </tr>
+        <!-- terceira linha-->
+        <tr>
+            <!-- dados-->
+            <td>Mickel</td>
+            <td>Junior</td>
+            <td>29</td>   
+        </tr>
+    </table>
+    <p>Tabela que possui celula que abrange muitas colunas</p>
+    <!-- 
+        * CELULA QUE ABRANGE MUITAS COLUNAS;
+        - criando uma segunda tabela que possui celula que abrange duas colunas;
+        - Para fazer uma célula ocupar mais de uma coluna, use o colspanatributo:
+    -->
+    <table style="width:100%">
+        <tr>
+          <th>Nome</th>
+          <th colspan="2">Telefone</th>
+        </tr>
+        <tr>
+          <td>Bill Gates</td>
+          <td>55577854</td>
+          <td>55577855</td>
+        </tr>
+      </table>
+      <p>Celula que abrange muitas linhas</p>
+      <!--
+          * CELULA QUE ABRANGE MUITAS LINHAS;
+           - Para fazer uma célula ocupar mais de uma linha, use o rowspanatributo:
+      -->
+      <table style="width:100%">
+        <tr>
+          <th>Nome:</th>
+          <td>Bill Gates</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Telefone:</th>
+          <td>55577854</td>
+        </tr>
+        <tr>
+          <td>55577855</td>
+        </tr>
+      </table>
+      <p>Adicionando uma legenda a uma tabela</p>
+      <!--
+           * ADICIONAR UMA LEGENDA;
+            - Para adicionar uma legenda a uma tabela, use a <caption>tag:
+      -->
+      <table style="width:100%">
+        <caption>Monthly savings</caption>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$50</td>
+        </tr>
+      </table>
+      <p>Tabela com estilo especial aplicado</p>
+      <!-- 
+          uma tabela com um estilo especial aplicado usando CSS;
+          Para definir um estilo especial para uma tabela específica, adicione um id atributo à tabela:
+     -->
+      <table id="t01">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+    * IMAGE TITLES(TITULOS DE IMAGENS)
+
+        Assim como nos links , você também pode adicionar title atributos às imagens para fornecer mais informações de suporte, se necessário. Em nosso exemplo, poderíamos fazer isso:
+
+            <img src="images/dinosaur.jpg" alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth" width="400" height="341" title="A T-Rex on display in the Manchester University Museum"/>
+
+        Isso nos dá uma dica de ferramenta sobre o foco do mouse, assim como os títulos dos links:
+
+        No entanto, isso não é recomendado - title tem vários problemas de acessibilidade, principalmente com base no fato de que o suporte ao leitor de tela é muito imprevisível e a maioria dos navegadores não o mostra, a menos que você esteja passando o mouse com o mouse (por exemplo, sem acesso a usuários de teclado).
+        
+        É melhor incluir essas informações de apoio no texto do artigo principal, em vez de anexar à imagem.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Images in HTML</title>
+</head>
+<body>
+
+    <h1>Images in HTML</h1>
+
+    <!--
+        - para colocar uma imagem e uma pagina da web usamos o <img> elemento.
+        - um elemento vazio, que não tem  conteudo de texto ou tag de fechamento.
+            - requer dois atributos o src(source, caminho que aponta para a imagem que eu desejo incorporar na pagina, usando uma URL relativa ou absoluta)
+            - o atributo alt, Seu valor deve ser uma descrição textual da imagem
+            - Você pode usar os atributos width e height para especificar a largura e a altura da sua imagem.
+            - titles de imagem Assim como nos links , você também pode adicionar titleatributos às imagens para fornecer mais informações de suporte, se necessário.
+        - o img elemento e um elemento subtituido, o conteudo e o tamanho do elemento são definidos por um recurso externo como um arquivo de imagem, não pelo conteudo do proprio elemento.
+    -->
+    <img src="dinosaur.jpg" alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth" width="400" height="341" title="A T-Rex on display in the Manchester University Museum"/>
+</body>
+
+</html>

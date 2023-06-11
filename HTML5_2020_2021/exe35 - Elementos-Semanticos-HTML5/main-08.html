@@ -1,0 +1,147 @@
+<!--
+    * TAG HTML <main>
+
+     - A <main> tag especifica o conteúdo principal de um documento.
+     
+     - O conteúdo dentro do <main> elemento deve ser exclusivo para o documento. Não deve conter nenhum conteúdo que se repita em documentos, como barras laterais, links de navegação, informações de direitos autorais, logotipos de sites e formulários de pesquisa.
+     
+     - Nota: Não deve haver mais de um <main>elemento em um documento. O <main> elemento NÃO deve ser descendente de um elemento <article>, <aside>, <footer>, <header> ou <nav>.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag main</title>
+    <style>
+
+        /****************************************configuração do article geral*************************************/
+        .conteudo-principal{
+            /*tira todo o espaço externo ao redor da caixa do elemento article, da borda para fora*/
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            /*add espaço interno dentro do elemento article, da borda para dentro em todos os lados*/
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            /*add um cor de fundo a caixa*/
+            background-color: lightgray;
+        }
+
+        /************************************configuração de cor de fundo para cada article*******************************/
+        .artigo-navegador-google{
+            /*cor de fundo do elemento article*/
+            background-color: white;
+        }
+        .artigo-navegador-edge{
+             /*cor de fundo do elemento article*/
+             background-color: white;
+        }
+        .artigo-navegador-mozila{
+             /*cor de fundo do elemento article*/
+             background-color: white;
+        }
+
+        /***********************************configuração do titulo geral*********************************************************/
+
+        .conteudo-principal > #titulo-geral{
+            /*add espaço externo ao redor da caixa do elemento h1,da borda para fora, cria um espaço externo*/
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /*add espaço interno dentro do elemento h1, da borda para dentro em todos os lados, entre a borda e o conteudo*/
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+        
+        /****************congigura os titulos de cada artigo**************************************/
+
+        .artigo-navegador-google > #titulo-artigo-google{
+             /*add espaço externo ao redor da caixa do elemento h2,da borda para fora, cria um espaço externo*/
+             margin-top: 4px;
+             margin-right: 4px;
+             margin-bottom: 4px;
+             margin-left: 4px;
+             /*configura um tamanho da fonte*/
+             font-size: 90%;
+        }
+        .artigo-navegador-mozila > #titulo-artigo-mozila{
+                /*add espaço externo ao redor da caixa do elemento h2,da borda para fora, cria um espaço externo*/
+                margin-top: 4px;
+                margin-right: 4px;
+                margin-bottom: 4px;
+                margin-left: 4px;
+                /*configura um tamanho da fonte*/
+                font-size: 90%;
+        }
+        .artigo-navegador-edge > #titulo-artigo-edge{
+                 /*add espaço externo ao redor da caixa do elemento h2,da borda para fora, cria um espaço externo*/
+                 margin-top: 4px;
+                 margin-right: 4px;
+                 margin-bottom: 4px;
+                 margin-left: 4px;
+                 /*configura um tamanho da fonte*/
+                 font-size: 90%;
+        }
+
+        /************************************configurações dos paragrafos de cada artigo***********************/
+
+        .artigo-navegador-mozila > #paragrafo-artigo-mozila{
+                /*add espaço externo ao redor da caixa do elemento h2,da borda para fora, cria um espaço externo*/
+                margin-top: 4px;
+                margin-right: 4px;
+                margin-bottom: 4px;
+                margin-left: 4px;
+                /*configura um tamanho da fonte*/
+                font-size: 90%;
+        }
+        .artigo-navegador-edge > #paragrafo-artigo-edge{
+                 /*add espaço externo ao redor da caixa do elemento h2,da borda para fora, cria um espaço externo*/
+                 margin-top: 4px;
+                 margin-right: 4px;
+                 margin-bottom: 4px;
+                 margin-left: 4px;
+                 /*configura um tamanho da fonte*/
+                 font-size: 90%;
+        }
+
+        .artigo-navegador-google > #paragrafo-artigo-google{
+             /*add espaço externo ao redor da caixa do elemento p,da borda para fora, cria um espaço externo*/
+             margin-top: 4px;
+             margin-right: 4px;
+             margin-bottom: 4px;
+             margin-left: 4px;
+             /*configura um tamanho da fonte*/
+             font-size: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>TAG SEMÂNTICA &lt;main&gt;</h1>
+    <p>Especifica o conteúdo principal de um documento</p>
+    <p>Especifique o conteúdo principal do documento:</p>
+    <main class="conteudo-principal">
+        <h1 id="titulo-geral">Navegadores mais populares</h1>
+        <article class="artigo-navegador-google">
+            <h2 id="titulo-artigo-google">Google Chrome</h2>
+            <p id="paragrafo-artigo-google">Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+        </article>
+            
+        <article class="artigo-navegador-mozila">
+            <h2 id="titulo-artigo-mozila">Mozilla Firefox</h2>
+            <p id="paragrafo-artigo-mozila">Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+        </article>
+            
+        <article class="artigo-navegador-edge">
+            <h2 id="titulo-artigo-edge">Microsoft Edge</h2>
+            <p id="paragrafo-artigo-edge">Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+        </article>
+    </main>
+</body>
+</html>

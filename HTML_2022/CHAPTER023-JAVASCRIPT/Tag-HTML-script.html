@@ -1,0 +1,72 @@
+<!--
+    * JAVASCRIPT HTML
+
+        - JavaScript torna as páginas HTML mais dinâmicas e interativas.
+
+    * A TAG HTML <script>
+
+        - A tag HTML <script> é usada para definir um script do lado do cliente (JavaScript).
+
+        - O <script> elemento contém instruções de script ou aponta para um arquivo de script externo por meio do src atributo.
+
+        - Os usos comuns para JavaScript são manipulação de imagem, validação de formulário e alterações dinâmicas de conteúdo.
+
+    * ATRIBUTOS
+
+        ATTRIBUTE: async;
+        VALUE: async;
+        DESCRIPTION: Especifica que o script é baixado em paralelo para analisar a página e executado assim que estiver disponível (antes da conclusão da análise) (somente para scripts externos)
+        ------------------------------------
+        ATTRIBUTE: crossorigin;
+        VALUE: anonymous use-credentials(anônimo credenciais de uso);
+        DESCRIPTION: Define o modo da solicitação para uma solicitação HTTP CORS
+        ------------------------------------
+        ATTRIBUTE: defer;
+        VALUE: defer
+        DESCRIPTION: Especifica que o script é baixado em paralelo para analisar a página e executado depois que a página terminar de analisar (somente para scripts externos)
+        ------------------------------------
+        ATTRIBUTE: integrity(integridade);
+        VALUE: filehash(arquivo hash);
+        DESCRIPTION: Permite que um navegador verifique o script obtido para garantir que o código nunca seja carregado se a fonte tiver sido manipulada;
+        ------------------------------------
+        ATTRIBUTE: nomodule(não modulo);
+        VALUE: true/false;
+        DESCRIPTION: Especifica que o script não deve ser executado em navegadores com suporte a módulos ES2015 
+        -----------------------------------
+        ATTRIBUTE: referrepolicy(política de referência)
+        VALUE: no-referrer(sem referenciador), no-referrer-when-downgrade(sem referenciador-quando-downgrade), origin(origem), origin-when-cross-origin(origem-quando-origem-cruzada,), same-origin(mesma origem), strict-origin-when-cross-origin(origem-estrita-quando-origem-cruzada), unsafe-url(url inseguro)
+        DESCRIPTION: Especifica quais informações do referenciador enviar ao buscar o iframe
+        -----------------------------------
+        ATTRIBUTE: src;
+        VALUE: URL;
+        DESCRIPTION: Especifica o URL de um arquivo de script externo
+        ------------------------------------
+        ATTRIBUTE: type;
+        VALUE: scripttype;
+        DESCRIPTION: Especifica o tipo de mídia do script
+        ------------------------------------
+        - Para selecionar um elemento HTML, o JavaScript geralmente usa o document.getElementById() método.
+
+        - Este exemplo de JavaScript escreve "Hello JavaScript!" em um elemento HTML com id="demo":
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Use JavaScript para alterar o texto</h2>
+
+    <p>Este exemplo escreve "Hello JavaScript!" em um elemento HTML com id="demo":</p>
+
+    <p id="demo"></p>
+
+    <!--
+        - define um script do lado do cliente(JavaScript) usando o elemento html <script>, para conter instruções de script
+    -->
+    <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+</body>
+</html>

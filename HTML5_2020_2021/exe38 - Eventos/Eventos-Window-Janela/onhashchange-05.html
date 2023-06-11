@@ -1,0 +1,62 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML onhashchange(na mudança de hash)
+
+     - O atributo onhashchange é acionado quando há mudanças na parte da âncora - link - a (começa com o símbolo '#') da URL atual.
+
+     - Um exemplo do que realmente é uma parte âncora: Suponha que o URL atual seja
+     http://www.example.com/test.htm#part2 - A parte âncora desse URL seria #part2.
+
+     - Para invocar este evento, você pode:
+
+       - Mudar a parte âncora, definindo o location.hash ou location.href propriedade do objeto Local;
+
+       - Navegue até a página atual com um favorito diferente (use os botões "voltar" ou "avançar")
+
+       - Clique em um link para uma âncora de favorito
+
+    * SINTAXE:
+
+        <element onhashchange="script">
+
+        script : O roteiro a ser executado em onhashchange
+        
+        TAG HTML SUPORTADAS: <body>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento HTML onhashchange</title>
+</head>
+<body onhashchange="minhaFuncao()">
+
+    <h1>Atributo de Evento HTML onhashchange(na mudança de hash)</h1>
+
+    <p><strong>Exemplo: </strong> Execute um JAVASCRIPT quando a peça âncora for alterada:</p>
+
+    <p>Clique no botão para alterar a parte âncora do URL atual para  #part5, a ancora que vai mudar e a da pagina e a URL da pagina!</p>
+
+    <!--ao clicar no botão-->
+    <button onclick="mudarParte()">Experimente</button>
+
+    <p id="demo">Tente</p>
+
+    <!--Script a ser executado quando houve alterações na parte âncora da URL de um-->
+    <script>
+        //usando a propriedade location.hash para alterar a parte da âncora
+        function mudarParte() {
+            location.hash = "parte5";
+            var x = "A parte da âncora agora é: " + location.hash;
+            document.getElementById("demo").innerHTML = x; 
+        }
+
+        //alerte algum texto se houver mudanças na parte âncora
+        function minhaFuncao(){
+            alert("A parte da âncora mudou!");
+        }
+    </script>
+</body>
+</html>

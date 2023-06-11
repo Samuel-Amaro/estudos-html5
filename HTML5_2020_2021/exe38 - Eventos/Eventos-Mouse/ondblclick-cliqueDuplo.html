@@ -1,0 +1,38 @@
+<!--
+    * * ATRIBUTO DE EVENTO HTML ONDBLCLICK(CLIQUE DUPLO EM UM ELEMENTO)
+    * 
+    * DEFINIÇÃO E USO
+    * 
+    *  O atributo ondblclick é acionado com um clique duplo do mouse no elemento.
+    * 
+    * SINTAXE:
+
+        <element ondblclick="script">
+
+    * TAGS HTML SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ondblclick</title>
+</head>
+<body>
+    <h1>Eventos De Mouse</h1>
+    <h2>Atributo de evento HTML ondblclick - clique duplo</h2>
+    <p><strong>Exemplo 01:</strong> Execute um JavaScript quando um botão for clicado duas vezes:</p>
+    <!--botão recebe o atributo de duplo clique-->
+    <button ondblclick="setaTextoParagrafo()">Clique Aqui</button>
+    <p id="recebeTexto"></p>
+    <p>Uma função é acionada quando o botão é clicado duas vezes. A função produz algum texto no elemento p com id = "demo".</p>
+    <!--função java script, que seta um texto no elemento p, com id correspondente-->
+    <script>
+        function setaTextoParagrafo() {
+            document.getElementById("recebeTexto").innerHTML = "Você Clicou no botão duas vezes!";
+        }
+    </script>
+</body>
+</html>

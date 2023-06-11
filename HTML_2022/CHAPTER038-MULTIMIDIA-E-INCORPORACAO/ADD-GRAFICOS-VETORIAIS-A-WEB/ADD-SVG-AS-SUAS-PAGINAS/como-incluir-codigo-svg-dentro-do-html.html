@@ -1,0 +1,30 @@
+<!--
+    * COMO INCLUIR CÓDIGO SVG DENTRO DO SEU HTML
+
+        Você também pode abrir o arquivo SVG em um editor de texto, copiar o código SVG e colá-lo em seu documento HTML — isso às vezes é chamado de colocar seu SVG inline , ou inlining SVG . Certifique-se de que seu snippet de código SVG comece com uma <svg> tag inicial e termine com uma </svg> tag final. Aqui está um exemplo muito simples do que você pode colar em seu documento:
+
+            <svg width="300" height="200">
+                <rect width="100%" height="100%" fill="green" />
+            </svg>
+
+        Prós:
+
+            Colocar seu SVG em linha(inline) salva uma solicitação HTTP e, portanto, pode reduzir um pouco o tempo de carregamento.
+
+            Você pode atribuir classes e ids a elementos SVG e estilizá-los com CSS, seja dentro do SVG ou onde quer que você coloque as regras de estilo CSS para seu documento HTML. Na verdade, você pode usar qualquer atributo de apresentação SVG como uma propriedade CSS.
+
+            Inlining SVG é a única abordagem que permite usar interações CSS (como :focus) e animações CSS em sua imagem SVG (mesmo em sua folha de estilo normal).
+
+            Você pode transformar a marcação SVG em um hiperlink envolvendo-o em um <a> elemento.
+
+        Contras
+
+            Este método só é adequado se você estiver usando o SVG em apenas um lugar. A duplicação torna a manutenção intensiva em recursos.
+
+            O código SVG extra aumenta o tamanho do seu arquivo HTML.
+
+            O navegador não pode armazenar em cache SVG em linha, pois armazenaria em cache ativos de imagem regulares, portanto, as páginas que incluem a imagem não serão carregadas mais rapidamente após o carregamento da primeira página que contém a imagem.
+
+            Você pode incluir fallback em um <foreignObject> elemento, mas os navegadores que suportam SVG ainda baixam qualquer imagem de fallback. Você precisa avaliar se a sobrecarga extra realmente vale a pena, apenas para suportar navegadores obsoletos.
+
+-->

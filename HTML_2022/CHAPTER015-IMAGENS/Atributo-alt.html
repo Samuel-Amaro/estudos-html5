@@ -1,0 +1,40 @@
+<!--
+    * O ATRIBUTO ALT
+
+        - O alt atributo required(obrigatorio) fornece um texto alternativo para uma imagem, se o usuário por algum motivo não puder visualizá-la (devido à conexão lenta, um erro no atributo src ou se o usuário usar um leitor de tela).
+
+        - O valor do alt atributo deve descrever a imagen:
+
+        - Se um navegador não encontrar uma imagem, ele exibirá o valor do alt atributo:
+
+        - Dica: Um leitor de tela é um programa de software que lê o código HTML e permite que o usuário "ouça" o conteúdo. Os leitores de tela são úteis para pessoas com deficiência visual ou com deficiência de aprendizado.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Texto Alternativo - alt</h2>
+
+    <p>O atributo alt deve refletir o conteúdo da imagem, para que os usuários que não podem ver a imagem entendam o que a imagem contém:</p>
+
+    <!--
+        - a tag html <img> e usada para incorporar uma imagem em uma página da web, e uma tag vazia, e sem fechamento, possui atributos.
+
+        - as imagens são vinculadas a paginas da web. não são tecnicamente incorporadas, a  <img> tag cria um espaç de retenção para a imagen referenciada.
+
+        - o atributo src da tag <img> e obrigatorio, esse atributo especifica o caminho URL para imagen
+
+        - o alt atributo da tag <img>, atributo obrigatorio, especifica um texto alternativo, quando por algum motivo o usuario não puder visualizala.
+    -->
+
+    <img src="./imgs/img_chania.jpg" alt="Flowers in Chania" width="460" height="345">
+
+    <p>Se um navegador não encontrar uma imagem, ele exibirá o valor do alt atributo:</p>
+
+    <!-- quando o navegador não consegue encontrar a imagen, ou carregala para poder ser exibida, o texto alternativo especificado no atributo alt deve ser mostrado-->
+    <img src="wrongnam.gif" alt="Flowers in Chania"/>
+
+</body>
+</html>

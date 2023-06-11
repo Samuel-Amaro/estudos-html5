@@ -1,0 +1,40 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML ONERROR(NO ERRO)
+
+      - O atributo onerror é acionado quando ocorre um erro ao carregar um arquivo externo (por exemplo, um documento ou uma imagem).
+
+    * SINTAXE:
+
+        <element onerror="script">
+
+        script : O roteiro a ser executado em onerror
+
+        TAGS HTML SUPORTADAS: <img>, <input type = "image">, <object>, <link> e <script>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onerror</title>
+</head>
+<body>
+    
+    <h1>Evento HTML onerror - NO ERRO</h1>
+
+    <p><strong>Dica: </strong>Execute um JavaScript se ocorrer um erro ao carregar uma imagem:</p>
+
+    <p>Uma função é acionada se ocorrer um erro ao carregar a imagem. A função mostra uma caixa de alerta com um texto. Neste exemplo, nos referimos a uma imagem que não existe, portanto, o evento onerror ocorre.</p>
+
+    <img src="imagen_nao_existe.png" alt="imagen não existe" onerror="minhaFuncao()">
+
+    <!--Script a ser executado quando um erro ocorre-->
+    <script>
+        function minhaFuncao() {
+            alert("Não foi possivel carregar a imagen!");
+        }
+    </script>
+
+</body>
+</html>

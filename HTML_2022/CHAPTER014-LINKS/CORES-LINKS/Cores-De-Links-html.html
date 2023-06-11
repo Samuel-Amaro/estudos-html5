@@ -1,0 +1,72 @@
+<!--
+    * LINKS HTML - CORES DIFERENTES
+
+        - Um link HTML é exibido em uma cor diferente dependendo se foi visitado, não foi visitado ou está ativo.
+
+    * CORES DE LINKS HTML
+
+        - Por padrão, um link aparecerá assim (em todos os navegadores):
+
+            - Um link não visitado está sublinhado e azul
+
+            - Um link visitado é sublinhado e roxo
+
+            - Um link ativo está sublinhado e vermelho
+
+        - Você pode alterar as cores do estado do link usando CSS:
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--adiciona estilo ao documento de forma local, somente aplicado a pagina, a este documento, css local-->
+    <style>
+        /*alterando as cores do estado do link usando CSS*/
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cores dos Links</h1>
+
+    <p>Você pode alterar as cores padrão dos links</p>
+
+    <p>Aqui, um link não visitado ficará verde sem sublinhado. Um link visitado será rosa sem sublinhado. Um link ativo será amarelo e sublinhado. Além disso, ao passar o mouse sobre um link (a:hover), ele ficará vermelho e sublinhado:</p>
+
+    <!--
+        define um link - hiperlink- permitindo o usuario em clique mude de uma pagina para outra
+
+        define um hiperlink usando o elemento html <a>, o atributo href indica o destino do link, como destino especificamos uma URLs absoluta(um endereço da web completo) para vincular a um documento
+
+        o texto entre a tag inicial e a tag final e mostrado para o usuario, o texto do link e parte que ficara visivel para o usuario.
+
+        o atributo target(destino), permite especificar onde abrir o documento vinculado por meio do link, aqui especificaremos o valor _blank no target atributo para abrir o documento vinculado em nova janela ou nova guia.
+
+        o title atributo especifica informações extra sobre o elemento, o title atributo e um atributo global que todos elementos html possui. as informações são mostradas como um tooltip quando move o mouse sobre o elemento
+    -->
+
+    <a href="https://www.w3schools.com/html/" target="_blank" title="Vá para a seção HTML do W3Schools">HTML Imagens</a>
+    
+</body>
+</html>

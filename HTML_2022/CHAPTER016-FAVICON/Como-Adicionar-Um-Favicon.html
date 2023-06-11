@@ -1,0 +1,42 @@
+<!--
+    * HTML FAVICON
+
+        - Um favicon é uma pequena imagem exibida ao lado do título da página na guia do navegador.
+
+    * COMO ADICIONAR UM FAVICON EM HTML
+
+        - Você pode usar qualquer imagem que desejar como seu favicon. Você também pode criar seu próprio favicon em sites como https://favicon.cc 
+
+        Dica: Um favicon é uma imagem pequena, então deve ser uma imagem simples com alto contraste.
+
+        Uma imagem favicon é exibida à esquerda do título da página na guia do navegador, assim:
+
+        Para adicionar um favicon ao seu site, salve sua imagem favicon no diretório raiz do seu servidor web ou crie uma pasta no diretório raiz chamada images e salve sua imagem favicon nesta pasta. Um nome comum para uma imagem favicon é "favicon.ico".
+
+        Em seguida, adicione um <link>elemento ao seu arquivo "index.html", após o <title> elemento, assim:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título Da Minha Página</title>
+    <!--
+        - Usando a tag <link> para definir o relacionamento entre um documento atual e um recurso externo, neste caso estamos adiconando um favicon a pagina.
+        
+        - atributo href especifica o caminho atual onde o favicon se encontra, e um caminho relativo.
+        
+        - o atributo rel, especifica o relacionamento do documento atual com o recurso externo, isso e um icon.
+
+        - o atributo type, especifica o tipo de midia vinculado, neste caso estamos vinculando um image/do tipo icon.
+        
+    -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+
+    <h1>Este e um título</h1>
+
+    <p>Este é um paragrafo</p>
+
+</body>
+</html>

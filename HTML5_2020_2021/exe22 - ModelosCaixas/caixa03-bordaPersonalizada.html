@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda Personalizada</title>
+    <!-- configurando um estilo local de CSS, para ser aplicado ao documento HTML5-->
+    <style>
+        /*configurando a caixa de tipo box level do H1*/
+        h1{
+           border: 20px solid black; /*configurando uma borda para a caixa,um linha que circuncida toda a caixa, quase por cima do conteudo,so ah um espacinho entre eles*/
+           padding: 10px; /*aplicando uma espaço interno, entre conteudo e borda*/
+           border-image-source: url('imagem-borda.png'); /*aplicando uma imagem na borda da caixa do h1*/
+           border-image-slice: 15; /*fatiando a imagem na borda*/
+           border-image-repeat: repeat;/*vai repetir a imagem, ate prenecher todo espaço*/  
+        } 
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda Personalizada</h1>
+</body>
+</html>

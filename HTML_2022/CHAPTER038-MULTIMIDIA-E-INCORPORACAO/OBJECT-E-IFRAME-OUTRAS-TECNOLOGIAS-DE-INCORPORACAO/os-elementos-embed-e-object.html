@@ -1,0 +1,60 @@
+<!--
+    * OS ELEMENTOS <embed> e <object>
+
+        Os elementos <embed> e <object> têm uma função diferente para <iframe>— esses elementos são ferramentas de incorporação de uso geral para incorporar conteúdo externo, como PDFs.
+
+        No entanto, é improvável que você use muito esses elementos. Se você precisar exibir PDFs, geralmente é melhor vinculá-los, em vez de incorporá-los na página.
+
+        Historicamente, esses elementos também foram usados ​​para incorporar conteúdo manipulado por plug- ins de navegador , como Adobe Flash , mas essa tecnologia agora está obsoleta e não é suportada por navegadores modernos
+
+        Se você precisar incorporar conteúdo de plug-in, este é o tipo de informação que você precisará, no mínimo:
+
+        	<embed>	<object>
+            URL do conteúdo incorporado	
+            <embed>: src	
+            <object>: data
+            ------------------------------------------------
+            tipo de mídia preciso do conteúdo incorporado	
+            <embed>: type	
+            <object>: type
+            ----------------------------------
+            altura e largura (em pixels CSS) da caixa controlada pelo plugin	
+            <embed>: height width	
+            <object>: height width
+            ----------------------------------
+            nomes e valores, para alimentar o plugin como parâmetros
+            <embed>: atributos ad hoc com esses nomes e valores	
+            <object>: elementos de tag única <param>, contidos em <object>
+            ----------------------------------
+            conteúdo HTML independente como substituto para um recurso indisponível	
+            <embed>: não suportado ( <noembed> é obsoleto)	
+            <object>: contido dentro de <object>, depois de <param> elementos
+
+        Vejamos um <object>exemplo que incorpora um PDF em uma página
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object element example</title>
+</head>
+<body>
+
+    <h1>Object element example</h1>
+    <!--
+        - elemento object e uma ferramenta de incorporação de uso geral para incorporar conteúdo externo
+            - atributo data e o url do conteudo externo incorporado.
+            - o type atributo o tipo de midia preciso do conteudo incorporado.
+            - width e height são a altura e largura da caixa controladora do conteudo externo
+    -->
+    <object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+        <!--fallback contentn caso o navegador não suporte o elemento objetct-->
+        <p>You don't have a PDF plugin, but you can <a href="mypdf.pdf">download the PDF file.</a></p>
+    </object>
+
+    <!--
+        - Os PDFs foram um trampolim necessário entre o papel e o digital, mas apresentam muitos desafios de acessibilidade e podem ser difíceis de ler em telas pequenas. Eles ainda tendem a ser populares em alguns círculos, mas é muito melhor vinculá-los para que possam ser baixados ou lidos em uma página separada, em vez de incorporá-los em uma página da web.
+    -->
+</body>
+</html>

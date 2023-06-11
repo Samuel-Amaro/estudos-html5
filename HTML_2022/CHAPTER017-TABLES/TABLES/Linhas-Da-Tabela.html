@@ -1,0 +1,52 @@
+<!--
+    * LINHAS DA TABELA
+
+        - Cada linha da tabela começa com a <tr> e termina com uma </tr> tag.
+
+        - Você pode ter quantas linhas quiser em uma tabela, apenas certifique-se de que o número de células seja o mesmo em cada linha.
+
+        - Nota: Há momentos em que uma linha pode ter menos ou mais células que outra. Você aprenderá sobre isso em um capítulo posterior.
+
+        - tr significa linha da tabela(table row).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Os elementos TR definem as linhas da tabela</h2>
+
+    <!--define uma tabela, permitindo organizar os dados em linhas e colunas-->
+    <table style="width: 100%;">
+        <!--
+            - a tag <tr> define uma linha da tabela
+
+            - tr e o mesmo que table row
+        -->
+        <tr>
+            <!--
+                - a tag <td> define uma celula da tabela, tudo entre a tag de abertura e fechamento do td e contéudo da célula da tabela.
+
+                - td significa table data
+            -->
+            <td>Emil</td>
+            <td>Tobias</td>
+            <td>Linus</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>14</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <p>Para entender melhor o exemplo, adicionamos bordas á tabela</p>
+</body>
+</html>
+

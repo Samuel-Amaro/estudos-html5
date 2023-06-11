@@ -1,0 +1,44 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTOS DE FORMULARIO ONSELECT(EM SELEÇÃO):
+
+        - O atributo onselect é acionado após algum texto ter sido selecionado em um elemento.
+
+        - SINTAXE:
+
+          <element onselect="script">
+
+        - TAGS HTML SUPORTADAS:
+
+            <input type = "file">, <input type = "password">, <input type = "text"> e <textarea>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Formulario</title>
+</head>
+<body>
+    
+    <h1>Eventos de Formulario onselect(em seleção)</h1>
+
+    <p><strong>Exemplo:</strong>Execute um JavaScript depois que algum texto for selecionado em um elemento &lt;input&gt;:</p>
+
+    <label for="lbl">Algum texto:</label>
+
+    <input type="text" value="Selecione-me!!" onselect="alertaSelecaoTexto()">
+
+    <!--função java script que aciona uma mesagem quando um texto e selecionado de um elemento input do form-->
+    <script>
+        function alertaSelecaoTexto() {
+            alert('Você Selecionou algum texto!');
+        }
+    </script>
+</body>
+</html>

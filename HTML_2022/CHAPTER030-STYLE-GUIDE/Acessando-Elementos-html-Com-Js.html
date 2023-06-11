@@ -1,0 +1,20 @@
+<!--
+    * ACESSANDO ELEMENTOS HTML COM JS
+
+        - O uso de código HTML "desarrumado" pode resultar em erros de JavaScript.
+
+        - Essas duas instruções JavaScript produzirão resultados diferentes:
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo">Este e um paragrafo 1.</p>
+    <p id="demo">Este e um paragrafo 2.</p>
+
+    <script>
+        //Apenas o parágrafo 2 será substituído
+        document.getElementById("demo").innerHTML = "HELLO";
+    </script>
+</body>
+</html>

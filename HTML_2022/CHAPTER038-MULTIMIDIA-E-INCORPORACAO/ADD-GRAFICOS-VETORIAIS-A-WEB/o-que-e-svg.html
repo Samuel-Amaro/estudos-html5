@@ -1,0 +1,33 @@
+<!--
+    * O QUE É SVG?
+
+        SVG é uma linguagem baseada em XML para descrever imagens vetoriais. É basicamente marcação, como HTML, exceto que você tem muitos elementos diferentes para definir as formas que deseja que apareçam em sua imagem e os efeitos que deseja aplicar a essas formas. SVG é para marcar gráficos, não conteúdo. No extremo mais simples do espectro, você tem elementos para criar formas simples, como <circle> e <rect>. Recursos SVG mais avançados incluem <feColorMatrix> (transformar cores usando uma matriz de transformação) <animate> (animar partes do seu gráfico vetorial) e <mask> (aplicar uma máscara sobre a parte superior da imagem).
+
+        Como um exemplo simples, o código a seguir cria um círculo e um retângulo:
+
+            <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="black" />
+                <circle cx="150" cy="100" r="90" fill="blue" />
+            </svg>
+
+        A partir do exemplo acima, você pode ter a impressão de que o SVG é fácil de codificar manualmente. Sim, você pode codificar manualmente SVG simples em um editor de texto, mas para uma imagem complexa isso rapidamente começa a ficar muito difícil. Para criar imagens SVG, a maioria das pessoas usa um editor de gráficos vetoriais como o Inkscape ou o Illustrator . Esses pacotes permitem que você crie uma variedade de ilustrações usando várias ferramentas gráficas e crie aproximações de fotos (por exemplo, o recurso Trace Bitmap do Inkscape).
+
+        O SVG tem algumas vantagens adicionais além das descritas até agora:
+
+            O texto em imagens vetoriais permanece acessível (o que também beneficia seu SEO ).
+
+            Os SVGs se prestam bem ao estilo/script, porque cada componente da imagem é um elemento que pode ser estilizado via CSS ou script via JavaScript.
+
+        Então, por que alguém iria querer usar gráficos raster sobre SVG? Bem, o SVG tem algumas desvantagens:
+
+            O SVG pode ficar complicado muito rapidamente, o que significa que os tamanhos dos arquivos podem aumentar; SVGs complexos também podem levar um tempo de processamento significativo no navegador.
+
+            SVG pode ser mais difícil de criar do que imagens raster, dependendo do tipo de imagem que você está tentando criar.
+
+            O SVG não é suportado em navegadores mais antigos, portanto, pode não ser adequado se você precisar oferecer suporte a versões mais antigas do Internet Explorer com seu site (o SVG começou a ser suportado a partir do IE9).
+
+        Gráficos raster são indiscutivelmente melhores para imagens de precisão complexas, como fotos, pelos motivos descritos acima.
+
+        Nota: No Inkscape, salve seus arquivos como SVG simples para economizar espaço.
+
+-->

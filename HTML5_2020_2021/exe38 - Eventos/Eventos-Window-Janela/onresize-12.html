@@ -1,0 +1,40 @@
+<!--
+    * ATRIBUTO DE EVENTO HTML DE ONRESIZE(EM REDIMENSIONAR)
+
+      - O atributo onresize é disparado quando a janela do navegador é redimensionada.
+
+
+    * SINTAXE:
+
+      <element onresize="script">
+
+      script : O script a ser executado em onresize;
+
+      TAGS HTML SUPORTADAS: <body>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onresize</title>
+</head>
+<body onresize="minhaFuncao()">
+
+    <h1>Evento onresize(em redimensionar)</h1>
+
+    <p><strong>Exemplo:</strong> Execute um JavaScript quando a janela do navegador for redimensionada:</p>
+
+    <p>Tente redimensionar a janela do navegador!</p>
+
+    <!--É acionado quando a janela do navegador é redimensionada-->
+    <script>
+        function minhaFuncao() {
+            alert("Você alterou o tamanho da janela do navegador!");
+        }
+    </script>
+    
+</body>
+</html>

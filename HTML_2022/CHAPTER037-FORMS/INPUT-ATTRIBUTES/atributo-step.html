@@ -1,0 +1,51 @@
+<!--
+    * O ATRIBUTO STEP(DEGRAUS, PASSO A PASSO)
+
+        - O atributo input step especifica os intervalos de números legais para um campo de entrada.
+
+        - Exemplo: if step="3", os números legais podem ser -3, 0, 3, 6, etc.
+
+        - Dica: Este atributo pode ser usado junto com os atributos max e min para criar um intervalo de valores válidos.
+
+        - O step atributo funciona com os seguintes tipos de entrada: número(number), intervalo(range), data(date), data e hora local(datetime-local), mês(month), hora(time) e semana(week).
+
+        - Nota: As restrições de entrada não são infalíveis e o JavaScript oferece muitas maneiras de adicionar entrada ilegal. Para restringir a entrada com segurança, ela também deve ser verificada pelo receptor (o servidor)!
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O input step atributo</h2>
+
+    <p>O atributo step especifica os intervalos de números legais para um elemento de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="points">Pontos:</label>
+        <!--
+           - o <input type="number"> define um campo de entrada numérico.
+           - o step atributo especifica os intervalos de numeros legais para um campo de entrada
+        -->
+        <input type="number" id="points" name="points" step="3"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

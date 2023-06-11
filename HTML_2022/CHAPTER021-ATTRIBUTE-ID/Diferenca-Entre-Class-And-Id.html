@@ -1,0 +1,60 @@
+<!--
+    * DIFERENÇA ENTRE CLASS E ID
+
+        - Um nome de classe pode ser usado por vários elementos HTML, enquanto um nome de id deve ser usado apenas por um elemento HTML dentro da página:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+        /*
+            - criando um id, define um id com o nome myHeader. a sintaxe e: #nomeId{propriedades:css;}
+            - Estilize o elemento com o id "myHeader"    
+        */
+        #myHeader{
+            /*propriedades css para estilizar o elemento vinculado ao id*/
+            background-color: lightblue;
+            color: balck;
+            padding: 40px;
+            text-align: center;
+        }    
+        /*
+        - cria uma classe no css chamada city, temos que escrever o carctere ., seguido por um nome de classe
+        - Estilize todos os elementos com o nome da classe "city"
+        */
+        .city{
+            /*definimos as propriedades css entre chaves*/
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Diferenças entre classes e ID</h2>
+    <p>Um nome de classe pode ser usado por vários elementos HTML, enquanto um nome de id deve ser usado apenas por um elemento HTML dentro da página:</p>
+    <!--
+        - usando o atributo id do elemento html <h1>, para especificar um id exclusivo(unico) para um elemento html.
+        - o valor do id atributo deve ser exclusivo(unico) no documento html.
+        -o id atributo e usado para apontar para uma declaração de estilo especifica em uma folha de estilo.
+        - aqui neste exemplo temos o elemento <h1> apontando para o nome de id myHeader.
+        - um elemento com um id exclusivo.
+    -->
+    <h1 id="myHeader">My Cities</h1>
+    <!--
+        - Variós elementos com a mesma classe
+        - usando o atributo class em todos os elementos html abaixo para especificar uma classe para todos os elementos, aqui definimos que todos os elementos possui o atributo class com o valor city.
+        - todos os diferentes elementos abaixo terão a mesma classe
+        - o elementos que possui o atributo class com um valor sera estilizado com as classes vinculados no atributo class.
+        - o atributo class ira apontar para o nome de classe definido em uma folha de estilo.
+    -->
+    <h2 class="city">Londres</h2>
+    <p>Londres é a capital da Inglaterra.</p>
+    <h2 class="city">Paris</h2>
+    <p>Paris é a capital da França.</p>
+    <h2 class="city">Tóquio</h2>
+    <p>Tóquio é a capital do Japão</p>
+</body>
+</html>

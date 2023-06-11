@@ -1,0 +1,39 @@
+# Localizadores uniformes de recursos HTML
+  HTML Uniform Resource Locators
+
+  - Um URL é outra palavra para um endereço da web.
+  - Um URL pode ser composto de palavras (por exemplo, w3schools.com) ou um endereço de protocolo da Internet (IP) (por exemplo, 192.68.20.50).
+  - A maioria das pessoas insere o nome ao navegar, porque os nomes são mais fáceis de lembrar do que os números
+
+  * URL - LOCALIZADOR UNIFORME DE RECURSOS
+    
+    - Os navegadores da web solicitam páginas de servidores da web usando um URL;
+    - Um Uniform Resource Locator (URL) é usado para endereçar um documento (ou outros dados) na web.
+    - Um endereço da web como https://www.w3schools.com/html/default.asp segue estas regras de sintaxe:
+
+    sintaxe:
+
+     scheme://prefix.domain:port/path/filename
+
+     esquema(scheme): define o tipo de serviço de Internet (o mais comum é http ou https );
+     
+     prefixo(prefix): define um prefixo de domínio (o padrão para http é www)
+
+     dominio(domain): define o nome de domínio da Internet (como w3schools.com)
+
+     porta(port): define o número da porta no host (o padrão para http é 80)
+
+     caminho(path): define um caminho no servidor (se omitido: o diretório raiz do site)
+
+     nome arquivo(file name): define o nome de um documento ou recurso
+
+     * ESQUEMAS DE URL COMUNS:
+
+     HTTP: Protocolo de Transferência de Hipertexto; uso Páginas da web comuns. Não criptografado;
+
+     HTTPS: Protocolo de transferência de hipertexto seguro; Páginas da web seguras. Criptografado;
+
+     FTP: Protocolo de Transferência de Arquivos; Baixar ou enviar Arquivos;
+
+     FILE: um arquivo no meu computador;
+

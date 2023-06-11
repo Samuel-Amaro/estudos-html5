@@ -1,0 +1,62 @@
+/* 
+* Configurações de CSS, de estilo, Design;
+* nesta aula, não focar nas novas tags usadas aqui, masi para frente vamos aprender sobre elas;
+* focar na armonização de cores do site, como as cores estão harmonicos.
+* a linha abaixo aplica uma regra para não ter problemas com compatibilidade, de          caracteres especiais;
+*/
+@charset "UTF-8"; 
+
+* {
+    /* 
+     * Aplicando uma configuração global de CSS;
+     * dizendo que quero a altura 100%;
+     * e dizendo qual familia de fonte quero usar, no conteudo;
+     */
+    /*height: 100%;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    /* 
+        * Aplicando uma configuração na tag Body do documento HTML5;
+        * aplicando um degrade de duas cores somente, na direção da direita;
+    */
+ body {
+     background-image: linear-gradient(to right,#805626,#CC6D00);
+}
+
+    /* 
+        * aplicando um estilo para o conteudo, so onde ha texto, devido o fundo da pagina estar com degrade o conteudo não pode ter degradê, se não como o usuario vai consumir o conteudo textual ?
+        * fundo branco;
+        * quero que o conteudo não ocupe a largura inteira da pagina;
+        * colocando um espacinho entre o espaço do texto, um preenchimento;
+        * centralizando todo o conteudo textual no centro da pagina, para qualquer dispositivo, ou monitor, ou qualquer tamanho de tela usado;
+        * arredondando as pontas do fundo aonde esta o conteudo textual;
+        * fzd uma sobra no fundo do conteudo textual, parametros: qtd_sobra_anda_para_lado,qtd_sombra_anda_para_baixo, qtd_sombra_Vai_Espalhar, cor_sombra_trasparencia;
+    */
+main {
+    background-color: white;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px #FF8600;
+}
+    /*aplicando uma configuração nos paragrafos, quero todos justificados*/
+p{
+  text-align: justify;
+}
+
+    /* 
+     * Aplicando estilo nos titulos;
+     * centralizando o titulo principal;
+     * aplicando cores da paleta de cores nos titulos;
+     * aplicando uma sombra bem pequena no titulo principal, não e uma sombra gritante, uma sobra com trasparencia;
+    */
+h1{
+ color: #FF8600;
+ text-align: center;
+ text-shadow: 1px 1px 3px rgba(172, 112, 43, 0.568);
+}
+h2{
+ color:#804400;
+}

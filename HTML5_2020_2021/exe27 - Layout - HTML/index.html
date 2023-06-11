@@ -1,0 +1,141 @@
+<!--
+    # ELEMENTOS E TÉCNICAS DE LAYOUT HTML
+     - Os sites geralmente exibem conteúdo em várias colunas (como uma revista ou jornal).
+    
+     # ELEMENTOS DE LAYOUT HTML
+      - HTML tem vários elementos semânticos que definem as diferentes partes de uma página da web;
+
+        <header> - Define um cabeçalho para um documento ou seção;
+        
+        <nav> - Define um conjunto de links de navegação;
+            
+        <section> - Define uma seção em um documento;
+            
+        <article> - Define um conteúdo independente e autocontido;
+
+        <aside> - Define o conteúdo além do conteúdo (como uma barra lateral)
+
+        <footer> - define um rodapé para um documento ou seção;
+
+        <details> -  Define detalhes adicionais que o usuário pode abrir e fechar sob demanda;
+
+        <summary> - Define um título para o <details> elemento
+
+    # TECNICAS DE LAYOUT HTML
+      - Existem quatro técnicas diferentes para criar layouts de várias colunas. Cada técnica tem seus prós e contras;
+
+      - framework CSS;
+      - PROPRIEDADE CSS FLOAT;
+      - CSS FLEXBOX;
+      - GRADE CSS;
+
+      - LAYOUT FLUTUANTE CSS:
+        - É comum fazer layouts inteiros da web usando a floatpropriedade CSS . Float é fácil de aprender - você só precisa se lembrar de como as propriedades floate clearfuncionam. Desvantagens: Os elementos flutuantes estão vinculados ao fluxo do documento, o que pode prejudicar a flexibilidade. Saiba mais sobre float em nosso capítulo CSS Float and Clear;
+
+      - LAYOUT CSS FLEXBOX:
+        - O uso do flexbox garante que os elementos se comportem de maneira previsível quando o layout da página deve acomodar diferentes tamanhos de tela e diferentes dispositivos de exibição.
+
+      - LAYOUT DE GRADE CSS:
+       - O CSS Grid Layout Module oferece um sistema de layout baseado em grade, com linhas e colunas, facilitando o design de páginas da web sem ter que usar flutuadores e posicionamento.
+-->
+<!--
+    # exemplo
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT HTML</title>
+    <style>
+         /*para todas as caixas de layout vão ser todas de tamnanho de caixa de borda*/
+        *{
+            box-sizing: border-box;
+        }
+        /*para todo o conteudo da pagina*/
+        body{
+            /*define uma familia de fonte*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*configuração de estilo do cabeçalho*/
+        header{
+             background-color: #666;/*cor de fundo*/
+             padding: 30px;/*espaço interno entre borda e conteudo*/
+             text-align: center; /*alinhamento do texto ao centro da caixa*/
+             font-size: 35px;/*tamanho da fonte*/
+             color: white; /*cor da fonte*/
+        }
+        /*configuração de estilo do menu de navegação. vai ser  de duas colunas que flutuam lado a lado, no menu de navegação*/
+        nav{
+            float:left;/*especifica como uma caixa deve ser flutuada(posicionada);*/
+            width: 30%;/*largura da area de conteudo, area de prenchimento ou area da borda*/
+            height: 300px;/*altura*/
+            background: #ccc;
+            padding: 20px;/*espaço interno dentro da caixa entre conteudo e borda*/
+        }
+        /*no menu de navegação na lista que esta contida dentro do menu de navegação*/
+        nav > ul {
+             list-style-type: none; /*lista sem estilo*/
+             padding: 0; /*sem espaço interno nas caixas*/
+        }
+        /*o conteudo independente dentro da tag article*/
+        article{
+                float: left; /*caixa posicionada a esquerda, vai flutuar a esquerda*/
+                padding: 20px; /* espaço interno entre as caixas*/
+                width: 70%; /*area de conteudo dentro da caixa*/
+                background-color: #f1f1f1; /*cor de fundo*/
+                height: 300px; /*altura da caixa*/ 
+        }
+        /*limpa os flutuadores apos as colunas*/
+        section:after{
+            content: "";
+            display: table; /*determina o tipo de caixa ou caixas que são geradas para um elemento*/
+            clear: both;/*Indica quais lados da (s) caixa (s) de um elemento não podem ser adjacentes a uma caixa flutuante anterior*/
+        }
+        /* estilo do rodape*/
+        footer {
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+        }
+        /*Layout responsivo - faz com que as duas colunas / caixas sejam empilhadas uma sobre a outra, em vez de uma ao lado da outra, em telas pequenas*/
+        @media (max-width: 600px) {
+            nav, article {
+                    width: 100%;
+                    height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- cabecalho -->
+    <header>
+          <h1>CIDADES</h1>
+    </header>
+    <!-- seção de um documento-->
+    <section>
+        <!-- menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Londres</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokio</a></li>
+            </ul>
+        </nav>
+        <!-- artigo -->
+        <article>
+            <h1>Londres</h1>
+            <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants. 
+            </p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium
+            </p>
+        </article>
+    </section>
+    <!-- rodape-->
+    <footer>
+        <p>RODAPE</p>
+    </footer>
+
+</body>
+</html>

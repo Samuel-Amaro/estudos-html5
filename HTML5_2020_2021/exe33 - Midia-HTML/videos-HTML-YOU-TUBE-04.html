@@ -1,0 +1,80 @@
+<!--
+    * VÍDEOS HTML DO YOU TUBE 
+
+     - A maneira mais fácil de reproduzir vídeos em HTML é usar o YouTube.
+
+    * TEM DIFICULDADE COM FORMATOS DE VÍDEO ?
+
+     - Converter vídeos em formatos diferentes pode ser difícil e demorado.
+     - Uma solução mais fácil é permitir que o YouTube reproduza os vídeos em sua página da web.
+    
+    * ID DE VÍDEO DO YOU TUBE
+
+     - O YouTube exibirá um id (como tgbNymZ7vqY), quando você salva (ou reproduz) um vídeo.
+
+     - Você pode usar este id e referir-se ao seu vídeo no código HTML.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos You Tube</title>
+</head>
+<body>
+    <h1>Video do You Tube em HTML</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis necessitatibus, ut vitae tempore aperiam sed deserunt ipsum mollitia quisquam nihil iure ipsam facere quam nam ab tenetur deleniti labore ratione?</p>
+    <!--
+        * REPRODUZINDO UM VÍDEO DO YOU TUBE EM HTML
+
+         - Para reproduzir seu vídeo em uma página da web, faça o seguinte:
+
+           - Envie o vídeo para o YouTube
+           - Anote o ID do vídeo
+           - Defina um <iframe> elemento em sua página da web
+           - Deixe o srcatributo apontar para o URL do vídeo
+           - Use os atributos widthe heightpara especificar a dimensão do jogador
+           - Adicione quaisquer outros parâmetros ao URL (veja abaixo)
+    -->
+    <!-- CODIGO IFRAME TIRADO DE UM VIDEO NO YOU TUBE, NA OPÇÃO INCORPORAR DO VIDEEO-->
+    <h2>Video do You Tube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GiCt0Cwcp-U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2>YouTube - Reprodução automática + sem som</h2>
+    <!--
+        * REPRODUÇÃO AUTOMÁTICA + MUDO DO YOUTUBE
+
+         - Você pode permitir que seu vídeo comece a ser reproduzido automaticamente quando um usuário visitar a página, adicionando autoplay=1 ao URL do YouTube.
+         - Adicione mute=1 depois autoplay=1 para permitir que seu vídeo comece a ser reproduzido automaticamente (mas sem som).
+
+         - logo apos o link do video veja os atributos autoplay e mute 
+    -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GiCt0Cwcp-U?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!--
+        * LISTA DE REPRODUÇÃO DO YOU TUBE
+
+         - Uma lista de vídeos separados por vírgulas para reproduzir (além do URL original).
+    -->
+    <!--
+        * LOOP DO TOU TUBE
+
+         - Adicione loop=  deixar seu vídeo circular para sempre.
+         - Valor 0 (padrão): o vídeo será reproduzido apenas uma vez.
+         - Valor 1: o vídeo será repetido (para sempre).
+    -->
+    <h2>Loop de video do You tube - loop=1</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GiCt0Cwcp-U?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!--
+        * CONTROLES DO YOU TUBE
+
+         - Adicione controls=0 para exibir controles no player de vídeo.
+         - Valor 0: os controles do player não são exibidos.
+         - Valor 1 (padrão): exibição dos controles do player.
+    -->
+    <h2>Controles do YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GiCt0Cwcp-U?controls=0"></iframe>
+</body>
+</html>

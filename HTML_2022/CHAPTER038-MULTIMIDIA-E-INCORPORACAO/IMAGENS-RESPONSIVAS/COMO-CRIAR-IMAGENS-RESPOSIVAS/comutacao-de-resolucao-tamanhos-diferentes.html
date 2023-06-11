@@ -1,0 +1,152 @@
+<!--
+    * COMUTAÇÃO DE RESOLUÇÃO: TAMANHOS DIFERENTES
+
+        Então, qual é o problema que queremos resolver com a mudança de resolução? Queremos exibir conteúdo de imagem idêntico, apenas maior ou menor dependendo do dispositivo — esta é a situação que temos com a segunda imagem de conteúdo em nosso exemplo. O <img> elemento padrão tradicionalmente só permite que você aponte o navegador para um único arquivo de origem:
+
+            <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+        No entanto, podemos usar dois novos atributos — srcset e sizes— para fornecer várias imagens de origem adicionais junto com dicas para ajudar o navegador a escolher o caminho certo.
+
+        Os atributos srcset e sizes parecem complicados, mas não são muito difíceis de entender se você os formatar conforme mostrado acima, com uma parte diferente do valor do atributo em cada linha. Cada valor contém uma lista separada por vírgulas e cada parte dessas listas é composta por três subpartes. Vamos percorrer o conteúdo de cada um agora:
+
+        srcset define o conjunto de imagens que permitiremos ao navegador escolher e qual o tamanho de cada imagem. Cada conjunto de informações da imagem é separado do anterior por uma vírgula. Para cada um, escrevemos:
+
+            Um nome de arquivo de imagem ( elva-fairy-480w.jpg)
+
+            Um espaço
+
+            A largura intrínseca da imagem em pixels (480w) — observe que isso usa a w unidade, não px como você poderia esperar. O tamanho intrínseco de uma imagem é seu tamanho real, que pode ser encontrado inspecionando o arquivo de imagem em seu computador (por exemplo, em um Mac, você pode selecionar a imagem no Finder e pressionar Cmd + I para abrir a tela de informações).
+
+        sizesdefine um conjunto de condições de mídia (por exemplo, larguras de tela) e indica qual tamanho de imagem seria melhor escolher, quando certas condições de mídia são verdadeiras - essas são as dicas sobre as quais falamos anteriormente. Neste caso, antes de cada vírgula escrevemos:
+
+            Uma condição de mídia ( (max-width:600px)) — você aprenderá mais sobre isso no tópico CSS , mas por enquanto vamos apenas dizer que uma condição de mídia descreve um possível estado em que a tela pode estar. largura é de 600 pixels ou menos".
+
+            Um espaço
+
+            A largura do slot que a imagem preencherá quando a condição da mídia for verdadeira ( 480px)
+
+            Observação: para a largura do slot, em vez de fornecer uma largura absoluta (por exemplo, 480px), você também pode fornecer uma largura relativa à janela de visualização (por exemplo, 50vw) — mas não uma porcentagem. Você deve ter notado que a largura do último slot não tem condição de mídia (este é o padrão escolhido quando nenhuma das condições de mídia é verdadeira). O navegador ignora tudo após a primeira condição de correspondência, portanto, tenha cuidado ao ordenar as condições da mídia.
+
+        Então, com esses atributos no lugar, o navegador irá:
+
+            Observe a largura do dispositivo.
+
+            Descubra qual condição de mídia na sizes lista é a primeira a ser verdadeira.
+
+            Observe o tamanho do slot fornecido a essa consulta de mídia.
+
+            Carregue a imagem referenciada na srcset lista que tenha o mesmo tamanho do slot ou, se não houver, a primeira imagem maior que o tamanho do slot escolhido.
+
+        E é isso! Neste ponto, se um navegador compatível com uma largura de janela de visualização de 480px carregar a página, a (max-width: 600px)condição de mídia será verdadeira e, portanto, o navegador escolherá o 480px slot. O elva-fairy-480w.jpg será carregado, pois sua largura inerente (480w) é mais próxima do tamanho do slot. A imagem de 800px tem 128KB em disco, enquanto a versão de 480px tem apenas 63KB — uma economia de 65KB. Agora, imagine se esta fosse uma página com muitas fotos. O uso dessa técnica pode economizar muita largura de banda para os usuários móveis.
+
+        Nota: Ao testar isso com um navegador de desktop, se o navegador não carregar as imagens mais estreitas quando você tiver sua janela definida para a largura mais estreita, dê uma olhada no que é a janela de visualização (você pode aproximá-la acessando a janela do navegador console JavaScript e digitando document.querySelector('html').clientWidth). Diferentes navegadores têm tamanhos mínimos para os quais permitem reduzir a largura da janela e podem ser mais largos do que você imagina. Ao testá-lo com um navegador móvel, você pode usar ferramentas como a about:debuggingpágina do Firefox para inspecionar a página carregada no celular usando as ferramentas de desenvolvedor de desktop.
+
+        Os navegadores mais antigos que não suportam esses recursos simplesmente os ignoram. Em vez disso, esses navegadores irão em frente e carregarão a imagem referenciada no srcatributo normalmente.
+
+        Nota: No <head> exemplo do link acima, você encontrará a linha <meta name="viewport" content="width=device-width">: isso força os navegadores móveis a adotar sua largura real da janela de visualização para carregar páginas da web (alguns navegadores móveis mentem sobre a largura da janela de visualização e, em vez disso, carregam páginas com uma largura de janela maior em seguida, reduza a página carregada, o que não é muito útil para imagens ou design responsivos).
+
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Responsive HTML images demo</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            background-color: gray;
+        }
+
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        header {
+            background: url(../images/header.jpg) no-repeat center;
+            height: 200px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>My website</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget venenatis ligula. Ut lacinia at
+                dolor vitae pulvinar. Aliquam pretium dignissim eros. Integer faucibus, dui non aliquet bibendum, lectus
+                orci lobortis odio, ornare porttitor est tellus eget velit. Nulla eros elit, malesuada id neque vel,
+                viverra vehicula neque. Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu venenatis
+                libero tempor, ac pulvinar ligula dapibus.</p>
+
+            <picture>
+                <source media="(max-width: 799px)" srcset="../images/elva-480w-close-portrait.jpg">
+                <source media="(min-width: 800px)" srcset="../images/elva-800w.jpg">
+                <img src="../images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+            </picture>
+
+            <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam imperdiet eleifend
+                luctus. Duis ut justo nec eros ornare consectetur. Vestibulum convallis condimentum varius. Maecenas
+                rutrum porta varius. Phasellus volutpat sem id sagittis luctus. Morbi vitae quam vitae nisi iaculis
+                dignissim.</p>
+
+            <!--
+                - Queremos exibir conteúdo de imagem idêntico, apenas maior ou menor dependendo do dispositivo.
+                - o atributo srcset define o conjunto de imagens que permitiremos ao navegador escolher e qual o tamanho de cada imagem. cada conjunto de informações da imagem e separa do anterior por uma virgurla. para cada conjunto de informações escrevemos
+
+                    - o nome de arquivo de imagem
+                    - um espaço
+                    - a largura intriseca da imagem em pixels, observe que isso usa w unidade não px.
+
+                - o atributo sizes define um conjunto de condições de midia, e indica qual tamanho de imagem sera melhor escolher, quando certas condições de midia são verdadeiras. cada conjunto de condição no atributo sizes contem:
+
+                    - uma condição de midia, que descreve um possível estado em que a tela pode estar.
+                    - um espaço
+                    - a largura do slot que a imagem preenchera quando a condição de midia for verdadeira
+                
+                    obs: quando o ultimo slot não tem condições de midia, este é o padrão escolhido quando nenhuma das condições de midia e verdadeira. O navegador ignora tudo apos a primeira condição de correspondencia, portanto, tenha cuidado ao ordenar as condições da mídia.
+                
+                Então, com esses atributos no lugar, o navegador irá:
+
+                    1. Observe a largura do dispositivo.
+
+                    2. Descubra qual condição de mídia na sizes lista é a primeira a ser verdadeira.
+                    
+                    3. Observe o tamanho do slot fornecido a essa consulta de mídia.
+                    
+                    4. Carregue a imagem referenciada na srcset lista que tenha o mesmo tamanho do slot ou, se não houver, a primeira imagem maior que o tamanho do slot escolhido.
+                
+            -->
+            <img srcset="../images/elva-fairy-480w.jpg 480w,
+                         ../images/elva-fairy-800w.jpg 800w" 
+                sizes="(max-width: 600px) 480px, 800px" 
+                src="../images/elva-fairy-800w.jpg" 
+                alt="Elva dressed as a fairy">
+
+            <p>Header image originally by <a href="https://www.flickr.com/photos/miwok/17086751527/">Miwok</a>.</p>
+        </section>
+    </main>
+
+</body>
+</html>

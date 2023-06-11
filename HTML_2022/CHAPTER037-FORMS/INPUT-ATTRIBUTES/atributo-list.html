@@ -1,0 +1,48 @@
+<!--
+    * O ATRIBUTO <list>
+
+        - list O atributo input refere-se a um <datalist> elemento que contém opções pré-definidas para um elemento <input>.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo da lista de entrada</h2>
+
+    <p>O atributo list refere-se a um elemento datalist que contém opções predefinidas para um elemento de entrada.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - define um elemento de formulario
+            - O <datalist> elemento especifica uma lista de opções predefinidas para um <input> elemento.
+            - O list atributo do <input> elemento deve se referir ao id atributo do <datalist> elemento.
+            - define um elemento de entrada de texto de linha unica.
+        -->
+        <input type="text" list="browsers" name="browser"/>
+        <!--
+            - define uma lista de opções prefefinidas de entradas para um input elemento de texto
+            - o atributo id refererncia o atributo list do elemento input para associar essa lista pre-definida a input
+        -->
+        <datalist id="browsers">
+            <option value="Internet Explores"/>
+            <option value="Chrome"/>
+            <option value="Opera"/>
+            <option value="Safari"/>
+        </datalist>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+    
+    <p><strong>Observação:</strong> a tag datalist não é compatível com a versão anterior 12.1 do Safari.</p>
+</body>
+</html>

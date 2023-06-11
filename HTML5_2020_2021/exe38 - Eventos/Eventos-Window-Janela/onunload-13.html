@@ -1,0 +1,42 @@
+<!--
+    * ATRIBUTO DE EVENTO ONUNLOAD(EM DESCARGA) HTML
+
+      - O atributo onunload dispara quando uma página é descarregada (ou a janela do navegador é fechada).
+
+      - onunload ocorre quando o usuário sai da página (clicando em um link, enviando um formulário, fechando a janela do navegador, etc.)
+
+      - Observação: se você recarregar uma página, também acionará o evento onunload (e o evento onload ).
+
+    * SINTAXE:
+
+        <element onunload="script">
+
+        script : O script a ser executado onunload
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onload</title>
+</head>
+<body onload="minhaFuncao()">
+    
+    <h1>Evento HTML onload(em descarga)</h1>
+
+    <p><strong>Exemplo:</strong> Execute um JavaScript quando um usuário descarregar o documento:</p>
+
+    <h2>Bem vindo á minha página inicial</h2>
+
+    <p>Feche esta janela ou pressione F5 para recarregar a página.</p>
+
+    <!--É acionado uma vez que uma página tenha sido descarregada (ou a janela do navegador tenha sido fechada)
+    -->
+    <script>
+        function minhaFuncao() {
+            alert("Obrigado por visitar minha pagina!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--
+    * ALTERNATIVE TEXT(TEXTO ALTERNATIVO)
+
+        O próximo atributo que veremos é alt. Seu valor deve ser uma descrição textual da imagem, para uso em situações em que a imagem não pode ser vista/exibida ou demora muito para renderizar devido a uma conexão lenta com a internet. Por exemplo, nosso código acima pode ser modificado assim:
+
+            <img src="images/dinosaur.jpg" alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth">
+
+        A maneira mais fácil de testar seu alt texto é escrever errado propositalmente o nome do arquivo. Se, por exemplo, o nome da nossa imagem estiver escrito dinosooooor.jpg, o navegador não exibirá a imagem e exibirá o texto alternativo:
+
+        Então, por que você veria ou precisaria de texto alternativo? Pode ser útil por vários motivos:
+
+            O usuário é deficiente visual e está usando um leitor de tela para ler a web para eles. Na verdade, ter texto alternativo disponível para descrever imagens é útil para a maioria dos usuários.
+
+            Conforme descrito acima, a ortografia do nome do arquivo ou caminho pode estar errada.
+
+            O navegador não suporta o tipo de imagem. Algumas pessoas ainda usam navegadores somente de texto, como Lynx , que exibe o texto alternativo das imagens.
+
+            Você pode fornecer texto para os mecanismos de pesquisa utilizarem; por exemplo, os mecanismos de pesquisa podem combinar o texto alternativo com as consultas de pesquisa.
+
+            Os usuários desativaram as imagens para reduzir o volume de transferência de dados e as distrações. Isso é especialmente comum em telefones celulares e em países onde a largura de banda é limitada ou cara.
+
+        O que exatamente você deve escrever dentro do seu alt atributo? Depende de por que a imagem está lá em primeiro lugar. Em outras palavras, o que você perde se sua imagem não aparecer:
+
+            Decoração(decoration). Você deve usar imagens de plano de fundo CSS para imagens decorativas, mas se precisar usar HTML, adicione um alt="". Se a imagem não faz parte do conteúdo, um leitor de tela não deve perder tempo lendo.
+
+            Contente(conteudo). Se sua imagem fornecer informações significativas, forneça as mesmas informações em um texto breve no alt – ou melhor ainda, no texto principal que todos possam ver. Não escreva alt texto redundante. Quão irritante seria para um usuário com visão se todos os parágrafos fossem escritos duas vezes no conteúdo principal? Se a imagem for descrita adequadamente pelo corpo do texto principal, você pode usar apenas alt="".
+
+            Link. Se você colocar uma imagem dentro de <a> tags, para transformar uma imagem em um link, você ainda deverá fornecer um texto de link acessível . Nesses casos você também pode escrevê-lo dentro do mesmo <a> elemento, ou dentro do alt atributo da imagem – o que funcionar melhor no seu caso.
+
+            Texto(text). Você não deve colocar seu texto em imagens. Se o seu título principal precisar de uma sombra projetada, por exemplo, use CSS para isso em vez de colocar o texto em uma imagem. No entanto, se você realmente não pode evitar fazer isso , você deve fornecer o texto dentro do alt atributo.
+
+        Essencialmente, a chave é oferecer uma experiência útil, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não percam nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Images in HTML</title>
+</head>
+<body>
+
+    <h1>Images in HTML</h1>
+
+    <!--
+        - para colocar uma imagem e uma pagina da web usamos o <img> elemento.
+        - um elemento vazio, que não tem  conteudo de texto ou tag de fechamento.
+            - requer dois atributos o src(source, caminho que aponta para a imagem que eu desejo incorporar na pagina, usando uma URL relativa ou absoluta)
+            - o atributo alt, Seu valor deve ser uma descrição textual da imagem
+        - o img elemento e um elemento subtituido, o conteudo e o tamanho do elemento são definidos por um recurso externo como um arquivo de imagem, não pelo conteudo do proprio elemento.
+    -->
+    <img src="dinosaur.jpg" alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+        width="400" height="341" title="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"/>
+</body>
+
+</html>

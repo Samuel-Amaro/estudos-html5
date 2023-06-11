@@ -1,0 +1,48 @@
+<!--
+    * INPUT TYPE FILE(ARQUIVO DE TIPO DE ENTRADA)
+
+        - O <input type="file"> define um campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos.
+
+        - O input elemento representa uma lista de arquivos selecionados , cada arquivo consistindo em um nome de arquivo, um tipo de arquivo e um corpo de arquivo (o conteúdo do arquivo).
+
+        - Os nomes de arquivo não devem conter componentes de caminho , mesmo no caso de um usuário ter selecionado uma hierarquia de diretórios inteira ou vários arquivos com o mesmo nome de diretórios diferentes. Componentes de caminho , para fins do estado Upload de arquivo , são aquelas partes de nomes de arquivo que são separadas por caracteres U+005C REVERSE SOLIDUS caractere (\).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Upload de arquivos</h2>
+
+    <p>O <strong>&lt;input type="file"&gt;</strong> é usado para campos de entrada que devem conter um file</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+        -->
+        <label for="myFile">Select a file:</label>
+        <!--
+            - o <input type="file"> define um campo de seleção de arquivo e um botão procurar para uploads de arquivos.
+            - o usuario deve entrar com um arquivo
+        -->
+        <input type="file" id="myFile" name="myFile" formmethod="post" formenctype="multipart/form-data"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

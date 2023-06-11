@@ -1,0 +1,36 @@
+<!--
+    * BACKGROUND-REPEAT(FUNDO DE REPETIÇÃO)
+
+        - Se a imagem de fundo for menor que o elemento, a imagem se repetirá, horizontal e verticalmente, até chegar ao final do elemento:
+
+        - Para evitar que a imagem de fundo se repita, defina a background-repeat propriedade como no-repeat.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        - forma de adicionar css a essa pagina foi, Um CSS interno é definido na <head> seção de uma página HTML, dentro de um <style> elemento.
+    -->
+    <style>
+        body{
+            /*
+            - por meio dessa porpriedade css, especificamos que toda a area de conteudo da pagina o corpo da pagina, toda area visivel pelo usuario, tera uma imagem de fundo.
+            
+            - se a imagen de fundo for menor que o elemento a imagen se repetira, horizontalmente e verticalmente, até chegar ao final do elemento.
+            
+            - para evitar que a imagen de fundo se repita, defina a bakgroun-repeat propriedade como no-repeat*/
+            background-image: url('../imgs/img_girl\ \(1\).jpg');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Bakground-Repeat - Fundo de Repetição</h2>
+
+    <p>Por padrão, a imagem de fundo se repetirá se for menor que o elemento onde está especificada, neste caso o elemento body.</p>
+
+
+</body>
+</html>

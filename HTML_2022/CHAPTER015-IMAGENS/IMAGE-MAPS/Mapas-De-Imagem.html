@@ -1,0 +1,31 @@
+<!--
+    * MAPAS DE IMAGEM HTML - IMAGEN MAP
+
+        - Com mapas de imagem HTML, você pode criar áreas clicáveis ​​em uma imagem.
+
+    * MAPAS DE IMAGEN
+
+        - A tag HTML <map> define um mapa de imagem. Um mapa de imagem é uma imagem com áreas clicáveis. As áreas são definidas com uma ou mais <area> tags.
+
+        - Tente clicar no computador, telefone ou na xícara de café na imagem abaixo:
+
+        - Aqui está o código-fonte HTML para o mapa de imagem acima:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+    
+    <h2>Mapas de imagem</h2>
+
+    <p>Clique no computador, no telefone ou na xícara de café para ir para uma nova página e ler mais sobre o assunto:</p>
+
+    <img src="../imgs/workplace.jpg" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+        <area shape="circle" coords="337, 300, 44" alt="Cup of coffee" href="https://www.w3schools.com/html/coffee.htm">
+    </map>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--
+    * ATRIBUTO GLOBAL HTML - SPELLCHECK(VERIFICAÇÃO ORTOGRÁFICA)
+
+     - O spellcheck atributo especifica se o elemento deve ter sua ortografia e gramática verificadas ou não.
+
+     - O seguinte pode ser verificado:
+
+       - Valores de texto em elementos de entrada (não senha);
+
+       - Texto em elementos <textarea>;
+
+       - Texto em elementos editáveis
+
+    * SINTAXE
+
+        <element spellcheck="true|false">
+
+        true : O elemento é ter sua ortografia e gramática verificadas;
+
+        false : O elemento não deve ser verificado
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Global HTML</title>
+</head>
+<body>
+    <h1>Atributo Global HTML - spellcheck(verificação ortografica)</h1>
+    <p>Especifica se o elemento deve ter sua ortografia e gramática verificadas ou não</p>
+    <p><strong>Um parágrafo editável com verificação ortográfica:</strong> Clique no paragrafo edite o conteudo com palavras digitadas de maneira incorreta de acordo com a ortografia brasileira e espere o corretor sugerir uma sugestão de como essa palavra deve ser digitada</p>
+    <p contenteditable="true" spellcheck="true">Isso e um paragrafo</p>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!--
+    * TAG HTML <input>
+    
+    * DEFINIÇÃO E USO
+
+        - A <input> tag especifica um campo de entrada onde o usuário pode inserir dados.
+        
+        - O <input> elemento é o elemento de forma mais importante.
+
+        - O <input> elemento pode ser exibido de várias maneiras, dependendo do atributo type.
+
+        - Os diferentes tipos de entrada são os seguintes:
+
+            <input type="button">
+            <input type="checkbox">
+            <input type="color">
+            <input type="date">
+            <input type="datetime-local">
+            <input type="email">
+            <input type="file">
+            <input type="hidden">
+            <input type="image">
+            <input type="month">
+            <input type="number">
+            <input type="password">
+            <input type="radio">
+            <input type="range">
+            <input type="reset">
+            <input type="search">
+            <input type="submit">
+            <input type="tel">
+            <input type="text">(valor padrão)
+            <input type="time">
+            <input type="url">
+            <input type="week">
+
+    * DICAS E NOTAS
+
+        - Dica: Sempre use a tag <label> para definir rótulos para <input type="text">, <input type="checkbox">, <input type="radio">, <input type="file">e <input type="password">
+
+    * ATRIBUTOS
+
+        ATTRIBUTO:  accept(aceitar)
+        VALUE: file_extension, audio/*, video/*, image/*, media_type
+        DESCRIPTION: Especifica um filtro para quais tipos de arquivo o usuário pode escolher na caixa de diálogo de entrada de arquivo (somente para type="file")
+        --------------------------------------
+        ATTRIBUTO: alt(texto altenartivo);
+        VALUE: text
+        DESCRIPTION: Especifica um texto alternativo para imagens (somente para type="image")
+        --------------------------------------
+        ATTRIBUTO: autcomplete(preenchimento automatico);
+        VALUE: on/off
+        DESCRIPTION: Especifica se um elemento <input> deve ter o preenchimento automático ativado
+        --------------------------------------
+        ATTRIBUTO: autofocus(auto foco);
+        VALUE: autofocus
+        DESCRIPTION: Especifica que um elemento <input> deve obter foco automaticamente quando a página for carregada
+        --------------------------------------
+        ATTRIBUTO: checked(verificado)
+        VALUE: checked
+        DESCRIPTION: Especifica que um elemento <input> deve ser pré-selecionado quando a página for carregada (para type="checkbox" ou type="radio")
+        --------------------------------------
+        ATTRIBUTO: dirname(nome diretorio)
+        VALUE: inputname.dir(nome entrada diretorio)
+        DESCRIPTION: Especifica que a direção do texto será enviada
+        --------------------------------------
+        ATTRIBUTO: disabled(desabilitado)
+        VALUE: disabled
+        DESCRIPTION: Especifica que um elemento <input> deve ser desabilitado
+        --------------------------------------
+        ATTRIBUTO: form
+        VALUE: form_id
+        DESCRIPTION: Especifica o formulário ao qual o elemento <input> pertence
+        --------------------------------------
+        ATTRIBUTO: formaction
+        VALUE: URL
+        DESCRIPTION: Especifica a URL do arquivo que processará o controle de entrada quando o formulário for enviado (para type="submit" e type="image")
+        --------------------------------------
+        ATTRIBUTO: formenctype(tipo de encriptação dos dados do formulario)
+        VALUE: application/x-www-form-urlencoded, multipart/form-data, text/plain
+        DESCRIPTION: Especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor (para type="submit" e type="image")
+        --------------------------------------
+        ATTRIBUTO: formmethod(metodo formulario) 
+        VALUE: get, post
+        DESCRIPTION: Define o método HTTP para enviar dados para a URL de ação (para type="submit" e type="image") 
+        --------------------------------------
+        ATTRIBUTO: formnovalidate(sem validação de formulario)
+        VALUE: formnovalidate
+        DESCRIPTION: Define que os elementos do formulário não devem ser validados quando enviados 
+        --------------------------------------
+        ATTRIBUTO: formtarget(alvo formulario)
+        VALUE: _blank, _self, _parent, _top, framename
+        DESCRIPTION: Especifica onde exibir a resposta recebida após o envio do formulário (para type="submit" e type="image")
+        --------------------------------------
+        ATTRIBUTO: height(altura)
+        VALUE: pixels
+        DESCRIPTION: Especifica a altura de um elemento <input> (somente para type="image")
+        --------------------------------------
+        ATTRIBUTO: list(lista)
+        VALUE: datalist_id
+        DESCRIPTION: Refere-se a um elemento <datalist> que contém opções predefinidas para um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: max(maximo)
+        VALUE: number, date
+        DESCRIPTION: Especifica o valor máximo para um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: maxlength(comprimento maximo)
+        VALUE: number
+        DESCRIPTION: Especifica o número máximo de caracteres permitidos em um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: min(minimo)
+        VALUE: number, date
+        DESCRIPTION: Especifica um valor mínimo para um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: minlength(comprimento minimo)
+        VALUE: number
+        DESCRIPTION: Especifica o número mínimo de caracteres necessários em um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: multiple(multiplos)
+        VALUE: multiple
+        DESCRIPTION: Especifica que um usuário pode inserir mais de um valor em um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: name(nome)
+        VALUE: text
+        DESCRIPTION: Especifica o nome de um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: pattern(padrão)
+        VALUE: regexp(expressão regular)
+        DESCRIPTION: Especifica uma expressão regular com a qual o valor de um elemento <input> é verificado
+        --------------------------------------
+        ATTRIBUTO: placeholder(marcador de posição)
+        VALUE: text
+        DESCRIPTION: Especifica uma dica curta que descreve o valor esperado de um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: readonly(somente leitura)
+        VALUE: readonly
+        DESCRIPTION: Especifica que um campo de entrada é somente leitura
+        --------------------------------------
+        ATTRIBUTO: required(obrigatorio)
+        VALUE: required
+        DESCRIPTION: Especifica que um campo de entrada deve ser preenchido antes de enviar o formulário
+        --------------------------------------
+        ATTRIBUTO: size(tamanho)
+        VALUE: number
+        DESCRIPTION: Especifica a largura, em caracteres, de um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: src
+        VALUE: URL
+        DESCRIPTION: Especifica o URL da imagem a ser usada como botão de envio (somente para type="image")
+        --------------------------------------
+        ATTRIBUTO: step(degrau)
+        VALUE: number, qualquer
+        DESCRIPTION: Especifica o intervalo entre os números válidos em um campo de entrada
+        --------------------------------------
+        ATTRIBUTO: type(tipo)
+        VALUE: button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week
+        DESCRIPTION: Especifica o elemento tipo <input> a ser exibido
+        --------------------------------------
+        ATTRIBUTO: value(valor)
+        VALUE: text
+        DESCRIPTION: Especifica o valor de um elemento <input>
+        --------------------------------------
+        ATTRIBUTO: width(largura)
+        VALUE: pixels
+        DESCRIPTION: Especifica a largura de um elemento <input> (somente para type="image")
+        --------------------------------------
+-->

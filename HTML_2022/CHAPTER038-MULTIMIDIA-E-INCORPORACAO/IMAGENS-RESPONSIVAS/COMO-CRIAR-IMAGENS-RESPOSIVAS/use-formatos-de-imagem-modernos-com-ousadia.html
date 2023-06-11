@@ -1,0 +1,19 @@
+<!--
+    * USAR FORMATOS DE IMAGEM MODERNOS COM OUSADIA
+
+        Novos formatos de imagem como WebP e AVIF podem manter um tamanho de arquivo baixo e alta qualidade ao mesmo tempo. Esses formatos agora têm suporte a navegadores relativamente amplo, mas pouca "profundidade histórica".
+
+        <picture> nos permite continuar atendendo a navegadores mais antigos. Você pode fornecer tipos MIME dentro type de atributos para que o navegador possa rejeitar imediatamente tipos de arquivo não suportados:
+
+            <picture>
+                <source type="image/svg+xml" srcset="pyramid.svg"/>
+                <source type="image/webp" srcset="pyramid.webp"/>
+                <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles"/>
+            </picture>
+
+        Não use o atributo media , a menos que você também precise de direção de arte.
+
+        Em um <source> elemento, você só pode fazer referência a imagens do tipo declarado em type.
+
+        Use listas separadas por vírgulas com srcset e sizes, conforme necessário.
+-->

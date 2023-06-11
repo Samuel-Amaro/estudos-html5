@@ -1,0 +1,84 @@
+<!-- Links-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+<!-- Links Externos, vai para outros sites que não e o meu, vai para um lugar fora do meu site usa a tag <a href="URL_COMPLETA_SITE" target="_blank" rel="external"> texto com linkedição do link</a>  o parametro href e para colocar a url externa que vai para outro lugar, target e e para abrir uma nova janela e não sobrepor o meu site e  poder voltar no meu site, e rel e dizendo que tipo de link e, esse rel e um parametro novo e e opcional-->
+ 
+ <h1>Usando Links Externos</h1>
+ <p>Os hyperlinks são um dos conceitos mais antigos da história da linguagem<br>
+    HTML. Eles permitem que você ligue um ponto a outro na World Wide<br>
+    Web. Toda vez que você está acessando um site e clica em um local para<br>
+    ir para outra página, outro site ou até para baixar um arquivo, você está<br>
+    interagindo com um hyperlink. 
+ </p>
+ <!-- Para Colocar um Hiperlink Simples no Documento HTML5 usa a tag
+  <a href="url-completa-site" hreflang="idioma-padrão-que-o-site-esta"> </a>
+ -->
+ <ul>
+  <li>
+      <p>Tipo 1 -  Hiperlink - Continuando na mesma aba Visite Meu <a href="https://github.com/Samuel-Amaro" hreflang="en">Perfil</a> No GitHub
+      </p>
+  </li> 
+  <!--
+   com o parametro target = " ", usando as opções _blank(abre o hiperlink em uma nova aba do navegador), e opção _self(subtitui a aba atual aberta no meu site pelo Hiperlink)
+  -->
+  <li>
+      <p>Tipo 2 - Hiperlink - Abrindo Em uma nova aba o link exposto aqui. Visite Meu <a href="https://github.com/Samuel-Amaro" target="_blank" rel="external">Perfil</a> No GitHub</p>
+  </li>
+</ul>
+  <h1>Usando Links - Hiperlinks Internos</h1>
+  <!--
+      Existe um recurso bem interessante para links que é indicar qual é a natureza do
+      destino usando o atributo rel.
+      opções do atributo rel: 
+      next - indica que o link é para a próxima parte do documento atual.
+  -->
+  <ul>
+     <li>
+         <p><a href="pagina2.html" target="_self" rel="next">Ir para a pagina2</a></p>
+         <p>No código anterior, o primeiro link é o que chamamos de link local ou<br>
+         link interno, já que ele leva o visitante a outra página dentro do<br>
+         nosso próprio site. Note que não é necessário nem indicar a URL<br>
+         completa nesses casos.</p>
+     </li>
+      <!-- 
+          external - indica que é um link para outro site que não faz parte do site atual
+      -->
+     <li>
+      <p><a href="https://github.com/Samuel-Amaro" hreflang="en" target="_blank" rel="external">Meu Git Hub</a></p>
+      <p>
+         Já o segundo link vai nos levar para um outro site, o que chamamos de<br>
+         link externo. Nestes casos, devemos indicar a URL completa, incluindo o<br>
+         protocolo http:// ou https:// e o caminho que leve à uma página específica, se for
+         necessário.
+      </p>
+     </li> 
+  </ul>
+  <h1>Links Para Dawnloads</h1>
+  <p>
+     Outra coisa que aparece bastante em sites são os links para<br>
+     efetuar download de algum material em PDF, ou de um arquivo<br>
+     ZIP qualquer. A partir da versão HTML5, as âncoras receberam<br>
+     atributos especiais para isso. Basta fazer o link diretamente<br>
+     para o arquivo que se deseja efetuar o download e adicionar o<br>
+     atributo download com o valor configurado para o nome do<br>
+     arquivo a ser baixado e o atributo type para indicar ao<br>
+     navegador que tipo de arquivo está sendo baixado.<br>
+  </p> 
+  <ul>
+      <!-- 
+         links para dawnloads, continua usando a mesma tag a, so muda os atributos da tag,
+         adicionar o atributo dawnload, e o atributo type(tipo arquivo que vai ser baixado, para inforar o navegador).
+         <a href="link-ate-arquivo-baixar" download="arquivo.extensão" type="application/pdf"> </a>  
+      -->
+      <li>
+       <p><a href="imagen-baixar/moto-baixar.jpg" download="moto-top.jpg" type="application/jpeg">Minha Moto No Futuro, Deus Quiser</a></p>
+      </li>
+  </ul>    
+</body>
+</html>

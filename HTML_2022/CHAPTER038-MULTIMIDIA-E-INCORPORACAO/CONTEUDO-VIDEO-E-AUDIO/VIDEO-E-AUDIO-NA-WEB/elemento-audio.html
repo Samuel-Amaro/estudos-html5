@@ -1,0 +1,52 @@
+<!--
+    * O ELEMENTO <audio>
+
+        O <audio> elemento funciona exatamente como o <video> elemento, com algumas pequenas diferenças, conforme descrito abaixo. Um exemplo típico pode ser assim:
+
+            <audio controls>
+                <source src="viper.mp3" type="audio/mp3">
+                <source src="viper.ogg" type="audio/ogg">
+                <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+            </audio>               
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Multiple format audio example</title>
+</head>
+<body>
+    <h1>Below is an audio player that will play in all modern browsers</h1>
+
+    <!--
+        - incorporando um audio no documento usando elemento audio, tecnologia nativa do HTML5.
+            - o atributo controls, permite os usuarios controlar a reprodução de video e audio.
+    -->
+    <audio controls>
+        <!--
+            - usamos varios formatos de origem para melhorar compatibilidade, para que o audio seja reproduzido/compativel com todos navegadores.
+            - cada source elemento aponta para uma fonte especifica de audio.
+                - o <source> elemento possui um type atributo que e opcional, o type atributo contém o tipo MIME do arquivo especificado pelo <source>
+            - o navegador passará pelos <source> elementos e reproduzirá o primeiro que tiver o codec para suportar.
+        -->
+        <source src="../viper.mp3" type="audio/mp3"/>
+        <source src="../viper.ogg" type="audio/ogg"/>
+        <!--
+            - o elemento <p> dentro da tag <video> e chamado de conteudo de fallback isso sera exibido se o navegador que estiver acessando a página não suportar o <video> elemento.
+        -->
+        <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+    </audio>
+
+    <!--
+        - Isso ocupa menos espaço do que um player de vídeo, pois não há componente visual - você só precisa exibir os controles para reproduzir o áudio. Outras diferenças do vídeo HTML são as seguintes:
+
+            - O <audio> elemento não suporta os atributos width/ height— novamente, não há componente visual, então não há nada para atribuir uma largura ou altura.
+
+            - Ele também não suporta o poster atributo — novamente, nenhum componente visual.
+
+        - Além disso, <audio> suporta todos os mesmos recursos que <video>
+    -->
+</body>
+
+</html>

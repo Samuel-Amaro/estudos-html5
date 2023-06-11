@@ -1,0 +1,46 @@
+<!--
+    * INPUT TYPE RANGE(TIPO DE ENTRADA INTERVALO)
+
+        - O <input type="range"> define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante). O intervalo padrão é de 0 a 100. No entanto, você pode definir restrições sobre quais números são aceitos com os atributos min, max e step:
+
+        - O input elemento representa um controle para definir o valor do elemento para uma string representando um número, mas com a ressalva de que o valor exato não é importante, permitindo que os UAs forneçam uma interface mais simples do que para o estado Number .
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Range field(campo intervalo)</h2>
+
+    <p>Dependendo do suporte do navegador: O tipo de entrada "intervalo"(range) pode ser exibido como um controle deslizante.</p>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+    -->
+    <form>
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+        -->
+        <label for="vol">Volume (intervalo 0 a 50):</label>
+        <!--
+           - o <input type="range"> define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante).
+           - atributo min Especifica um valor mínimo para um elemento <input>
+           - atributo max Especifica o valor máximo para um elemento <input>.
+           - campo de entrada para usuario entrar com um valor numerico entre 0 e 100
+           - usuario entra com um numero, de acordo com os ja predefinidos
+        -->
+        <input type="range" id="vol" name="vol" min="0" max="50"/>
+        <!--
+            - O <input type="submit"> define um botão do tipo submit para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+            - O elemento input representa um botão que, quando ativado, envia o formulário.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

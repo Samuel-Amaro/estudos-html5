@@ -1,0 +1,32 @@
+<!--
+    * O QUE SÃO GRÁFICOS VETORIAIS?
+
+        Na web, você trabalhará com dois tipos de imagens — imagens raster(raster images) e imagens vetoriais(vector images):
+
+            As imagens raster são definidas usando uma grade de pixels — um arquivo de imagem raster contém informações que mostram exatamente onde cada pixel deve ser colocado e exatamente qual cor deve ser. Os formatos raster da Web populares incluem Bitmap ( .bmp), PNG ( .png), JPEG ( .jpg) e GIF ( .gif.)
+
+            As imagens vetoriais são definidas usando algoritmos — um arquivo de imagem vetorial contém definições de forma e caminho que o computador pode usar para descobrir como a imagem deve ficar quando renderizada na tela. O formato SVG nos permite criar gráficos vetoriais poderosos para uso na Web.
+
+        Para dar uma idéia da diferença entre os dois, vamos ver um exemplo. Você pode encontrar este exemplo ao vivo em nosso repositório GitHub como vector-versus-raster.html — ele mostra duas imagens aparentemente idênticas lado a lado, de uma estrela vermelha com uma sombra preta. A diferença é que o da esquerda é um PNG e o da direita é uma imagem SVG.
+
+        A diferença fica aparente quando você amplia a página — a imagem PNG torna-se pixelizada conforme você aumenta o zoom porque contém informações sobre onde cada pixel deve estar (e qual cor). Quando é ampliado, cada pixel é aumentado em tamanho para preencher vários pixels na tela, de modo que a imagem começa a parecer em blocos. A imagem vetorial, no entanto, continua com uma aparência agradável e nítida, porque não importa o tamanho, os algoritmos são usados ​​para descobrir as formas na imagem, com os valores sendo dimensionados à medida que ela aumenta.
+
+        Além disso, os arquivos de imagem vetorial são muito mais leves do que seus equivalentes raster, porque eles precisam conter apenas um punhado de algoritmos, em vez de informações sobre cada pixel da imagem individualmente.
+
+
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Vector versus raster</title>
+</head>
+<body>
+
+    <h1>Vector versus raster</h1>
+    <img src="star.png" alt="A raster star"/>
+    <img  src="star.svg" role="img" alt="A vector star"/>
+
+</body>
+</html>

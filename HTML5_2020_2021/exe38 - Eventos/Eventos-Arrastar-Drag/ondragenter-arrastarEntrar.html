@@ -1,0 +1,132 @@
+<!--
+    * EVENTO DE ARRASTAR
+    * 
+    * ATRIBUTO DE EVENTO HTML ONDRAGENTER(ARRASTAR E ENTRAR)
+    * 
+    * DEFINIÇÃO E USO:
+    * 
+    * O atributo ondragenter é acionado quando um elemento arrastável ou seleção de texto entra em um destino de soltar válido.
+    * 
+    * Os eventos ondragenter e ondragleave podem ajudar o usuário a entender que um elemento arrastável está prestes a entrar ou sair de um destino de soltar. Isso pode ser feito, por exemplo, definindo uma cor de fundo quando o elemento arrastável entra no destino de soltar e removendo a cor quando o elemento é movido para fora do destino.
+    * 
+    * Arrastar e soltar é um recurso muito comum em HTML5. É quando você "pega" um objeto e o arrasta para um local diferente.
+    * 
+    * Nota: Para tornar um elemento arrastável, use o atributo arrastável(draggable) HTML5 global.
+    * 
+    * Dica: Links e imagens podem ser arrastados por padrão e não precisam do atributo draggable.
+    * 
+    * Existem muitos atributos de evento que são usados ​​e podem ocorrer nos diferentes estágios de uma operação de arrastar e soltar:
+    *
+        * Eventos disparados no destino arrastável (o elemento de origem):
+
+            - ondragstart - dispara quando o usuário começa a arrastar um elemento.
+            - 
+            - ondrag - dispara quando um elemento está sendo arrastado.
+            - 
+            - ondragend - dispara quando o usuário termina de arrastar o elemento
+
+        * Eventos disparados no alvo de soltar:
+
+            - ondragenter - dispara quando o elemento arrastado entra no destino de soltar.
+            - 
+            - ondragover - dispara quando o elemento arrastado está sobre o alvo de soltar.
+            -
+            - ondragleave - dispara quando o elemento arrastado deixa o destino de soltar.
+            - 
+            - ondrop - dispara quando o elemento arrastado é solto no alvo
+
+    * Nota: Ao arrastar um elemento, o evento ondrag dispara a cada 350 milissegundos.
+    * 
+    * SINTAXE:
+
+        <element ondrag="script">
+
+    * TAGS HTML COM SUPORTE: todos os elementos HTML
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento ondragenter</title>
+    <style>
+        div.caixa{
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin-top: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-left: 1px;
+            border-style: solid;
+            border-color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atributo de evento HTML ondragenter</h1>
+    <p><strong>Exemplo: </strong>Execute um JavaScript quando um elemento arrastável entrar em um destino de soltar:</p>
+    <p>Arraste o elemento p para frente e para trás entre os dois retângulos:</p>
+    <!--
+        * ondrop: disparado quando o elemento arrastado e solto na div;
+        * 
+        * ondragover: disparado quando o elemento arrastado esta sobre o div, que e o elemento alvo;
+        * 
+        * 
+    -->
+    <div class="caixa" ondrop="soltar(event)" ondragover="permitirSoltar(event)" ondragenter="arrastando()" ondragleave="permitirSoltar()">
+        <!--
+            * ondragstart: dispara quando usuario começa a arrastar um elemento;
+            * ondrag: dispara quando elemento esta sendo arrastado;
+            * draggable: atributo global que torna o elemento arrastavel; 
+        -->
+        <p ondragstart="iniciarArrastar(event)" ondrag="arrastando(event)" draggable="true" id="paragrafo">Arraste-me!</p>
+    </div>
+
+    <div class="caixa" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+    </div>
+
+    <p style="clear:both;" id="demo"></p>
+
+    <!--
+        * java script local, adicionado na pagina
+    -->
+    <script>
+        function iniciarArrastar(event) {
+            event.dataTransfer.setData("Text",event.target.id);
+        }
+
+        function arrastando(event) {
+           if(event.target.className == "caixa") {
+               event.target.style.border = "3px dotted red";
+               document.getElementById("demo").innerHTML = "Entrou na zona de lançamento";
+           }
+        } 
+
+        function permitirSoltar(event) {
+            if(event.target.className == "caixa") {
+                event.target.style.border = "";
+                document.getElementsByName("demo").innerHTML = "Saiu da zona de lançamento";
+            }
+        }
+
+        function soltar(event) {
+            event.preventDefault();
+            var dado = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(dado));
+            document.getElementById("demo").innerHTML = "O elemento p esta sendo solto";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!--
+    * HTML BLOCK(BLOCO) AND INLINE(EMBUTIDOS) ELEMENTS
+
+    * ELEMENTOS DE BLOCO E EMBUTIDOS HTML
+
+        - Cada elemento HTML tem um valor de exibição(display) padrão, dependendo do tipo de elemento.
+
+        - Existem dois valores de exibição: block(BLOCO) e inline(EMBUTIDO).
+
+    * ELEMENTOS EM NÍVEL DE BLOCO(BLOCK-LEVEL)
+
+        - Um elemento de nível de bloco sempre começa em uma nova linha e os navegadores adicionam automaticamente algum espaço (uma margem - margin) antes e depois do elemento.
+
+        - Um elemento de nível de bloco sempre ocupa toda a largura disponível (se estende para a esquerda e para a direita o máximo possível).
+
+        - Dois elementos de bloco comumente usados ​​são: <p> e <div>.
+
+        - O <p> elemento define um parágrafo em um documento HTML.
+
+        - O <div> elemento define uma divisão ou uma seção em um documento HTML.
+
+        - Aqui estão os elementos de nível de bloco em HTML:
+
+            <address>
+            <canvas>
+            <dt>
+            <footer>
+            <hr>
+            <noscript>
+            <section>
+            <video>
+            <article>
+            <dd>
+            <fieldset>
+            <form>
+            <li>
+            <ol>
+            <table>
+            <aside>
+            <div>
+            <figcaption>
+            <h1>-<h6>
+            <main>
+            <p>
+            <tfoot>
+            <blokquote>
+            <dl>
+            <figure>
+            <header>
+            <nav>
+            <pre>
+            <ul>
+
+            - 34 elementos de nivel de bloco
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <h2>Elementos de nível de bloco.</h2>
+
+    <p>Os elementos P e DIV são ambos elementos de bloco e sempre começarão em uma nova linha e ocuparão toda a largura disponível (se estendem para a esquerda e para a direita o máximo possível).</p>
+
+    <!--
+        - o elemento <p> e um elemento que possui um valor de exibição - display como block(um elemento de bloco).
+        - o elemento <p> e um elemento de nivel de bloco, que começa em uma nova linha, e os navegadores adicionam espaço(margin antes e depois do elemento).
+        - o elemento de nivel de bloco sempre ocupa toda a largura disponivel, se estende da esquerda para direita.
+        - usando o atributo style de forma embutida na tag para adicionar uma propriedade css que adiciona borda somente neste elemento
+    -->
+    <p style="border: 1px solid black;">Olá Mundo!</p>
+    <!--
+        - o elemento <div> e um elemento que possui um valor de exibição - display como block(um elemento de bloco).
+        - o elemento <div> também e um elemento em nível de bloco, em que o navegador começa o elemento em uma nova linha, e ele ocupa todo espaço horizontal, se estende por toda a esquerda e direita.
+        - o navegador adiciona espaços ao elemento, antes e depois do elemento
+        - usando o atributo style de forma embutida na tag para adicionar uma propriedade css que adiciona borda somente neste elemento
+    -->
+    <div style="border: 1px solid black;">Olá Mundo!</div>
+
+</body>
+</html>

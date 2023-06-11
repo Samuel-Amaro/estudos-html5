@@ -1,0 +1,42 @@
+<!-- 
+    * Usando fontes externas no documento HTML5;
+    * Fontes externas usadas no google Fontes, e um repositorio de fontes, que e mantido   para o google.
+    * as fontes que ja veem com o navegador, e com o HTML5 por padrão são bem limitadas.
+    * se quisermos conseguir fontes mais robustas, e fontes mais trabalhadas em detalhes, podemos buscar no google fontes.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Com o Google Fontes</title>
+    <!-- aplicando uma configuração de CSS local, configurando fontes do documento HTML5, usando fontes externas-->
+    <style>
+        /*importando a fonte externa para o documento HTML5*/
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+             font-family: 'Work Sans', sans-serif;
+             font-size: 16px;
+             color: #000000;
+
+        }
+        h1{
+           /*usando a fonte externa*/
+           font-family: 'Dancing Script', cursive;
+           font-size: 3em;
+        }
+        h2{
+            font-family: 'Dancing Script',cursive;
+            font-size: 2em;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam saepe ipsa ab voluptas, amet error accusamus porro in temporibus nam possimus iure delectus aut iusto dicta repellat nihil ratione.</p>
+    <h2>Subtitulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, tempore explicabo natus dolorem quasi quod voluptate similique consequatur alias id? Consequatur nam dignissimos blanditiis distinctio facilis nemo, nisi reiciendis qui.</p>
+</body>
+</html>

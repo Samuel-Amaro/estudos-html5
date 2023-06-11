@@ -1,0 +1,55 @@
+<!--
+    * EVENTOS DE FORMULARIO
+
+      - Eventos disparados por ações dentro de um formulário HTML (aplica-se a quase todos os elementos HTML, mas é mais usado em elementos de formulário):
+
+    * EVENTO ONBLUR(EM DESFOQUE)
+
+      - Dispara o momento em que o elemento perde o foco
+
+      - Onblur é mais frequentemente usado com código de validação de formulário (por exemplo, quando o usuário sai de um campo de formulário).
+
+      - Dica: O atributo onblur é o oposto do atributo onfocus .
+
+      - SINTAXE:
+
+        <element onblur="script">
+
+      - VALORES DE ATRIBUTO:
+
+         script : O roteiro a ser executado em onblur;    
+
+      - TAGS HTMLS SUPORTADAS: Todos os elementos HTML, EXCETO: <base>, <bdo>, <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style> e <title>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em desfoque</title>
+</head>
+<body>
+    
+    <h1>Evento de Formulario - onblur(em desfoque)</h1>
+
+    <p><strong>Exemplo: </strong> Valide um campo de entrada quando o usuário o deixa:</p>
+
+    <label for="nome">Digite seu Nome: </label>
+
+    <input type="text" name="campoNome" id="nome" onblur="minhaFuncao()">
+
+    <p>Ao sair do campo de entrada, é acionada uma função que transforma o texto de entrada em maiúsculas.</p>
+
+    <!--codigo java script que faz a ação do evento-->
+    <script>
+        function minhaFuncao() {
+            
+            var x = document.getElementById("nome");
+
+            x.value = x.value.toLocaleUpperCase();
+        }
+    </script>
+</body>
+</html>

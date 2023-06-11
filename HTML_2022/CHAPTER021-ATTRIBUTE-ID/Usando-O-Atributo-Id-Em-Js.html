@@ -1,0 +1,31 @@
+<!--
+    * USANDO O ATRIBUTO ID EM JS
+
+        - O id atributo também pode ser usado pelo JavaScript para realizar algumas tarefas para aquele elemento específico.
+
+        - JavaScript pode acessar um elemento com um id específico com o getElementById() método:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>Usando o atributo id em JavaScript</h2>
+    <p>JavaScript pode acessar um elemento com um id especificado usando o método getElementById():</p>
+    <!--
+        - usando o atributo id do elemento html <h1>, para especificar um id exclusivo(unico) para um elemento html.
+        - o valor do id atributo deve ser exclusivo(unico) no documento html.
+        -o id atributo e usado para apontar para uma declaração de estilo especifica em uma folha de estilo.
+        - aqui neste exemplo temos o elemento <h1> apontando para o nome de id myHeader
+    -->
+    <h1 id="myHeader">Olá Mundo!</h1>
+    <button onclick="displayResult()">Alterar texto</button>
+    <script>
+        /*usando o id atributo para realizar algumas tarefas para um elemento especifico. Js pode acessar um elemento com um id especifico*/
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Tenha um bom dia!";
+        }
+    </script>
+</body>
+</html>

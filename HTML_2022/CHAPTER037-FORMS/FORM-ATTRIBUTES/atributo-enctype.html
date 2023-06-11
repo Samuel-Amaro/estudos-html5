@@ -1,0 +1,74 @@
+<!--
+    * ATRIBUTO HTML <form> enctype
+
+    * DEFINIÇÃO E USO
+
+        - O enctype atributo especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor.
+
+        - Nota: O enctype atributo pode ser usado somente se method="post".
+
+    * SINTAXE:
+
+        <form enctype="value">
+
+    * VALORES DE ATRIBUTO
+
+            VALUE: application/x-www-form-urlencoded
+            DESCRIPTION: Predefinição. Todos os caracteres são codificados antes do envio (os espaços são convertidos em símbolos "+" e os caracteres especiais são convertidos em valores ASCII HEX)
+            ---------------------------------
+            VALUE: multipart/form-data
+            DESCRIPTION: Este valor é necessário se o usuário fizer upload de um arquivo através do formulário
+            ---------------------------------
+            VALUE: text/plain
+            DESCRIPTION: Envia dados sem qualquer codificação. Não recomendado
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>O atributo enctype do formulário</h2>
+
+    <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+        - o atributo method, especifica o método HTTP a ser usado ao enviar os dados do formulario.
+        - o metodo utilizado por padrão para enviar dados do formulario e get
+        - o atributo enctype especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor.
+        - O enctype atributo pode ser usado somente se method="post".
+        - o valor escolhido foi, multipart/form-data
+    -->
+    <form action="#" method="get" enctype="multipart/form-data">
+        <!--
+            - o elemento <label> define um rotulo para um elemento de formulario.
+            - O for atributo da <label> tag deve ser igual ao id atributo do <input> elemento para ligá-los.
+            - O atributo for pode ser especificado para indicar um controle de formulário ao qual a legenda deve ser associada.
+            - definimos um label para o input fname
+        -->
+        <label for="fname">First Name:</label>
+        <br/>
+         <!--
+            - o elemento <input> e um elemento de entrada do formulario.
+            - O <input type="text"> define um campo de entrada de linha única para entrada de texto.
+            - o label fname esta associado a esse input
+        -->
+        <input type="text" id="fname" name="fname" value="John"/>
+        <br/>
+        <label for="lname">Last Name:</label>
+        <br/>
+        <input type="text" id="lname" name="lname" value="Doe"/>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>

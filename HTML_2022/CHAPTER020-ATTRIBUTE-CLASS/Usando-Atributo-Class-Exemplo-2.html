@@ -1,0 +1,30 @@
+<!--
+    - No exemplo a seguir temos dois <span> elementos com um class atributo com o valor "note". Ambos os <span> elementos serão estilizados igualmente de acordo com a .note definição de estilo na seção head:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--definição de estilo local para o documento na seção head-->
+    <style>
+        /*estiliza os dois elementos span que possui o valor note nos class atributos*/
+        .note{
+            font-size: 120%;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        - usando o atributo class no elemento <span> para especificar uma classe para o span elemento, aqui definimos que o span elemento possui um class atributo com o valor note.
+        - aqui definiremos uma class com o valor note.
+        - o atributo class ira apontar para um nome de classe definido em uma folha de estilo.
+    -->
+    <h1>Meu título <span class="note">importante</span></h1>
+    <!--
+        - um valor de class pode ser comparitlhado por varios elementos html
+    -->
+    <p>Este é um texto <span class="note">importante</span></p>
+    
+</body>
+</html>

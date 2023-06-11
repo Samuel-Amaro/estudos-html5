@@ -1,0 +1,46 @@
+<!--
+    * O ELEMENTO <textarea>
+
+        - O <textarea> elemento define um campo de entrada de várias linhas (uma área de texto):
+
+        - O rows atributo especifica o número visível de linhas em uma área de texto.
+
+        - O cols atributo especifica a largura visível de uma área de texto.
+
+        - Você também pode definir o tamanho da área de texto usando CSS:
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h2>Área de texto</h2>
+
+    <p>O elemento textarea define um campo de entrada de várias linhas.</p>
+
+     <!--
+        - o elemento <form> e usado para criar um formulario HTML para entrada do usuario.
+        -  O <form> elemento é um contêiner para diferentes tipos de elementos de entrada
+        - o atributo action, define a ação a ser executada quando o formulário for enviado.
+        - neste exemplo não tera nenhuma ação a ser executa quando o formulario for enviado. não temos script do lado do servidor para tratar os dados.
+    -->
+    <form action="#">
+        <!--
+            - o elemento <textarea> e um elemento de formulario, que define um campo de entrada de varias linhas, uma area de texto.
+            - o atributo rows especifica o numero visivel de linhas em uma area de texto, aqui sera definido uma area de texto de 10 linnhas.
+            - o cols atributo especifica a largura visivel de uma area de texto, aqui sera de 30 colunas, a alrgura;
+        -->
+        <textarea name="message" rows="10" cols="30">O gato estava brincando no jardim.</textarea>
+        <br/>
+        <br/>
+        <!--
+            - O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulários.
+            - O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+        -->
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>
