@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atividade Escolar</title>
+</head>
+<body>
+    <h2>9º Série A - Prova de Conhecimentos Gerais</h2>
+    <p>
+        Responda todas as questões, utilize rascunhos em papel para realizar os
+        cálculos. Os rascunhos serão recolhidos pela professora após a quarentena.
+    </p>
+    <form>
+        <fieldset>
+            <legend>Informações do aluno</legend>
+            <ul>
+                <li>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" />
+                </li>
+                <li>
+                    <label for="matricula">Matricula:</label>
+                    <input type="number" id="matricula" name="matricula" />
+                </li>
+                <li>
+                    <label for="emailresponsavel">Email responsável:</label>
+                    <input type="email" id="emailresponsavel" name="emailresponsavel" />
+                </li>
+                <li>
+                    <label for="datanascimento">Data nascimento:</label>
+                    <input type="date" id="datanascimento" name="datanascimento" />
+                </li>
+                <li>
+                    <label for="pwd">Digite uma senha para acessar os dados da pesquisa
+                        posteriormente:</label>
+                    <input type="password" id="pwd" name="pwd" />
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Matemática</legend>
+            <img src="./images/matematica.jpg" alt="ilustração para a prova de matématica" width="400" height="300" />
+            <ul>
+                <li>
+                    <label for="soma">3 + 3 =</label>
+                    <input type="number" id="soma" name="soma" />
+                </li>
+                <li>
+                    <label for="divisao">10 / 3 =</label>
+                    <input type="number" id="divisao" name="divisao" />
+                </li>
+                <li>
+                    <label for="multiplicacao">5 * 2 =</label>
+                    <input type="number" id="multiplicacao" name="multiplicacao" />
+                </li>
+                <li>
+                    <label for="feedbackmatematica">Essa tarefa foi dificil?</label>
+                    <input type="range" min="0" max="100" name="feedbackmatematica" id="feedbackmatematica" />
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Português</legend>
+            <img src="./images/portugues.jpg" alt="ilustração da prova de português" width="400" height="300" />
+            <br />
+            <label for="pergunta01">Na frase: <q>Eu sou bonito</q> o sujeito é:</label>
+            <br />
+            <input type="radio" name="respostapergunta01" id="respota01" value="Brad pit" />
+            <label for="respota01">Brad pit</label>
+            <br />
+            <input type="radio" name="respostapergunta01" id="respota02" value="João da padaria" />
+            <label for="respota02">João da padaria</label>
+            <br />
+            <input type="radio" name="respostapergunta01" id="respota03" value="Você mesmo" />
+            <label for="respota03">Você mesmo</label>
+            <br />
+            <input type="radio" name="respostapergunta01" id="respota04" value="Meus pais" />
+            <label for="respota04">Meus pais</label>
+            <br />
+            <input type="radio" name="respostapergunta01" id="respota05" value="Eu" />
+            <label for="respota05">Eu</label>
+            <br/>
+            <br/>
+            <label for="pergunta02">Complete a frase: <q>Filho de peixe, peixinho </q></label>
+            <br/>
+            <input type="checkbox" name="respotapergunta02" id="respota01pergunta02" value="é"/>
+            <label for="respota01pergunta02">é</label>
+            <br/>
+            <input type="checkbox" name="respotapergunta02" id="respota02pergunta02" value="tem"/>
+            <label for="respota02pergunta02">tem</label>
+            <br/>
+            <input type="checkbox" name="respotapergunta02" id="respota03pergunta02" value="verde"/>
+            <label for="respota03pergunta02">verde</label>
+            <br/>
+            <input type="checkbox" name="respotapergunta02" id="respota04pergunta02" value="bonito"/>
+            <label for="respota04pergunta02">Bonito</label>
+            <br/>
+            <input type="checkbox" name="respotapergunta02" id="respota05pergunta02" value="maria"/>
+            <label for="respota05pergunta02">maria</label>
+            <br/>
+        </fieldset>
+        <fieldset>
+            <legend>Dê uma nota para sua professora:</legend>
+            <ul>
+                <li>
+                    <label for="notaavaliacao">Sua professora explica bem a matéria?</label>
+                    <input type="range" min="0" max="100" id="notaavaliacao" name="notaavaliacao"/>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Opniões</legend>
+            <label for="opnion">Digite sua opnião sobre a disciplina</label>
+            <br/>
+            <textarea cols="40" rows="15"></textarea>
+        </fieldset>
+        <br/>
+        <br/>
+        <br/>
+        <input type="submit" value="Gravar respostas"/>
+    </form>
+</body>
+
+</html>

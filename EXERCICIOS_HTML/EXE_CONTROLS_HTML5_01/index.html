@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Controles HTML5 tarefa 1</title>
+    <style>
+        body {
+          background-color: #fff;
+          color: #333;
+          font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+          padding: 1em;
+          margin: 0;
+        }
+  
+        * {
+          box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+   <form>
+      <h2>Edite suas preferências</h2>
+      <ul>
+        <li>
+            <label for="e-mail">Email:</label>
+            <input type="email" name="email" id="e-mail"/>
+        </li>
+        <li>
+            <label for="website">Website:</label>
+            <input type="url" name="website" id="website"/>
+        </li>
+        <li>
+            <label for="phone">Numero telefone:</label>
+            <input type="tel" name="phone" id="phone" pattern="\([0-9]{2}\) [0-9]{1} [0-9]{4}\-[0-9]{4}" placeholder="(##) # ####-####"/>
+        </li>
+        <li>
+            <label for="fave-color">Cor Favorita:</label>
+            <input type="color" name="fave-color" id="fave-color"/>
+        </li>
+        <li>
+            <button type=submit>Atualizar preferências</button>
+        </li>
+      </ul>
+   </form>
+</body>
+</html>

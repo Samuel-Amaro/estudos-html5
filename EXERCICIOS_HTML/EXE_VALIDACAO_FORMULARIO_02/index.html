@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="witdh=device-witdh, initial-scale=1"/>
+    <title>Validação Formulário: Tarefa 2</title>
+    <style>
+        body{
+            background-color: #fff;
+            color: #333;
+            font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 1em;
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        textarea:invalid {
+            border: 2px dashed red;
+        }
+        textarea:valid {
+            border: 2px solid black;
+        }
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>Insira sua consulta de suporte</h2>
+        <ul>
+            <li>
+                <label for="uname">Nome usuário:</label>
+                <input type="text" name="uname" id="uname" minlength="5" maxlength="20" pattern="\w\.[a-z0-9]*" placeholder="i.username" required/>
+            </li>
+            <li>
+                <label for="email">Endereço de email:</label>
+                <input type="email" name="email" id="email" pattern="[A-Za-z0-9]*@bigcorp\.eu" placeholder="user@bigcorp.eu" required/>
+            </li>
+            <li>
+                <label for="phone">Numero telefone:</label>
+                <input type="tel" name="phone" id="phone" pattern="\d{3}\-\d{3}\-\d{4}" maxlength="12" placeholder="000-000-0000" required/>
+            </li>
+            <li>
+                <label for="comment">Comentário</label>
+                <textarea name="comment" id="comment" required maxlength="200">Comment</textarea>
+            </li>
+            <li>
+                <button type="submit">Enviar comentário</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

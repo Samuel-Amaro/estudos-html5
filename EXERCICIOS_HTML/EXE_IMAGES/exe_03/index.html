@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon">
+    <title>Imagen Fléxivel</title>
+</head>
+<body>
+
+    <h2>Imagen Fléxivel</h2>
+
+    <p>Você está vendo a imagen completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência</p>
+
+    <picture>
+        <!--sempre do maior para menor-->
+        <source srcset="../images/paisagem-g.png" media="(min-width: 1200px)" >
+        <source media="(min-width: 800px)" srcset="../images/paisagem-m.png">
+        <source media="(min-width: 300px)" srcset="../images/paisagem-p.png">
+        <!--padrão caso nenhuma source tag seja compativel-->
+        <img src="../images/paisagem-m.png" alt="Imagen">
+    </picture>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Outros Controles Formulário tarefa 2</title>
+    <style>
+        body {
+          background-color: #fff;
+          color: #333;
+          font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+          padding: 1em;
+          margin: 0;
+        }
+  
+        * {
+          box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+  <form>
+      <ul>
+          <li>
+              <label for="comida">Escolha sua comida favorita:</label>
+              <select id="comida" name="comida">
+                <optgroup label="principal">
+                    <option value="Salad">Salad</option>
+                    <option value="Curry">Curry</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Fajitas">Fajitas</option>
+                </optgroup>
+                <optgroup label="lanches">
+                    <option value="Biscuits">Biscuits</option>
+                    <option value="Crisps">Crisps</option>
+                    <option value="Fruit">Fruit</option>
+                    <option value="Breadsticks">Breadsticks</option>
+                </optgroup>
+              </select>
+          </li>
+          <li>
+              <button type="submit">Enviar Escolha</button>
+          </li>
+      </ul>
+  </form>
+
+</body>
+</html>
